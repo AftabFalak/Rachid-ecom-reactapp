@@ -1,0 +1,151 @@
+.ProductDetail {
+  background-color: #fff;
+  padding: 25px;
+}
+
+
+.brandLogo{
+  width: 150px;
+}
+
+.priceView{
+  margin-top: 20px;
+  text-align: left;
+}
+.priceView .oldPrice{
+  color: gray;
+  text-decoration: line-through;
+  margin-right: 12px;
+  font-size: 20px;
+}
+.priceView .offer{
+  color: red;
+  font-size: 20px;
+}
+
+.colorSelection .circle{
+  border:1px solid black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  cursor: pointer;
+  transition: all .5s;
+}
+.colorSelection .circle:hover{
+opacity: 0.5;  
+}
+.colorSelection .yellow{
+  background-color: #FDFD04;
+}
+.colorSelection .white{
+  background-color: #fff;
+}
+.colorSelection .pink{
+  background-color: #FFC0CB;
+}
+.colorSelection .check{
+font-size: 20px;
+margin: auto;
+text-align: center;
+align-self: center;
+align-content: center;
+justify-content: center;
+}
+
+
+.productDetail{
+  text-align: left;
+  margin-top: 20px;
+}
+.productDetail .productDetailPara{
+  font-size: 18px;
+}
+.productDetail h4{
+  font-weight: 500;
+}
+.productDetail p{
+  font-weight: 500;
+  color: gray;
+}
+
+
+.addToCart{
+  text-align: left;
+  margin-top: 20px;
+}
+
+
+.addToCart .size span{
+font-size: 22px;
+margin-right: 20px;
+}
+
+.instock{
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quantity{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.counterButton{
+  display: flex;
+  margin-top: 10px;
+}
+
+.counterButton .logo{
+  cursor: pointer;
+  padding: 12px;
+  background-color: #ffff;
+  border: 2px solid rgb(232, 227, 227);
+  display: flex;
+  align-items: center;
+}
+.counterButton .countNumber{
+  padding: 12px;
+  background-color: #E8ECEF;
+  border-top: 2px solid rgb(232, 227, 227);
+  border-bottom: 2px solid  rgb(232, 227, 227);
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  font-size: 22px;
+}
+
+/* /////////////////////////////// */
+
+.cardImage {
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+.cardHeading {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+}
+
+.buttonOutline {
+  border-color: #f0b54d;
+  color: #f0b54d;
+}
+.buttonView{
+  text-align: left;
+  margin-top: 20px;
+}
+.addButton {
+  background-color: #f0b54d;
+  color: #ffff;
+  font-size: 20px;
+  padding: 10px 40px;
+}
