@@ -6,7 +6,7 @@ import navbarLogo from '../../assets/images/navbarLogo.png'
 
 function NavbarBottom() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark shadow">
     <a className="navbar-brand d-lg-none" href="#">
       Navbar
     </a>

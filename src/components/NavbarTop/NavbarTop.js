@@ -3,9 +3,15 @@ import React from "react";
 import "./NavbarTop.css";
 import navbarLogo from "../../assets/images/navbarLogo.png";
 
+import { GoGitCompare } from 'react-icons/go';
+
+import {BsFillHeartFill}  from 'react-icons/bs';
+
+import   {FaUserAlt} from'react-icons/fa'
+
 const NavbarTop = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light shadow">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-light">
       <a className="navbar-brand d-lg-none" href="#">
         Navbar
       </a>
@@ -69,10 +75,7 @@ const NavbarTop = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="fa fa-phone"
-                style={{ transform: "rotate(100deg)", color: "#C30F54" }}
-              ></i>
+            <GoGitCompare/>{' '}
               Compare
             </a>
           </li>
@@ -85,10 +88,7 @@ const NavbarTop = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="fa fa-phone"
-                style={{ transform: "rotate(100deg)", color: "#C30F54" }}
-              ></i>
+             <BsFillHeartFill/>
               Wish List
             </a>
           </li>
@@ -102,10 +102,8 @@ const NavbarTop = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="fa fa-user"
-                style={{ color: "#C30F54" }}
-              ></i>
+             
+              <FaUserAlt/>
               My Account 
             </a>
           </li>

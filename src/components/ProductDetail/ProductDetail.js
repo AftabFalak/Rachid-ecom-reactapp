@@ -158,10 +158,19 @@ const ProductDetail = () => {
           </div>
 
           <div className="buttonView">
-          <button className="btn addButton">Add to Cart</button>
+            <button className="btn addButton">Add to Cart</button>
           </div>
           <hr />
-          <div className="wishList">Add To Wish List</div>
+          <div className="wishList d-flex justify-content-between">
+
+            <div>
+              <p>Share it</p>
+              <i className="fa fa-facebook"></i>
+            </div>
+            <div> <i className="fa fa-heart"></i>  <span>Add To wishList</span></div>
+          </div>
+
+          <hr />
           <div className="completeLook">
             <h1>Complete the look</h1>
 
