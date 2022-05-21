@@ -8,10 +8,16 @@ import "./ProductDetail.css";
 import productImage from "../../assets/images/brand.png";
 import brandLogo from "../../assets/images/brand2.PNG";
 
+import { FaFacebookF } from "react-icons/fa";
+
+
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProductDetail = () => {
   const { check, setCheck } = useState(false);
+  const { count, setCount } = useState(0);
+
   const cards = [
     {
       image: productImage,
@@ -144,13 +150,13 @@ const ProductDetail = () => {
               <span className="quantity">Quantity</span>
 
               <div className="counterButton">
-                <div className="logo">
+                <div className="logo" onClick={() => setCount(count + 1)}>
                   <i class="fa fa-less-than"></i>
                 </div>
                 <div className="countNumber">
                   <span>{"1"}</span>
                 </div>
-                <div className="logo">
+                <div className="logo" onClick={() => setCount(count + 1)}>
                   <i class="fa fa-greater-than"></i>
                 </div>
               </div>
@@ -158,10 +164,31 @@ const ProductDetail = () => {
           </div>
 
           <div className="buttonView">
-          <button className="btn addButton">Add to Cart</button>
+            <button className="btn addButton">Add to Cart</button>
           </div>
           <hr />
-          <div className="wishList">Add To Wish List</div>
+          <div className="wishList d-flex justify-content-between">
+            <div>
+              <p>Share it</p>
+              <FaFacebookF />
+              <FaFacebookF />
+
+              <FaFacebookF />
+
+              <FaFacebookF />
+
+              {/* <AiOutlineGooglePlus/>
+              <BsTwitter/>
+              <AiFillInstagram/> */}
+            </div>
+            <div>
+              <i className="fa fa-heart"></i>
+              <span>Add To Wish List</span>
+            </div>
+          </div>
+
+          <hr />
+
           <div className="completeLook">
             <h1>Complete the look</h1>
 

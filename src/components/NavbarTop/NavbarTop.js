@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./NavbarTop.css";
-import navbarLogo from "../../assets/images/navbarLogo.png";
+
 
 const NavbarTop = () => {
   return (
@@ -58,7 +58,6 @@ const NavbarTop = () => {
           </li>
         </ul>
 
-
         <ul className="navbar-nav">
           <li className="nav-item dropdown">
             <a
@@ -93,22 +92,20 @@ const NavbarTop = () => {
             </a>
           </li>
 
-          <li className="nav-item dropdown dropdown-toggle">
-            <a
-              className="text-dark nav-link "
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i
-                class="fa fa-user"
-                style={{ color: "#C30F54" }}
-              ></i>
-              My Account 
-            </a>
-          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"/></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+
+
+
         </ul>
       </div>
     </nav>
