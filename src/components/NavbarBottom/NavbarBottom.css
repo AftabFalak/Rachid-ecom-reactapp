@@ -1,0 +1,36 @@
+.custonNavbar{
+    height: 90px;
+    overflow: hidden;
+}
+
+.signInLink{
+    border-left: .5px solid rgb(222, 220, 220);
+    border-right: .5px solid rgb(222, 220, 220);
+    position: relative;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.signInLink:hover{
+    background-color: rgb(235, 233, 233);
+    transition: all .5s;
+}
+.signInLogo{
+    font-size: 25px;
+    color: rgb(100, 99, 99);
+}
+.signInText{
+    font-size: 14px;
+    color: rgb(100, 99, 99);
+    margin-top: 20px;
+}
+.CartBadge {
+    background-color: #5C77FC;
+    border-radius: 50%;
+    color: #ffff;
+    width: 20px;
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}

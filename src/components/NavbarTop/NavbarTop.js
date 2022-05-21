@@ -3,9 +3,17 @@ import React from "react";
 import "./NavbarTop.css";
 
 
+import { GoGitCompare } from 'react-icons/go';
+
+import {BsFillHeartFill}  from 'react-icons/bs';
+import {IoMdArrowDropdown} from 'react-icons/io'
+
+
+import   {FaUserAlt} from'react-icons/fa'
+
 const NavbarTop = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light shadow">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-light">
       <a className="navbar-brand d-lg-none" href="#">
         Navbar
       </a>
@@ -50,7 +58,7 @@ const NavbarTop = () => {
             >
               <i
                 class="fa fa-phone"
-                style={{ transform: "rotate(100deg)", color: "#C30F54" }}
+                style={{ transform: "rotate(100deg)", color: "gray", marginRight:'10px'}}
               ></i>{" "}
               {"     "}
               Call Us: 123 - 456 - 7890
@@ -59,7 +67,7 @@ const NavbarTop = () => {
         </ul>
 
         <ul className="navbar-nav">
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown mr-3">
             <a
               className="text-dark nav-link "
               href="#"
@@ -68,14 +76,11 @@ const NavbarTop = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="fa fa-phone"
-                style={{ transform: "rotate(100deg)", color: "#C30F54" }}
-              ></i>
+            <GoGitCompare style={{  color: "gray", marginRight: '8px' }}/>{' '}
               Compare
             </a>
           </li>
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown mr-3">
             <a
               className="text-dark nav-link "
               href="#"
@@ -84,28 +89,26 @@ const NavbarTop = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="fa fa-phone"
-                style={{ transform: "rotate(100deg)", color: "#C30F54" }}
-              ></i>
+             <BsFillHeartFill style={{   color: "gray", marginRight: '8px' }}/>
               Wish List
             </a>
           </li>
 
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Account
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>
-
-
-
+          <li className="nav-item dropdown mr-3">
+            <a
+              className="text-dark nav-link "
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+             
+              <FaUserAlt    style={{  color: "gray", marginRight: '8px' }}  />
+              My Account {' '}
+              <IoMdArrowDropdown style={{   color: "black", marginRight: '8px' }}/>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

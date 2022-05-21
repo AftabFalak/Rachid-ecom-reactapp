@@ -3,7 +3,6 @@
   padding: 25px;
 }
 
-
 .brandLogo{
   width: 150px;
 }
@@ -12,12 +11,14 @@
   margin-top: 20px;
   text-align: left;
 }
+
 .priceView .oldPrice{
   color: gray;
   text-decoration: line-through;
   margin-right: 12px;
   font-size: 20px;
 }
+
 .priceView .offer{
   color: red;
   font-size: 20px;
@@ -34,18 +35,23 @@
   cursor: pointer;
   transition: all .5s;
 }
+
 .colorSelection .circle:hover{
 opacity: 0.5;  
 }
+
 .colorSelection .yellow{
   background-color: #FDFD04;
 }
+
 .colorSelection .white{
   background-color: #fff;
 }
+
 .colorSelection .pink{
   background-color: #FFC0CB;
 }
+
 .colorSelection .check{
 font-size: 20px;
 margin: auto;
@@ -118,6 +124,39 @@ margin-right: 20px;
   font-size: 22px;
 }
 
+.wishList .socialheading{
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.wishList p{
+  font-size: 20px;
+}
+.wishList .socialicon{
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.addtowishlist i{
+
+  margin-right: 1px;
+}
+.completeLook{
+  text-align: left;
+
+}
+
+.completeLook .cardImageBottom{
+  width: 100%;
+  height: 300px;
+}
+.cardBody{
+text-align: center;
+}
 /* /////////////////////////////// */
 
 .cardImage {
@@ -137,7 +176,12 @@ margin-right: 20px;
 
 .buttonOutline {
   border-color: #f0b54d;
+  border-width: 3px;
   color: #f0b54d;
+  font-weight: 700;
+}
+.brandName{
+  text-decoration: underline;
 }
 .buttonView{
   text-align: left;
@@ -148,4 +192,12 @@ margin-right: 20px;
   color: #ffff;
   font-size: 20px;
   padding: 10px 40px;
+}
+.stockAva{
+  color: rgb(174, 169, 169);
+}
+
+.oldPricecard{
+  color: gray;
+  text-decoration: line-through;
 }

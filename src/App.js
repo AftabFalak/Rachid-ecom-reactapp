@@ -8,9 +8,9 @@ import NavbarBottom from './components/NavbarBottom/NavbarBottom'
 function App() {
   return (
     <div className="App">
-      <NavbarTop/>
       <NavbarBottom/>
-      <ProductDetail />
+      {/* <NavbarTop/> */}
+      {/* <ProductDetail /> */}
     </div>
   );
 }

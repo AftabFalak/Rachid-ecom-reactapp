@@ -6,11 +6,21 @@ import React, { useState } from "react";
 import "./ProductDetail.css";
 
 import productImage from "../../assets/images/brand.png";
+import card1 from "../../assets/images/shoe.PNG";
+import card2 from "../../assets/images/ring.PNG";
+import card3 from "../../assets/images/bag.PNG";
+
 import brandLogo from "../../assets/images/brand2.PNG";
 
 import { FaFacebookF } from "react-icons/fa";
-
-
+import { AiOutlineGooglePlus } from "react-icons/ai";
+import { BsTwitter } from "react-icons/bs";
+import {
+  AiFillInstagram,
+  AiOutlineHeart,
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -20,34 +30,37 @@ const ProductDetail = () => {
 
   const cards = [
     {
-      image: productImage,
+      image: card1,
       brandName: "Outfitter",
       productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
+      brandLogo: brandLogo,
     },
     {
-      image: productImage,
-      brandName: "Outfitter",
+      image: card2,
+      brandName: "Levise",
       productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
+      brandLogo: brandLogo,
     },
     {
-      image: productImage,
-      brandName: "Outfitter",
+      image: card3,
+      brandName: "Denizen",
       productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
+      brandLogo: brandLogo,
     },
   ];
   return (
     <div className="ProductDetail">
       <div className="row">
-        <div className="col-md-6 border">
+        <div className="col-md-5 d-flex justify-content-center">
           <div
             id="carouselExampleIndicators"
             className="carousel slide w-50"
@@ -109,7 +122,7 @@ const ProductDetail = () => {
             </a>
           </div>
         </div>
-        <div className="col-md-6 border justify-content-left">
+        <div className="col-md-6 justify-content-left">
           <div className="top d-flex justify-content-start align-items-center">
             <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
             <h1 className="ml-5 font-weight-bold">Fashion Clothing</h1>
@@ -123,10 +136,10 @@ const ProductDetail = () => {
                 {true ? <i className="fa fa-check check"></i> : ""}
               </div>
               <div className="circle white">
-                {true ? <i className="fa fa-check check"></i> : ""}
+                {false ? <i className="fa fa-check check"></i> : ""}
               </div>
               <div className="circle pink">
-                {true ? <i className="fa fa-check check"></i> : ""}
+                {false ? <i className="fa fa-check check"></i> : ""}
               </div>
             </div>
           </div>
@@ -150,11 +163,11 @@ const ProductDetail = () => {
               <span className="quantity">Quantity</span>
 
               <div className="counterButton">
-                <div className="logo" onClick={() => setCount(count + 1)}>
+                <div className="logo" onClick={() => setCount(count - 1)}>
                   <i class="fa fa-less-than"></i>
                 </div>
                 <div className="countNumber">
-                  <span>{"1"}</span>
+                  <span>{'1'}</span>
                 </div>
                 <div className="logo" onClick={() => setCount(count + 1)}>
                   <i class="fa fa-greater-than"></i>
@@ -169,19 +182,13 @@ const ProductDetail = () => {
           <hr />
           <div className="wishList d-flex justify-content-between">
             <div>
-              <p>Share it</p>
-              <FaFacebookF />
-              <FaFacebookF />
-
-              <FaFacebookF />
-
-              <FaFacebookF />
-
-              {/* <AiOutlineGooglePlus/>
-              <BsTwitter/>
-              <AiFillInstagram/> */}
+              <span className="socialheading">Share it</span>
+              <FaFacebookF className="socialicon" />
+              <AiOutlineGooglePlus className="socialicon" />
+              <BsTwitter className="socialicon" />
+              <AiFillInstagram className="socialicon" />
             </div>
-            <div>
+            <div className="addtowishlist">
               <i className="fa fa-heart"></i>
               <span>Add To Wish List</span>
             </div>
@@ -190,32 +197,60 @@ const ProductDetail = () => {
           <hr />
 
           <div className="completeLook">
-            <h1>Complete the look</h1>
+            <h1 className="text-align-left">Complete the look</h1>
 
-            <div className="row">
+            <div className="d-flex justify-content-between">
               {cards.map((item, index) => {
                 return (
                   <div
-                    className="card p-0"
+                    className="card p-0 singleCard"
                     style={{ width: "15rem" }}
                     key={index}
                   >
+                    <AiOutlineHeart
+                      style={{
+                        color: "black",
+                        fontSize: "35px",
+                        position: "absolute",
+                        right: 10,
+                        top: 10,
+                        backgroundColor: "#ffff",
+                        borderRadius: "50%",
+                        padding: "5px",
+                      }}
+                    />
+
+                    <AiOutlineSearch
+                      style={{
+                        color: "black",
+                        fontSize: "35px",
+                        position: "absolute",
+                        right: 10,
+                        top: 55,
+                        backgroundColor: "#ffff",
+                        borderRadius: "50%",
+                        padding: "5px",
+                      }}
+                    />
                     <img
-                      className="card-img-top"
+                      className="card-img-top cardImageBottom"
                       src={item.image}
                       alt="Card image cap"
                     />
-                    <div className="card-body">
+                    <div className="card-body cardBody">
                       <button className="btn btn-outline-primary buttonOutline">
-                        <i className="fa-solid fa-cart-arrow-down"></i> ADD TO
+                        <AiOutlineShoppingCart/> ADD TO
                         CART
                       </button>
-                      <p className="brandName">{item.brandName}</p>
-                      <p className="stock">
+                      <div >
+                        <img src={item.brandLogo} alt="" style={{width: '50px'}} />
+                      <span className="brandName">{item.brandName}</span>
+                      </div>
+                      <p className="stockAva">
                         {item.productTitle} <span>{item.stock}</span>
                       </p>
                       <span className="price">$344.40</span>{" "}
-                      <span className="oldPrice text-decuration-underline">
+                      <span className="oldPricecard text-decuration-underline">
                         $410.00
                       </span>
                     </div>
