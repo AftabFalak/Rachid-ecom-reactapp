@@ -10,7 +10,7 @@ import { FaSignInAlt } from 'react-icons/fa'
 import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 
 
-function NavbarBottom() {
+function NavbarBottom(props) {
 
   const handelOnSignup = () => {
     console.log('Signup Clicked')
@@ -37,7 +37,7 @@ function NavbarBottom() {
               <p className='signInText'>SEARCH</p>
             </a>
           </li>
-          <li className="nav-item signInLink" onClick={handelOnSignup}>
+          <li className="nav-item signInLink" onClick={props.toggleDrawer}>
             <a className="nav-link text-dark" href="#">
               <FaSignInAlt className='signInLogo' />
               <p className='signInText'>SING IN/UP</p>

@@ -1,0 +1,41 @@
+.MainDrawer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    box-shadow: 3px 4px 20px lightgray;
+    background-color: white;
+}
+
+.MainDrawer .head {
+    padding: 20px;
+}
+
+.MainDrawer .tab-btn {
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+    padding-bottom: 14px;
+}
+
+.MainDrawer .selected-tab {
+    border-bottom: 1px solid blue;
+    color: black;
+    font-weight: 500;
+}
+
+.MainDrawer .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 16px;
+    background-color: gainsboro;
+    top: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
