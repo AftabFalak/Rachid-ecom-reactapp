@@ -1,5 +1,5 @@
 .custonNavbar{
-    height: 90px;
+    height: 71px;
     overflow: hidden;
 }
 
@@ -7,7 +7,7 @@
     border-left: .5px solid rgb(222, 220, 220);
     border-right: .5px solid rgb(222, 220, 220);
     position: relative;
-    padding-top: 8px;
+    padding-top: 2px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
@@ -17,13 +17,12 @@
     transition: all .5s;
 }
 .signInLogo{
-    font-size: 25px;
+    font-size: 18px;
     color: rgb(47, 47, 47);
 }
 .signInText{
     font-size: 14px;
     color: rgb(100, 99, 99);
-    margin-top: 20px;
 }
 .CartBadge {
     background-color: #5C77FC;
