@@ -39,7 +39,7 @@ const VenderProfile = () => {
 
         <div className="vendorInfoView_bottom">
           <div className="row">
-            <div className="col-md-4 border brandInfoView">
+            <div className="col-md-4 border brandInfoView text-start">
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">Hugo Boss</h3>
                 <div>
