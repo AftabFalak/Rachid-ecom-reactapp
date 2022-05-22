@@ -44,9 +44,10 @@ const VenderProfile = () => {
 
         <div className="vendorInfoView_bottom">
           <div className="row">
-            <div className="col-md-4 border brandInfoView text-start">
+            <div className="col-md-4 brandInfoView text-start">
               <div className="d-flex justify-content-start align-items-center">
-                <h3 className="brandName mr-3">Hugo Boss</h3>
+                <h3 className="brandName mr-3">Hugo Boss Brand</h3>
+                <span className="or">|</span>
                 <div>
                   <Rating
                     onClick={handleRating}
@@ -82,7 +83,7 @@ const VenderProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 border Shipping text-start">
+            <div className="col-md-4  Shipping text-start">
               <h4 className="">stayfineofficial is a Star Seller!</h4>
               <div className="row mt-4">
                 <div className="col-md-6 mt-3">
@@ -101,7 +102,7 @@ const VenderProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 border ShopMember text-center">
+            <div className="col-md-4  ShopMember text-center">
               <h4 className="">Shop Member</h4>
 
               <div className="mt-4">

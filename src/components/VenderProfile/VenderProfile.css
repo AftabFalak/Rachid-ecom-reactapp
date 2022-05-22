@@ -48,8 +48,11 @@
 .vendorInfoView_bottom .brandInfoView .brandName {
   font-weight: 700;
   padding-right: 20px;
-  border-right: 1px solid black;
   font-size: 35px;
+  text-decoration: none;
+}
+.vendorInfoView_bottom .brandInfoView .or {
+  margin-right: 20px;
 }
 
 .vendorInfoView_bottom .brandInfoView .starRaiting {
