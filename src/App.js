@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import NavbarTop from './components/NavbarTop/NavbarTop'
@@ -6,6 +7,14 @@ import { useState } from 'react';
 import MainDrawer from './components/MainDrawer/MainDrawer';
 import { red } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+=======
+/* eslint-disable react/jsx-no-undef */
+import "./App.css";
+
+import NavbarBottom from "./components/NavbarBottom/NavbarBottom";
+
+import VenderProfile from "./components/VenderProfile/VenderProfile";
+>>>>>>> vender-profile
 
 function App() {
 
@@ -32,12 +41,20 @@ function App() {
 
   return (
     <div className="App">
+<<<<<<< HEAD
       <ThemeProvider theme={theme}>
         <NavbarBottom toggleDrawer={toggleDrawer} />
         {/* <NavbarTop/> */}
         {/* <ProductDetail /> */}
         {open.drawerOpen&&<MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />}
         </ThemeProvider>
+=======
+      <NavbarBottom />
+       
+        <VenderProfile />
+   
+
+>>>>>>> vender-profile
     </div>
   );
 }
