@@ -23,15 +23,8 @@ const VenderProfile = () => {
     <div className="VenderProfile">
       <div className="vendorInfoView">
         <div className="vendorInfoView_top">
-          {/* <img src={coverPhoto} alt="Cover Photo" className="coverImage" /> */}
           <div className="coverImage"></div>
           <div className="profilePhotoView">
-            {/* <img
-              src={profilePhoto}
-              alt="Profile Photo"
-              className="profilePhoto"
-              resizeMode={"center"}
-            /> */}
           <div className="profilePhoto"></div>
           </div>
 
@@ -109,9 +102,21 @@ const VenderProfile = () => {
             </div>
           </div>
         </div>
+
+        <div className="Announcements">
+          <h4>Announcements</h4>
+          <span>Last Updates on Feb 19, 2022</span>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum dolor fugiat esse necessitatibus sunt quis 
+            quo distinctio asperiores. Deserunt earum
+             mollitia necessitatibus quasi, qui dolore fugit cumque officiis modi!</p>
+        </div>
       </div>
     </div>
   );
 };
+
+
+
 
 export default VenderProfile;
