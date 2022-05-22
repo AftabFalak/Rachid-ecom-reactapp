@@ -1,16 +1,18 @@
-import './App.css';
-import ProductDetail from './components/ProductDetail/ProductDetail';
+/* eslint-disable react/jsx-no-undef */
+import "./App.css";
 
-import NavbarTop from './components/NavbarTop/NavbarTop'
-import NavbarBottom from './components/NavbarBottom/NavbarBottom'
+import NavbarBottom from "./components/NavbarBottom/NavbarBottom";
 
+import VenderProfile from "./components/VenderProfile/VenderProfile";
 
 function App() {
   return (
     <div className="App">
-      <NavbarBottom/>
-      {/* <NavbarTop/> */}
-      {/* <ProductDetail /> */}
+      <NavbarBottom />
+       
+        <VenderProfile />
+   
+
     </div>
   );
 }
