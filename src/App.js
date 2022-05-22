@@ -36,8 +36,8 @@ function App() {
         <NavbarBottom toggleDrawer={toggleDrawer} />
         {/* <NavbarTop/> */}
         {/* <ProductDetail /> */}
-        <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
-        ,/</ThemeProvider>
+        {open.drawerOpen&&<MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />}
+        </ThemeProvider>
     </div>
   );
 }

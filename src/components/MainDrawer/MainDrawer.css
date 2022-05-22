@@ -8,6 +8,10 @@
     background-color: white;
 }
 
+.MainDrawer .forgotPassword {
+color: #007BFF;
+}
+
 .MainDrawer .head {
     padding: 20px;
 }
