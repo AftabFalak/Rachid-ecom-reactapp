@@ -10,7 +10,7 @@ import { AiFillStar, AiOutlineInstagram } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
-import Gallery from "react-photo-gallery";
+import Masonry from 'react-masonry-css'
 import { Rating } from "react-simple-star-rating";
 
 const VenderProfile = () => {
@@ -125,7 +125,15 @@ const VenderProfile = () => {
       <div>
         <h3>Products</h3>
 
-        <Gallery photos={photos} />;
+        <Masonry
+  breakpointCols={4}
+  className="my-masonry-grid"
+  columnClassName="my-masonry-grid_column">
+ <div>My Element</div>
+  <div>My Element</div>
+  <div>My Element</div>
+  <div>My Element</div>
+</Masonry>
       </div>
     </div>
   );
