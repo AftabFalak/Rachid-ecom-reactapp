@@ -2,20 +2,32 @@
 import React, { useState } from "react";
 import "./VenderProfile.css";
 
-import profilePhoto from "../../assets/images/brand2.PNG";
-import memberProfile from "../../assets/images/memberProfile.jpg";
+// import profilePhoto from "../../assets/images/brand2.PNG";
+// import memberProfile from "../../assets/images/memberProfile.jpg";
 
 import { FaRegHandshake, FaShuttleVan } from "react-icons/fa";
 import { AiFillStar, AiOutlineInstagram } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
-
+import Gallery from "react-photo-gallery";
 import { Rating } from "react-simple-star-rating";
 
 const VenderProfile = () => {
   const [rating, setRating] = useState(0);
 
+  const photos = [
+    {
+      src: 'http://example.com/example/img1.jpg',
+      width: 4,
+      height: 3
+    },
+    {
+      src: 'http://example.com/example/img2.jpg',
+      width: 1,
+      height: 1
+    }
+  ];
   const handleRating = (rate) => {
     setRating(rate);
   };
@@ -111,6 +123,11 @@ const VenderProfile = () => {
             quo distinctio asperiores. Deserunt earum
              mollitia necessitatibus quasi, qui dolore fugit cumque officiis modi!</p>
         </div>
+      </div>
+      <div>
+        <h3>Products</h3>
+
+        <Gallery photos={photos} />;
       </div>
     </div>
   );

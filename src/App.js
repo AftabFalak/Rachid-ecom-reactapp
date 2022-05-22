@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 import './App.css';
-import ProductDetail from './components/ProductDetail/ProductDetail';
-import NavbarTop from './components/NavbarTop/NavbarTop'
 import NavbarBottom from './components/NavbarBottom/NavbarBottom'
 import { useState } from 'react';
 import MainDrawer from './components/MainDrawer/MainDrawer';
-import { red } from '@mui/material/colors';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-=======
-/* eslint-disable react/jsx-no-undef */
-import "./App.css";
 
-import NavbarBottom from "./components/NavbarBottom/NavbarBottom";
-
-import VenderProfile from "./components/VenderProfile/VenderProfile";
->>>>>>> vender-profile
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import VendorProfile from './components/VenderProfile/VenderProfile';
 
 function App() {
-
   const [open, setOpen] = useState({ drawerOpen: false })
-
-
   const setDrawerOpen = (isDrawerOpen) => {
     setOpen({
       drawerOpen: isDrawerOpen
@@ -31,30 +22,23 @@ function App() {
     setOpen((pstate) => ({ drawerOpen: !pstate.drawerOpen }))
   }
 
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: red[500],
-      },
-    },
-  });
-
   return (
     <div className="App">
-<<<<<<< HEAD
-      <ThemeProvider theme={theme}>
-        <NavbarBottom toggleDrawer={toggleDrawer} />
+      <NavbarBottom toggleDrawer={toggleDrawer} />
+      <Routes>
+        {/* <Route path="/" element={<App ≥÷/>} /> */}
+        <Route path="/product" element={<ProductDetail />} />
+        <Route path="/vendor" element={<VendorProfile/>} />
+      </Routes>
+      {/* <NavbarTop/> */}
+      {/* <ProductDetail /> */}
+
         {/* <NavbarTop/> */}
         {/* <ProductDetail /> */}
-        {open.drawerOpen&&<MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />}
-        </ThemeProvider>
-=======
-      <NavbarBottom />
-       
-        <VenderProfile />
-   
+        <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
+    
+    
 
->>>>>>> vender-profile
     </div>
   );
 }

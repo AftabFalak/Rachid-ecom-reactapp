@@ -7,7 +7,7 @@ import GoogleButton from "react-google-button";
 const MainDrawer = (props) => {
   const [tab, setTab] = useState(1);
   return (
-    <div className="MainDrawer">
+    <div className={`MainDrawer ${!props.open?'closed':''}`}>
       <div className="head">
         <h5>Sign in / Create account</h5>
         <button className="close" onClick={() => props.setDrawertoggle(false)}>
@@ -68,7 +68,7 @@ const MainDrawer = (props) => {
                   </div>
                 </div>
                 <div className="col-auto">
-                  <div className="form-check mb-2">
+                  <div className="form-check mb-1">
                     <input
                       className="form-check-input  rounded-0"
                       type="checkbox"
@@ -81,7 +81,7 @@ const MainDrawer = (props) => {
                 </div>
                 
                 <div className="col-auto">
-                  <div className="form-check mb-2  text-center">
+                  <div className="form-check mb-0  text-center">
                     <a
                       className="form-check-label forgotPassword cursor-pointer btn outline-none border-0"
                       for="autoSizingCheck"
@@ -99,7 +99,10 @@ const MainDrawer = (props) => {
                   </button>
                 </div>
                 <div className="col-auto">
-
+<div className="text-center divider">
+  <div className="line"></div>
+<p className="text">Or sign in via</p>
+</div>
                 <GoogleButton
                   onClick={() => {
                     console.log("Google button clicked");

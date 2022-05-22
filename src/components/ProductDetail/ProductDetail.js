@@ -25,7 +25,7 @@ import {
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProductDetail = () => {
-  const { check, setCheck } = useState(false);
+  // const { check, setCheck } = useState(false);
   const { count, setCount } = useState(0);
 
   const cards = [
@@ -132,7 +132,7 @@ const ProductDetail = () => {
             <span className="offer">50% Off</span>
             <h1 className="price">$87.00</h1>
             <div className="colorSelection d-flex">
-              <div className="circle yellow" onClick={() => setCheck(true)}>
+              <div className="circle yellow" >
                 {true ? <i className="fa fa-check check"></i> : ""}
               </div>
               <div className="circle white">
