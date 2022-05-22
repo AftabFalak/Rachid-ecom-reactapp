@@ -12,10 +12,80 @@ import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
 import Masonry from 'react-masonry-css'
 import { Rating } from "react-simple-star-rating";
-
+import m2 from '../../assets/images/2.jpg'
+import m3 from '../../assets/images/3.jpg'
+import m4 from '../../assets/images/4.jpg'
+import m5 from '../../assets/images/5.jpg'
+import m6 from '../../assets/images/6.jpg'
+import m7 from '../../assets/images/7.jpg'
+import m8 from '../../assets/images/7.jpg'
+import m9 from '../../assets/images/9.jpg'
 const VenderProfile = () => {
   const [rating, setRating] = useState(0);
 
+  const items=[
+
+    {
+      img:m2,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m4,
+    },
+    {
+      img:m5,
+    },
+    {
+      img:m6,
+    },
+    {
+      img:m7,
+    },
+    {
+      img:m8,
+    },
+    {
+      img:m9,
+    },
+    {
+      img:m2,
+    },
+    {
+      img:m6,
+    },  {
+      img:m2,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m4,
+    },
+    {
+      img:m5,
+    },
+    {
+      img:m6,
+    },
+    {
+      img:m7,
+    },
+    {
+      img:m8,
+    },
+    {
+      img:m9,
+    },
+
+  ]
   const photos = [
     {
       src: 'http://example.com/example/img1.jpg',
@@ -129,10 +199,10 @@ const VenderProfile = () => {
   breakpointCols={4}
   className="my-masonry-grid"
   columnClassName="my-masonry-grid_column">
- <div>My Element</div>
-  <div>My Element</div>
-  <div>My Element</div>
-  <div>My Element</div>
+ 
+ {items.map(d=>{
+  return <div className=""> <img width={"100%"} src={d.img}/></div>
+ })}
 </Masonry>
       </div>
     </div>
