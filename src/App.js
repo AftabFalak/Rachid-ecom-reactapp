@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import VendorProfile from './components/VenderProfile/VenderProfile';
+import StoreList from './pages/store-list';
 
 function App() {
   const [open, setOpen] = useState({ drawerOpen: false })
@@ -29,6 +30,7 @@ function App() {
         {/* <Route path="/" element={<App ≥÷/>} /> */}
         <Route path="/product" element={<ProductDetail />} />
         <Route path="/vendor" element={<VendorProfile/>} />
+        <Route path="/store-list" element={<StoreList/>} />
       </Routes>
       {/* <NavbarTop/> */}
       {/* <ProductDetail /> */}

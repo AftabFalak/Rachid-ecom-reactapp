@@ -10,7 +10,6 @@ import { AiFillStar, AiOutlineInstagram } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
-import Masonry from 'react-masonry-css'
 import { Rating } from "react-simple-star-rating";
 import m2 from '../../assets/images/2.jpg'
 import m3 from '../../assets/images/3.jpg'
@@ -20,69 +19,71 @@ import m6 from '../../assets/images/6.jpg'
 import m7 from '../../assets/images/7.jpg'
 import m8 from '../../assets/images/7.jpg'
 import m9 from '../../assets/images/9.jpg'
+import Gallery from "../Gallery";
+import Annoucements from "../Announcements";
 const VenderProfile = () => {
   const [rating, setRating] = useState(0);
 
-  const items=[
+  const items = [
 
     {
-      img:m2,
+      img: m2,
     },
     {
-      img:m3,
+      img: m3,
     },
     {
-      img:m3,
+      img: m3,
     },
     {
-      img:m4,
+      img: m4,
     },
     {
-      img:m5,
+      img: m5,
     },
     {
-      img:m6,
+      img: m6,
     },
     {
-      img:m7,
+      img: m7,
     },
     {
-      img:m8,
+      img: m8,
     },
     {
-      img:m9,
+      img: m9,
     },
     {
-      img:m2,
+      img: m2,
     },
     {
-      img:m6,
-    },  {
-      img:m2,
+      img: m6,
+    }, {
+      img: m2,
     },
     {
-      img:m3,
+      img: m3,
     },
     {
-      img:m3,
+      img: m3,
     },
     {
-      img:m4,
+      img: m4,
     },
     {
-      img:m5,
+      img: m5,
     },
     {
-      img:m6,
+      img: m6,
     },
     {
-      img:m7,
+      img: m7,
     },
     {
-      img:m8,
+      img: m8,
     },
     {
-      img:m9,
+      img: m9,
     },
 
   ]
@@ -103,25 +104,25 @@ const VenderProfile = () => {
   };
   return (
     <div className="VenderProfile">
-      <div className="vendorInfoView">
-        <div className="vendorInfoView_top">
+      <div className="vendorInfoView"  style={{backgroundColor:"#F8F8F8"}}>
+        <div className="vendorInfoView_top" >
           {/* <img src={coverPhoto} alt="Cover Photo" className="coverImage" /> */}
           <div className="coverImage"></div>
-          <div className="profilePhotoView">
+          <div className="profilePhotoView" >
             {/* <img
               src={profilePhoto}
               alt="Profile Photo"
               className="profilePhoto"
               resizeMode={"center"}
             /> */}
-          <div className="profilePhoto"></div>
+            <div className="profilePhoto"></div>
           </div>
 
         </div>
 
         <div className="vendorInfoView_bottom">
-          <div className="row">
-            <div className="col-md-4 border brandInfoView text-start">
+          <div className="row" style={{backgroundColor:"#F8F8F8"}}>
+            <div className="col-md-4 brandInfoView text-start">
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">Hugo Boss</h3>
                 <div>
@@ -159,7 +160,7 @@ const VenderProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 border Shipping text-start">
+            <div className="col-md-4  Shipping text-start">
               <h4 className="">stayfineofficial is a Star Seller!</h4>
               <div className="row mt-4">
                 <div className="col-md-6 mt-3">
@@ -178,7 +179,7 @@ const VenderProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 border ShopMember text-center">
+            <div className="col-md-4  ShopMember text-center">
               <h4 className="">Shop Member</h4>
 
               <div className="mt-4">
@@ -190,21 +191,10 @@ const VenderProfile = () => {
               </div>
             </div>
           </div>
+          <Annoucements/>
         </div>
       </div>
-      <div>
-        <h3>Products</h3>
-
-        <Masonry
-  breakpointCols={4}
-  className="my-masonry-grid"
-  columnClassName="my-masonry-grid_column">
- 
- {items.map(d=>{
-  return <div className=""> <img width={"100%"} src={d.img}/></div>
- })}
-</Masonry>
-      </div>
+    <Gallery cards={items}/>
     </div>
   );
 };

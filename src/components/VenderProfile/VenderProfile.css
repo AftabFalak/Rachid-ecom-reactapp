@@ -42,56 +42,56 @@
   padding-left: 20px;
 }
 
-.vendorInfoView_bottom .brandInfoView {
+.VenderProfile .vendorInfoView_bottom .brandInfoView {
   text-align: left;
 }
-.vendorInfoView_bottom .brandInfoView .brandName {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .brandName {
   font-weight: 700;
   padding-right: 20px;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
   font-size: 35px;
 }
 
-.vendorInfoView_bottom .brandInfoView .starRaiting {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .starRaiting {
   margin-right: 15px;
 }
 
-.vendorInfoView_bottom .brandInfoView .raitingPoint {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
   font-size: 20px;
   font-weight: 500;
 }
 
-.vendorInfoView_bottom .brandInfoView .handShakeRaiting {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .handShakeRaiting {
   display: inline-block;
   margin-right: 15px;
 
 }
-.vendorInfoView_bottom .brandInfoView .raitingPoint {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
   font-size: 18px;
 }
-.vendorInfoView_bottom .handShakeIcon {
+.VenderProfile .vendorInfoView_bottom .handShakeIcon {
   font-size: 22px;
   margin-left: 4px;
 }
-.vendorInfoView_bottom .handShakePoint {
+.VenderProfile .vendorInfoView_bottom .handShakePoint {
     font-size: 14px;
 }
-.vendorInfoView_bottom .brandInfoView .brandDescription {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .brandDescription {
   font-size: 18px;
   margin-top: 5px;
 }
 
-.vendorInfoView_bottom .brandInfoView .venderSales {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales {
   font-size: 22px;
   margin-top: 5px;
 }
-.vendorInfoView_bottom .brandInfoView .venderSales_left {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales_left {
   margin-top: 5px;
   font-size: 22px;
   padding-left: 10px;
 }
 
-.vendorInfoView_bottom .brandInfoView .venderSales_right {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales_right {
   font-size: 22px;
   margin-top: 5px;
   margin-left: 20px;
@@ -136,21 +136,3 @@
 }
 
 
-
-.my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
-}
-.my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
-}
-
-/* Style your items */
-.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  background: grey;
-  margin-bottom: 30px;
-} 
