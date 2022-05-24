@@ -12,9 +12,7 @@ import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 
 function NavbarBottom(props) {
 
-  const handelOnSignup = () => {
-    console.log('Signup Clicked')
-  }
+
   return (
     <nav className="navbar navbar-expand-lg shadow p-0 custonNavbar">
 

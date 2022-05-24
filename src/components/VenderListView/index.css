@@ -1,0 +1,59 @@
+.VendorListView {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.VendorListView .vendorInfoView {
+  width: 100%;
+}
+.vendorInfoView hr{
+  margin: 5px;
+}
+.VendorListView .vendorInfoView .vendorInfoView_top {
+  position: relative;
+}
+
+.VendorListView .vendorInfoView .vendorInfoView_top .coverImage {
+  width: 100%;
+  height: 100px;
+  background-image: url("../../assets//images/venderCoverPhotoavif.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.VendorListView .vendorInfoView .vendorInfoView_top .profilePhotoView {
+  position: absolute;
+  margin: auto;
+  transform: translate(-50% ,0%);
+  left: 50%;
+  text-align: center;
+  bottom: -35px;
+  overflow: hidden;
+}
+
+.VendorListView .vendorInfoView .vendorInfoView_top .profilePhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  border: 2px solid black;
+  background-image: url("../../assets/images/brand2.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.VendorListView a{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all .5s;
+}
+.VendorListView a:hover{
+  opacity: 0.5;
+}

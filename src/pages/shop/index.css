@@ -1,0 +1,8 @@
+ .productDropDownsView{
+    margin: 15px 0px;
+  }
+ .productsDropDowns{
+  padding: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+}
