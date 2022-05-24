@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <NavbarBottom toggleDrawer={toggleDrawer} />
       <Routes>
-        {/* <Route path="/" element={<App ≥÷/>} /> */}
+        <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
         <Route path="/vendor" element={<VendorProfile/>} />
       </Routes>

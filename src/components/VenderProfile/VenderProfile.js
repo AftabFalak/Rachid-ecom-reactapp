@@ -10,12 +10,82 @@ import { AiFillStar, AiOutlineInstagram } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
-import Gallery from "react-photo-gallery";
+import Masonry from 'react-masonry-css'
 import { Rating } from "react-simple-star-rating";
-
+import m2 from '../../assets/images/2.jpg'
+import m3 from '../../assets/images/3.jpg'
+import m4 from '../../assets/images/4.jpg'
+import m5 from '../../assets/images/5.jpg'
+import m6 from '../../assets/images/6.jpg'
+import m7 from '../../assets/images/7.jpg'
+import m8 from '../../assets/images/7.jpg'
+import m9 from '../../assets/images/9.jpg'
 const VenderProfile = () => {
   const [rating, setRating] = useState(0);
 
+  const items=[
+
+    {
+      img:m2,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m4,
+    },
+    {
+      img:m5,
+    },
+    {
+      img:m6,
+    },
+    {
+      img:m7,
+    },
+    {
+      img:m8,
+    },
+    {
+      img:m9,
+    },
+    {
+      img:m2,
+    },
+    {
+      img:m6,
+    },  {
+      img:m2,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m3,
+    },
+    {
+      img:m4,
+    },
+    {
+      img:m5,
+    },
+    {
+      img:m6,
+    },
+    {
+      img:m7,
+    },
+    {
+      img:m8,
+    },
+    {
+      img:m9,
+    },
+
+  ]
   const photos = [
     {
       src: 'http://example.com/example/img1.jpg',
@@ -35,8 +105,15 @@ const VenderProfile = () => {
     <div className="VenderProfile">
       <div className="vendorInfoView">
         <div className="vendorInfoView_top">
+          {/* <img src={coverPhoto} alt="Cover Photo" className="coverImage" /> */}
           <div className="coverImage"></div>
           <div className="profilePhotoView">
+            {/* <img
+              src={profilePhoto}
+              alt="Profile Photo"
+              className="profilePhoto"
+              resizeMode={"center"}
+            /> */}
           <div className="profilePhoto"></div>
           </div>
 
@@ -115,26 +192,22 @@ const VenderProfile = () => {
             </div>
           </div>
         </div>
-
-        <div className="Announcements">
-          <h4>Announcements</h4>
-          <span>Last Updates on Feb 19, 2022</span>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum dolor fugiat esse necessitatibus sunt quis 
-            quo distinctio asperiores. Deserunt earum
-             mollitia necessitatibus quasi, qui dolore fugit cumque officiis modi!</p>
-        </div>
       </div>
       <div>
         <h3>Products</h3>
 
-        <Gallery photos={photos} />;
+        <Masonry
+  breakpointCols={4}
+  className="my-masonry-grid"
+  columnClassName="my-masonry-grid_column">
+ 
+ {items.map(d=>{
+  return <div className=""> <img width={"100%"} src={d.img}/></div>
+ })}
+</Masonry>
       </div>
     </div>
   );
 };
-
-
-
 
 export default VenderProfile;
