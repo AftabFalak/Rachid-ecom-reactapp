@@ -5,124 +5,156 @@ import "./VenderProfile.css";
 // import profilePhoto from "../../assets/images/brand2.PNG";
 // import memberProfile from "../../assets/images/memberProfile.jpg";
 
-import { FaRegHandshake, FaShuttleVan } from "react-icons/fa";
-import { AiFillStar, AiOutlineInstagram,AiOutlineHeart  } from "react-icons/ai";
+import {  FaShuttleVan } from "react-icons/fa";
+import { AiFillStar, AiOutlineInstagram, AiOutlineHeart } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
 
 import { Rating } from "react-simple-star-rating";
-import m2 from '../../assets/images/2.jpg'
-import m3 from '../../assets/images/3.jpg'
-import m4 from '../../assets/images/4.jpg'
-import m5 from '../../assets/images/5.jpg'
-import m6 from '../../assets/images/6.jpg'
-import m7 from '../../assets/images/7.jpg'
-import m8 from '../../assets/images/7.jpg'
-import m9 from '../../assets/images/9.jpg'
+import m2 from "../../assets/images/ProductList/2.jpg";
+import m3 from "../../assets/images/ProductList/3.jpg";
+import m4 from "../../assets/images/ProductList/4.jpg";
+import m5 from "../../assets/images/ProductList/5.jpg";
+import m6 from "../../assets/images/ProductList/6.jpg";
+import m7 from "../../assets/images/ProductList/7.jpg";
+import m8 from "../../assets/images/ProductList/7.jpg";
+import m9 from "../../assets/images/ProductList/9.jpg";
 import Gallery from "../Gallery";
 import Annoucements from "../Announcements";
 export const items = [
   {
+    favorite: true,
+    category: "jacket",
     img: m2,
   },
   {
+    favorite: true,
+    category: "shirt",
     img: m3,
   },
   {
+    favorite: true,
+    category: "shirt",
     img: m3,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m4,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m5,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m6,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m7,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m8,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m9,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m2,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m6,
-  }, {
+  },
+  {
     img: m2,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m3,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m3,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m4,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m5,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m6,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m7,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m8,
   },
   {
+    favorite: true,
+    category: "bag",
     img: m9,
   },
-
 ];
 const VenderProfile = () => {
   const [rating, setRating] = useState(0);
 
-
   const photos = [
     {
-      src: 'http://example.com/example/img1.jpg',
+      src: "http://example.com/example/img1.jpg",
       width: 4,
-      height: 3
+      height: 3,
     },
     {
-      src: 'http://example.com/example/img2.jpg',
+      src: "http://example.com/example/img2.jpg",
       width: 1,
-      height: 1
-    }
+      height: 1,
+    },
   ];
   const handleRating = (rate) => {
     setRating(rate);
   };
   return (
     <div className="VenderProfile">
-      <div className="vendorInfoView"  style={{backgroundColor:"#F8F8F8"}}>
-        <div className="vendorInfoView_top" >
-          {/* <img src={coverPhoto} alt="Cover Photo" className="coverImage" /> */}
+      <div className="vendorInfoView" style={{ backgroundColor: "#F8F8F8" }}>
+        <div className="vendorInfoView_top">
           <div className="coverImage"></div>
-          <div className="profilePhotoView" >
-            {/* <img
-              src={profilePhoto}
-              alt="Profile Photo"
-              className="profilePhoto"
-              resizeMode={"center"}
-            /> */}
+          <div className="profilePhotoView">
             <div className="profilePhoto"></div>
           </div>
-
         </div>
 
         <div className="vendorInfoView_bottom">
-          <div className="row" style={{backgroundColor:"#F8F8F8"}}>
+          <div
+            className="row"
+            style={{ backgroundColor: "#F8F8F8", paddingBottom: "20px" }}
+          >
             <div className="col-md-4 brandInfoView text-start">
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">Hugo Boss Brand</h3>
@@ -136,15 +168,6 @@ const VenderProfile = () => {
                     className="starRaiting"
                   />
                   <span className="raitingPoint">(250)</span>
-                  <br />
-                  <div className="handShakeRaiting">
-                    <FaRegHandshake className="handShakeIcon" />
-                    <FaRegHandshake className="handShakeIcon" />
-                    <FaRegHandshake className="handShakeIcon" />
-                    <FaRegHandshake className="handShakeIcon" />
-                    <FaRegHandshake className="handShakeIcon" />
-                  </div>
-                  <span className="handShakePoint">(150)</span>
                 </div>
               </div>
 
@@ -161,7 +184,11 @@ const VenderProfile = () => {
                   <span>40,284 sales |</span>
                 </div>
               </div>
-              <button className="followBrandButton"> <AiOutlineHeart className="FollowIconHeart"/> Follow Brand (2.5k)</button>
+              <button className="followBrandButton">
+                {" "}
+                <AiOutlineHeart className="FollowIconHeart" /> Follow Brand
+                (2.5k)
+              </button>
             </div>
             <div className="col-md-4  Shipping text-start">
               <h4 className="">stayfineofficial is a Star Seller!</h4>
@@ -194,10 +221,10 @@ const VenderProfile = () => {
               </div>
             </div>
           </div>
-          <Annoucements/>
         </div>
+        <Annoucements />
       </div>
-    <Gallery cards={items} heading={"Products"} />
+      <Gallery cards={items} heading={"Products"} />
     </div>
   );
 };

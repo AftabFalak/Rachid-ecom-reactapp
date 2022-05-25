@@ -28,7 +28,7 @@
 .VenderProfile .vendorInfoView .vendorInfoView_top .coverImage {
   width: 100%;
   height: 35vh;
-  background-image: url("../../assets//images/venderCoverPhotoavif.avif");
+  background-image: url("../../assets//images/VenderCover/venderCoverPhotoavif.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   height: 180px;
   border-radius: 100px;
   border: 2px solid black;
-  background-image: url("../../assets/images/brand2.PNG");
+  background-image: url("../../assets/images/VendorProfile/brand2.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

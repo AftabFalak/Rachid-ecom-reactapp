@@ -2,24 +2,33 @@
 import React from "react";
 import "./index.css";
 
-const VendorListView = () => {
+const VendorListView = ({VendorList}) => {
   return (
-    <div className="VendorListView">
+    <>
+    {VendorList.map((item,index)=>{
+      return(
+        <div className="VendorListView">
       <div className="vendorInfoView" style={{ backgroundColor: "#F8F8F8" }}>
         <div className="vendorInfoView_top">
-          <div className="coverImage"></div>
+          <img src={item.coverImage} alt="" className="coverImage"/>
           <div className="profilePhotoView">
-            <div className="profilePhoto"></div>
+          <img src={item.profileImage} className="profilePhoto" alt=""/>
+
           </div>
         </div>
         <div className="mt-5 text-center p-1">
-          <h3>Brand Name</h3>
+          <h3>{item.brandName}</h3>
           <hr />
-          <p>Finest engraved wood watch for your loved ones.</p>
+          <p>{item.brandDescription}</p>
           <a href="/vendor" className="VisitStoreNumber">Visit Store</a>
         </div>
       </div>
     </div>
+      )
+    
+    })}
+    </>
+    
   );
 };
 

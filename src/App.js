@@ -34,7 +34,7 @@ function App() {
         <Route path="/product" element={<ProductDetail />} />
         <Route path="/vendor" element={<VendorProfile/>} />
         <Route path="/store-list" element={<StoreList/>} />
-        <Route path="/shop" element={<Shop open={open.drawerOpen} setDrawertoggle={setDrawerOpen}/>} toggleDrawer={toggleDrawer}/>
+        <Route path="/shop" element={<Shop/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
 
 

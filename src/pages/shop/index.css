@@ -1,4 +1,7 @@
- .productDropDownsView{
+.Shop {
+  position: relative;
+}
+.productDropDownsView{
     margin: 15px 0px;
   }
  .productsDropDowns{

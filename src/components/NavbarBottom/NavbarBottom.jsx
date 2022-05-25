@@ -2,7 +2,7 @@
 import React from 'react';
 import './NavbarBottom.css';
 
-import navbarLogo from '../../assets/images/navbarLogo.png'
+import navbarLogo from '../../assets/images/MainLogo/navbarLogo.png'
 
 
 import { FaSignInAlt } from 'react-icons/fa'

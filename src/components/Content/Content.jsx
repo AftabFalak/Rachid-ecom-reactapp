@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import productImage from '../../assets/images/brand.png';
-import productImage1 from '../../assets/images/bag.PNG';
-import productImage2 from '../../assets/images/shoe.PNG';
-import productImage3 from '../../assets/images/ring.PNG';
+import productImage from '../../assets/images/ProductCardImage/brand.png';
+import productImage1 from '../../assets/images/ProductCardImage/bag.PNG';
+import productImage2 from '../../assets/images/ProductCardImage/shoe.PNG';
+import productImage3 from '../../assets/images/ProductCardImage/ring.PNG';
 
 import './Content.css';
 function Content() {
@@ -30,7 +30,7 @@ function Content() {
         <div style={{ border: '2px solid black' }} className="col-4 p-5 mx-4 ">
           <div className="row ">
             <div className="col-6">
-              <img src={require('../../assets/images/brand2.PNG')} alt="" />
+              <img src={require('../../assets/images/VendorProfile/brand2.PNG')} alt="" />
             </div>
             <div className="col-6">
               <p> i am image</p>
@@ -39,7 +39,7 @@ function Content() {
           </div>
           <div className="row ">
             <div className="col-6">
-              <img src={require('../../assets/images/brand2.PNG')} alt="" />
+              <img src={require('../../assets/images/VendorProfile/brand2.PNG')} alt="" />
             </div>
             <div className="col-6">
               <p> i am image</p>
@@ -48,7 +48,7 @@ function Content() {
           </div>
           <div className="row">
             <div className="col-6">
-              <img src={require('../../assets/images/brand2.PNG')} alt="" />
+              <img src={require('../../assets/images/VendorProfile/brand2.PNG')} alt="" />
             </div>
             <div className="col-6">
               <p> i am image</p>

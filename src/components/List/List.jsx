@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
-import pic1 from '../../assets/images/bag.PNG';
-import pic2 from '../../assets/images/brand.png';
-import pic3 from '../../assets/images/ring.PNG';
-import pic4 from '../../assets/images/shoe.PNG';
+import pic1 from '../../assets/images/ProductCardImage/bag.PNG';
+import pic2 from '../../assets/images/ProductCardImage/brand.png';
+import pic3 from '../../assets/images/ProductCardImage/ring.PNG';
+import pic4 from '../../assets/images/ProductCardImage/shoe.PNG';
 
 function List() {
   const cards = [

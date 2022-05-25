@@ -6,18 +6,21 @@ const Gallery = ({ cards, heading }) => {
   return (
     <div className="Gallery">
       <h3>{heading}</h3>
-      {/* <div className="d-flex justify-content-between productDropDownsView">
-        <select name="cars" id="cars" className="productsDropDowns" disabled={staticFilter ? false : true} >
-          <option value="volvo">Search by Category</option>
-          <option value="mercedes">Mercedes</option>
+      <div className="d-flex justify-content-between productDropDownsView">
+        <select name="categoryFilter"  className="productsDropDowns"  >
+          <option selected disabled hidden>Search by Category</option>
+          <option value="mercedes">All</option>
+          <option value="mercedes">Jackets</option>
+          <option value="mercedes">Bag</option>
+          <option value="mercedes">Shoe</option>
         </select>
 
         <select name="cars" id="cars" className="productsDropDowns">
-          <option value="volvo">Sort by: 
+          <option selected disabled hidden>Sort by: 
           Relevency</option>
           <option value="audi">Audi</option>
         </select>
-      </div> */}
+      </div>
 
       <Masonry
         breakpointCols={4}

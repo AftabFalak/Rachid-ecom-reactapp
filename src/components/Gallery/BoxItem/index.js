@@ -4,8 +4,8 @@ const BoxItem = ({item}) => {
   return (
     <div className="BoxItem"> 
     <div className='buttons'>
-        <span><i  className='fa fa-heart'></i></span>
-        <span className='icon'><i  className='fa fa-cart-plus'></i></span>
+        <span ><i  className='fa fa-cart-plus'></i></span>
+        <span className='icon'><i  className='fa fa-heart'></i></span>
         <span className='icon'><i  className='fa fa-search'></i></span>
     </div>
     <div  className='textArea'>

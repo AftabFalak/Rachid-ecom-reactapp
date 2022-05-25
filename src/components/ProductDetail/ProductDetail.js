@@ -5,12 +5,12 @@
 import React, { useState } from "react";
 import "./ProductDetail.css";
 
-import productImage from "../../assets/images/brand.png";
-import card1 from "../../assets/images/shoe.PNG";
-import card2 from "../../assets/images/ring.PNG";
-import card3 from "../../assets/images/bag.PNG";
+import productImage from "../../assets/images/ProductCardImage/brand.png";
+import card1 from "../../assets/images/ProductCardImage/shoe.PNG";
+import card2 from "../../assets/images/ProductCardImage/ring.PNG";
+import card3 from "../../assets/images/ProductCardImage/bag.PNG";
 
-import brandLogo from "../../assets/images/brand2.PNG";
+import brandLogo from "../../assets/images/VendorProfile/brand2.PNG";
 
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineGooglePlus } from "react-icons/ai";

@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin-bottom: 10px;
   cursor: pointer;
+  border: 2px solid gray;
+  padding-bottom: 10px;
 }
 
 .VendorListView .vendorInfoView {
@@ -17,7 +19,7 @@
 .VendorListView .vendorInfoView .vendorInfoView_top .coverImage {
   width: 100%;
   height: 100px;
-  background-image: url("../../assets//images/venderCoverPhotoavif.avif");
+  background-image: url("../../assets//images/VenderCover/venderCoverPhotoavif.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,7 +40,7 @@
   height: 80px;
   border-radius: 100px;
   border: 2px solid black;
-  background-image: url("../../assets/images/brand2.PNG");
+  background-image: url("../../assets/images/VendorProfile/brand2.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
