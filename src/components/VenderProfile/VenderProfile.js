@@ -122,7 +122,7 @@ export const items = [
     img: m9,
   },
 ];
-const VenderProfile = () => {
+const VenderProfile = ({vendor}) => {
   const [rating, setRating] = useState(0);
 
   const photos = [
@@ -144,7 +144,7 @@ const VenderProfile = () => {
     <div className="VenderProfile">
       <div className="vendorInfoView" style={{ backgroundColor: "#F8F8F8" }}>
         <div className="vendorInfoView_top">
-          <div className="coverImage"></div>
+          <div className="coverImage" style={{backgroundImage:`url('${vendor.coverImage}')`}}></div>
           <div className="profilePhotoView">
             <div className="profilePhoto"></div>
           </div>
@@ -157,7 +157,7 @@ const VenderProfile = () => {
           >
             <div className="col-md-4 brandInfoView text-start">
               <div className="d-flex justify-content-start align-items-center">
-                <h3 className="brandName mr-3">Hugo Boss Brand</h3>
+                <h3 className="brandName mr-3">{vendor.brandName}</h3>
                 <span className="or">|</span>
                 <div>
                   <Rating

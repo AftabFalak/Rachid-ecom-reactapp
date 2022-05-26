@@ -1,0 +1,29 @@
+.store-list {
+    display: flex;
+}
+
+.store-list .vendor-list {
+
+    overflow-y: scroll;
+    max-width: 400px;
+    width: 30%;
+    display: inline-block;
+    height: calc(100vh - 70px);
+
+}
+
+.store-list .vendor-view {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+
+}
+
+.store-list .vendor-view .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

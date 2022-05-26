@@ -32,21 +32,33 @@ function App() {
       <Routes>
         <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
-        <Route path="/vendor" element={<VendorProfile/>} />
-        <Route path="/store-list" element={<StoreList/>} />
-        <Route path="/shop" element={<Shop/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/vendor" element={<VendorProfile vendor={ {
+    id: 1,
+    brandName: 'Outfitter',
+    brandDescription: 'Finest engraved wood watch for your love ones.',
+    profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
+    coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif')
+  }} />} />
+        <Route></Route>
+
+        <Route path="/store-list">
+          <Route index element={<StoreList />} />
+          <Route path=":id" element={<StoreList />} />
+        </Route>
+     
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
 
       </Routes>
       {/* <NavbarTop/> */}
       {/* <ProductDetail /> */}
 
-        {/* <NavbarTop/> */}
-        {/* <ProductDetail /> */}
-        <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
-    
-    
+      {/* <NavbarTop/> */}
+      {/* <ProductDetail /> */}
+      <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
+
+
 
     </div>
   );

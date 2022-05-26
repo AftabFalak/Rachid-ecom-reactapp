@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import VendorListView from '../../components/VenderListView'
 import VenderProfile from '../../components/VenderProfile/VenderProfile'
-
-export const VendorList = [
+import './index.css'
+export const vendorList = [
   {
     id: 1,
     brandName: 'Outfitter',
@@ -23,7 +24,15 @@ export const VendorList = [
     brandDescription: 'Shop your Dreams',
     profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
     coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif')
+  },
+  {
+    id: 4,
+    brandName: 'JDot',
+    brandDescription: 'Shop Online',
+    profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
+    coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif')
   }
+
 ]
 
 
@@ -32,15 +41,31 @@ const onClickVenderHandel = () => {
 }
 
 const StoreList = () => {
+  const [vendor, setVendor] = useState(null);
+  const { id } = useParams()
+
+  useEffect(() => {
+
+    if (id) {
+      const index = vendorList.findIndex(f => f.id == id)
+      if (index != -1) {
+      setVendor(vendorList[index])
+         
+      }
+    }
+  }, [id])
   return (
-    <div className='row'>
+    <div className='store-list'>
 
-        <div className='col-md-2'>
-            <VendorListView VendorList={VendorList} onClick={onClickVenderHandel}/>
-        </div>
+      <div className='vendor-list'>
+        <VendorListView VendorList={vendorList}  onClick={onClickVenderHandel} />
+      </div>
 
-        <div className='col-md-10'>
-            <VenderProfile/>
+      <div className='vendor-view'>
+        {vendor ? <VenderProfile vendor={vendor} /> :
+          <div className='center-text'>
+            <h3>Select vendor's name to preview their profiles</h3>
+          </div>}
         </div>
     </div>
   )
