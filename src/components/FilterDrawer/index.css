@@ -1,0 +1,108 @@
+.FilterDrawer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    box-shadow: 3px 4px 20px lightgray;
+    background-color: white;
+    transition: right 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.25s,box-shadow 0.3s 0.25s,-webkit-box-shadow 0.3s 0.25s;
+z-index: 5  ;
+overflow: hidden;
+}
+
+.FilterDrawer .forgotPassword {
+color: #007BFF;
+}
+
+.closed{
+    left: -350px;
+}
+.FilterDrawer .head {
+    padding: 20px;
+}
+
+.FilterDrawer .tab-btn {
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+    padding-bottom: 14px;
+}
+
+.FilterDrawer .selected-tab {
+    border-bottom: 1px solid blue;
+    color: black;
+    font-weight: 500;
+}
+
+.FilterDrawer .divider{
+    position: relative;
+    height: 20px;
+    margin: 20px  0px;
+    
+}
+.FilterDrawer .divider .line{
+    height: 1px;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%; margin-top: 12 px;
+    /* margin-top: 50%÷≥; */
+}
+
+.FilterDrawer .text{
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+
+}
+.FilterDrawer .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 16px;
+    background-color: gainsboro;
+    top: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.FilterDrawer .fix-bottom{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    width: 330px;
+}
+
+.FilterDrawer .fix-bottom button{
+    flex: 1;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.FilterDrawer .fix-bottom .btn-black{
+    background-color: black;
+    color: white;
+}
+
+.FilterDrawer .btn-category{
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid black;
+    position: relative;
+    text-align: left;
+    padding: 5px 10px;
+}
+ 
+.FilterDrawer .btn-category span{
+    float: right;
+}

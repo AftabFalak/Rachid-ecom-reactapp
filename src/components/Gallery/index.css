@@ -30,3 +30,11 @@
 }
 
 
+.btn-filters{
+
+
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 10px;
+  width: 130px;
+}

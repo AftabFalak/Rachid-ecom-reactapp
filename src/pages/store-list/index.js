@@ -45,12 +45,10 @@ const StoreList = () => {
   const { id } = useParams()
 
   useEffect(() => {
-
     if (id) {
       const index = vendorList.findIndex(f => f.id == id)
       if (index != -1) {
       setVendor(vendorList[index])
-         
       }
     }
   }, [id])
