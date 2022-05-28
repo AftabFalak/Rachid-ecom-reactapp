@@ -51,11 +51,7 @@ function App() {
 
 
       </Routes>
-      {/* <NavbarTop/> */}
-      {/* <ProductDetail /> */}
-
-      {/* <NavbarTop/> */}
-      {/* <ProductDetail /> */}
+     
       <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
 
 
