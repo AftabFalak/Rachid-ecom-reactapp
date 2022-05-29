@@ -3,77 +3,14 @@ import React, { useState } from "react";
 import "./index.css";
 
 import { BsArrowLeft } from "react-icons/bs";
-const FilterDrawer = ({ open, drawertoggle, filters }) => {
+const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
 
-  const allCategorie = [
-    {
-      categorie: "Home & Living",
-      subCategorie: [{ categorie: "Home Doctor" }, { categorie: "Kitchen & Dining" }, { categorie: "Bedding" }],
-    },
-    {
-      categorie: "Clothing",
-      subCategorie: [{ categorie: "Women's Clothing" }, { categorie: "Men's Clothing" }, { categorie: "Girls Clothing" }],
-    },
-    {
-      categorie: "Art & Collectibles",
-      subCategorie: [{ categorie: "Print" }, { categorie: "Painting" }, { categorie: "Glass Art" }],
-    },
-    {
-      categorie: "Jewellery",
-      subCategorie: [{ categorie: "Ring" }, { categorie: "Watches" }, { categorie: "Earrings" }],
-    },
-    {
-      categorie: "Accessories",
-      subCategorie: [{ categorie: "Belts & Braces" }, { categorie: "Suits & Lanyards" }, { categorie: "Baby Accessories" }],
-    },
-    {
-      categorie: "Craft Supplies & Tools",
-      subCategorie: [{ categorie: "Home & Hobby" }, { categorie: "Jewellery & Beuty" }, { categorie: "Visual Arts" }],
-    },
-    {
-      categorie: "Bags & Purses",
-      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" },{ categorie: "Electronics Cases" }],
-    },
-    {
-      categorie: "Paper & Party Supplies",
-      subCategorie: [{ categorie: "Paper" }, { categorie: "Party Supplies" }],
-    },
-    {
-      categorie: "Weddings",
-      subCategorie: [{ categorie: "Accessories" }, { categorie: "Decoration" }, { categorie: "Jewellery" }],
-    },
-    {
-      categorie: "Toys & Games",
-      subCategorie: [{ categorie: "Toys" }, { categorie: "Games & Puzzle" }, { categorie: "Sports" }],
-    },
-    {
-      categorie: "Books, Films & Music",
-      subCategorie: [{ categorie: "Books" }, { categorie: "Music" }],
-    },
-    {
-      categorie: "Bath & Beauty",
-      subCategorie: [{ categorie: "Soaps" }, { categorie: "" }, { categorie: "Spa & Relaxaion" }],
-    },
-    {
-      categorie: "Electronics & Accessories",
-      subCategorie: [{ categorie: "Docking & Stands" },  { categorie: "Computer & Peripherals" }],
-    },
-    {
-      categorie: "Pet Supplies",
-      subCategorie: [{ categorie: "Urns & Memorials" }, { categorie: "Pet Clothing" }, { categorie: "Accessories & Shoe" }],
-    },
-    {
-      categorie: "Shoes",
-      subCategorie: [{ categorie: "Women's Shoe" }, { categorie: "Men's Shoe" }],
-    },
-  ];
-
   const onClickItem = (index) => {
-    const item = allCategorie.forEach((el)=>{
-      return
-    })
-  }
+    const item = allCategorie.forEach((el) => {
+      return;
+    });
+  };
 
   return (
     <div className={`FilterDrawer ${!open ? "closed" : ""}`}>
@@ -94,7 +31,156 @@ const FilterDrawer = ({ open, drawertoggle, filters }) => {
                     <i className="fa fa-caret-right"></i>
                   </span>
                 </button>
-                Filters LIst
+                <div className="filtersList">
+                  <div className="offers my-3">
+                    <span className="font-weight-bold">Special offers</span>
+                    <div>
+                      <input type="checkbox" className="mr-2" id="" />
+                      <span>Free Dilevery</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" className="mr-2" id="" />
+                      <span>On sale</span>
+                    </div>
+                  </div>
+                  <div className="dilevery my-3">
+                    <span className="font-weight-bold">
+                      Ready to dispatch in
+                    </span>
+                    <div>
+                      <input type="checkbox" className="mr-2" id="" />
+                      <span>1 business day</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" className="mr-2" id="" />
+                      <span>1–3 business days</span>
+                    </div>
+                  </div>
+
+                  <div className="prices my-3">
+                    <span className="font-weight-bold">Price ($)</span>
+                   
+                    <label class="container">
+                    Any Price
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    Under USD 25
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    USD 25 to USD 50
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    USD 50 to USD 100
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    Over USD 100
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    Custom
+                      <input type="radio" checked="checked" name="radio" />
+                      <span class="checkmark"></span>
+                    </label> 
+
+                    <div className="flex">
+                      <input type="text" name="" id="" placeholder="Low" />
+                      <span className="mx-2">to</span>
+                      <input type="text" name="" id="" placeholder="Hight" />
+                    </div>
+                  </div>
+
+                  <div className="location my-3">
+                    <span className="font-weight-bold">Shop location</span>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>Anywhere</span>
+                    </div>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>Pakistan</span>
+                    </div>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>Custom</span>
+                    </div>
+
+                    <div className="flex">
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Enter location"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="itemType my-3">
+                    <span className="font-weight-bold">Item Type</span>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>All Times</span>
+                    </div>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>Handmade</span>
+                    </div>
+                    <div>
+                      <input type="radio" name="price" className="mr-2" id="" />
+                      <span>Vintage</span>
+                    </div>
+                  </div>
+
+                  <div className="orderingOption my-3">
+                    <span className="font-weight-bold">Ordering options</span>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="price"
+                        className="mr-2"
+                        id=""
+                      />
+                      <span>Accepts Etsy gift cards</span>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="price"
+                        className="mr-2"
+                        id=""
+                      />
+                      <span>Can be gift-wrapped</span>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="price"
+                        className="mr-2"
+                        id=""
+                      />
+                      <span>Customisable</span>
+                    </div>
+                  </div>
+
+                  <div className="my-3">
+                    <select
+                      name="country"
+                      id="country"
+                      className="countrySelect"
+                    >
+                      <option value="germany">Germany</option>
+                      <option value="pakistan">Pakistan</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div className="fix-bottom">
                 <button className="btn btn-cancel" onClick={drawertoggle}>
@@ -115,15 +201,23 @@ const FilterDrawer = ({ open, drawertoggle, filters }) => {
                 <p className="all_categories">All Categories</p>
 
                 <ul className="list">
-               {allCategorie.map((item,index) => {
-                 return(<li key={index} className="list_item"  onClick={() => onClickItem(index)} >{item.categorie}</li>)
-               })}
+                  {allCategorie.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="list_item"
+                        onClick={() => onClickItem(index)}
+                      >
+                        {item.categorie}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
               <div className="fix-bottom">
                 <button className="btn btn-back" onClick={() => setTab(1)}>
-                  <span>
+                  <span className="backArrowIcon">
                     <BsArrowLeft />
                   </span>{" "}
                   Back

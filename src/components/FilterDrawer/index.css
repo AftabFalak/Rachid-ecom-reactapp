@@ -97,18 +97,24 @@
 }
 
 .FilterDrawer .fix-bottom .btn-black {
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-    padding: 8px 20px;
-    transition: all 0.3s;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.3s;
 }
-.FilterDrawer .btn-cancel:hover,.FilterDrawer .btn-black:hover {
-    transform: scale(1.05);
+.FilterDrawer .btn-cancel:hover,
+.FilterDrawer .btn-black:hover {
+  transform: scale(1.05);
 }
-.FilterDrawer .btn-back{
-    border: none!important;
-    
+.FilterDrawer .btn-back {
+  border: none !important;
+  transition: all 0.5;
+}
+
+.FilterDrawer .btn-back:hover span {
+  transform: scale(1.1);
+  margin-right: 6px;
 }
 
 .FilterDrawer .btn-category {
@@ -121,31 +127,87 @@
   transition: all 0.3s;
 }
 .FilterDrawer .btn-category:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .FilterDrawer .btn-category span {
   float: right;
 }
 
-.Tab_2 .Tab_2_heading{
-    font-size: 40px;
+.Tab_2 .Tab_2_heading {
+  font-size: 40px;
 }
-.Tab_2 .All_Categories_List{
-    width: 90%;
-    margin: auto;
+.Tab_2 .All_Categories_List {
+  width: 90%;
+  margin: auto;
 }
-.Tab_2 .All_Categories_List .all_categories{
-    font-size: 20px;
-    border-bottom:1px solid rgba(0,0,0,0.2);
-    padding: 12px 0px;
+.Tab_2 .All_Categories_List .all_categories {
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 0px;
 }
-.Tab_2 .All_Categories_List .list  {
-    list-style: none;
-
+.Tab_2 .All_Categories_List .list {
+  list-style: none;
 }
 .Tab_2 .All_Categories_List .list .list_item {
- text-decoration: underline;
- padding: 10px 0px;
- cursor: pointer;
+  text-decoration: underline;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 6px;
+  left: 6.4px;
+  width: 8px;   
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }

@@ -8,6 +8,72 @@ const Gallery = ({ cards, heading }) => {
   const toggleOpenDrawer = () => {
     setOpen(!open);
   };
+
+
+
+  const allCategorie = [
+    {
+      categorie: "Home & Living",
+      subCategorie: [{ categorie: "Home Doctor" }, { categorie: "Kitchen & Dining" }, { categorie: "Bedding" }],
+    },
+    {
+      categorie: "Clothing",
+      subCategorie: [{ categorie: "Women's Clothing" }, { categorie: "Men's Clothing" }, { categorie: "Girls Clothing" }],
+    },
+    {
+      categorie: "Art & Collectibles",
+      subCategorie: [{ categorie: "Print" }, { categorie: "Painting" }, { categorie: "Glass Art" }],
+    },
+    {
+      categorie: "Jewellery",
+      subCategorie: [{ categorie: "Ring" }, { categorie: "Watches" }, { categorie: "Earrings" }],
+    },
+    {
+      categorie: "Accessories",
+      subCategorie: [{ categorie: "Belts & Braces" }, { categorie: "Suits & Lanyards" }, { categorie: "Baby Accessories" }],
+    },
+    {
+      categorie: "Craft Supplies & Tools",
+      subCategorie: [{ categorie: "Home & Hobby" }, { categorie: "Jewellery & Beuty" }, { categorie: "Visual Arts" }],
+    },
+    {
+      categorie: "Bags & Purses",
+      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" },{ categorie: "Electronics Cases" }],
+    },
+    {
+      categorie: "Paper & Party Supplies",
+      subCategorie: [{ categorie: "Paper" }, { categorie: "Party Supplies" }],
+    },
+    {
+      categorie: "Weddings",
+      subCategorie: [{ categorie: "Accessories" }, { categorie: "Decoration" }, { categorie: "Jewellery" }],
+    },
+    {
+      categorie: "Toys & Games",
+      subCategorie: [{ categorie: "Toys" }, { categorie: "Games & Puzzle" }, { categorie: "Sports" }],
+    },
+    {
+      categorie: "Books, Films & Music",
+      subCategorie: [{ categorie: "Books" }, { categorie: "Music" }],
+    },
+    {
+      categorie: "Bath & Beauty",
+      subCategorie: [{ categorie: "Soaps" }, { categorie: "" }, { categorie: "Spa & Relaxaion" }],
+    },
+    {
+      categorie: "Electronics & Accessories",
+      subCategorie: [{ categorie: "Docking & Stands" },  { categorie: "Computer & Peripherals" }],
+    },
+    {
+      categorie: "Pet Supplies",
+      subCategorie: [{ categorie: "Urns & Memorials" }, { categorie: "Pet Clothing" }, { categorie: "Accessories & Shoe" }],
+    },
+    {
+      categorie: "Shoes",
+      subCategorie: [{ categorie: "Women's Shoe" }, { categorie: "Men's Shoe" }],
+    },
+  ];
+
   const [filters, setFilters] = useState({
     category: "All Categories",
     offers: "",
@@ -17,6 +83,7 @@ const Gallery = ({ cards, heading }) => {
     type: "Home Made",
     orderingOption: { cards: false, wrapped: false, custom: false },
   });
+
 
   return (
     <div className="Gallery">
@@ -48,6 +115,7 @@ const Gallery = ({ cards, heading }) => {
           open={open}
           drawertoggle={toggleOpenDrawer}
           filters={filters}
+          allCategorie={allCategorie}
         />
       )}
     </div>
