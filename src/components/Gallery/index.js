@@ -3,7 +3,7 @@ import Masonry from "react-masonry-css";
 import FilterDrawer from "../FilterDrawer";
 import BoxItem from "./BoxItem";
 import "./index.css";
-const Gallery = ({ cards, heading }) => {
+const Gallery = ({ cards, heading, showFilter = true }) => {
   const [open, setOpen] = useState(false);
   const toggleOpenDrawer = () => {
     setOpen(!open);
@@ -89,9 +89,9 @@ const Gallery = ({ cards, heading }) => {
     <div className="Gallery">
       <h3>{heading}</h3>
       <div className="d-flex justify-content-between productDropDownsView">
-        <button className="btn btn-filters" onClick={() => setOpen(true)}>
+        {showFilter && <button className="btn btn-filters" onClick={() => setOpen(true)}>
           <i className="fa fa-filter"></i> Filters
-        </button>
+        </button>}
         <select name="cars" id="cars" className="productsDropDowns">
           <option selected disabled hidden>
             Sort by: Relevency

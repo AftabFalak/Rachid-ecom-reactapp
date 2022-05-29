@@ -9,7 +9,7 @@ const Shop = (props) => {
 
   return (
     <div className="Shop">
-      <Gallery cards={items} heading={"Find Products You Love"} />
+      <Gallery  cards={items} heading={"Find Products You Love"} />
     </div>
   );
 };

@@ -224,7 +224,7 @@ const VenderProfile = ({vendor}) => {
         </div>
         <Annoucements />
       </div>
-      <Gallery cards={items} heading={"Products"} />
+      <Gallery showFilter={false} cards={items} heading={"Products"} />
     </div>
   );
 };
