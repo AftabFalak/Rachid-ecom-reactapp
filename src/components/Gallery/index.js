@@ -38,7 +38,7 @@ const Gallery = ({ cards, heading }) => {
     },
     {
       categorie: "Bags & Purses",
-      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" },{ categorie: "Electronics Cases" }],
+      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" }, { categorie: "Electronics Cases" }],
     },
     {
       categorie: "Paper & Party Supplies",
@@ -62,7 +62,7 @@ const Gallery = ({ cards, heading }) => {
     },
     {
       categorie: "Electronics & Accessories",
-      subCategorie: [{ categorie: "Docking & Stands" },  { categorie: "Computer & Peripherals" }],
+      subCategorie: [{ categorie: "Docking & Stands" }, { categorie: "Computer & Peripherals" }],
     },
     {
       categorie: "Pet Supplies",
@@ -101,7 +101,12 @@ const Gallery = ({ cards, heading }) => {
       </div>
 
       <Masonry
-        breakpointCols={4}
+        breakpointCols={{
+          default: 4,
+          1100: 3,
+          700: 2,
+          500: 1
+        }}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >

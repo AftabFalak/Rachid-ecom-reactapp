@@ -5,6 +5,7 @@ import "./index.css";
 import { BsArrowLeft } from "react-icons/bs";
 const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
+  const [selectedCategory,setSelectedCategory]=useState();
 
   const onClickItem = (index) => {
     const item = allCategorie.forEach((el) => {
@@ -59,37 +60,37 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
 
                   <div className="prices my-3">
                     <span className="font-weight-bold">Price ($)</span>
-                   
+
                     <label class="container">
-                    Any Price
+                      Any Price
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                    Under USD 25
+                      Under USD 25
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                    USD 25 to USD 50
+                      USD 25 to USD 50
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                    USD 50 to USD 100
+                      USD 50 to USD 100
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                    Over USD 100
+                      Over USD 100
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                    Custom
+                      Custom
                       <input type="radio" checked="checked" name="radio" />
                       <span class="checkmark"></span>
-                    </label> 
+                    </label>
 
                     <div className="flex">
                       <input type="text" name="" id="" placeholder="Low" />
@@ -208,7 +209,15 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                         className="list_item"
                         onClick={() => onClickItem(index)}
                       >
-                        {item.categorie}
+                        <p className="m-0" onClick={()=>setSelectedCategory(item.categorie)}>{item.categorie}</p>
+                        {item.categorie === selectedCategory && <ul>
+
+                          {item.subCategorie.map((sub, index) => {
+                            return <li>{sub.categorie}</li>
+
+                          })}
+
+                        </ul>}
                       </li>
                     );
                   })}
