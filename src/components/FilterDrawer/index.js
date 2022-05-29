@@ -5,6 +5,7 @@ import "./index.css";
 import { BsArrowLeft } from "react-icons/bs";
 const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
+  const [selectedCategory,setSelectedCategory]=useState();
 
   const onClickItem = (index) => {
     const item = allCategorie.forEach((el) => {
@@ -208,7 +209,15 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                         className="list_item"
                         onClick={() => onClickItem(index)}
                       >
-                        {item.categorie}
+                        <p className="m-0" onClick={()=>setSelectedCategory(item.categorie)}>{item.categorie}</p>
+                        {item.categorie === selectedCategory && <ul>
+
+                          {item.subCategorie.map((sub, index) => {
+                            return <li>{sub.categorie}</li>
+
+                          })}
+
+                        </ul>}
                       </li>
                     );
                   })}

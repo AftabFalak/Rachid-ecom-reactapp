@@ -18,10 +18,10 @@ const VendorListView = ({ VendorList }) => {
                 </div>
               </div>
               <div className="mt-5 text-center p-1">
-                <h3><Link to={`/store-list/${item.id}`}>{item.brandName}</Link> </h3>
+                <h3>{item.brandName} </h3>
                 <hr />
                 <p>{item.brandDescription}</p>
-                <a href="/vendor" className="VisitStoreNumber">Visit Store</a>
+                <Link to={`/store-list/${item.id}`} className="VisitStoreNumber">Visit Store</Link>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import Masonry from "react-masonry-css";
 import FilterDrawer from "../FilterDrawer";
 import BoxItem from "./BoxItem";
 import "./index.css";
-const Gallery = ({ cards, heading }) => {
+const Gallery = ({ cards, heading, showFilter = true }) => {
   const [open, setOpen] = useState(false);
   const toggleOpenDrawer = () => {
     setOpen(!open);
@@ -38,7 +38,7 @@ const Gallery = ({ cards, heading }) => {
     },
     {
       categorie: "Bags & Purses",
-      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" },{ categorie: "Electronics Cases" }],
+      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" }, { categorie: "Electronics Cases" }],
     },
     {
       categorie: "Paper & Party Supplies",
@@ -62,7 +62,7 @@ const Gallery = ({ cards, heading }) => {
     },
     {
       categorie: "Electronics & Accessories",
-      subCategorie: [{ categorie: "Docking & Stands" },  { categorie: "Computer & Peripherals" }],
+      subCategorie: [{ categorie: "Docking & Stands" }, { categorie: "Computer & Peripherals" }],
     },
     {
       categorie: "Pet Supplies",
@@ -89,9 +89,9 @@ const Gallery = ({ cards, heading }) => {
     <div className="Gallery">
       <h3>{heading}</h3>
       <div className="d-flex justify-content-between productDropDownsView">
-        <button className="btn btn-filters" onClick={() => setOpen(true)}>
+        {showFilter && <button className="btn btn-filters" onClick={() => setOpen(true)}>
           <i className="fa fa-filter"></i> Filters
-        </button>
+        </button>}
         <select name="cars" id="cars" className="productsDropDowns">
           <option selected disabled hidden>
             Sort by: Relevency
@@ -101,7 +101,12 @@ const Gallery = ({ cards, heading }) => {
       </div>
 
       <Masonry
-        breakpointCols={4}
+        breakpointCols={{
+          default: 4,
+          1100: 3,
+          700: 2,
+          500: 1
+        }}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
