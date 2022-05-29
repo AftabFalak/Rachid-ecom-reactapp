@@ -2,7 +2,6 @@ import './App.css';
 import NavbarBottom from './components/NavbarBottom/NavbarBottom'
 import { useState } from 'react';
 import MainDrawer from './components/MainDrawer/MainDrawer';
-
 import {
   Routes,
   Route,

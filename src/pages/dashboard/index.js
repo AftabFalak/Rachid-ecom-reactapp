@@ -1,5 +1,4 @@
 import React from "react";
-
 const Dashboard = () => {
   return (
     <>
@@ -13,8 +12,8 @@ const Dashboard = () => {
                   <ul>
                     <li>Welcome to Our store Multikart</li>
                     <li>
-                      <i className="fa fa-phone" aria-hidden="true"></i>Call Us: 123
-                      - 456 - 7890
+                      <i className="fa fa-phone" aria-hidden="true"></i>Call Us:
+                      123 - 456 - 7890
                     </li>
                   </ul>
                 </div>
@@ -75,7 +74,10 @@ const Dashboard = () => {
                           </div>
                         </div>
 
-                        <ul id="sub-menu" className="sm pixelstrap sm-vertical ">
+                        <ul
+                          id="sub-menu"
+                          className="sm pixelstrap sm-vertical "
+                        >
                           <li>
                             <a href="#">clothing</a>
                             <ul className="mega-menu clothing-menu">
@@ -340,7 +342,10 @@ const Dashboard = () => {
                       <div className="toggle-nav">
                         <i className="fa fa-bars sidebar-bar"></i>
                       </div>
-                      <ul id="main-menu" className="sm pixelstrap sm-horizontal">
+                      <ul
+                        id="main-menu"
+                        className="sm pixelstrap sm-horizontal"
+                      >
                         <li>
                           <div className="mobile-back text-end">
                             Back
@@ -679,7 +684,8 @@ const Dashboard = () => {
                             </li>
                             <li>
                               <a href="product-page(video-thumbnail).html">
-                                video thumbnail<span className="new-tag">new</span>
+                                video thumbnail
+                                <span className="new-tag">new</span>
                               </a>
                             </li>
                             <li>
@@ -1045,7 +1051,10 @@ const Dashboard = () => {
                               </div>
                               <div className="close-circle">
                                 <a href="#">
-                                  <i className="fa fa-times" aria-hidden="true"></i>
+                                  <i
+                                    className="fa fa-times"
+                                    aria-hidden="true"
+                                  ></i>
                                 </a>
                               </div>
                             </li>
@@ -1069,7 +1078,10 @@ const Dashboard = () => {
                               </div>
                               <div className="close-circle">
                                 <a href="#">
-                                  <i className="fa fa-times" aria-hidden="true"></i>
+                                  <i
+                                    className="fa fa-times"
+                                    aria-hidden="true"
+                                  ></i>
                                 </a>
                               </div>
                             </li>
@@ -1286,7 +1298,11 @@ const Dashboard = () => {
                         required="required"
                       />
                     </div>
-                    <button type="submit" className="btn btn-solid" id="mc-submit">
+                    <button
+                      type="submit"
+                      className="btn btn-solid"
+                      id="mc-submit"
+                    >
                       subscribe
                     </button>
                   </form>
@@ -1320,7 +1336,10 @@ const Dashboard = () => {
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-google-plus" aria-hidden="true"></i>
+                          <i
+                            className="fa fa-google-plus"
+                            aria-hidden="true"
+                          ></i>
                         </a>
                       </li>
                       <li>
@@ -1402,8 +1421,8 @@ const Dashboard = () => {
                   <div className="footer-contant">
                     <ul className="contact-list">
                       <li>
-                        <i className="fa fa-map-marker"></i>Multikart Demo Store,
-                        Demo store India 345-659
+                        <i className="fa fa-map-marker"></i>Multikart Demo
+                        Store, Demo store India 345-659
                       </li>
                       <li>
                         <i className="fa fa-phone"></i>Call Us: 123-456-7898
@@ -1428,8 +1447,8 @@ const Dashboard = () => {
               <div className="col-xl-6 col-md-6 col-sm-12">
                 <div className="footer-end">
                   <p>
-                    <i className="fa fa-copyright" aria-hidden="true"></i> 2017-18
-                    themeforest powered by pixelstrap
+                    <i className="fa fa-copyright" aria-hidden="true"></i>{" "}
+                    2017-18 themeforest powered by pixelstrap
                   </p>
                 </div>
               </div>
@@ -1512,7 +1531,8 @@ const Dashboard = () => {
           <div className="setting_box_body">
             <div onclick="closeSetting()">
               <div className="sidebar-back text-start">
-                <i className="fa fa-angle-left pe-2" aria-hidden="true"></i> Back
+                <i className="fa fa-angle-left pe-2" aria-hidden="true"></i>{" "}
+                Back
               </div>
             </div>
             <div className="setting-body">
@@ -1729,7 +1749,10 @@ const Dashboard = () => {
                   </div>
                   <div className="col-md-4 col-6 text-center demo-effects">
                     <div className="set-position">
-                      <a href="marketplace-demo.html" className="layout-container">
+                      <a
+                        href="marketplace-demo.html"
+                        className="layout-container"
+                      >
                         <img
                           src="../assets/images/landing-page/demo/marketplace.jpg"
                           className="img-fluid bg-img bg-top"
@@ -2088,7 +2111,10 @@ const Dashboard = () => {
                   </div>
                   <div className="col-md-4 col-6 text-center demo-effects">
                     <div className="set-position">
-                      <a href="left_sidebar-demo.html" className="layout-container">
+                      <a
+                        href="left_sidebar-demo.html"
+                        className="layout-container"
+                      >
                         <img
                           src="../assets/images/landing-page/demo/left-sidebar.jpg"
                           className="img-fluid bg-img bg-top"
@@ -2242,7 +2268,10 @@ const Dashboard = () => {
                   </div>
                   <div className="col-md-4 col-6 text-center demo-effects">
                     <div className="set-position">
-                      <a href="instagram-shop.html" className="layout-container">
+                      <a
+                        href="instagram-shop.html"
+                        className="layout-container"
+                      >
                         <img
                           src="../assets/images/landing-page/demo/instagram.jpg"
                           className="img-fluid bg-img bg-top"
