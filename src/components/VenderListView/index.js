@@ -14,12 +14,11 @@ const VendorListView = ({ VendorList }) => {
                 <img src={item.coverImage} alt="" className="coverImage" />
                 <div className="profilePhotoView">
                   <img src={item.profileImage} className="profilePhoto" alt="" />
-
                 </div>
               </div>
               <div className="mt-5 text-center p-1">
-                <h3>{item.brandName} </h3>
-                <hr />
+                <h3 className="border-bottom pb-2">{item.brandName} </h3>
+                
                 <p>{item.brandDescription}</p>
                 <Link to={`/store-list/${item.id}`} className="VisitStoreNumber">Visit Store</Link>
               </div>

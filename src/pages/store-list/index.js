@@ -7,7 +7,7 @@ export const vendorList = [
   {
     id: 1,
     brandName: 'Outfitter',
-    brandDescription: 'Finest engraved wood watch for your love ones.',
+    brandDescription: 'Finest engraved wood watch for your.',
     profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
     coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif')
   },
@@ -54,7 +54,27 @@ const StoreList = () => {
   }, [id])
   return (
     <div className='store-list'>
-      <div className='vendor-list'>
+
+      <div className='vendor-list p-3'>
+        <div className='d-flex justify-content-between flex-wrap mb-2'>
+
+        <select name="cars" id="cars" className="productsDropDowns">
+          <option selected disabled hidden>
+            Search by: <strong>Category</strong>
+          </option>
+          <option value="jackets">Jacket</option>
+          <option value="shoe">Shoe</option>
+          <option value="shoe">T Shirts</option>
+        </select>
+        <select name="cars" id="cars" className="productsDropDowns">
+          <option selected disabled hidden>
+            Sort by: <strong>Relevency</strong>
+          </option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+        </div>
+        
         <VendorListView VendorList={vendorList}  onClick={onClickVenderHandel} />
       </div>
 

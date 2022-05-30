@@ -68,7 +68,6 @@
 .VenderProfile .vendorInfoView_bottom .brandInfoView .brandName {
   font-weight: 700;
   padding-right: 20px;
-  /* border-right: 1px solid black; */
   font-size: 35px;
   text-decoration: none;
 }
@@ -127,7 +126,7 @@
   margin-left: 20px;
   padding-left: 10px;
 }
-
+            
 .Shipping {
   color: gray;
 }
@@ -214,5 +213,20 @@ element.style {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+}
+
+
+
+@media (max-width: 953px) {
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
+    font-size: 15px;
+  }
+  
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .brandName {
+    padding-right: 20px;
+    font-size: 26px;
+  }
+
 
 }

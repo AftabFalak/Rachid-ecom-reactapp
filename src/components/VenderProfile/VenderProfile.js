@@ -159,7 +159,7 @@ const VenderProfile = ({vendor}) => {
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">{vendor.brandName}</h3>
                 <span className="or">|</span>
-                <div>
+                <div className="starRaitingView">
                   <Rating
                     onClick={handleRating}
                     ratingValue={80}
