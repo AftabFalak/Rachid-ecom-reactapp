@@ -229,6 +229,54 @@
   background: white;
 }
 
+.FilterDrawer .category-container {
+
+position: relative;
+}
+
+.FilterDrawer .list{
+
+  display: none;
+  position: absolute;
+  width: 80%;
+  box-shadow: 3px 4px 10px lightgray;
+  top: 40px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 3;
+  left: 30px;
+  overflow-y: scroll;
+
+max-height: 400px;
+}
+.category-container{
+  /* background-color: red; */
+}
+.FilterDrawer .category-container :hover +.list{
+
+  display: block;
+}
+
+.FilterDrawer .category-container .list li{
+ 
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  margin-right: 20px;
+}
+
+.FilterDrawer .category-container .list li p{
+
+flex: 1;
+
+
+}
+
+.FilterDrawer .category-container .list li input{
+
+  left: 0px;
+  margin-top: 5px;
+
+}
 
 @media screen and (max-width:800px) {
   
@@ -237,6 +285,12 @@
   .FilterDrawer {
     width: 80%;
 
+  }
+
+  .FilterDrawer .fix-bottom {
+  
+    width: calc(80% - 10px);
+    background-color: #fff;
   }
 }
 /* ////////////////////     Checkbox  ////////////////////     */
