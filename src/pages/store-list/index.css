@@ -27,3 +27,35 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.store-list .vendor-list .productsDropDowns{
+    border: 2px solid black;
+    margin-top: 3px;
+}
+
+
+@media (max-width: 320px) {
+    .store-list .vendor-list .productsDropDowns{
+        border: 2px solid red;
+        width: 50px;
+    }
+}
+
+@media (max-width: 667px) {
+    .store-list .vendor-list .productsDropDowns{
+        border-width: 1px;
+        width: 80px;
+        padding: 0px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 953px) {
+    .store-list .vendor-list .productsDropDowns{
+        border-width: 1px;
+        width: 80px;
+        padding: 0px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+}
