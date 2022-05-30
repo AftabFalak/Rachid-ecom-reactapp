@@ -211,3 +211,14 @@
   border-radius: 50%;
   background: white;
 }
+
+
+@media screen and (max-width:800px) {
+  
+
+
+  .FilterDrawer {
+    width: 80%;
+
+  }
+}

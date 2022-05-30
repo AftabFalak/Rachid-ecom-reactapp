@@ -54,7 +54,6 @@ const StoreList = () => {
   }, [id])
   return (
     <div className='store-list'>
-
       <div className='vendor-list'>
         <VendorListView VendorList={vendorList}  onClick={onClickVenderHandel} />
       </div>
