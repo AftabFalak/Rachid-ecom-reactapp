@@ -229,7 +229,6 @@
   background: white;
 }
 
-<<<<<<< HEAD
 
 @media screen and (max-width:800px) {
   
@@ -240,7 +239,6 @@
 
   }
 }
-=======
 /* ////////////////////     Checkbox  ////////////////////     */
 
 .containerCheckbox {
@@ -309,4 +307,3 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
->>>>>>> cdbdbd0fcea0c2ccf45155090d2e99d37099a6e9
