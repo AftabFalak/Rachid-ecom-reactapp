@@ -13,6 +13,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
     });
   };
 
+  const a = 10;
   return (
     <div className={`FilterDrawer ${!open ? "closed" : ""}`}>
       <div className="head">
