@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 450px;
+  width: 500px;
   height: 100vh;
   box-shadow: 3px 4px 20px lightgray;
   background-color: white;
@@ -11,7 +11,9 @@
   z-index: 5;
   overflow: hidden;
 }
-
+.FilterDrawer .ScrollVieww {
+  overflow: scroll;
+}
 .FilterDrawer .forgotPassword {
   color: #007bff;
 }
@@ -76,11 +78,12 @@
 
 .FilterDrawer .fix-bottom {
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   left: 10px;
   border-top: 1px solid lightgray;
   display: flex;
   width: 420px;
+  background-color: #fff;
 }
 
 .FilterDrawer .fix-bottom button {
@@ -118,13 +121,14 @@
 }
 
 .FilterDrawer .btn-category {
-  width: 100%;
+  width: 90%;
   border-radius: 50px;
   border: 2px solid black;
   position: relative;
   text-align: left;
   padding: 5px 10px;
   transition: all 0.3s;
+  margin-left: 5%;
 }
 .FilterDrawer .btn-category:hover {
   transform: scale(1.05);
@@ -155,13 +159,26 @@
   cursor: pointer;
 }
 
+.prices .pricesInut {
+  width: 30%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 5px 6px;
+}
+.location .locationInut {
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 5px 6px;
+}
+/* ///////////////////// custom radio ////////////////////// */
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 30px;
+  margin-top: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -179,8 +196,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -204,14 +221,15 @@
 }
 
 .container .checkmark:after {
-  top: 6px;
-  left: 6.4px;
-  width: 8px;   
+  top: 4.5px;
+  left: 5.3px;
+  width: 8px;
   height: 8px;
   border-radius: 50%;
   background: white;
 }
 
+<<<<<<< HEAD
 
 @media screen and (max-width:800px) {
   
@@ -222,3 +240,73 @@
 
   }
 }
+=======
+/* ////////////////////     Checkbox  ////////////////////     */
+
+.containerCheckbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmarkCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckbox:hover input ~ .checkmarkCheckbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckbox input:checked ~ .checkmarkCheckbox {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmarkCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckbox input:checked ~ .checkmarkCheckbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckbox .checkmarkCheckbox:after {
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+>>>>>>> cdbdbd0fcea0c2ccf45155090d2e99d37099a6e9
