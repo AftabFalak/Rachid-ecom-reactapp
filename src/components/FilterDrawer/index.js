@@ -22,23 +22,17 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
           <i className="fa fa-times"></i>
         </button>
         <hr />
-        <div >
+        <div>
           {tab === 1 ? (
-            <div className="Tab_1 ScrollVieww" style={
-              {height:'85vh',overfollowY:'scroll'}
-            }>
+            <div
+              className="Tab_1 ScrollVieww"
+              style={{ height: "85vh", overfollowY: "scroll" }}
+            >
               <p>Filter By Category</p>
 
               <div className="category-container">
-
-
-                
-
-               <button  className="btn-category">All Categories</button>
-                 
-                
-
-                <ul className="list" >
+                <button className="btn-category">All Categories</button>
+                <ul className="list">
                   {allCategorie.map((item, index) => {
                     return (
                       <li
@@ -46,12 +40,15 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                         className="list_item d-flex"
                         onClick={() => onClickItem(index)}
                       >
-                        <p className="m-0" onClick={() => setSelectedCategory(item.categorie)}>{item.categorie}  </p>
+                        <p
+                          className="m-0"
+                          onClick={() => setSelectedCategory(item.categorie)}
+                        >
+                          {item.categorie}{" "}
+                        </p>
                         {item.categorie === selectedCategory}
 
-                        {/* <input className="justify-content-end" type={"checkbox"}/> */}
                         <label class="containerCheckbox justify-content-end">
-
                           <input type="checkbox" />
                           <span class="checkmarkCheckbox"></span>
                         </label>
@@ -60,8 +57,6 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                   })}
                 </ul>
               </div>
-
-
 
               <div className="filtersList">
                 <div className="offers my-3">
@@ -78,9 +73,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                   </label>
                 </div>
                 <div className="dilevery my-3">
-                  <span className="font-weight-bold">
-                    Ready to dispatch in
-                  </span>
+                  <span className="font-weight-bold">Ready to dispatch in</span>
 
                   <label class="containerCheckbox">
                     1 business day
@@ -128,9 +121,21 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                   </label>
 
                   <div className="flex">
-                    <input type="text" name="" id="" placeholder="Low" className="pricesInut" />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Low"
+                      className="pricesInut"
+                    />
                     <span className="mx-2">to</span>
-                    <input type="text" name="" id="" placeholder="Hight" className="pricesInut" />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Hight"
+                      className="pricesInut"
+                    />
                   </div>
                 </div>
 
@@ -204,11 +209,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                 </div>
 
                 <div className="my-3">
-                  <select
-                    name="country"
-                    id="country"
-                    className="countrySelect"
-                  >
+                  <select name="country" id="country" className="countrySelect">
                     <option value="germany">Germany</option>
                     <option value="pakistan">Pakistan</option>
                   </select>
@@ -223,7 +224,6 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                 </button>
               </div>
             </div>
-
           ) : (
             <div className="Tab_2">
               <div className="form">
@@ -241,15 +241,19 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                         className="list_item"
                         onClick={() => onClickItem(index)}
                       >
-                        <p className="m-0" onClick={() => setSelectedCategory(item.categorie)}>{item.categorie}</p>
-                        {item.categorie === selectedCategory && <ul>
-
-                          {item.subCategorie.map((sub, index) => {
-                            return <li>{sub.categorie}</li>
-
-                          })}
-
-                        </ul>}
+                        <p
+                          className="m-0"
+                          onClick={() => setSelectedCategory(item.categorie)}
+                        >
+                          {item.categorie}
+                        </p>
+                        {item.categorie === selectedCategory && (
+                          <ul>
+                            {item.subCategorie.map((sub, index) => {
+                              return <li>{sub.categorie}</li>;
+                            })}
+                          </ul>
+                        )}
                       </li>
                     );
                   })}

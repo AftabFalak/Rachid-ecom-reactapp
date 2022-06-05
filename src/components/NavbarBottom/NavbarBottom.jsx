@@ -15,9 +15,7 @@ function NavbarBottom(props) {
 
   return (
     <nav className="navbar navbar-expand-lg shadow p-0 custonNavbar">
-
-
-      <div
+      <nav
         className="collapse navbar-collapse justify-content-between"
         id="navbarToggle"
       >
@@ -49,8 +47,7 @@ function NavbarBottom(props) {
             </a>
           </li>
         </ul>
-      </div>
-
+      </nav>
     </nav>
 
 

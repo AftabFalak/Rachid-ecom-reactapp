@@ -16,10 +16,9 @@ const VendorListView = ({ VendorList }) => {
                   <img src={item.profileImage} className="profilePhoto" alt="" />
                 </div>
               </div>
-              <div className="mt-5 text-center p-1">
-                <h3 className="border-bottom pb-2">{item.brandName} </h3>
-                
-                <p>{item.brandDescription}</p>
+              <div className="mt-5 text-center px-2">
+                <h3 className="border-dark border-bottom pb-2 font-weight-bold">{item.brandName} </h3>
+                <p className="brandDiscription">{item.brandDescription}</p>
                 <Link to={`/store-list/${item.id}`} className="VisitStoreNumber">Visit Store</Link>
               </div>
             </div>

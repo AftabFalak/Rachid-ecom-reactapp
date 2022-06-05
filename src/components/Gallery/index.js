@@ -3,7 +3,72 @@ import Masonry from "react-masonry-css";
 import FilterDrawer from "../FilterDrawer";
 import BoxItem from "./BoxItem";
 import "./index.css";
-const Gallery = ({ cards, heading, showFilter = true }) => {
+
+export const allCategorie = [
+  {
+    categorie: "Home & Living",
+    subCategorie: [{ categorie: "Home Doctor" }, { categorie: "Kitchen & Dining" }, { categorie: "Bedding" }],
+  },
+  {
+    categorie: "Clothing",
+    subCategorie: [{ categorie: "Women's Clothing" }, { categorie: "Men's Clothing" }, { categorie: "Girls Clothing" }],
+  },
+  {
+    categorie: "Art & Collectibles",
+    subCategorie: [{ categorie: "Print" }, { categorie: "Painting" }, { categorie: "Glass Art" }],
+  },
+  {
+    categorie: "Jewellery",
+    subCategorie: [{ categorie: "Ring" }, { categorie: "Watches" }, { categorie: "Earrings" }],
+  },
+  {
+    categorie: "Accessories",
+    subCategorie: [{ categorie: "Belts & Braces" }, { categorie: "Suits & Lanyards" }, { categorie: "Baby Accessories" }],
+  },
+  {
+    categorie: "Craft Supplies & Tools",
+    subCategorie: [{ categorie: "Home & Hobby" }, { categorie: "Jewellery & Beuty" }, { categorie: "Visual Arts" }],
+  },
+  {
+    categorie: "Bags & Purses",
+    subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" }, { categorie: "Electronics Cases" }],
+  },
+  {
+    categorie: "Paper & Party Supplies",
+    subCategorie: [{ categorie: "Paper" }, { categorie: "Party Supplies" }],
+  },
+  {
+    categorie: "Weddings",
+    subCategorie: [{ categorie: "Accessories" }, { categorie: "Decoration" }, { categorie: "Jewellery" }],
+  },
+  {
+    categorie: "Toys & Games",
+    subCategorie: [{ categorie: "Toys" }, { categorie: "Games & Puzzle" }, { categorie: "Sports" }],
+  },
+  {
+    categorie: "Books, Films & Music",
+    subCategorie: [{ categorie: "Books" }, { categorie: "Music" }],
+  },
+  {
+    categorie: "Bath & Beauty",
+    subCategorie: [{ categorie: "Soaps" }, { categorie: "" }, { categorie: "Spa & Relaxaion" }],
+  },
+  {
+    categorie: "Electronics & Accessories",
+    subCategorie: [{ categorie: "Docking & Stands" }, { categorie: "Computer & Peripherals" }],
+  },
+  {
+    categorie: "Pet Supplies",
+    subCategorie: [{ categorie: "Urns & Memorials" }, { categorie: "Pet Clothing" }, { categorie: "Accessories & Shoe" }],
+  },
+  {
+    categorie: "Shoes",
+    subCategorie: [{ categorie: "Women's Shoe" }, { categorie: "Men's Shoe" }],
+  },
+];
+
+
+const Gallery = ({ cards, heading, showFilter = true , categorieFilterOnTop}) => {
   const [open, setOpen] = useState(false);
   const toggleOpenDrawer = () => {
     setOpen(!open);
@@ -11,68 +76,6 @@ const Gallery = ({ cards, heading, showFilter = true }) => {
 
 
 
-  const allCategorie = [
-    {
-      categorie: "Home & Living",
-      subCategorie: [{ categorie: "Home Doctor" }, { categorie: "Kitchen & Dining" }, { categorie: "Bedding" }],
-    },
-    {
-      categorie: "Clothing",
-      subCategorie: [{ categorie: "Women's Clothing" }, { categorie: "Men's Clothing" }, { categorie: "Girls Clothing" }],
-    },
-    {
-      categorie: "Art & Collectibles",
-      subCategorie: [{ categorie: "Print" }, { categorie: "Painting" }, { categorie: "Glass Art" }],
-    },
-    {
-      categorie: "Jewellery",
-      subCategorie: [{ categorie: "Ring" }, { categorie: "Watches" }, { categorie: "Earrings" }],
-    },
-    {
-      categorie: "Accessories",
-      subCategorie: [{ categorie: "Belts & Braces" }, { categorie: "Suits & Lanyards" }, { categorie: "Baby Accessories" }],
-    },
-    {
-      categorie: "Craft Supplies & Tools",
-      subCategorie: [{ categorie: "Home & Hobby" }, { categorie: "Jewellery & Beuty" }, { categorie: "Visual Arts" }],
-    },
-    {
-      categorie: "Bags & Purses",
-      subCategorie: [{ categorie: "Handbags" }, { categorie: "Totes" }, { categorie: "Backpacks" }, { categorie: "Electronics Cases" }],
-    },
-    {
-      categorie: "Paper & Party Supplies",
-      subCategorie: [{ categorie: "Paper" }, { categorie: "Party Supplies" }],
-    },
-    {
-      categorie: "Weddings",
-      subCategorie: [{ categorie: "Accessories" }, { categorie: "Decoration" }, { categorie: "Jewellery" }],
-    },
-    {
-      categorie: "Toys & Games",
-      subCategorie: [{ categorie: "Toys" }, { categorie: "Games & Puzzle" }, { categorie: "Sports" }],
-    },
-    {
-      categorie: "Books, Films & Music",
-      subCategorie: [{ categorie: "Books" }, { categorie: "Music" }],
-    },
-    {
-      categorie: "Bath & Beauty",
-      subCategorie: [{ categorie: "Soaps" }, { categorie: "" }, { categorie: "Spa & Relaxaion" }],
-    },
-    {
-      categorie: "Electronics & Accessories",
-      subCategorie: [{ categorie: "Docking & Stands" }, { categorie: "Computer & Peripherals" }],
-    },
-    {
-      categorie: "Pet Supplies",
-      subCategorie: [{ categorie: "Urns & Memorials" }, { categorie: "Pet Clothing" }, { categorie: "Accessories & Shoe" }],
-    },
-    {
-      categorie: "Shoes",
-      subCategorie: [{ categorie: "Women's Shoe" }, { categorie: "Men's Shoe" }],
-    },
-  ];
 
   const [filters, setFilters] = useState({
     category: "All Categories",
@@ -88,10 +91,38 @@ const Gallery = ({ cards, heading, showFilter = true }) => {
   return (
     <div className="Gallery">
       <h3>{heading}</h3>
-      <div className="d-flex justify-content-between productDropDownsView">
+      <div className="productDropDownsView">
         {showFilter && <button className="btn btn-filters" onClick={() => setOpen(true)}>
           <i className="fa fa-filter"></i> Filters
         </button>}
+        {categorieFilterOnTop && 
+          <div className="category-container">
+          <button className="btn-category">All Categories</button>
+          <ul className="list">
+            {allCategorie.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="list_item d-flex"
+                  
+                >
+                  <p
+                    className="m-0"
+                  >
+                    {item.categorie}{" "}
+                  </p>
+                 
+
+                  <label class="containerCheckbox justify-content-end">
+                    <input type="checkbox" />
+                    <span class="checkmarkCheckbox"></span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        }
         <select name="cars" id="cars" className="productsDropDowns">
           <option selected disabled hidden>
             Sort by: Relevency
@@ -128,3 +159,4 @@ const Gallery = ({ cards, heading, showFilter = true }) => {
 };
 
 export default Gallery;
+

@@ -153,9 +153,9 @@ const VenderProfile = ({vendor}) => {
         <div className="vendorInfoView_bottom">
           <div
             className="row"
-            style={{ backgroundColor: "#F8F8F8", paddingBottom: "20px" }}
+       
           >
-            <div className="col-md-4 brandInfoView text-start">
+            <div className="col-md-4 brandInfoView">
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">{vendor.brandName}</h3>
                 <span className="or">|</span>
@@ -176,11 +176,9 @@ const VenderProfile = ({vendor}) => {
                   Finest engraved wood watch for your love ones.
                 </p>
               </div>
-              <div className="venderSales d-flex">
-                <div className="venderSales_left">
-                  <AiFillStar /> <span>Star seller |</span>
-                </div>
-                <div className="venderSales_right">
+              <div className="venderSales">
+                <div>
+                  <AiFillStar /> <span>Star seller |</span> {'             '}
                   <span>40,284 sales |</span>
                 </div>
               </div>
@@ -190,7 +188,7 @@ const VenderProfile = ({vendor}) => {
                 (2.5k)
               </button>
             </div>
-            <div className="col-md-4  Shipping text-start">
+            <div className="col-md-4  Shipping">
               <h4 className="">stayfineofficial is a Star Seller!</h4>
               <div className="row mt-4">
                 <div className="col-md-6 mt-3">
@@ -216,15 +214,15 @@ const VenderProfile = ({vendor}) => {
                 <div className="memberProfileImg m-auto"></div>
                 <p className="memberName">Paul Tian</p>
                 <GoMail className="socialLogo" />{" "}
-                <AiOutlineInstagram className="socialLogo" />{" "}
+                <AiOutlineInstagram className="socialLogo" />
                 <FiFacebook className="socialLogo" />
               </div>
             </div>
-          </div>
+          </div>  
         </div>
         <Annoucements />
       </div>
-      <Gallery showFilter={false} cards={items} heading={"Products"} />
+      <Gallery showFilter={false} cards={items} heading={"Products"} categorieFilterOnTop />
     </div>
   );
 };

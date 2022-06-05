@@ -3,15 +3,21 @@
   margin-bottom: 10px;
   cursor: pointer;
   border: 2px solid rgba(0,0,0,0.2);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .VendorListView .vendorInfoView {
   width: 100%;
 }
 
-.vendorInfoView hr {
-  margin: 5px;
+.VendorListView .brandDiscription{
+  color: rgba(0,0,0,0.5);
+  font-weight: 500;
+
+}
+
+.vendorInfoView .VisitStoreNumber{
+  border: 1.8px solid rgba(0,0,0,0.2);
 }
 
 .VendorListView .vendorInfoView .vendorInfoView_top {
@@ -20,7 +26,7 @@
 
 .VendorListView .vendorInfoView .vendorInfoView_top .coverImage {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-image: url("../../assets//images/VenderCover/venderCoverPhotoavif.avif");
   background-size: cover;
   background-position: center;
@@ -33,15 +39,15 @@
   transform: translate(-50%, 0%);
   left: 50%;
   text-align: center;
-  bottom: -35px;
+  bottom: -45px;
   overflow: hidden;
 }
 
 .VendorListView .vendorInfoView .vendorInfoView_top .profilePhoto {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 100px;
-  border: 2px solid black;
+  border: 1px solid black;
   background-image: url("../../assets/images/VendorProfile/brand2.PNG");
   background-size: cover;
   background-position: center;
@@ -63,26 +69,31 @@
   opacity: 0.5;
 }
 
-@media screen and (max-width:800px) {
 
-
-
-  .VendorListView .vendorInfoView .vendorInfoView_top .coverImage {
-    height: 60px;
-  }
-
+@media (max-width: 400px) {
   .VendorListView .vendorInfoView .vendorInfoView_top .profilePhoto {
     width: 60px;
     height: 60px;
   }
+}
 
-  .VendorListView .vendorInfoView h3 {
-
-    font-size: 16px !important;
+@media (max-width: 550px) {
+  .VendorListView .vendorInfoView .vendorInfoView_top .profilePhoto {
+    width: 80px;
+    height: 80px;
   }
-  .VendorListView .vendorInfoView p {
+}
 
-    font-size: 14px !important;
-    line-height: 1.1em;
+
+
+
+
+@media screen and (max-width:800px) {
+  .VendorListView .vendorInfoView .vendorInfoView_top .coverImage {
+    height: 90px;
+  }
+  .VendorListView .vendorInfoView .vendorInfoView_top .profilePhoto {
+    width: 100px;
+    height: 100px;
   }
 }

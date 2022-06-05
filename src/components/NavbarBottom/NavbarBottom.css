@@ -1,6 +1,5 @@
 .custonNavbar{
     height: 71px;
-    overflow: hidden;
 }
 
 .signInLink{
@@ -33,4 +32,10 @@
     position: absolute;
     top: 6px;
     right: 20px;
+}
+
+@media (max-width = 320px) {
+
+
+    
 }

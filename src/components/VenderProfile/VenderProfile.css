@@ -14,15 +14,12 @@
   padding: 12px 40px;
   background-color: #ffff;
   border-radius: 15px;
-  font-size: 22px;
-  transition: all .5s;
-  margin-top: 10px;
+  font-size: 18px;
+  transition: all 0.5s;
 }
 
 .VenderProfile .vendorInfoView .followBrandButton:hover {
   opacity: 0.5;
-
-
 }
 
 .VenderProfile .vendorInfoView .followBrandButton .FollowIconHeart {
@@ -59,9 +56,13 @@
 .VenderProfile .vendorInfoView .vendorInfoView_bottom {
   margin-top: 120px;
   padding-left: 20px;
+  background-color: "#F8F8F8";
+  padding-bottom: "20px";
 }
-
-.VenderProfile .vendorInfoView_bottom .brandInfoView {
+.vendorInfoView_bottom .brandInfoView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   text-align: left;
 }
 
@@ -88,7 +89,6 @@
 .VenderProfile .vendorInfoView_bottom .brandInfoView .handShakeRaiting {
   display: inline-block;
   margin-right: 15px;
-
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
@@ -126,9 +126,13 @@
   margin-left: 20px;
   padding-left: 10px;
 }
-            
+
 .Shipping {
   color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: left;
 }
 
 .Shipping .shippingHeading {
@@ -168,13 +172,34 @@
   font-size: 18px;
 }
 
+@media (max-width: 575.98px) {
+  .VenderProfile .vendorInfoView .vendorInfoView_top .coverImage {
+    height: 25vh;
+  }
 
-@media screen and (max-width:800px) {
+  .vendorInfoView_bottom .brandInfoView {
+    justify-content: center;
+    text-align: center;
+  }
 
+  .Shipping {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .VenderProfile .vendorInfoView .followBrandButton {
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
   .VenderProfile {
     text-align: center;
   }
-  .brandInfoView>div {
+  .brandInfoView > div {
     display: block !important;
   }
 
@@ -183,50 +208,48 @@
   }
 
   .brandInfoView .brandName {
-
-    font-size: 20px !important;
     flex: 1;
   }
 
-
   .VenderProfile .vendorInfoView .followBrandButton {
-    padding: 4px 10px !important;
-  
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
+    left: 60px;
+    bottom: -50px;
+  }
+
+  .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 2px solid black;
+    background-image: url("../../assets/images/VendorProfile/brand2.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
-element.style {
-}
-.VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
-
-  left: 60px;
-  bottom: -50px;
-
-}
-
-.VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
-  width: 120px;
-  height: 120px;
-  border-radius: 100px;
-  border: 2px solid black;
-  background-image: url("../../assets/images/VendorProfile/brand2.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-}
-
-
-
-@media (max-width: 953px) {
+@media (max-width: 991.98px) {
   .VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
     font-size: 15px;
   }
-  
+
   .VenderProfile .vendorInfoView_bottom .brandInfoView .brandName {
     padding-right: 20px;
     font-size: 26px;
   }
+  .VenderProfile .vendorInfoView .followBrandButton {
+    width: 80%;
+    margin-top: 10px;
+  }
+}
 
+@media (max-width: 1199.98px) {
+}
 
+@media (max-width: 1399.98px) {
 }

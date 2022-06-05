@@ -107,7 +107,7 @@ const MainDrawer = (props) => {
                     onClick={() => {
                       console.log("Google button clicked");
                     }}
-                    style={{ backgroundColor: "#007BFF", overflow:'hidden' }}
+                    style={{ backgroundColor: "#ffff", overflow:'hidden' , color:' black' }}
                     className="w-100"
                     icon
                   />

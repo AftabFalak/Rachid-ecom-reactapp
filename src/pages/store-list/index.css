@@ -1,61 +1,194 @@
 .store-list {
-    display: flex;
+  display: flex;
 }
 
 .store-list .vendor-list {
-
-    overflow-y: scroll;
-    max-width: 400px;
-    width: 30%;
-    display: inline-block;
-    height: calc(100vh - 70px);
-
+  overflow-y: scroll;
+  max-width: 400px;
+  width: 30%;
+  display: inline-block;
+  height: calc(100vh - 70px);
 }
 
 .store-list .vendor-view {
-    position: relative;
-    display: inline-block;
-    flex: 1;
-    overflow-y: scroll;
-    height: calc(100vh - 70px);
-
+  position: relative;
+  display: inline-block;
+  flex: 1;
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+  padding: 0px 10px;
 }
 
 .store-list .vendor-view .center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.store-list .vendor-list .productsDropDowns{
-    border: 2px solid black;
-    margin-top: 3px;
+.store-list .vendor-list .productsDropDowns {
+  width: 90%;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 5px 10px;
+  transition: all 0.3s;
+  margin-left: 5%;
+  margin-top: 10px;
+  outline: none;
+  box-shadow: none;
 }
 
-
-@media (max-width: 320px) {
-    .store-list .vendor-list .productsDropDowns{
-        border: 2px solid red;
-        width: 50px;
-    }
+.store-list .vendor-list .productsDropDowns:hover {
+  transform: scale(1.05);
 }
 
-@media (max-width: 667px) {
-    .store-list .vendor-list .productsDropDowns{
-        border-width: 1px;
-        width: 80px;
-        padding: 0px;
-        margin-top: 3px;
-        font-size: 12px;
-    }
+.store-list .vendor-list .productsDropDowns span {
+  float: right;
 }
-@media (max-width: 953px) {
-    .store-list .vendor-list .productsDropDowns{
-        border-width: 1px;
-        width: 80px;
-        padding: 0px;
-        margin-top: 3px;
-        font-size: 12px;
-    }
+.store-list .btn-category {
+  width: 90%;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: left;
+  padding: 5px 10px;
+  transition: all 0.3s;
+  margin-left: 5%;
+  marngi-top: 10px;
+}
+.store-list .btn-category:hover {
+  transform: scale(1.05);
+}
+
+.store-list .btn-category span {
+  float: right;
+}
+
+.store-list .category-container {
+  position: relative;
+}
+
+.store-list .list {
+  display: none;
+  position: absolute;
+  width: 85%;
+  box-shadow: 3px 4px 10px lightgray;
+  top: 40px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 3;
+  left: 30px;
+  overflow-y: scroll;
+  max-height: 400px;
+  z-index: 100;
+}
+
+.store-list .category-container :hover + .list {
+  display: block;
+}
+
+.store-list .category-container .list li {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  margin-right: 20px;
+}
+
+.store-list .category-container .list li p {
+  flex: 1;
+}
+
+.store-list .category-container .list li input {
+  left: 0px;
+  margin-top: 5px;
+}
+
+.containerCheckbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.containerCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmarkCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+.containerCheckbox:hover input ~ .checkmarkCheckbox {
+  background-color: #ccc;
+}
+
+.containerCheckbox input:checked ~ .checkmarkCheckbox {
+  background-color: #000;
+}
+
+.checkmarkCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.containerCheckbox input:checked ~ .checkmarkCheckbox:after {
+  display: block;
+}
+
+.containerCheckbox .checkmarkCheckbox:after {
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 450px) {
+  .store-list .vendor-view {
+    display: none;
+  }
+  .store-list .vendor-list {
+    width: 100%;
+    margin: auto;
+  }
+  .store-list .btn-category {
+   font-size: 12px;
+  }
+  .store-list .vendor-list .productsDropDowns {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .store-list .vendor-view {
+    display: none;
+  }
+  .store-list .vendor-list {
+    width: 100%;
+    margin: auto;
+  }
+  .store-list .btn-category {
+    font-size: 12px;
+   }
+  .store-list .vendor-list .productsDropDowns {
+    font-size: 12px;
+  }
 }
