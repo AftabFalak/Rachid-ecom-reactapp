@@ -164,14 +164,13 @@
 
 .vendor-modal-view{
   position: absolute;
-  top: 0;
+  top: -21px;
   margin-top: 40px;
   padding: 10px;
   left: 0;
 
 }
 .vendor-modal-view .back-btn{
-
   background-color: transparent;
   border: none;
 

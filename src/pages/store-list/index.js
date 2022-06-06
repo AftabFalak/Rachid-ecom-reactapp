@@ -101,9 +101,9 @@ const StoreList = () => {
 
       {show===true && <div className="vendor-modal-view d-block d-md-node">
 
-        <button className="back-btn" onClick={() => setShow(false)}><i className="fa fa-chevron-left"></i></button>
+        
         {vendor && (
-        <VenderProfile vendor={vendor} categorieFilterOnTop={true} />
+        <VenderProfile vendor={vendor} categorieFilterOnTop={true}  onClickBack={setShow} show={show}/>
         )}
       </div>}
 

@@ -5,7 +5,7 @@ import "./VenderProfile.css";
 // import profilePhoto from "../../assets/images/brand2.PNG";
 // import memberProfile from "../../assets/images/memberProfile.jpg";
 
-import {  FaShuttleVan } from "react-icons/fa";
+import { FaShuttleVan } from "react-icons/fa";
 import { AiFillStar, AiOutlineInstagram, AiOutlineHeart } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
@@ -122,7 +122,7 @@ export const items = [
     img: m9,
   },
 ];
-const VenderProfile = ({vendor}) => {
+const VenderProfile = ({ vendor, show, onClickBack }) => {
   const [rating, setRating] = useState(0);
 
   const photos = [
@@ -142,19 +142,28 @@ const VenderProfile = ({vendor}) => {
   };
   return (
     <div className="VenderProfile">
+      {show && (
+        <div className="top-bar-vendder">
+          <button className="back-btn" onClick={() => onClickBack(false)}>
+            <i className="fa fa-chevron-left"></i>
+          </button>
+          <h4 >{vendor.brandName}</h4>
+          <div>{' '}</div>
+        </div>
+      )}
       <div className="vendorInfoView" style={{ backgroundColor: "#F8F8F8" }}>
         <div className="vendorInfoView_top">
-          <div className="coverImage" style={{backgroundImage:`url('${vendor.coverImage}')`}}></div>
+          <div
+            className="coverImage"
+            style={{ backgroundImage: `url('${vendor.coverImage}')` }}
+          ></div>
           <div className="profilePhotoView">
             <div className="profilePhoto"></div>
           </div>
         </div>
 
         <div className="vendorInfoView_bottom">
-          <div
-            className="row"
-       
-          >
+          <div className="row">
             <div className="col-md-4 brandInfoView">
               <div className="d-flex justify-content-start align-items-center">
                 <h3 className="brandName mr-3">{vendor.brandName}</h3>
@@ -178,7 +187,7 @@ const VenderProfile = ({vendor}) => {
               </div>
               <div className="venderSales">
                 <div>
-                  <AiFillStar /> <span>Star seller |</span> {'             '}
+                  <AiFillStar /> <span>Star seller |</span> {"             "}
                   <span>40,284 sales |</span>
                 </div>
               </div>
@@ -218,11 +227,16 @@ const VenderProfile = ({vendor}) => {
                 <FiFacebook className="socialLogo" />
               </div>
             </div>
-          </div>  
+          </div>
         </div>
         <Annoucements />
       </div>
-      <Gallery showFilter={false} cards={items} heading={"Products"} categorieFilterOnTop />
+      <Gallery
+        showFilter={false}
+        cards={items}
+        heading={"Products"}
+        categorieFilterOnTop
+      />
     </div>
   );
 };

@@ -1,7 +1,14 @@
 .VenderProfile {
   box-sizing: border-box;
 }
-
+.VenderProfile .top-bar-vendder{
+  display: flex;
+  justify-content: space-between;
+}
+.VenderProfile .top-bar-vendder h4{
+  text-align: center;
+  align-items: center;
+}
 .VenderProfile .vendorInfoView {
   width: 100%;
 }

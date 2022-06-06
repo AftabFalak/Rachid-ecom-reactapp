@@ -42,7 +42,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
             >
               <p>Filter By Category</p>
 
-              <div className="category-container">
+              <div className="category-container-drawer">
                 <button onClick={handleOnClick} className="btn-category">All Categories</button>
 
                 {<ul style={{ 'display': categoryBoxShow ? 'block' : 'none' }} onFocus={handleOnClick} onBlur={handleOnBlur} className="list">
