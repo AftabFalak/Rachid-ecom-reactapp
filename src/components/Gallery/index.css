@@ -48,7 +48,7 @@
 }
 
 .Gallery .list {
-  display: none;
+  /* display: none; */
   position: absolute;
   width: 85%;
   box-shadow: 3px 4px 10px lightgray;
@@ -99,7 +99,7 @@
 }
 
 .Gallery .list {
-  display: none;
+  /* display: none; */
   position: absolute;
   width: 85%;
   box-shadow: 3px 4px 10px lightgray;

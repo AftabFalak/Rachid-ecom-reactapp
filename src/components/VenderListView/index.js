@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-const VendorListView = ({ VendorList }) => {
+const VendorListView = ({ VendorList,setShow }) => {
   return (
     <>
       {VendorList.map((item, index) => {
@@ -19,7 +19,7 @@ const VendorListView = ({ VendorList }) => {
               <div className="mt-5 text-center px-2">
                 <h3 className="border-dark border-bottom pb-2 font-weight-bold">{item.brandName} </h3>
                 <p className="brandDiscription">{item.brandDescription}</p>
-                <Link to={`/store-list/${item.id}`} className="VisitStoreNumber">Visit Store</Link>
+                <Link to={window.innerWidth<768?"#":`/store-list/${item.id}`} onClick={window.innerWidth<768? ()=>setShow(true):null} className="VisitStoreNumber">Visit Store</Link>
               </div>
             </div>
           </div>

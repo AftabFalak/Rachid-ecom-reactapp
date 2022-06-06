@@ -235,8 +235,8 @@
 }
 
 .FilterDrawer .list {
-  display: none;
-  position: absolute;
+  /* display: none; */
+  /* position: absolute;
   width: 85%;
   box-shadow: 3px 4px 10px lightgray;
   top: 40px;
@@ -245,12 +245,12 @@
   z-index: 3;
   left: 30px;
   overflow-y: scroll;
-  max-height: 400px;
+  max-height: 400px; */
 }
 
-.FilterDrawer .category-container :hover + .list {
+/* .FilterDrawer .category-container :hover + .list {
   display: block;
-}
+} */
 
 .FilterDrawer .category-container .list li {
   padding: 10px;

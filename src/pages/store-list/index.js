@@ -44,6 +44,7 @@ const onClickVenderHandel = () => {
 const StoreList = () => {
   const [vendor, setVendor] = useState(null);
   const { id } = useParams();
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     if (id) {
@@ -82,21 +83,30 @@ const StoreList = () => {
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
           </select>
-          
+
         </div>
 
-        <VendorListView VendorList={vendorList} onClick={onClickVenderHandel} />
+        <VendorListView setShow={setShow} VendorList={vendorList} onClick={onClickVenderHandel} />
       </div>
 
-      <div className="vendor-view">
+      <div className="vendor-view d-none d-md-block">
         {vendor ? (
-          <VenderProfile vendor={vendor} categorieFilterOnTop={true}/>
+          <VenderProfile vendor={vendor} categorieFilterOnTop={true} />
         ) : (
           <div className="center-text">
             <h3>Select vendor's name to preview the profiles</h3>
           </div>
         )}
       </div>
+
+      {show===true && <div className="vendor-modal-view d-block d-md-node">
+
+        <button className="back-btn" onClick={() => setShow(false)}><i className="fa fa-chevron-left"></i></button>
+        {vendor && (
+        <VenderProfile vendor={vendor} categorieFilterOnTop={true} />
+        )}
+      </div>}
+
     </div>
   );
 };

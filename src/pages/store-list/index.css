@@ -161,13 +161,30 @@
   transform: rotate(45deg);
 }
 
-@media (max-width: 450px) {
+
+.vendor-modal-view{
+  position: absolute;
+  top: 0;
+  margin-top: 40px;
+  padding: 10px;
+  left: 0;
+
+}
+.vendor-modal-view .back-btn{
+
+  background-color: transparent;
+  border: none;
+
+}
+
+@media (max-width: 767px) {
   .store-list .vendor-view {
     display: none;
   }
   .store-list .vendor-list {
     width: 100%;
     margin: auto;
+    max-width: 100%;
   }
   .store-list .btn-category {
    font-size: 12px;

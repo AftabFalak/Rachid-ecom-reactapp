@@ -6,12 +6,24 @@ import { BsArrowLeft } from "react-icons/bs";
 const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();
+  const [categoryBoxShow, setCategoryBoxShow] = useState(false)
 
   const onClickItem = (index) => {
     const item = allCategorie.forEach((el) => {
       return;
     });
   };
+
+  const handleOnClick = () => {
+
+    setCategoryBoxShow(true)
+
+  }
+
+  const handleOnBlur = () => {
+    setCategoryBoxShow(false)
+    console.log("ddd")
+  }
 
   const a = 10;
   return (
@@ -31,8 +43,9 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
               <p>Filter By Category</p>
 
               <div className="category-container">
-                <button className="btn-category">All Categories</button>
-                <ul className="list">
+                <button onClick={handleOnClick} className="btn-category">All Categories</button>
+
+                {<ul style={{ 'display': categoryBoxShow ? 'block' : 'none' }} onFocus={handleOnClick} onBlur={handleOnBlur} className="list">
                   {allCategorie.map((item, index) => {
                     return (
                       <li
@@ -55,7 +68,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                       </li>
                     );
                   })}
-                </ul>
+                </ul>}
               </div>
 
               <div className="filtersList">
