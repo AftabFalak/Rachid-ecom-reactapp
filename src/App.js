@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import NavbarBottom from './components/NavbarBottom/NavbarBottom'
 import { useState } from 'react';
@@ -31,26 +32,26 @@ function App() {
       <Routes>
         <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
-        <Route path="/vendor" element={<VendorProfile vendor={ {
-    id: 1,
-    brandName: 'Outfitter',
-    brandDescription: 'Finest engraved wood watch for your love ones.',
-    profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
-    coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif')
-  }} />} />
+        <Route path="/vendor" element={<VendorProfile vendor={{
+          id: 1,
+          brandName: 'Outfitter',
+          brandDescription: 'Finest engraved wood watch for your love ones.',
+          profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
+          coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif')
+        }} />} />
         <Route></Route>
 
         <Route path="/store-list">
           <Route index element={<StoreList />} />
           <Route path=":id" element={<StoreList />} />
         </Route>
-     
+
         <Route path="/shop" element={<Shop />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
 
       </Routes>
-     
+
       <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
 
 
