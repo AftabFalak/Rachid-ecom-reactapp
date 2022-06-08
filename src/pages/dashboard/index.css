@@ -1,0 +1,164 @@
+
+#address .cards-view{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+#address .customAdressCard{
+    background-color: #ffff;
+    margin: 10px 10px;
+}
+
+
+#address .buttons-div{
+border-top: 2px solid #ececec;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+
+#address .buttons-div button{
+    background-color: #F8F8F8;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: 0;
+    border: 0;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 25px;
+}
+#address .address-div{
+    width: 80%;
+}
+#address .address-div p{
+    line-height: 20px;
+
+}
+#address .homeButton-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#address .homeButton-div .homeButton{
+    border-radius: 3px;
+    padding: 3px 6px!important;
+}
+#address .officeButton-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#address .officeButton-div .officeButton{
+    border-radius: 3px;
+    padding: 3px 6px!important;
+}
+
+#orders .statusButton{
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 30px;
+   
+}
+#orders .shipped{
+    background-color: #198754; 
+}
+#orders .pending{
+    background-color: #DC3545; 
+}
+#orders .canceled{
+    background-color: #6C757D
+}
+#orders .viewIcon{
+    color: #FF4C3B;
+}
+
+#whishlist .statusButton{
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 30px;
+   
+}
+#whishlist .shipped{
+    background-color: #198754; 
+}
+#whishlist .pending{
+    background-color: #DC3545; 
+}
+#whishlist .canceled{
+    background-color: #6C757D
+}
+#whishlist .viewIcon{
+    color: #FF4C3B;
+}
+
+#savedcards .cards-view{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+#savedcards .customAdressCard{
+    background-color: #ffff;
+    margin: 10px 10px;
+    width: 32%;
+}
+
+
+#savedcards .buttons-div{
+border-top: 2px solid #ececec;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+
+#savedcards .buttons-div button{
+    background-color: #F8F8F8;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: 0;
+    border: 0;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 25px;
+}
+#savedcards .cardInfo-div .cardInfo-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+#savedcards .cardInfo-div p{
+    line-height: 20px;
+
+}
+#savedcards .homeButton-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#savedcards .homeButton-div .homeButton{
+    border-radius: 3px;
+    padding: 3px 6px!important;
+}
+#savedcards .officeButton-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#savedcards .officeButton-div .officeButton{
+    border-radius: 3px;
+    padding: 3px 6px!important;
+}
+#savedcards .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#savedcards .header img {
+    height: 20px;
+    width: 60px;
+}
