@@ -397,8 +397,8 @@ var FlipClock;
 			}
 
 			var dots = [
-				'<span class="'+this.factory.classes.dot+' top"></span>',
-				'<span class="'+this.factory.classes.dot+' bottom"></span>'
+				'<span className="'+this.factory.classes.dot+' top"></span>',
+				'<span className="'+this.factory.classes.dot+' bottom"></span>'
 			].join('');
 
 			if(excludeDots) {
@@ -408,8 +408,8 @@ var FlipClock;
 			label = this.factory.localize(label);
 
 			var html = [
-				'<span class="'+this.factory.classes.divider+' '+(css ? css : '').toLowerCase()+'">',
-					'<span class="'+this.factory.classes.label+'">'+(label ? label : '')+'</span>',
+				'<span className="'+this.factory.classes.divider+' '+(css ? css : '').toLowerCase()+'">',
+					'<span className="'+this.factory.classes.label+'">'+(label ? label : '')+'</span>',
 					dots,
 				'</span>'
 			];	
@@ -1086,15 +1086,15 @@ var FlipClock;
 		 
 		createListItem: function(css, value) {
 			return [
-				'<li class="'+(css ? css : '')+'">',
+				'<li className="'+(css ? css : '')+'">',
 					'<a href="#">',
-						'<div class="up">',
-							'<div class="shadow"></div>',
-							'<div class="inn">'+(value ? value : '')+'</div>',
+						'<div className="up">',
+							'<div className="shadow"></div>',
+							'<div className="inn">'+(value ? value : '')+'</div>',
 						'</div>',
-						'<div class="down">',
-							'<div class="shadow"></div>',
-							'<div class="inn">'+(value ? value : '')+'</div>',
+						'<div className="down">',
+							'<div className="shadow"></div>',
+							'<div className="inn">'+(value ? value : '')+'</div>',
 						'</div>',
 					'</a>',
 				'</li>'
@@ -1120,7 +1120,7 @@ var FlipClock;
 			var lastDigit = this.getPrevDigit() ? this.getPrevDigit() : this.digit;
 
 			var html = $([
-				'<ul class="'+this.classes.flip+' '+(this.factory.running ? this.factory.classes.play : '')+'">',
+				'<ul className="'+this.classes.flip+' '+(this.factory.running ? this.factory.classes.play : '')+'">',
 					this.createListItem(this.classes.before, lastDigit),
 					this.createListItem(this.classes.active, this.digit),
 				'</ul>'
@@ -2314,7 +2314,7 @@ var FlipClock;
 			this.base(time);			
 			this.meridiumText = this.getMeridium();			
 			this.meridium = $([
-				'<ul class="flip-clock-meridium">',
+				'<ul className="flip-clock-meridium">',
 					'<li>',
 						'<a href="#">'+this.meridiumText+'</a>',
 					'</li>',

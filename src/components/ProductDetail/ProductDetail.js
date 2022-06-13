@@ -164,13 +164,13 @@ const ProductDetail = () => {
 
               <div className="counterButton">
                 <div className="logo" onClick={() => setCount(count - 1)}>
-                  <i class="fa fa-less-than"></i>
+                  <i className="fa fa-less-than"></i>
                 </div>
                 <div className="countNumber">
                   <span>{'1'}</span>
                 </div>
                 <div className="logo" onClick={() => setCount(count + 1)}>
-                  <i class="fa fa-greater-than"></i>
+                  <i className="fa fa-greater-than"></i>
                 </div>
               </div>
             </div>

@@ -185,7 +185,7 @@
   user-select: none;
 }
 
-.container input {
+.container .contInput {
   position: absolute;
   cursor: pointer;
   opacity: 0;

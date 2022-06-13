@@ -35,37 +35,37 @@
 
         {
             "Name": "Product List",
-            "Status": "<i class=\"fa fa-circle font-warning f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-warning f-12\"></i>",
             "Created on": "Sep 5,18",
         },
         {
             "Name": "Digital Product",
-            "Status": "<i class=\"fa fa-circle font-danger f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-danger f-12\"></i>",
             "Created on": "Mar 10,18",
         },
         {
             "Name": "User Media",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created on": "Aug 24,18",
         },
         {
             "Name": "About Product",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created on": "Jun 12,18",
         },
         {
             "Name": "User Profile",
-            "Status": "<i class=\"fa fa-circle font-warning f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-warning f-12\"></i>",
             "Created on": "May 26,18",
         },
         {
             "Name": "Discount Product",
-            "Status": "<i class=\"fa fa-circle font-danger f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-danger f-12\"></i>",
             "Created on": "Sep 13,18",
         },
         {
             "Name": "About Invoice",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created on": "Dec 30,18",
         },
 

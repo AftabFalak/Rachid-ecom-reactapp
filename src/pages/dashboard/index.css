@@ -1,164 +1,199 @@
-
-#address .cards-view{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    justify-items: center;
-    flex-wrap: wrap;
+#address .cards-view {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
 }
-#address .customAdressCard{
-    background-color: #ffff;
-    margin: 10px 10px;
-}
-
-
-#address .buttons-div{
-border-top: 2px solid #ececec;
-display: flex;
-justify-content: space-between;
-padding: 10px;
+#address .customAdressCard {
+  background-color: #ffff;
+  margin: 10px 10px;
 }
 
-#address .buttons-div button{
-    background-color: #F8F8F8;
-    outline: 0;
-    box-sizing: border-box;
-    box-shadow: 0;
-    border: 0;
-    color: #000;
-    text-align: center;
-    font-weight: 500;
-    padding: 5px 25px;
-}
-#address .address-div{
-    width: 80%;
-}
-#address .address-div p{
-    line-height: 20px;
-
-}
-#address .homeButton-div{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-#address .homeButton-div .homeButton{
-    border-radius: 3px;
-    padding: 3px 6px!important;
-}
-#address .officeButton-div{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-#address .officeButton-div .officeButton{
-    border-radius: 3px;
-    padding: 3px 6px!important;
+#address .buttons-div {
+  border-top: 2px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-#orders .statusButton{
-    padding: 6px 12px;
-    color: #fff;
-    border-radius: 30px;
-   
+#address .buttons-div button {
+  background-color: #f8f8f8;
+  outline: 0;
+  box-sizing: border-box;
+  box-shadow: 0;
+  border: 0;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px 25px;
 }
-#orders .shipped{
-    background-color: #198754; 
+#address .address-div {
+  width: 80%;
 }
-#orders .pending{
-    background-color: #DC3545; 
+#address .address-div p {
+  line-height: 20px;
 }
-#orders .canceled{
-    background-color: #6C757D
+#address .homeButton-div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-#orders .viewIcon{
-    color: #FF4C3B;
+#address .homeButton-div .homeButton {
+  border-radius: 3px;
+  padding: 3px 6px !important;
 }
-
-#whishlist .statusButton{
-    padding: 6px 12px;
-    color: #fff;
-    border-radius: 30px;
-   
+#address .officeButton-div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-#whishlist .shipped{
-    background-color: #198754; 
-}
-#whishlist .pending{
-    background-color: #DC3545; 
-}
-#whishlist .canceled{
-    background-color: #6C757D
-}
-#whishlist .viewIcon{
-    color: #FF4C3B;
+#address .officeButton-div .officeButton {
+  border-radius: 3px;
+  padding: 3px 6px !important;
 }
 
-#savedcards .cards-view{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    justify-items: center;
-    flex-wrap: wrap;
+#orders .statusButton {
+  padding: 4px 9px;
+  color: #fff;
+  border-radius: 30px;
 }
-#savedcards .customAdressCard{
-    background-color: #ffff;
-    margin: 10px 10px;
-    width: 32%;
+#orders .shipped {
+  background-color: #198754;
 }
-
-
-#savedcards .buttons-div{
-border-top: 2px solid #ececec;
-display: flex;
-justify-content: space-between;
-padding: 10px;
+#orders .pending {
+  background-color: #dc3545;
+}
+#orders .canceled {
+  background-color: #6c757d;
+}
+#orders .viewIcon {
+  color: #ff4c3b;
 }
 
-#savedcards .buttons-div button{
-    background-color: #F8F8F8;
-    outline: 0;
-    box-sizing: border-box;
-    box-shadow: 0;
-    border: 0;
-    color: #000;
-    text-align: center;
-    font-weight: 500;
-    padding: 5px 25px;
+#whishlist .statusButton {
+  padding: 6px 12px;
+  color: #fff;
+  border-radius: 30px;
 }
-#savedcards .cardInfo-div .cardInfo-flex{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+#whishlist .shipped {
+  background-color: #198754;
 }
-#savedcards .cardInfo-div p{
-    line-height: 20px;
+#whishlist .pending {
+  background-color: #dc3545;
+}
+#whishlist .canceled {
+  background-color: #6c757d;
+}
+#whishlist .viewIcon {
+  color: #ff4c3b;
+}
 
+#cards .cards-view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
 }
-#savedcards .homeButton-div{
-    position: absolute;
-    top: 10px;
-    right: 10px;
+#cards .customAdressCard {
+  background-color: #ffff;
+  margin: 10px 10px;
+  width: 32%;
 }
-#savedcards .homeButton-div .homeButton{
-    border-radius: 3px;
-    padding: 3px 6px!important;
+
+#cards .buttons-div {
+  border-top: 2px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
-#savedcards .officeButton-div{
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+#cards .buttons-div button {
+  background-color: #f8f8f8;
+  outline: 0;
+  box-sizing: border-box;
+  box-shadow: 0;
+  border: 0;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px 25px;
 }
-#savedcards .officeButton-div .officeButton{
-    border-radius: 3px;
-    padding: 3px 6px!important;
+#cards .cardInfo-div .cardInfo-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
-#savedcards .header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+#cards .cardInfo-div p {
+  line-height: 20px;
 }
-#savedcards .header img {
-    height: 20px;
-    width: 60px;
+#cards .homeButton-div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#cards .homeButton-div .homeButton {
+  border-radius: 3px;
+  padding: 3px 6px !important;
+}
+#cards .officeButton-div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#cards .officeButton-div .officeButton {
+  border-radius: 3px;
+  padding: 3px 6px !important;
+}
+#cards .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#cards .header img {
+  height: 20px;
+  width: 60px;
+}
+#whishlist .actioniIcons {
+  color: #ff4c3b;
+  margin: 0px 6px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#whishlist .actioniIcons:hover {
+  opacity: 0.7;
+  margin: 0px 6px;
+}
+
+#profile .editInputs {
+  border: 1.8px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #777777;
+  margin: 0px;
+}
+#profile .save-cancel-button-view {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin-right: auto;
+  margin: 20px auto 20px 30px;
+}
+
+#profile .save-cancel-button-view button {
+  margin: 0px 20px;
+  padding: 4px 20px;
+  color: #ffff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 3px;
+}
+#profile .save-cancel-button-view .cancel {
+  background-color: #ff4c3b;
+}
+#profile .save-cancel-button-view .save {
+  background-color: #198754;
 }

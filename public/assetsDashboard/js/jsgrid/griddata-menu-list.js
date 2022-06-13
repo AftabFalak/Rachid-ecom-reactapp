@@ -34,32 +34,32 @@
     db.clients = [
         {
             "Name": "Product Menu",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
         {
             "Name": "Category Menu",
-            "Status": "<i class=\"fa fa-circle font-warning f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-warning f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
         {
             "Name": "Subcategory Menu",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
         {
             "Name": "Sales Menu",
-            "Status": "<i class=\"fa fa-circle font-danger f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-danger f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
         {
             "Name": "Vendor Menu",
-            "Status": "<i class=\"fa fa-circle font-success f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-success f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
         {
             "Name": "Category Menu",
-            "Status": "<i class=\"fa fa-circle font-warning f-12\"></i>",
+            "Status": "<i className=\"fa fa-circle font-warning f-12\"></i>",
             "Created On": "2018-04-18T00:00:00",
         },
 

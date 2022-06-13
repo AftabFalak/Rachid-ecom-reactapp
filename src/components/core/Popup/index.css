@@ -1,0 +1,134 @@
+.AddPopup {
+  min-width: 35vw;
+  border: 2px solid gray !important;
+  background: #fff;
+  font-weight: 600;
+  z-index: 50;
+  position: absolute;
+  border-radius: 6px;
+  top: 45%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: auto;
+}
+.bg-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #000000c9;
+  opacity: 0.6;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 49;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 17px;
+  padding: 10px;
+  border-bottom: 2px solid gray !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.border-none {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray !important;
+}
+.dropd {
+  width: 100%;
+}
+
+.send-button {
+  background-color: #5c976b;
+  color: gray !important;
+  font-weight: 500;
+  box-shadow: 2px 2px 2px 2px gray !important;
+  line-height: 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.form-buttons {
+  margin-top: 200px;
+  text-align: right;
+}
+.addbtn {
+  padding: 0px 5px;
+  font-size: 15px;
+  background-color: #90c47f;
+  box-shadow: 1px 1px 1px 1px gray !important;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.cancelbtn {
+  border-radius: 10px;
+  background-color: #e16469;
+  padding: 0px 5px;
+  box-shadow: 1px 1px 1px 1px gray !important;
+  font-weight: 500;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.buttonView {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonView button {
+  margin: 0px 20px;
+  padding: 7px 18px;
+  color: #ffff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 3px;
+}
+.buttonView .cancel {
+  background-color: #ff4c3b;
+}
+.buttonView .save {
+  background-color: #198754;
+}
+
+@media (max-width: 900px) {
+  .AddPopup {
+    margin: 0;
+    min-width: 50vw;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .send-button {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .AddPopup {
+    margin: 0;
+    min-width: 50vw;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .form-buttons {
+    margin-top: 100px;
+    text-align: right;
+  }
+}

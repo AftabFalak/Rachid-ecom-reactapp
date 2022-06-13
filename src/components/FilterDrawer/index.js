@@ -69,9 +69,9 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                             </p>
                             {item.categorie === selectedCategory}
 
-                            <label class="containerCheckbox justify-content-end">
+                            <label className="containerCheckbox justify-content-end">
                               <input type="checkbox" />
-                              <span class="checkmarkCheckbox-drawer"></span>
+                              <span className="checkmarkCheckbox-drawer"></span>
                             </label>
                           </li>
                         );
@@ -86,63 +86,63 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                 <div className="filtersList">
                   <div className="offers my-3">
                     <span className="font-weight-bold">Special offers</span>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       Free Dilevery
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       On sale
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
                   </div>
                   <div className="dilevery my-3">
                     <span className="font-weight-bold">Ready to dispatch in</span>
 
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       1 business day
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       1–3 business days
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
                   </div>
 
                   <div className="prices my-3">
                     <span className="font-weight-bold">Price ($)</span>
-                    <label class="container">
+                    <label className="container">
                       Any Price
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       Under USD 25
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       USD 25 to USD 50
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       USD 50 to USD 100
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       Over USD 100
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       Custom
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
 
                     <div className="flex">
@@ -167,20 +167,20 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                   <div className="location my-3">
                     <span className="font-weight-bold">Shop location</span>
 
-                    <label class="container">
+                    <label className="container">
                       <span>Anywhere</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       <span>Pakistan</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       <span>Custom</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
 
                     <div className="flex">
@@ -196,40 +196,40 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
 
                   <div className="itemType my-3">
                     <span className="font-weight-bold">Item Type</span>
-                    <label class="container">
+                    <label className="container">
                       <span>All Times</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
 
-                    <label class="container">
+                    <label className="container">
                       <span>Handmade</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
-                    <label class="container">
+                    <label className="container">
                       <span>Vintage</span>
-                      <input type="radio" checked="checked" name="radio" />
-                      <span class="checkmark"></span>
+                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <span className="checkmark"></span>
                     </label>
                   </div>
 
                   <div className="orderingOption my-3">
                     <span className="font-weight-bold">Ordering options</span>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       Accepts Etsy gift cards
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       Can be gift-wrapped
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
-                    <label class="containerCheckbox">
+                    <label className="containerCheckbox">
                       Customisable
                       <input type="checkbox" />
-                      <span class="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox"></span>
                     </label>
                   </div>
 

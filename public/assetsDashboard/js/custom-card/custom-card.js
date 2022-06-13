@@ -13,7 +13,7 @@ var customcard = {
         }), $(".card-header-right .reload-card").on('click', function() {
             var $this = $(this);
             $this.parents('.card').addClass("card-load");
-            $this.parents('.card').append('<div class="loader-box card-loader"><div class="loader card-load"><div class="whirly-loader"></div></div></div>');
+            $this.parents('.card').append('<div className="loader-box card-loader"><div className="loader card-load"><div className="whirly-loader"></div></div></div>');
             setTimeout(function() {
                 $this.parents('.card').children(".card-loader").remove();
                 $this.parents('.card').removeClass("card-load");

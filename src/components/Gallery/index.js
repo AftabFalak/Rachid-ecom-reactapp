@@ -171,9 +171,9 @@ const Gallery = ({
                         <li key={index} className="list_item d-flex">
                           <p className="m-0">{item.categorie} </p>
 
-                          <label class="containerCheckbox justify-content-end">
+                          <label className="containerCheckbox justify-content-end">
                             <input type="checkbox" />
-                            <span class="checkmarkCheckbox"></span>
+                            <span className="checkmarkCheckbox"></span>
                           </label>
                         </li>
                       );

@@ -216,7 +216,7 @@
      ==========================*/
     var contentwidth = jQuery(window).width();
     if ((contentwidth) < '750') {
-        jQuery('.footer-title h4').append('<span class="according-menu"></span>');
+        jQuery('.footer-title h4').append('<span className="according-menu"></span>');
         jQuery('.footer-title').on('click', function() {
             jQuery('.footer-title').removeClass('active');
             jQuery('.footer-contant').slideUp('normal');
@@ -231,7 +231,7 @@
     }
 
     if ($(window).width() < '1183') {
-        jQuery('.menu-title h5').append('<span class="according-menu"></span>');
+        jQuery('.menu-title h5').append('<span className="according-menu"></span>');
         jQuery('.menu-title').on('click', function() {
             jQuery('.menu-title').removeClass('active');
             jQuery('.menu-content').slideUp('normal');
@@ -1623,13 +1623,13 @@
                 exit: 'animated fadeOutUp'
             },
             icon_type: 'class',
-            template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
-                '<button type="button" aria-hidden="true" class="btn-close" data-notify="dismiss"></button>' +
+            template: '<div data-notify="container" className="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                '<button type="button" aria-hidden="true" className="btn-close" data-notify="dismiss"></button>' +
                 '<span data-notify="icon"></span> ' +
                 '<span data-notify="title">{1}</span> ' +
                 '<span data-notify="message">{2}</span>' +
-                '<div class="progress" data-notify="progressbar">' +
-                '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                '<div className="progress" data-notify="progressbar">' +
+                '<div className="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
                 '</div>' +
                 '<a href="{3}" target="{4}" data-notify="url"></a>' +
                 '</div>'
@@ -1666,13 +1666,13 @@
                 exit: 'animated fadeOutUp'
             },
             icon_type: 'class',
-            template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
-                '<button type="button" aria-hidden="true" class="btn-close" data-notify="dismiss"></button>' +
+            template: '<div data-notify="container" className="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                '<button type="button" aria-hidden="true" className="btn-close" data-notify="dismiss"></button>' +
                 '<span data-notify="icon"></span> ' +
                 '<span data-notify="title">{1}</span> ' +
                 '<span data-notify="message">{2}</span>' +
-                '<div class="progress" data-notify="progressbar">' +
-                '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                '<div className="progress" data-notify="progressbar">' +
+                '<div className="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
                 '</div>' +
                 '<a href="{3}" target="{4}" data-notify="url"></a>' +
                 '</div>'

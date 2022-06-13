@@ -6,10 +6,10 @@
         $body, $datepickersContainer,
         containerBuilt = false,
         baseTemplate = '' +
-            '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
-            '<nav class="datepicker--nav"></nav>' +
-            '<div class="datepicker--content"></div>' +
+            '<div className="datepicker">' +
+            '<i className="datepicker--pointer"></i>' +
+            '<nav className="datepicker--nav"></nav>' +
+            '<div className="datepicker--content"></div>' +
             '</div>',
         defaults = {
             classes: '',
@@ -263,13 +263,13 @@
 
         _buildDatepickersContainer: function () {
             containerBuilt = true;
-            $body.append('<div class="datepickers-container" id="datepickers-container"></div>');
+            $body.append('<div className="datepickers-container" id="datepickers-container"></div>');
             $datepickersContainer = $('#datepickers-container');
         },
 
         _buildBaseHtml: function () {
             var $appendTarget,
-                $inline = $('<div class="datepicker-inline">');
+                $inline = $('<div className="datepicker-inline">');
 
             if(this.el.nodeName == 'INPUT') {
                 if (!this.opts.inline) {
@@ -1496,17 +1496,17 @@
     ;(function () {
         var templates = {
                 days:'' +
-                    '<div class="datepicker--days datepicker--body">' +
-                    '<div class="datepicker--days-names"></div>' +
-                    '<div class="datepicker--cells datepicker--cells-days"></div>' +
+                    '<div className="datepicker--days datepicker--body">' +
+                    '<div className="datepicker--days-names"></div>' +
+                    '<div className="datepicker--cells datepicker--cells-days"></div>' +
                     '</div>',
                 months: '' +
-                    '<div class="datepicker--months datepicker--body">' +
-                    '<div class="datepicker--cells datepicker--cells-months"></div>' +
+                    '<div className="datepicker--months datepicker--body">' +
+                    '<div className="datepicker--cells datepicker--cells-months"></div>' +
                     '</div>',
                 years: '' +
-                    '<div class="datepicker--years datepicker--body">' +
-                    '<div class="datepicker--cells datepicker--cells-years"></div>' +
+                    '<div className="datepicker--years datepicker--body">' +
+                    '<div className="datepicker--cells datepicker--cells-years"></div>' +
                     '</div>'
             },
             datepicker = $.fn.datepicker,
@@ -1548,7 +1548,7 @@
                 if (i > 7) return html;
                 if (curDay == 7) return this._getDayNamesHtml(firstDay, 0, html, ++i);
 
-                html += '<div class="datepicker--day-name' + (this.d.isWeekend(curDay) ? " -weekend-" : "") + '">' + this.d.loc.daysMin[curDay] + '</div>';
+                html += '<div className="datepicker--day-name' + (this.d.isWeekend(curDay) ? " -weekend-" : "") + '">' + this.d.loc.daysMin[curDay] + '</div>';
 
                 return this._getDayNamesHtml(firstDay, ++curDay, html, ++i);
             },
@@ -1668,7 +1668,7 @@
             _getDayHtml: function (date) {
                 var content = this._getCellContents(date, 'day');
 
-                return '<div class="' + content.classes + '" ' +
+                return '<div className="' + content.classes + '" ' +
                     'data-date="' + date.getDate() + '" ' +
                     'data-month="' + date.getMonth() + '" ' +
                     'data-year="' + date.getFullYear() + '">' + content.html + '</div>';
@@ -1696,7 +1696,7 @@
             _getMonthHtml: function (date) {
                 var content = this._getCellContents(date, 'month');
 
-                return '<div class="' + content.classes + '" data-month="' + date.getMonth() + '">' + content.html + '</div>'
+                return '<div className="' + content.classes + '" data-month="' + date.getMonth() + '">' + content.html + '</div>'
             },
 
             _getYearsHtml: function (date) {
@@ -1716,7 +1716,7 @@
             _getYearHtml: function (date) {
                 var content = this._getCellContents(date, 'year');
 
-                return '<div class="' + content.classes + '" data-year="' + date.getFullYear() + '">' + content.html + '</div>'
+                return '<div className="' + content.classes + '" data-year="' + date.getFullYear() + '">' + content.html + '</div>'
             },
 
             _renderTypes: {
@@ -1807,11 +1807,11 @@
 
     ;(function () {
         var template = '' +
-            '<div class="datepicker--nav-action" data-action="prev">#{prevHtml}</div>' +
-            '<div class="datepicker--nav-title">#{title}</div>' +
-            '<div class="datepicker--nav-action" data-action="next">#{nextHtml}</div>',
-            buttonsContainerTemplate = '<div class="datepicker--buttons"></div>',
-            button = '<span class="datepicker--button" data-action="#{action}">#{label}</span>',
+            '<div className="datepicker--nav-action" data-action="prev">#{prevHtml}</div>' +
+            '<div className="datepicker--nav-title">#{title}</div>' +
+            '<div className="datepicker--nav-action" data-action="next">#{nextHtml}</div>',
+            buttonsContainerTemplate = '<div className="datepicker--buttons"></div>',
+            button = '<span className="datepicker--button" data-action="#{action}">#{label}</span>',
             datepicker = $.fn.datepicker,
             dp = datepicker.Constructor;
 
@@ -1952,17 +1952,17 @@
     })();
 
     ;(function () {
-        var template = '<div class="datepicker--time">' +
-            '<div class="datepicker--time-current">' +
-            '   <span class="datepicker--time-current-hours">#{hourVisible}</span>' +
-            '   <span class="datepicker--time-current-colon">:</span>' +
-            '   <span class="datepicker--time-current-minutes">#{minValue}</span>' +
+        var template = '<div className="datepicker--time">' +
+            '<div className="datepicker--time-current">' +
+            '   <span className="datepicker--time-current-hours">#{hourVisible}</span>' +
+            '   <span className="datepicker--time-current-colon">:</span>' +
+            '   <span className="datepicker--time-current-minutes">#{minValue}</span>' +
             '</div>' +
-            '<div class="datepicker--time-sliders">' +
-            '   <div class="datepicker--time-row">' +
+            '<div className="datepicker--time-sliders">' +
+            '   <div className="datepicker--time-row">' +
             '      <input type="range" name="hours" value="#{hourValue}" min="#{hourMin}" max="#{hourMax}" step="#{hourStep}"/>' +
             '   </div>' +
-            '   <div class="datepicker--time-row">' +
+            '   <div className="datepicker--time-row">' +
             '      <input type="range" name="minutes" value="#{minValue}" min="#{minMin}" max="#{minMax}" step="#{minStep}"/>' +
             '   </div>' +
             '</div>' +
@@ -2085,7 +2085,7 @@
                 this.$minutesText = $('.datepicker--time-current-minutes', this.$timepicker);
 
                 if (this.d.ampm) {
-                    this.$ampm = $('<span class="datepicker--time-current-ampm">')
+                    this.$ampm = $('<span className="datepicker--time-current-ampm">')
                         .appendTo($('.datepicker--time-current', this.$timepicker))
                         .html(this.dayPeriod);
 

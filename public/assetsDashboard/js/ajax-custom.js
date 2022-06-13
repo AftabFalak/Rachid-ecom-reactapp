@@ -44,12 +44,12 @@ $('.the-basics .typeahead').typeahead({
   source: states.ttAdapter(),
   templates: {
     empty: [
-      '<div class="empty-message">',
+      '<div className="empty-message">',
         'No Record Found !',
       '</div>'
     ].join('\n'),
     suggestion: function (data) {
-        return '<a href="product-page.html" class="man-section"><div class="image-section"><img src='+data.image+'></div><div class="description-section"><h4>'+data.name+'</h4><span>'+data.price+'</span></div></a>';
+        return '<a href="product-page.html" className="man-section"><div className="image-section"><img src='+data.image+'></div><div className="description-section"><h4>'+data.name+'</h4><span>'+data.price+'</span></div></a>';
     }
   },
 });

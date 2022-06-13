@@ -287,7 +287,7 @@
 					// display overlay over the menu to prevent interaction
 					if (!noOverlay && !this.opts.isPopup && this.$root.is(':visible')) {
 						var pos = this.$root.offset();
-						this.$disableOverlay = $('<div class="sm-jquery-disable-overlay"/>').css({
+						this.$disableOverlay = $('<div className="sm-jquery-disable-overlay"/>').css({
 							position: 'absolute',
 							top: pos.top,
 							left: pos.left,
@@ -738,7 +738,7 @@
 					if (horizontalParent && (absY + subH > winY + winH + 0.49 || absY < winY) || !horizontalParent && subH > winH + 0.49) {
 						var self = this;
 						if (!$sub.dataSM('scroll-arrows')) {
-							$sub.dataSM('scroll-arrows', $([$('<span class="scroll-up"><span class="scroll-up-arrow"></span></span>')[0], $('<span class="scroll-down"><span class="scroll-down-arrow"></span></span>')[0]])
+							$sub.dataSM('scroll-arrows', $([$('<span className="scroll-up"><span className="scroll-up-arrow"></span></span>')[0], $('<span className="scroll-down"><span className="scroll-down-arrow"></span></span>')[0]])
 								.on({
 									mouseenter: function() {
 										$sub.dataSM('scroll').up = $(this).hasClass('scroll-up');

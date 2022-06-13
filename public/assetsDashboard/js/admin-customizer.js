@@ -1,5 +1,5 @@
 // RTl & Ltr
-$('<ul class="custom-theme"><li class="btn-rtl">RTL</li><li class="btn-dark-setting">Dark</li></ul>').appendTo($('body'));
+$('<ul className="custom-theme"><li className="btn-rtl">RTL</li><li className="btn-dark-setting">Dark</li></ul>').appendTo($('body'));
 (function () {
 })();
 //live customizer js

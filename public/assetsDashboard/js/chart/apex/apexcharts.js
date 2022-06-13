@@ -4166,7 +4166,7 @@
               var h = w.globals.seriesCandleH[seriesIndex][dataPointIndex];
               var l = w.globals.seriesCandleL[seriesIndex][dataPointIndex];
               var c = w.globals.seriesCandleC[seriesIndex][dataPointIndex];
-              return '<div class="apexcharts-tooltip-candlestick">' + '<div>Open: <span class="value">' + o + '</span></div>' + '<div>High: <span class="value">' + h + '</span></div>' + '<div>Low: <span class="value">' + l + '</span></div>' + '<div>Close: <span class="value">' + c + '</span></div>' + '</div>';
+              return '<div className="apexcharts-tooltip-candlestick">' + '<div>Open: <span className="value">' + o + '</span></div>' + '<div>High: <span className="value">' + h + '</span></div>' + '<div>Low: <span className="value">' + l + '</span></div>' + '<div>Close: <span className="value">' + c + '</span></div>' + '</div>';
             }
           },
           states: {
@@ -4267,7 +4267,7 @@
                 endVal = w.config.tooltip.x.formatter(end);
               }
 
-              return '<div class="apexcharts-tooltip-rangebar">' + '<div> <span class="series-name" style="color: ' + color + '">' + (seriesName ? seriesName : '') + '</span></div>' + '<div> <span class="category">' + ylabel + ' </span> <span class="value start-value">' + startVal + '</span> <span class="separator">-</span> <span class="value end-value">' + endVal + '</span></div>' + '</div>';
+              return '<div className="apexcharts-tooltip-rangebar">' + '<div> <span className="series-name" style="color: ' + color + '">' + (seriesName ? seriesName : '') + '</span></div>' + '<div> <span className="category">' + ylabel + ' </span> <span className="value start-value">' + startVal + '</span> <span className="separator">-</span> <span className="value end-value">' + endVal + '</span></div>' + '</div>';
             }
           },
           xaxis: {
@@ -28184,7 +28184,7 @@
         element.__resizeLast__ = {};
         element.__resizeListeners__ = [];
         (element.__resizeTriggers__ = document.createElement('div')).className = 'resize-triggers';
-        element.__resizeTriggers__.innerHTML = '<div class="expand-trigger"><div></div></div>' + '<div class="contract-trigger"></div>';
+        element.__resizeTriggers__.innerHTML = '<div className="expand-trigger"><div></div></div>' + '<div className="contract-trigger"></div>';
         element.appendChild(element.__resizeTriggers__);
         resetTriggers(element);
         element.addEventListener('scroll', scrollListener, true);

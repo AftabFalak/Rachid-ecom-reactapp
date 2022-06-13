@@ -47,7 +47,7 @@ function App() {
         </Route>
 
         <Route path="/shop" element={<Shop />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/:page" element={<Dashboard />} />
 
 
       </Routes>
