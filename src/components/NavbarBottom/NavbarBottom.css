@@ -1,41 +1,41 @@
-.custonNavbar{
-    height: 71px;
+.custonNavbar {
+  height: 71px;
 }
 
-.signInLink{
-    border-left: .5px solid rgb(222, 220, 220);
-    border-right: .5px solid rgb(222, 220, 220);
-    position: relative;
-    padding-top: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+.signInLink {
+  border-left: 0.5px solid rgb(222, 220, 220);
+  border-right: 0.5px solid rgb(222, 220, 220);
+  position: relative;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
-.signInLink:hover{
-    background-color: rgb(235, 233, 233);
-    transition: all .5s;
+.signInLink:hover {
+  background-color: rgb(235, 233, 233);
+  transition: all 0.5s;
 }
-.signInLogo{
-    font-size: 18px;
-    color: rgb(47, 47, 47);
+.signInLogo {
+  font-size: 18px;
+  color: rgb(47, 47, 47);
 }
-.signInText{
-    font-size: 14px;
-    color: rgb(100, 99, 99);
+.signInText {
+  font-size: 14px;
+  color: rgb(100, 99, 99);
 }
 .CartBadge {
-    background-color: #5C77FC;
-    border-radius: 50%;
-    color: #ffff;
-    width: 18px;
-    font-size: 13px;
-    position: absolute;
-    top: 6px;
-    right: 20px;
+  background-color: #5c77fc;
+  border-radius: 50%;
+  color: #ffff;
+  width: 18px;
+  font-size: 13px;
+  position: absolute;
+  top: 6px;
+  right: 20px;
 }
-
-@media (max-width = 320px) {
-
-
-    
+.signInTextDummy {
+  font-size: 14px;
+  color: rgb(100, 99, 99);
+  margin-top: 6px;
+  padding: 0px;
 }
