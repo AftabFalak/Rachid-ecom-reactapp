@@ -1,30 +1,27 @@
-import React from 'react'
-import './App.css';
-import NavbarBottom from './components/NavbarBottom/NavbarBottom'
-import { useState } from 'react';
-import MainDrawer from './components/MainDrawer/MainDrawer';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
-import ProductDetail from './components/ProductDetail/ProductDetail';
-import VendorProfile from './components/VenderProfile/VenderProfile';
-import StoreList from './pages/store-list';
-import Shop from './pages/shop';
-import Dashboard from './pages/dashboard';
-
+import React from "react";
+import "./App.css";
+import NavbarBottom from "./components/NavbarBottom/NavbarBottom";
+import { useState } from "react";
+import MainDrawer from "./components/MainDrawer/MainDrawer";
+import { Routes, Route } from "react-router-dom";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
+import VendorProfile from "./components/VenderProfile/VenderProfile";
+import StoreList from "./pages/store-list";
+import Shop from "./pages/shop";
+import Dashboard from "./pages/dashboard";
+import Checkout from "./pages/checkout";
 
 function App() {
-  const [open, setOpen] = useState({ drawerOpen: false })
+  const [open, setOpen] = useState({ drawerOpen: false });
   const setDrawerOpen = (isDrawerOpen) => {
     setOpen({
-      drawerOpen: isDrawerOpen
-    })
-  }
+      drawerOpen: isDrawerOpen,
+    });
+  };
 
   const toggleDrawer = () => {
-    setOpen((pstate) => ({ drawerOpen: !pstate.drawerOpen }))
-  }
+    setOpen((pstate) => ({ drawerOpen: !pstate.drawerOpen }));
+  };
 
   return (
     <div className="App">
@@ -32,13 +29,21 @@ function App() {
       <Routes>
         <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
-        <Route path="/vendor" element={<VendorProfile vendor={{
-          id: 1,
-          brandName: 'Outfitter',
-          brandDescription: 'Finest engraved wood watch for your love ones.',
-          profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
-          coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif')
-        }} />} />
+        <Route
+          path="/vendor"
+          element={
+            <VendorProfile
+              vendor={{
+                id: 1,
+                brandName: "Outfitter",
+                brandDescription:
+                  "Finest engraved wood watch for your love ones.",
+                profileImage: require("./assets/images/VendorProfile/brand2.PNG"),
+                coverImage: require("./assets/images/VenderCover/venderCoverPhotoavif.avif"),
+              }}
+            />
+          }
+        />
         <Route></Route>
 
         <Route path="/store-list">
@@ -48,14 +53,10 @@ function App() {
 
         <Route path="/shop" element={<Shop />} />
         <Route path="/dashboard/:page" element={<Dashboard />} />
-
-
+        <Route path="/checkout/:page" element={<Checkout />} />
       </Routes>
 
       <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
-
-
-
     </div>
   );
 }

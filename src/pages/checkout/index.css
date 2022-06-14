@@ -1,0 +1,20 @@
+#checkout-topbar {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#checkout-topbar .singleTab {
+  border-right: 2px dotted rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#checkout-topbar .singleTab:last-child {
+  border: none;
+}
+#checkout-topbar .singleTab p {
+  margin-top: 10px;
+  font-size: 20px;
+}

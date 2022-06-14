@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import "./index.css";
 
@@ -11,7 +12,6 @@ import Cards from "../../components/Layout/Dashboard/Cards";
 import Orders from "../../components/Layout/Dashboard/Orders";
 import Profile from "../../components/Layout/Dashboard/Profile";
 import Wishlist from "../../components/Layout/Dashboard/Wishlist";
-import { useState } from "react";
 
 const initAddressBook = [
   {
