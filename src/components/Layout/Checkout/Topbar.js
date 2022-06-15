@@ -1,25 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-const Topbar = ({ page }) => {
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+
+const Topbar = ({ page, tabs }) => {
   return (
     <div id="checkout-topbar">
-      <Link to="/checkout/shoppingcart" className="singleTab">
-        <i class="fa fa-cart-shopping"></i>
-        <p>1- Shopping Cart</p>
-      </Link>
-      <Link to="/checkout/detail" className="singleTab">
-        <i class="fa fa-user"></i>
-        <p>2- Your details</p>
-      </Link>
-
-      <Link to="/checkout/payment" className="singleTab">
-        <i class="fa fa-credit"></i>
-        <p>4- Payment</p>
-      </Link>
-      <Link to="/checkout/review" className="singleTab">
-        <i class="fa fa-circle-check"></i>
-        <p>5- Final Review</p>
-      </Link>
+      {tabs.map(({ link, endPoint, icon, title, id }, index) => (
+        <Link to={link} className="singleTab">
+          {page === endPoint ? (
+            <div className="checkedIconDiv">
+              <BsFillCheckCircleFill className="checkedIcon" />
+            </div>
+          ) : (
+            <></>
+          )}
+          {icon}
+          <p>
+            {id}- {title}
+          </p>
+        </Link>
+      ))}
     </div>
   );
 };

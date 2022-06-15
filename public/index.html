@@ -1,129 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <title>React App</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <title>React App</title>
+  </head>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-  integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+  <script
+    defer
+    src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"
+  ></script>
 
-<!--Google font-->
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <!--Google font-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+    rel="stylesheet"
+  />
 
-<!-- Icons -->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/fontawesome.css">
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/fontawesome.css"
+  />
 
-<!--Slick slider css-->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/slick.css">
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/slick-theme.css">
+  <!--Slick slider css-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/slick.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/slick-theme.css"
+  />
 
-<!-- Animate icon -->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/animate.css">
+  <!-- Animate icon -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/animate.css"
+  />
 
-<!-- Themify icon -->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/themify-icons.css">
+  <!-- Themify icon -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/themify-icons.css"
+  />
 
-<!-- Bootstrap css -->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/vendors/bootstrap.css">
+  <!-- Bootstrap css -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/vendors/bootstrap.css"
+  />
 
-<!-- Theme css -->
-<link rel="stylesheet" type="text/css" href="/assetsDashboard/css/style.css">
+  <!-- Theme css -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/assetsDashboard/css/style.css"
+  />
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-    crossorigin="anonymous"></script>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <!-- latest jquery-->
-  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
 
-  <!-- menu js-->
-  <script src="../assets/js/menu.js"></script>
+    <!-- menu js-->
+    <script src="../assets/js/menu.js"></script>
 
-  <!-- lazyload js-->
-  <script src="../assets/js/lazysizes.min.js"></script>
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
 
-  <!-- slick js-->
-  <script src="../assets/js/slick.js"></script>
+    <!-- slick js-->
+    <script src="../assets/js/slick.js"></script>
 
-  <!-- Bootstrap js-->
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap Notification js-->
-  <script src="../assets/js/bootstrap-notify.min.js"></script>
+    <!-- Bootstrap Notification js-->
+    <script src="../assets/js/bootstrap-notify.min.js"></script>
 
-  <!-- Theme js-->
-  <script src="../assets/js/theme-setting.js"></script>
-  <script src="../assets/js/script.js"></script>
+    <!-- Theme js-->
+    <script src="../assets/js/theme-setting.js"></script>
+    <script src="../assets/js/script.js"></script>
 
-  <script>
-    function openSearch() {
-      document.getElementById("search-overlay").style.display = "block";
-    }
+    <script>
+      function openSearch() {
+        document.getElementById('search-overlay').style.display = 'block';
+      }
 
-    function closeSearch() {
-      document.getElementById("search-overlay").style.display = "none";
-    }
-  </script>
+      function closeSearch() {
+        document.getElementById('search-overlay').style.display = 'none';
+      }
+    </script>
+    <!-- fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/a6f2083694.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- latest jquery-->
-  <script src="/assetsDashboard/js/jquery-3.3.1.min.js"></script>
+    <!-- latest jquery-->
+    <script src="/assetsDashboard/js/jquery-3.3.1.min.js"></script>
 
-  <!-- menu js-->
-  <script src="/assetsDashboard/js/menu.js"></script>
+    <!-- menu js-->
+    <script src="/assetsDashboard/js/menu.js"></script>
 
-  <!-- lazyload js-->
-  <script src="/assetsDashboard/js/lazysizes.min.js"></script>
+    <!-- lazyload js-->
+    <script src="/assetsDashboard/js/lazysizes.min.js"></script>
 
-  <!-- slick js-->
-  <script src="/assetsDashboard/js/slick.js"></script>
+    <!-- slick js-->
+    <script src="/assetsDashboard/js/slick.js"></script>
 
-  <!-- Bootstrap js-->
-  <script src="/assetsDashboard/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="/assetsDashboard/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap Notification js-->
-  <script src="/assetsDashboard/js/bootstrap-notify.min.js"></script>
+    <!-- Bootstrap Notification js-->
+    <script src="/assetsDashboard/js/bootstrap-notify.min.js"></script>
 
-  <!-- Theme js-->
-  <script src="/assetsDashboard/js/theme-setting.js"></script>
-  <script src="/assetsDashboard/js/script.js"></script>
+    <!-- Theme js-->
+    <script src="/assetsDashboard/js/theme-setting.js"></script>
+    <script src="/assetsDashboard/js/script.js"></script>
 
-  <script>
-    function openSearch() {
-      document.getElementById("search-overlay").style.display = "block";
-    }
+    <script>
+      function openSearch() {
+        document.getElementById('search-overlay').style.display = 'block';
+      }
 
-    function closeSearch() {
-      document.getElementById("search-overlay").style.display = "none";
-    }
-  </script>
-</body>
-
+      function closeSearch() {
+        document.getElementById('search-overlay').style.display = 'none';
+      }
+    </script>
+  </body>
 </html>
