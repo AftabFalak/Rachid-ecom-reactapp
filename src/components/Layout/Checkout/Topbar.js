@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const Topbar = ({ page, tabs }) => {
   return (
