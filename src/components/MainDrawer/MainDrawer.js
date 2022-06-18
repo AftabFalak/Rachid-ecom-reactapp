@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import "./MainDrawer.css";
+import React, { useState } from 'react';
+import './MainDrawer.css';
 
-import GoogleButton from "react-google-button";
+import GoogleButton from 'react-google-button';
 
 const MainDrawer = (props) => {
   const [tab, setTab] = useState(1);
   return (
-    <div className={`MainDrawer ${!props.open ? "closed" : ""}`}>
+    <div className={`MainDrawer ${!props.open ? 'closed' : ''}`}>
       <div className="head">
         <h5>Sign in / Create account</h5>
         <button className="close" onClick={() => props.setDrawertoggle(false)}>
@@ -20,13 +20,13 @@ const MainDrawer = (props) => {
           <div>
             <div className="d-flex  mb-3">
               <button
-                className={`tab-btn ${tab === 1 ? "selected-tab" : ""}`}
+                className={`tab-btn ${tab === 1 ? 'selected-tab' : ''}`}
                 onClick={() => setTab(1)}
               >
                 <i className="fa fa-sign-in-alt"></i> Sign In
               </button>
               <button
-                className={`tab-btn ${tab === 2 ? "selected-tab" : ""}`}
+                className={`tab-btn ${tab === 2 ? 'selected-tab' : ''}`}
                 onClick={() => setTab(2)}
               >
                 <i className="fa fa-user"></i> Sign Up
@@ -41,7 +41,7 @@ const MainDrawer = (props) => {
                   <div className="input-group mb-4">
                     <div className="input-group-prepend">
                       <div className="input-group-text  rounded-0 bg-white">
-                        <i className="fa fa-envelope"></i>{" "}
+                        <i className="fa fa-envelope"></i>{' '}
                       </div>
                     </div>
                     <input
@@ -105,9 +105,13 @@ const MainDrawer = (props) => {
                   </div>
                   <GoogleButton
                     onClick={() => {
-                      console.log("Google button clicked");
+                      console.log('Google button clicked');
                     }}
-                    style={{ backgroundColor: "#ffff", overflow:'hidden' , color:' black' }}
+                    style={{
+                      backgroundColor: '#ffff',
+                      overflow: 'hidden',
+                      color: ' black',
+                    }}
                     className="w-100"
                     icon
                   />

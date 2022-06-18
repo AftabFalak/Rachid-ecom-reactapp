@@ -90,7 +90,7 @@ function NavbarBottom(props) {
               <p className="signInText">SING IN/UP</p>
             </a>
           </li>
-          <li className="nav-item signInLink">
+          <li className="nav-item signInLink" onClick={props.toggleDrawerCart}>
             <a className="nav-link text-dark" href="#">
               <AiOutlineShoppingCart className="signInLogo" />
               <div className="CartBadge">

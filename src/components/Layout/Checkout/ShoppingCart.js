@@ -27,7 +27,7 @@ const ShoppingCart = () => {
               </div>
             </div>
             <div>
-              <Link to="/dashboard/profile" className="EditProfileLink">
+              <Link to="/dashboard/profile" className="EditOrderLink">
                 <BiEdit /> Edit Profile
               </Link>
             </div>
