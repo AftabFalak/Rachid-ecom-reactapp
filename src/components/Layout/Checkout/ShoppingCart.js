@@ -1,10 +1,11 @@
-import React from 'react';
-import { profile, user } from '../../../pages/dashboard';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { profile, user } from "../../../pages/dashboard";
+import { Link } from "react-router-dom";
 
-import { BiEdit } from 'react-icons/bi';
+import { BiEdit } from "react-icons/bi";
 
-import OrderSummary from './OrderSummary';
+import OrderSummary from "./OrderSummary";
+import CartTotal from "./CartTotals";
 
 const ShoppingCart = () => {
   const { url, firstName, lastName, rewardPoint } = profile;
@@ -34,7 +35,7 @@ const ShoppingCart = () => {
           </div>
           <div className="shippingAdress">
             <div>
-              <h2>Shipping adress</h2>
+              <h3 className="h3-text">Shipping adress</h3>
               <div className="row">
                 <div className="col-md-6">
                   <h5>First Name</h5>
@@ -98,7 +99,7 @@ const ShoppingCart = () => {
               </div>
             </div>
             <div>
-              <h2>Billing adress</h2>
+              <h3 className="h3-text">Billing adress</h3>
             </div>
             <div>
               <input type="checkbox" className="mr-2" />
@@ -111,7 +112,7 @@ const ShoppingCart = () => {
           </div>
         </div>
         <div className="col-md-4">
-          <OrderSummary />
+          <CartTotal />
         </div>
       </div>
     </div>

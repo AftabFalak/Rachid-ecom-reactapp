@@ -1,0 +1,27 @@
+import React from "react";
+
+const CartTotal = () => {
+  return (
+    <div id="CartTotal">
+      <div className="Header">
+        <span>CART TOTALS</span>
+      </div>
+      <div className="Section">
+        <div className="d-flex justify-content-between section-item">
+          <span className="key">Subtotal:</span>
+          <span className="value">$325.00</span>
+        </div>
+        <div className="d-flex justify-content-between section-item">
+          <span className="key">Shipping:</span>
+          <span className="value">$35.00</span>
+        </div>
+        <div className="d-flex justify-content-between section-item">
+          <span className="key">Total</span>
+          <span className="totalPrice value">$360.00</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CartTotal;
