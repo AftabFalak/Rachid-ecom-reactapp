@@ -3,109 +3,173 @@
   padding: 25px;
 }
 
-.brandLogo{
+.ProductDetail .brandLogo {
   width: 150px;
+  border: 1px solid gainsboro;
+  float: right;
+  padding: 10px;
 }
 
-.priceView{
-  margin-top: 20px;
+.ProductDetail .product-heading {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.ProductDetail .product-heading span{
+  font-size: 16px;
+  text-transform: none;
+}
+
+.ProductDetail .product-heading span a{
+  color: #f0b54d;
+}
+
+
+
+.priceView {
+  margin-top: 3px;
   text-align: left;
 }
 
-.priceView .oldPrice{
+.priceView .oldPrice {
   color: gray;
   text-decoration: line-through;
   margin-right: 12px;
   font-size: 20px;
 }
 
-.priceView .offer{
-  color: red;
+
+.ProductDetail .short-description{
+  margin: 10px 0px;
+}
+
+.priceView .offer {
+  color: #f0b54d;
+  font-weight: 600;
   font-size: 20px;
 }
 
-.colorSelection .circle{
-  border:1px solid black;
-  width: 40px;
-  height: 40px;
+.colorSelection{
+
+   align-items: center;
+   /* justify-content: center; */
+
+}
+
+.colorSelection p{
+  font-weight: 700;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+.colorSelection .circle {
+  border: 2px solid transparent;
+
+  width: 34px;
+  height: 34px;
   text-align: center;
   border-radius: 50%;
   margin-right: 10px;
   display: flex;
   cursor: pointer;
-  transition: all .5s;
+  transition: all 0.5s;
 }
+.colorSelection .color-selected{
+  border: 2px solid black;
 
-.colorSelection .circle:hover{
-opacity: 0.5;  
+} 
+ .colorSelection .inner-circle {
+   border: 1px solid black;
+   width: 26px;
+   height: 26px;
+   text-align: center;
+   border-radius: 50%;
+   margin: 2px;
+   display: flex;
+   cursor: pointer;
+   transition: all 0.5s;
+ }
+ 
+ 
+
+
+
+.sizeSelection{
+  align-items: center;
+
 }
-
-.colorSelection .yellow{
-  background-color: #FDFD04;
+.sizeSelection p{
+ font-weight: 700;
+ margin-top: 16px;
+ margin-right: 20px;
 }
-
-.colorSelection .white{
-  background-color: #fff;
-}
-
-.colorSelection .pink{
-  background-color: #FFC0CB;
-}
-
-.colorSelection .check{
-font-size: 20px;
-margin: auto;
+.sizeSelection .size {
+ border: 2px solid transparent;
+font-weight: 600;
 text-align: center;
-align-self: center;
-align-content: center;
-justify-content: center;
+min-width: 30px;
+ text-align: center;
+ margin-right: 10px;
+ display: flex;
+ cursor: pointer;
+ transition: all 0.5s;
+}
+.sizeSelection .size p{
+  text-align: center;
+}
+.sizeSelection .size-selected{
+ border-bottom: 2px solid black;
+
 }
 
 
-.productDetail{
+
+
+
+
+
+
+.productDetail {
   text-align: left;
   margin-top: 20px;
 }
-.productDetail .productDetailPara{
+.productDetail .productDetailPara {
   font-size: 18px;
 }
-.productDetail h4{
+.productDetail h4 {
   font-weight: 500;
 }
-.productDetail p{
+.productDetail p {
   font-weight: 500;
   color: gray;
 }
 
-
-.addToCart{
+.addToCart {
   text-align: left;
   margin-top: 20px;
 }
 
-
-.addToCart .size span{
-font-size: 22px;
-margin-right: 20px;
+.addToCart .size span {
+  font-size: 22px;
+  margin-right: 20px;
 }
 
-.instock{
+.instock {
   color: red;
   font-size: 20px;
   font-weight: 600;
 }
 
-.quantity{
+.quantity {
   font-size: 20px;
   font-weight: 600;
 }
 
-.counterButton{
+.counterButton {
   display: flex;
   margin-top: 10px;
 }
 
-.counterButton .logo{
+.counterButton .logo {
   cursor: pointer;
   padding: 12px;
   background-color: #ffff;
@@ -113,18 +177,18 @@ margin-right: 20px;
   display: flex;
   align-items: center;
 }
-.counterButton .countNumber{
+.counterButton .countNumber {
   padding: 12px;
-  background-color: #E8ECEF;
+  background-color: #e8ecef;
   border-top: 2px solid rgb(232, 227, 227);
-  border-bottom: 2px solid  rgb(232, 227, 227);
+  border-bottom: 2px solid rgb(232, 227, 227);
   font-size: 20px;
   text-align: center;
   width: 100px;
   font-size: 22px;
 }
 
-.wishList .socialheading{
+.wishList .socialheading {
   font-size: 20px;
   display: block;
   text-align: left;
@@ -133,29 +197,27 @@ margin-right: 20px;
   align-content: center;
 }
 
-.wishList p{
+.wishList p {
   font-size: 20px;
 }
-.wishList .socialicon{
+.wishList .socialicon {
   font-size: 20px;
   margin-right: 20px;
 }
 
-.addtowishlist i{
-
+.addtowishlist i {
   margin-right: 1px;
 }
-.completeLook{
+.completeLook {
   text-align: left;
-
 }
 
-.completeLook .cardImageBottom{
+.completeLook .cardImageBottom {
   width: 100%;
   height: 300px;
 }
-.cardBody{
-text-align: center;
+.cardBody {
+  text-align: center;
 }
 /* /////////////////////////////// */
 
@@ -180,10 +242,10 @@ text-align: center;
   color: #f0b54d;
   font-weight: 700;
 }
-.brandName{
+.brandName {
   text-decoration: underline;
 }
-.buttonView{
+.buttonView {
   text-align: left;
   margin-top: 20px;
 }
@@ -193,11 +255,11 @@ text-align: center;
   font-size: 20px;
   padding: 10px 40px;
 }
-.stockAva{
+.stockAva {
   color: rgb(174, 169, 169);
 }
 
-.oldPricecard{
+.oldPricecard {
   color: gray;
   text-decoration: line-through;
 }

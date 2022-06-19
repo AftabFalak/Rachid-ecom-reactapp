@@ -60,7 +60,6 @@ function App() {
             />
           }
         />
-        <Route></Route>
 
         <Route path="/store-list">
           <Route index element={<StoreList />} />
