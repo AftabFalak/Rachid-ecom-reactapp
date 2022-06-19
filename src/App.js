@@ -12,7 +12,8 @@ import Dashboard from './pages/dashboard';
 import Checkout from './pages/checkout';
 import CartDrawer from './components/CartDrawer/CartDrawer';
 import YourCart from './pages/yourCart';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   const [open, setOpen] = useState({ drawerOpen: false });
   const [openCart, setOpenCart] = useState({ drawerOpenCart: false });

@@ -1,0 +1,50 @@
+.slick-prev,.slick-next{
+    z-index: 1;
+    background-color: white!important;
+    height: 38px!important;
+    width: 30px!important;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+.slick-prev:hover,.slick-next:hover{
+    opacity: 1;
+}
+
+.slick-prev{
+
+    left: 4px!important;
+    background-color: white;
+}
+.slick-next{
+
+    right: 4px!important;
+    background-color: white;
+}
+
+.slick-next:before {
+        content: url("/Assets/images/right.png")!important;
+    }
+    
+.slick-prev:before {
+    content: url("/Assets/images/left.png")!important;
+    }
+
+.slick-slide {
+    height: auto!important; 
+    /* background-color: #f2f5f3; */
+  }
+  .slick-track {
+    display: flex!important;
+    flex-direction: row!important;
+    flex-wrap: nowrap!important;
+    align-items: stretch!important;
+  }
+
+
+  .slick-track {
+    display: flex !important;
+  }
+  
+  .slick-slide {
+    height: auto !important;
+  }

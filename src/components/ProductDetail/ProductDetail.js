@@ -4,16 +4,16 @@
 
 import React, { useState } from "react";
 import "./ProductDetail.css";
+import Faq from "react-faq-component";
 
 import productImage from "../../assets/images/ProductCardImage/brand.png";
 import card1 from "../../assets/images/ProductCardImage/shoe.PNG";
 import card2 from "../../assets/images/ProductCardImage/ring.PNG";
 import card3 from "../../assets/images/ProductCardImage/bag.PNG";
-
+import { Rating } from "react-simple-star-rating";
 import brandLogo from "../../assets/images/VendorProfile/brand2.PNG";
 
 import { FaFacebookF } from "react-icons/fa";
-import { AiOutlineGooglePlus } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import {
   AiFillInstagram,
@@ -24,13 +24,15 @@ import {
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
+import ProductMainSlider from "../ProductMainSlider";
+import RelatedProductsSlider from "../RelatedProductsSlider";
 
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
-  const { count, setCount } = useState(0);
   const [selection, setSelection] = useState({
     color: "",
     size: "",
+    quantity: 1,
   });
   const cards = [
     {
@@ -63,14 +65,49 @@ const ProductDetail = () => {
   ];
 
   const product = {
+    images: ["brand.png", "4.jpg", "5,jpg"],
+    otherImages: ["ring.PNG", "shoe.PNG", "bag.PNG", "ring.PNG"],
     colors: ["black", "yello", "green"],
     sizes: ["L", "XL", "XXL"],
+    faqs: {
+      title: "",
+      rows: [
+        {
+          title: "Lorem ipsum dolor sit amet,",
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+                ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+                In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+                Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+          title: "Nunc maximus, magna at ultricies elementum",
+          content:
+            "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+      ],
+    },
   };
+
   return (
-    <div className="ProductDetail">
+    <div className="ProductDetail container">
       <div className="row">
-        <div className="col-md-5 d-flex justify-content-center">
-          <div
+        <div className="col-md-4">
+          <ProductMainSlider images={product.images} />
+
+          <div className="d-flex">
+            <h2>22 reviews </h2>
+            <div>
+              <Rating
+                // onClick={handleRating}
+                ratingValue={80}
+                // fillColor={COLORS.YELLOW_100}
+                size={26}
+                className="starRaiting"
+              />
+            </div>
+          </div>
+
+          {/* <div
             id="carouselExampleIndicators"
             className="carousel slide w-50"
             data-ride="carousel"
@@ -129,9 +166,9 @@ const ProductDetail = () => {
               ></span>
               <span className="sr-only">Next</span>
             </a>
-          </div>
+          </div> */}
         </div>
-        <div className="col-md-6 justify-content-left">
+        <div className="col-md-8 justify-content-left">
           <div className="top d-flex  ">
             <h2 className=" font-weight-bold product-heading">
               Fashion Clothing
@@ -185,7 +222,7 @@ const ProductDetail = () => {
                         size === selection.size ? "size-selected" : ""
                       }`}
                     >
-                      <p className="w-100 m-0 mb-1" >{size}</p>
+                      <p className="w-100 m-0 mb-1">{size}</p>
                     </div>
                   );
                 })}
@@ -193,59 +230,67 @@ const ProductDetail = () => {
             )}
           </div>
 
-          <div className="productDetail">
-            <h3>Product Heading</h3>
-            <p className="productDetailPara">
-              It is a long establishes fact that a reader will be distracted by
-              the content of the page when lookin at its layout. The point of
-              using Lorem Ipsum is that it has a more-or-less normal distribute.
-            </p>
-          </div>
-          <hr />
           <div className="addToCart">
-            <div className="size">
-              <span>S</span> <span>M</span> <span>L</span>
-            </div>
-            <span className="instock">In Stock</span>
-
-            <div className="counterView">
-              <span className="quantity">Quantity</span>
-
-              <div className="counterButton">
-                <div className="logo" onClick={() => setCount(count - 1)}>
-                  <i className="fa fa-less-than"></i>
-                </div>
-                <div className="countNumber">
-                  <span>{"1"}</span>
-                </div>
-                <div className="logo" onClick={() => setCount(count + 1)}>
-                  <i className="fa fa-greater-than"></i>
-                </div>
+            <div className="counterButton">
+              <button
+                className="logo minus-btn"
+                disabled={selection.quantity == 1}
+                onClick={() =>
+                  setSelection({
+                    ...selection,
+                    quantity: selection.quantity - 1,
+                  })
+                }
+              >
+                <i className="fa fa-minus"></i>
+              </button>
+              <div className="countNumber">
+                <span>{selection.quantity}</span>
               </div>
+              <button
+                disabled={selection.quantity === 10}
+                className="logo plus-btn"
+                onClick={() =>
+                  setSelection({
+                    ...selection,
+                    quantity: selection.quantity + 1,
+                  })
+                }
+              >
+                <i className="fa fa-plus"></i>
+              </button>
             </div>
-          </div>
-
-          <div className="buttonView">
             <button className="btn addButton">Add to Cart</button>
           </div>
+
           <hr />
-          <div className="wishList d-flex justify-content-between">
-            <div>
-              <span className="socialheading">Share it</span>
-              <FaFacebookF className="socialicon" />
-              <AiOutlineGooglePlus className="socialicon" />
-              <BsTwitter className="socialicon" />
-              <AiFillInstagram className="socialicon" />
-            </div>
+          <div className="wishList d-flex">
             <div className="addtowishlist">
               <i className="fa fa-heart"></i>
-              <span>Add To Wish List</span>
+              <span> Follow Brand</span>
+            </div>
+
+            <div className="d-flex share-box">
+              <span className="socialheading">Share:</span>
+              <span className="socialicon">
+                <FaFacebookF />
+              </span>
+              <span className="socialicon">
+                <BsTwitter />
+              </span>
+              <span className="socialicon">
+                <AiFillInstagram />
+              </span>
             </div>
           </div>
 
-          <hr />
+          <hr style={{ marginBottom: "0px" }} />
 
-          <div className="completeLook">
+          <Faq data={product.faqs} />
+
+          <RelatedProductsSlider images={product.otherImages} />
+
+          {/* <div className="completeLook">
             <h1 className="text-align-left">Complete the look</h1>
 
             <div className="d-flex justify-content-between">
@@ -310,7 +355,7 @@ const ProductDetail = () => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
