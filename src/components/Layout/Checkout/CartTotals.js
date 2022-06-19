@@ -1,6 +1,6 @@
-import React from "react";
-
-const CartTotal = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+const CartTotal = ({ proceedButton }) => {
   return (
     <div id="CartTotal">
       <div className="Header">
@@ -20,6 +20,14 @@ const CartTotal = () => {
           <span className="totalPrice value">$360.00</span>
         </div>
       </div>
+      {proceedButton && (
+        <div className="buttonDiv">
+          <Link to="/checkout/shoppingcart" className="proceedButton">
+            {' '}
+            Proceed To Checkout
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

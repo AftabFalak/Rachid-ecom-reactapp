@@ -1,11 +1,11 @@
-import React from "react";
-import { profile, user } from "../../../pages/dashboard";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { profile, user } from '../../../pages/dashboard';
+import { Link } from 'react-router-dom';
 
-import { BiEdit } from "react-icons/bi";
+import { BiEdit } from 'react-icons/bi';
 
-import OrderSummary from "./OrderSummary";
-import CartTotal from "./CartTotals";
+import OrderSummary from './OrderSummary';
+import CartTotal from './CartTotals';
 
 const ShoppingCart = () => {
   const { url, firstName, lastName, rewardPoint } = profile;
@@ -28,7 +28,7 @@ const ShoppingCart = () => {
               </div>
             </div>
             <div>
-              <Link to="/dashboard/profile" className="EditOrderLink">
+              <Link to="/dashboard/profile" className="EditProfileLink">
                 <BiEdit /> Edit Profile
               </Link>
             </div>
@@ -36,7 +36,7 @@ const ShoppingCart = () => {
           <div className="shippingAdress">
             <div>
               <h3 className="h3-text">Shipping adress</h3>
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-md-6">
                   <h5>First Name</h5>
                   <input type="text" className="form-control w-100" />
@@ -46,7 +46,7 @@ const ShoppingCart = () => {
                   <input type="text" className="form-control w-100" />
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-md-6">
                   <h5>E-mail Address</h5>
                   <input type="text" className="form-control w-100" />
@@ -56,7 +56,7 @@ const ShoppingCart = () => {
                   <input type="text" className="form-control w-100" />
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-md-6">
                   <h5>Company</h5>
                   <input type="text" className="form-control w-100" />
@@ -71,7 +71,7 @@ const ShoppingCart = () => {
                   </select>
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-md-6">
                   <h5>City</h5>
                   <select name="city" className="form-control w-100 ">
@@ -87,7 +87,7 @@ const ShoppingCart = () => {
                   <input type="text" className="form-control w-100" />
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-md-6">
                   <h5>Address 1</h5>
                   <input type="text" className="form-control w-100" />
@@ -106,13 +106,15 @@ const ShoppingCart = () => {
               <span>Same as shipping address</span>
             </div>
             <div className="buttonDiv">
-              <button className="backButton">Back to cart</button>
-              <button className="proceedButton">Proceed to shipping</button>
+              <button className="backButton">{' < '}Back to cart</button>
+              <button className="proceedButton">
+                Proceed to shipping {' > '}
+              </button>
             </div>
           </div>
         </div>
         <div className="col-md-4">
-          <CartTotal />
+          <CartTotal proceedButton={true} />
         </div>
       </div>
     </div>

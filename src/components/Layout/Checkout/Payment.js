@@ -11,7 +11,6 @@ const Payment = ({ orders }) => {
           <div className="header">
             <span>Review Your Order</span>
           </div>
-
           <div className="orderList">
             {orders.map(
               (
@@ -38,10 +37,10 @@ const Payment = ({ orders }) => {
                     </div>
                   </div>
                   <div>
-                    <p className="quantity">
+                    <p className="quantityOrder">
                       <span>Quantity:</span> {quantity}
                     </p>
-                    <Link to="/dashboard/profile" className="EditProfileLink">
+                    <Link to="/dashboard/profile" className="EditOrderLink">
                       <BiEdit className="editIcon" /> Edit
                     </Link>
                   </div>

@@ -61,7 +61,18 @@ function NavbarBottom(props) {
             }}
           >
             <Link className="nav-link text-dark" to="/store-list">
-              <p className="signInTextDummy">Store Lsit</p>
+              <p className="signInTextDummy">Store List</p>
+            </Link>
+          </span>
+          <span
+            className="nav-item"
+            style={{
+              border: '.5px solid rgba(0,0,0,0.1)',
+              marginRight: '6px',
+            }}
+          >
+            <Link className="nav-link text-dark" to="/yourcart">
+              <p className="signInTextDummy">Your Cart</p>
             </Link>
           </span>
           <span

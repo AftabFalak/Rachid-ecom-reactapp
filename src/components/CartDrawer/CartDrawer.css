@@ -71,8 +71,11 @@
   outline: none;
   border: none;
   background-color: transparent;
+  color: rgba(0, 0, 0, 0.4);
 }
-
+.CartDrawer .closeBtn .timeIcon {
+  font-weight: normal;
+}
 .CartDrawer .orderList {
   display: flex;
   flex-direction: column;
@@ -93,6 +96,7 @@
 .singleOrder .price span {
   color: #f4a51c;
 }
+
 .singleOrder .quantity {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 20px;

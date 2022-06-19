@@ -17,12 +17,12 @@ const CartDrawer = (props) => {
   return (
     <div className={`CartDrawer ${!props.open ? 'closedDrawer' : ''}`}>
       <div className="header">
-        <h5>Sign in / Create account</h5>
+        <h5>SHOPPING CART</h5>
         <button
           className="closeBtn"
           onClick={() => props.setDrawertoggle(false)}
         >
-          <i className="fa fa-times"></i> <span>Close</span>
+          <i className="fa fa-times timeIcon"></i> <span>Close</span>
         </button>
       </div>
       <div className="orderList">

@@ -1,0 +1,103 @@
+.YourCart {
+  padding: 12px;
+}
+.YourCart .orderList {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.YourCart .orderList .singleOrder {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px 0px;
+}
+.YourCart .orderList .singleOrder:last-child {
+  border-bottom: none;
+}
+.YourCart .orderList .singleOrder .infoView {
+  display: flex;
+}
+
+.YourCart .orderList .singleOrder .title {
+  color: #000;
+  font-weight: 600;
+}
+.YourCart .orderList .singleOrder .price {
+  color: #fdd700;
+}
+.YourCart .orderList .singleOrder .size span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.YourCart .orderList .singleOrder .color span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.YourCart .orderList .singleOrder .quantity {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+.YourCart .orderList .singleOrder .quantity span {
+  color: rgba(0, 0, 0, 0.6);
+}
+.YourCart .orderList .singleOrder .EditProfileLink {
+  background-color: #fff;
+  color: #000;
+  padding: 3px 12px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.YourCart .orderList .singleOrder .EditProfileLink .editIcon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.YourCart .ProductImage {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.YourCart .ProductImage .timesIcon {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 22px;
+  font-weight: normal;
+  margin-right: 15px;
+}
+.YourCart .ProductImage img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+.YourCart .subTotal {
+  color: #f4a51c;
+  font-size: 18px;
+}
+.YourCart .price {
+  align-items: center;
+  font-size: 18px;
+}
+.YourCart .quantity {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+.YourCart .quantity span {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0px 6px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.YourCart .quantity span button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.YourCart .quantity span:last-child {
+  border: none;
+}
+
+.YourCart .price {
+}
