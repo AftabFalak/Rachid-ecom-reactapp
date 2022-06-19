@@ -23,11 +23,15 @@ import {
 } from "react-icons/ai";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
   const { count, setCount } = useState(0);
-
+  const [selection, setSelection] = useState({
+    color: "",
+    size: "",
+  });
   const cards = [
     {
       image: card1,
@@ -57,6 +61,11 @@ const ProductDetail = () => {
       brandLogo: brandLogo,
     },
   ];
+
+  const product = {
+    colors: ["black", "yello", "green"],
+    sizes: ["L", "XL", "XXL"],
+  };
   return (
     <div className="ProductDetail">
       <div className="row">
@@ -123,25 +132,65 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className="col-md-6 justify-content-left">
-          <div className="top d-flex justify-content-start align-items-center">
+          <div className="top d-flex  ">
+            <h2 className=" font-weight-bold product-heading">
+              Fashion Clothing
+              <br />
+              <span>
+                By <Link to="/vendor">joseph</Link>
+              </span>
+            </h2>
             <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
-            <h1 className="ml-5 font-weight-bold">Fashion Clothing</h1>
           </div>
           <div className="priceView">
-            <span className="oldPrice">$145.00</span>
-            <span className="offer">50% Off</span>
-            <h1 className="price">$87.00</h1>
-            <div className="colorSelection d-flex">
-              <div className="circle yellow" >
-                {true ? <i className="fa fa-check check"></i> : ""}
-              </div>
-              <div className="circle white">
-                {false ? <i className="fa fa-check check"></i> : ""}
-              </div>
-              <div className="circle pink">
-                {false ? <i className="fa fa-check check"></i> : ""}
-              </div>
+            <span className="oldPrice">$345.00</span>
+            <span className="offer">$234.00</span>
+
+            <div className="short-description">
+              <p>
+                dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
             </div>
+            {product.colors && (
+              <div className="colorSelection d-flex">
+                <p>Color: </p>
+                {product.colors.map((color) => {
+                  return (
+                    <div
+                      onClick={() => setSelection({ ...selection, color })}
+                      className={`circle ${
+                        color === selection.color ? "color-selected" : ""
+                      }`}
+                    >
+                      <div
+                        style={{ backgroundColor: color }}
+                        className="inner-circle"
+                      ></div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+            {product.colors && (
+              <div className="sizeSelection d-flex">
+                <p>Size: </p>
+                {product.sizes.map((size) => {
+                  return (
+                    <div
+                      onClick={() => setSelection({ ...selection, size: size })}
+                      className={`size ${
+                        size === selection.size ? "size-selected" : ""
+                      }`}
+                    >
+                      <p className="w-100 m-0 mb-1" >{size}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           <div className="productDetail">
@@ -167,7 +216,7 @@ const ProductDetail = () => {
                   <i className="fa fa-less-than"></i>
                 </div>
                 <div className="countNumber">
-                  <span>{'1'}</span>
+                  <span>{"1"}</span>
                 </div>
                 <div className="logo" onClick={() => setCount(count + 1)}>
                   <i className="fa fa-greater-than"></i>
@@ -239,12 +288,15 @@ const ProductDetail = () => {
                     />
                     <div className="card-body cardBody">
                       <button className="btn btn-outline-primary buttonOutline">
-                        <AiOutlineShoppingCart/> ADD TO
-                        CART
+                        <AiOutlineShoppingCart /> ADD TO CART
                       </button>
-                      <div >
-                        <img src={item.brandLogo} alt="" style={{width: '50px'}} />
-                      <span className="brandName">{item.brandName}</span>
+                      <div>
+                        <img
+                          src={item.brandLogo}
+                          alt=""
+                          style={{ width: "50px" }}
+                        />
+                        <span className="brandName">{item.brandName}</span>
                       </div>
                       <p className="stockAva">
                         {item.productTitle} <span>{item.stock}</span>
