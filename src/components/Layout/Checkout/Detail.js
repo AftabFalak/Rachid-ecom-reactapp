@@ -12,7 +12,7 @@ const Detail = () => {
           </div>
 
           <div className="TabelDiv">
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col"> </th>

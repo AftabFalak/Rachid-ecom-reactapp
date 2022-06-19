@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
   return (
@@ -35,10 +35,10 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                             <i className="fa fa-eye actioniIcons"></i>
                           </span>
                           <span>
-                            <i class="fa fa-pen actioniIcons"></i>
+                            <i className="fa fa-pen actioniIcons"></i>
                           </span>
                           <span onClick={() => wishlistDeleteHandler(id)}>
-                            <i class="fa fa-trash actioniIcons"></i>
+                            <i className="fa fa-trash actioniIcons"></i>
                           </span>
                         </td>
                       </tr>

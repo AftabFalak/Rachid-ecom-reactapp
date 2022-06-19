@@ -11,6 +11,7 @@ import Shop from './pages/shop';
 import Dashboard from './pages/dashboard';
 import Checkout from './pages/checkout';
 import CartDrawer from './components/CartDrawer/CartDrawer';
+import YourCart from './pages/yourCart';
 
 function App() {
   const [open, setOpen] = useState({ drawerOpen: false });
@@ -45,6 +46,8 @@ function App() {
       <Routes>
         <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
+        <Route path="/yourcart" element={<YourCart />} />
+
         <Route
           path="/vendor"
           element={
