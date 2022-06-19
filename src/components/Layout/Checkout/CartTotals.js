@@ -22,8 +22,7 @@ const CartTotal = ({ proceedButton }) => {
       </div>
       {proceedButton && (
         <div className="buttonDiv">
-          <Link to="/checkout/shoppingcart" className="proceedButton">
-            {' '}
+          <Link to="/checkout/detail" className="proceedButton">
             Proceed To Checkout
           </Link>
         </div>

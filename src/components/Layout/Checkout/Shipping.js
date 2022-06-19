@@ -3,9 +3,9 @@ import OrderSummary from './OrderSummary';
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
-const Review = ({ orders }) => {
+const Shipping = ({ orders }) => {
   return (
-    <div id="Review">
+    <div id="Payment">
       <div className="row">
         <div className="col-md-8">
           <div className="header">
@@ -85,4 +85,4 @@ const Review = ({ orders }) => {
   );
 };
 
-export default Review;
+export default Shipping;

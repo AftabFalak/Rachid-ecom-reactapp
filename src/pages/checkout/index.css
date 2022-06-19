@@ -55,6 +55,8 @@
 
 #OrderSummary .Bottom {
   text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 #CartTotal {
   border: 2px solid rgba(0, 0, 0, 0.1);
@@ -105,7 +107,7 @@
   margin: auto;
   border-radius: 20px;
 }
-#Shoppingcart .h3-text {
+#Detail .h3-text {
   font-weight: 600 !important;
   font-size: 22px;
   color: #000;
@@ -113,8 +115,10 @@
   padding-bottom: 10px;
   margin-top: 20px;
 }
-
-#Shoppingcart .profileView {
+#Detail .profile_email {
+  color: #f5a71c;
+}
+#Detail .profileView {
   background-color: #f7f7f7;
   display: flex;
   flex-direction: row;
@@ -122,48 +126,50 @@
   align-items: center;
   padding: 20px 20px;
 }
-#Shoppingcart .profileView_1 {
+#Detail .profileView_1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#Shoppingcart .profileView_1 .name {
+#Detail .profileView_1 .name {
   color: #000;
   font-weight: 600;
 }
-#Shoppingcart .profile_email {
+#Detail .profile_email {
   color: '#fdd700';
 }
-#Shoppingcart .profileImage {
+#Detail .profileImage {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   resize: 'contain';
   margin-right: 30px;
 }
-#Shoppingcart .EditProfileLink {
+#Detail .EditProfileLink {
   background-color: #fff;
   color: #000;
   padding: 5px 12px;
   box-shadow: 3px 3px 3px 0.5px rgb(0, 0, 0, 0.3);
 }
 
-#Shoppingcart .buttonDiv {
+#Detail .buttonDiv {
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-#Shoppingcart .buttonDiv button {
+#Detail .buttonDiv button,
+#Detail .buttonDiv a {
   width: 45%;
   border: none;
   outline: none;
   padding: 6px 0px;
   border-radius: 3px;
+  text-align: center;
 }
 
-#Shoppingcart .buttonDiv .proceedButton {
+#Detail .buttonDiv .proceedButton {
   color: #fff;
   background-color: #f4a51c;
 }
@@ -190,6 +196,120 @@
 #Detail .TabelDiv .shippmentProcessDescription {
   color: rgba(0, 0, 0, 0.5);
 }
+#Review .header {
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+}
+
+#Review .header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#Review .orderList {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+#Review .orderList .singleOrder {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px 0px;
+}
+#Review .orderList .singleOrder:last-child {
+  border-bottom: none;
+}
+#Review .orderList .singleOrder .infoView {
+  display: flex;
+}
+#Review .orderList .singleOrder img {
+  width: 100px;
+  height: 100px;
+}
+#Review .orderList .singleOrder .title {
+  color: #000;
+  font-weight: 600;
+}
+#Review .orderList .singleOrder .price {
+  color: #fdd700;
+}
+#Review .orderList .singleOrder .size span {
+  color: rgba(0, 0, 0, 0.5);
+}
+#Review .orderList .singleOrder .color span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#Review .orderList .singleOrder .quantityOrder {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+#Review .orderList .singleOrder .quantityOrder span {
+  color: rgba(0, 0, 0, 0.6);
+}
+#Review .orderList .singleOrder .EditOrderLink {
+  color: #000;
+  background-color: #fff;
+  padding: 3px 12px;
+  border: 2px solid rgb(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+#Review .orderList .singleOrder .EditOrderLink .editIcon {
+  color: rgba(0, 0, 0, 0.5);
+}
+#Review .billingAddress {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+#Review .billingAddress .shippingTo .heading,
+#Review .billingAddress .paymentMeathod .heading {
+  font-size: 18px;
+  color: #000;
+  border: none !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0;
+  margin-bottom: 10px !important;
+}
+
+#Review .billingAddress .shippingTo .client,
+#Review .billingAddress .shippingTo .address,
+#Review .billingAddress .shippingTo .phone,
+#Review .billingAddress .paymentMeathod .creditCard {
+  font-size: 16px;
+}
+#Review .billingAddress .shippingTo .client span,
+#Review .billingAddress .shippingTo .address span,
+#Review .billingAddress .shippingTo .phone span,
+#Review .billingAddress .paymentMeathod .creditCard span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#Review .buttonDiv {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#Review .buttonDiv button,
+#Payment .buttonDiv a {
+  width: 45%;
+  border: none;
+  outline: none;
+  padding: 6px 0px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#Review .buttonDiv .completeOrder {
+  color: #fff;
+  background-color: #f4a51c;
+}
 #Payment .header {
   background-color: #f7f7f7;
   padding: 10px 20px;
@@ -200,105 +320,63 @@
   font-weight: bold;
 }
 
-#Payment .orderList {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0px;
-}
-
-#Payment .orderList .singleOrder {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 20px 0px;
-}
-#Payment .orderList .singleOrder:last-child {
-  border-bottom: none;
-}
-#Payment .orderList .singleOrder .infoView {
-  display: flex;
-}
-#Payment .orderList .singleOrder img {
-  width: 100px;
-  height: 100px;
-}
-#Payment .orderList .singleOrder .title {
-  color: #000;
-  font-weight: 600;
-}
-#Payment .orderList .singleOrder .price {
-  color: #fdd700;
-}
-#Payment .orderList .singleOrder .size span {
-  color: rgba(0, 0, 0, 0.5);
-}
-#Payment .orderList .singleOrder .color span {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-#Payment .orderList .singleOrder .quantityOrder {
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-}
-#Payment .orderList .singleOrder .quantityOrder span {
-  color: rgba(0, 0, 0, 0.6);
-}
-#Payment .orderList .singleOrder .EditOrderLink {
-  color: #000;
-  background-color: #fff;
-  padding: 3px 12px;
-  border: 2px solid rgb(0, 0, 0, 0.2);
-  font-weight: 600;
-}
-
-#Payment .orderList .singleOrder .EditOrderLink .editIcon {
-  color: rgba(0, 0, 0, 0.5);
-}
-#Payment .billingAddress {
-  background-color: #f7f7f7;
-  padding: 20px;
-}
-
-#Payment .billingAddress .shippingTo .heading,
-#Payment .billingAddress .paymentMeathod .heading {
-  font-size: 18px;
-  color: #000;
-  border: none !important;
-  text-align: left !important;
-  margin: 0 !important;
-  padding: 0;
-  margin-bottom: 10px !important;
-}
-
-#Payment .billingAddress .shippingTo .client,
-#Payment .billingAddress .shippingTo .address,
-#Payment .billingAddress .shippingTo .phone,
-#Payment .billingAddress .paymentMeathod .creditCard {
-  font-size: 16px;
-}
-#Payment .billingAddress .shippingTo .client span,
-#Payment .billingAddress .shippingTo .address span,
-#Payment .billingAddress .shippingTo .phone span,
-#Payment .billingAddress .paymentMeathod .creditCard span {
-  color: rgba(0, 0, 0, 0.6);
-}
-
 #Payment .buttonDiv {
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-#Payment .buttonDiv button {
+#Payment .buttonDiv button,
+#Payment .buttonDiv a {
   width: 45%;
   border: none;
   outline: none;
   padding: 6px 0px;
   border-radius: 3px;
+  text-align: center;
 }
 
 #Payment .buttonDiv .completeOrder {
   color: #fff;
   background-color: #f4a51c;
+}
+#Payment .creditCardDiv {
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  margin: 20px 0px;
+}
+#Payment .creditCardDiv .creditCardHeader {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+#Payment .creditCardDiv .creditCardFooter {
+  border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+#Payment .creditCardDiv .creditCardHeader .circleIcon,
+#Payment .creditCardDiv .creditCardFooter .circleIcon {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+}
+#Payment .creditCardDiv .creditMain {
+  padding: 12px;
+}
+
+#Payment .creditCardDiv .creditMain .cardLogos {
+  width: 25px;
+  height: 10px;
+  margin-right: 8px;
+}
+#Payment .creditCardDiv .creditMain .dummyCardDiv {
+  display: flex;
+  justify-content: center;
+  margin: 18px;
 }
