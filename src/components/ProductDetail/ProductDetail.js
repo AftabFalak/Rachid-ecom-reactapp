@@ -26,6 +26,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 import ProductMainSlider from "../ProductMainSlider";
 import RelatedProductsSlider from "../RelatedProductsSlider";
+import Reviews from "../Reviews";
+import BundleView from "../BundleView";
 
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
@@ -89,23 +91,23 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="ProductDetail container">
+    <div className="ProductDetail">
       <div className="row">
         <div className="col-md-4">
           <ProductMainSlider images={product.images} />
-
-          <div className="d-flex">
-            <h2>22 reviews </h2>
+          <div className="d-flex mt-4">
+            <h3>22 reviews </h3>
             <div>
               <Rating
                 // onClick={handleRating}
                 ratingValue={80}
-                // fillColor={COLORS.YELLOW_100}
+                fillColor={"black"}
                 size={26}
                 className="starRaiting"
               />
             </div>
           </div>
+          <Reviews />
 
           {/* <div
             id="carouselExampleIndicators"
@@ -356,6 +358,9 @@ const ProductDetail = () => {
               })}
             </div>
           </div> */}
+        </div>
+        <div className="col-md-12">
+          <BundleView />
         </div>
       </div>
     </div>

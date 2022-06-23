@@ -1,0 +1,17 @@
+.BundleView{
+
+}
+.BundleView .bundle-img{
+    width: 100%;
+}
+.brand-img .brands{
+    overflow: hidden;
+    width: 100%;
+}
+.bundle-img .brands .brand-img{
+    flex: 1;
+}
+
+.bundle-img .brands .brand-img img{
+   width: 100%;
+}

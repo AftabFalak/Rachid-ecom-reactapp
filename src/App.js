@@ -12,6 +12,7 @@ import Dashboard from './pages/dashboard';
 import Checkout from './pages/checkout';
 import CartDrawer from './components/CartDrawer/CartDrawer';
 import YourCart from './pages/yourCart';
+import BundleViewPage from './pages/bundle-view';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/" element={<div></div>} />
         <Route path="/product" element={<ProductDetail />} />
         <Route path="/yourcart" element={<YourCart />} />
+        <Route path="/bundle-view" element={<BundleViewPage />} />
 
         <Route
           path="/vendor"
