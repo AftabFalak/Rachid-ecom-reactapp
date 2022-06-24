@@ -1,3 +1,31 @@
 .b-img{
     position: sticky;
 }
+
+.BundleViewPage .brandLogo {
+    width: 150px;
+    border: 1px solid gainsboro;
+    float: right;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .BundleViewPage .product-heading {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  
+  .BundleViewPage .product-heading span {
+    font-size: 16px;
+    text-transform: none;
+  }
+  
+  .BundleViewPage .product-heading span a {
+    color: #f0b54d;
+  }
+  
+  .priceView {
+    margin-top: 3px;
+    text-align: left;
+  }
+  
