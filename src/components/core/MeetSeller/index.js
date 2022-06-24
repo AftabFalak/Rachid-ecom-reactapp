@@ -20,7 +20,7 @@ const MeetSeller = () => {
       </div>
       <button className="messageButton">Message Uwe</button>
       <p className="description">
-        This seller usually responds within 24 hours.
+        This seller usually responds <strong> within 24 hours.</strong>
       </p>
     </div>
   );

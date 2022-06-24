@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 10px;
+  padding: 0px 10px;
 }
 .BundleProductsSlider .slick-slide > div {
   /* position: absolute; */

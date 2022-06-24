@@ -28,7 +28,8 @@ import ProductMainSlider from "../ProductMainSlider";
 import RelatedProductsSlider from "../RelatedProductsSlider";
 import Reviews from "../Reviews";
 import BundleView from "../BundleView";
-
+import Policies from "../core/Policies";
+import MeetSeller from '../core/MeetSeller'
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
   const [selection, setSelection] = useState({
@@ -90,16 +91,13 @@ const ProductDetail = () => {
       title: "",
       rows: [
         {
-          title: "Lorem ipsum dolor sit amet,",
-          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-                ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-                In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-                Fusce sed commodo purus, at tempus turpis.`,
+          title: "Shipping and return policies",
+          content: <Policies/>,
         },
         {
-          title: "Nunc maximus, magna at ultricies elementum",
-          content:
-            "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+          title: "Contant your sellers",
+          content:<MeetSeller/> 
+          
         },
       ],
     },
@@ -116,7 +114,7 @@ const ProductDetail = () => {
               <Rating
                 // onClick={handleRating}
                 ratingValue={80}
-                fillColor={"black"}
+                fillColor={"gold"}
                 size={26}
                 className="starRaiting"
               />
