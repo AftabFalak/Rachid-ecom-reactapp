@@ -1,9 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import './index.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './index.css';
+
+import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
 const ProductView = ({ product, index, handleProduct }) => {
   return (
-    <div className="ProductView">
+    <div className="ProductView p-0 mt-3">
       <div className="row">
         <div className="col-md-4">
           <img src={product.image} width="100%" />
@@ -32,7 +34,7 @@ const ProductView = ({ product, index, handleProduct }) => {
                     <div
                       onClick={() => handleProduct({ color }, index)}
                       className={`circle ${
-                        color === product.color ? "color-selected" : ""
+                        color === product.color ? 'color-selected' : ''
                       }`}
                     >
                       <div
@@ -52,7 +54,7 @@ const ProductView = ({ product, index, handleProduct }) => {
                     <div
                       onClick={() => handleProduct({ size }, index)}
                       className={`size ${
-                        size === product.size ? "size-selected" : ""
+                        size === product.size ? 'size-selected' : ''
                       }`}
                     >
                       <p className="w-100 m-0 mb-1">{size}</p>

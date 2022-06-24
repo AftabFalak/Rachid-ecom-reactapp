@@ -1,17 +1,41 @@
-.BundleView{
-
+.BundleView .bundle-img {
+  width: 100%;
 }
-.BundleView .bundle-img{
-    width: 100%;
+.BundleView .brand-img .brands {
+  overflow: hidden;
+  width: 100%;
 }
-.brand-img .brands{
-    overflow: hidden;
-    width: 100%;
-}
-.bundle-img .brands .brand-img{
-    flex: 1;
+.BundleView .bundle-img .brands .brand-img {
+  flex: 1;
 }
 
-.bundle-img .brands .brand-img img{
-   width: 100%;
+.BundleView .bundle-img .brands .brand-img img {
+  width: 100%;
+}
+.BundleView .getInspiration {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.BundleView .getInspiration h2 {
+  margin-right: 40px;
+}
+.BundleView .LookButtons {
+  display: flex;
+  align-items: center;
+}
+
+.BundleView .LookButtons .lookBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 6px;
+  margin: 0px 5px;
+}
+.BundleView .LookButtons .activeLook {
+  border-bottom: 2px solid rgb(240, 181, 77);
+  color: rgb(240, 181, 77);
 }
