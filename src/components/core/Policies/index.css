@@ -1,0 +1,21 @@
+.Policies {
+  padding: 20px;
+}
+.Policies .arrival {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: dashed;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.6);
+}
+.Policies .dateHeading {
+  color: rgba(0, 0, 0, 0.6);
+}
+.statusRow .orderStatus {
+  display: block;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+.statusRow .dateStatus {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}

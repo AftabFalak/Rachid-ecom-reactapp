@@ -13,8 +13,8 @@ import Checkout from './pages/checkout';
 import CartDrawer from './components/CartDrawer/CartDrawer';
 import YourCart from './pages/yourCart';
 import BundleViewPage from './pages/bundle-view';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 function App() {
   const [open, setOpen] = useState({ drawerOpen: false });
   const [openCart, setOpenCart] = useState({ drawerOpenCart: false });
@@ -47,9 +47,9 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<div></div>} />
-        <Route path="/product" element={<ProductDetail />} />
         <Route path="/yourcart" element={<YourCart />} />
         <Route path="/bundle-view" element={<BundleViewPage />} />
+        <Route path="/product" element={<ProductDetail />} />
 
         <Route
           path="/vendor"
@@ -66,12 +66,10 @@ function App() {
             />
           }
         />
-
         <Route path="/store-list">
           <Route index element={<StoreList />} />
           <Route path=":id" element={<StoreList />} />
         </Route>
-
         <Route path="/shop" element={<Shop />} />
         <Route path="/dashboard/:page" element={<Dashboard />} />
         <Route path="/checkout/:page" element={<Checkout />} />

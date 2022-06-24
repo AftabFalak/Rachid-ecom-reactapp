@@ -86,6 +86,28 @@ function NavbarBottom(props) {
               <p className="signInTextDummy">Shop</p>
             </Link>
           </span>
+          <span
+            className="nav-item"
+            style={{
+              border: '.5px solid rgba(0,0,0,0.1)',
+              marginRight: '6px',
+            }}
+          >
+            <Link className="nav-link text-dark" to="/product">
+              <p className="signInTextDummy">Product</p>
+            </Link>
+          </span>
+          <span
+            className="nav-item"
+            style={{
+              border: '.5px solid rgba(0,0,0,0.1)',
+              marginRight: '6px',
+            }}
+          >
+            <Link className="nav-link text-dark" to="/bundle-view">
+              <p className="signInTextDummy">Bundle</p>
+            </Link>
+          </span>
         </div>
 
         <ul className="navbar-nav">

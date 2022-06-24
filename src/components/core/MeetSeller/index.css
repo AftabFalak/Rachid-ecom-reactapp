@@ -1,0 +1,31 @@
+.MeetSeller {
+  padding: 20px;
+}
+.MeetSeller img {
+  height: 75px;
+  width: 60px;
+  border-radius: 12px;
+}
+.MeetSeller .name {
+  margin: 0;
+}
+.MeetSeller .ownerOff {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.MeetSeller .ownerOff span {
+  text-decoration: underline;
+}
+.MeetSeller .messageButton {
+  background-color: transparent;
+  border: 2px solid #000;
+  width: 100%;
+  border-radius: 100px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin: 10px 0px;
+}
+.MeetSeller .description {
+  text-align: center;
+  margin-top: 10px;
+}
