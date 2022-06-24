@@ -2,47 +2,46 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/alt-text */
 
-import React, { useState } from 'react';
-import './ProductDetail.css';
-import Faq from 'react-faq-component';
+import React, { useState } from "react";
+import "./ProductDetail.css";
+import Faq from "react-faq-component";
 
-import productImage from '../../assets/images/ProductCardImage/brand.png';
-import card1 from '../../assets/images/ProductCardImage/shoe.PNG';
-import card2 from '../../assets/images/ProductCardImage/ring.PNG';
-import card3 from '../../assets/images/ProductCardImage/bag.PNG';
-import { Rating } from 'react-simple-star-rating';
-import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
+import productImage from "../../assets/images/ProductCardImage/brand.png";
+import card1 from "../../assets/images/ProductCardImage/shoe.PNG";
+import card2 from "../../assets/images/ProductCardImage/ring.PNG";
+import card3 from "../../assets/images/ProductCardImage/bag.PNG";
+import { Rating } from "react-simple-star-rating";
+import brandLogo from "../../assets/images/VendorProfile/brand2.PNG";
 
-import { FaFacebookF } from 'react-icons/fa';
-import { BsTwitter } from 'react-icons/bs';
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
 import {
   AiFillInstagram,
   AiOutlineHeart,
   AiOutlineSearch,
   AiOutlineShoppingCart,
-} from 'react-icons/ai';
+} from "react-icons/ai";
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Link } from 'react-router-dom';
-import ProductMainSlider from '../ProductMainSlider';
-import RelatedProductsSlider from '../RelatedProductsSlider';
-import Reviews from '../Reviews';
-import BundleView from '../BundleView';
-import Policies from '../core/Policies';
-import MeetSeller from '../core/MeetSeller';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
+import ProductMainSlider from "../ProductMainSlider";
+import RelatedProductsSlider from "../RelatedProductsSlider";
+import Reviews from "../Reviews";
+import BundleView from "../BundleView";
 
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
   const [selection, setSelection] = useState({
-    color: '',
-    size: '',
+    color: "",
+    size: "",
     quantity: 1,
   });
+
   const cards = [
     {
       image: card1,
-      brandName: 'Outfitter',
-      productTitle: 'Bag',
+      brandName: "Outfitter",
+      productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -50,8 +49,8 @@ const ProductDetail = () => {
     },
     {
       image: card2,
-      brandName: 'Levise',
-      productTitle: 'Bag',
+      brandName: "Levise",
+      productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -59,8 +58,8 @@ const ProductDetail = () => {
     },
     {
       image: card3,
-      brandName: 'Denizen',
-      productTitle: 'Bag',
+      brandName: "Denizen",
+      productTitle: "Bag",
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -69,37 +68,55 @@ const ProductDetail = () => {
   ];
 
   const product = {
-    images: ['brand.png', '4.jpg', '5,jpg'],
-    otherImages: ['ring.PNG', 'shoe.PNG', 'bag.PNG', 'ring.PNG'],
-    colors: ['black', 'yello', 'green'],
-    sizes: ['L', 'XL', 'XXL'],
+    images: [
+      {
+        img: "/Assets/images/ProductList/p1.jpeg",
+        liked: false,
+      },
+      {
+        img: "/Assets/images/ProductList/p1.jpeg",
+        liked: true,
+      },
+      {
+        img: "/Assets/images/ProductList/p1.jpeg",
+        liked: false,
+      }
+   
+    ],
+    otherImages: ["ring.PNG", "shoe.PNG", "bag.PNG", "ring.PNG"],
+    colors: ["black", "yello", "green"],
+    sizes: ["L", "XL", "XXL"],
     faqs: {
-      title: '',
+      title: "",
       rows: [
         {
-          title: 'Shipping and return policies',
-          content: <Policies />,
+          title: "Lorem ipsum dolor sit amet,",
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+                ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+                In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+                Fusce sed commodo purus, at tempus turpis.`,
         },
         {
-          title: 'Contact your sellers',
-          content: <MeetSeller />,
+          title: "Nunc maximus, magna at ultricies elementum",
+          content:
+            "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
         },
       ],
     },
   };
 
   return (
-    <div className="ProductDetail">
+    <div className="ProductDetail container">
       <div className="row">
         <div className="col-md-4">
-          <ProductMainSlider images={product.images} />
+          <ProductMainSlider images={product.images}  />
           <div className="d-flex mt-4">
             <h3>22 reviews </h3>
             <div>
               <Rating
                 // onClick={handleRating}
                 ratingValue={80}
-                fillColor={'black'}
+                fillColor={"black"}
                 size={26}
                 className="starRaiting"
               />
@@ -177,7 +194,11 @@ const ProductDetail = () => {
                 By <Link to="/vendor">joseph</Link>
               </span>
             </h2>
-            <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
+            <img
+              src={"/Assets/images/VendorProfile/brand3.jpeg"}
+              alt="BrandLogo"
+              className="brandLogo"
+            />
           </div>
           <div className="priceView">
             <span className="oldPrice">$345.00</span>
@@ -199,7 +220,7 @@ const ProductDetail = () => {
                     <div
                       onClick={() => setSelection({ ...selection, color })}
                       className={`circle ${
-                        color === selection.color ? 'color-selected' : ''
+                        color === selection.color ? "color-selected" : ""
                       }`}
                     >
                       <div
@@ -219,7 +240,7 @@ const ProductDetail = () => {
                     <div
                       onClick={() => setSelection({ ...selection, size: size })}
                       className={`size ${
-                        size === selection.size ? 'size-selected' : ''
+                        size === selection.size ? "size-selected" : ""
                       }`}
                     >
                       <p className="w-100 m-0 mb-1">{size}</p>
@@ -284,7 +305,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <hr style={{ marginBottom: '0px' }} />
+          <hr style={{ marginBottom: "0px" }} />
 
           <Faq data={product.faqs} />
 

@@ -4,8 +4,7 @@
   /* margin: auto; */
   /* height: 300px; */
   /* overflow: hidden; */
-  margin: 0px 40px;
-  text-align: center;
+  margin: 0px 10px;
 }
 .BundleProductsSlider .slide-single {
   display: flex;
@@ -34,19 +33,27 @@
 }
 
 .BundleProductsSlider .p-title {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
-.BundleProductsSlider .p-brand{
-  width: 60px;
+.BundleProductsSlider .slide-text{
+  flex: 1;
+}
+.BundleProductsSlider .p-brand {
+  width: 80px;
   /* height: 40px; */
   text-align: center;
-margin: 10px auto ;
+  margin: 0px auto;
+  margin-left: 5px;
 }
 
 .BundleProductsSlider .p-price {
   font-weight: 600;
   color: #f0b54d;
-  font-size: 20px;
+  font-size: 16px;
+}
+.slide-content .brand-container {
+
 }

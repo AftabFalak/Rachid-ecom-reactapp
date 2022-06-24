@@ -13,7 +13,10 @@ const ProductMainSlider = ({images}) => {
     <div className="ProductMainSlider">
     <Slider {...settings}>
      {images.map(image=>{
-        return <div><img src={`/Assets/images/ProductList/${image}`}/></div>
+        return <div className="heart-parent">
+          <img src={image.img}/>
+          <button className="heart-btn"><i className={`fa${image.liked?'':'r'} fa-heart`}></i></button>
+          </div>
      })}
     </Slider>
     </div>

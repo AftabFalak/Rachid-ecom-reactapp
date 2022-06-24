@@ -16,9 +16,15 @@ const BundleProductsSlider = ({ products }) => {
           return (
             <div className="slide-single">
               <img className="p-img" src={`${product.image}`} />
-              <p className="p-title">{product.title}</p>
-              <img className="p-brand" src={product.brand}/>
-              <p className="p-price">{product.price}</p>
+              <div className="d-flex py-1 slide-content">
+                <div className="slide-text">
+                  <p className="p-title">{product.title}</p>
+                  <p className="p-price">{product.price}</p>
+                </div>
+                <div className="brand-container" >
+                  <img className="p-brand" src={product.brand} />
+                </div>
+              </div>
             </div>
           );
         })}

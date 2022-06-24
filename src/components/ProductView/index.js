@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './index.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./index.css";
 
-import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
 const ProductView = ({ product, index, handleProduct }) => {
   return (
     <div className="ProductView p-0 mt-3">
+      <hr/>
+
       <div className="row">
         <div className="col-md-4">
           <img src={product.image} width="100%" />
@@ -28,36 +29,18 @@ const ProductView = ({ product, index, handleProduct }) => {
             <div className="short-description"></div>
             {product.colors && (
               <div className="colorSelection d-flex">
-                <p>Color: </p>
                 {product.colors.map((color) => {
                   return (
                     <div
                       onClick={() => handleProduct({ color }, index)}
                       className={`circle ${
-                        color === product.color ? 'color-selected' : ''
+                        color === product.color ? "color-selected" : ""
                       }`}
                     >
                       <div
                         style={{ backgroundColor: color }}
                         className="inner-circle"
                       ></div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-            {product.colors && (
-              <div className="sizeSelection d-flex">
-                <p>Size: </p>
-                {product.sizes.map((size) => {
-                  return (
-                    <div
-                      onClick={() => handleProduct({ size }, index)}
-                      className={`size ${
-                        size === product.size ? 'size-selected' : ''
-                      }`}
-                    >
-                      <p className="w-100 m-0 mb-1">{size}</p>
                     </div>
                   );
                 })}
@@ -99,8 +82,31 @@ const ProductView = ({ product, index, handleProduct }) => {
                 <i className="fa fa-plus"></i>
               </button>
             </div>
-            <button className="btn addButton">Add to Cart</button>
+            {product.colors && (
+              <div className="sizeSelection d-flex">
+                <select className="select-size">
+                  <option value={""} selected disabled>
+                    Select Size
+                  </option>
+                  {product.sizes.map((size) => {
+                    return (
+                      <option
+                        onClick={() => handleProduct({ size }, index)}
+                        className={`size ${
+                          size === product.size ? "size-selected" : ""
+                        }`}
+                      >
+                        {size}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+            )}
           </div>
+          <button className="btn addButton mt-2">
+            <i className="fa fa-shopping-cart"></i> Add to Cart
+          </button>
         </div>
       </div>
     </div>

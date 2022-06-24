@@ -5,7 +5,7 @@
 
 .ProductDetail .brandLogo {
   width: 150px;
-  border: 1px solid gainsboro;
+  /* border: 1px solid gainsboro; */
   float: right;
   padding: 10px;
 }
