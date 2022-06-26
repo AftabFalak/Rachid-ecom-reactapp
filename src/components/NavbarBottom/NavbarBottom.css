@@ -1,3 +1,28 @@
+.NavbarLinks {
+  display: flex;
+  margin-left: 5px;
+  border: 1px solid green;
+  justify-content: space-between;
+}
+
+.NavbarLinks .NavbarLinks-Item {
+  padding: 0px;
+  /* margin-right: 8px; */
+  border: 1px solid red;
+}
+.NavbarLinks .NavbarLinks-Item .NavLink {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  margin-top: 6px;
+  padding: 0px;
+}
+.NavbarLinks .NavbarLinks-Item .NavLink:active,
+.NavbarLinks .NavbarLinks-Item .NavLink:focus,
+.NavbarLinks .NavbarLinks-Item .NavLink:hover {
+  color: var(--main-color);
+}
+
 .custonNavbar {
   height: 71px;
 }
@@ -32,10 +57,4 @@
   position: absolute;
   top: 6px;
   right: 20px;
-}
-.signInTextDummy {
-  font-size: 14px;
-  color: rgb(100, 99, 99);
-  margin-top: 6px;
-  padding: 0px;
 }

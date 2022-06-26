@@ -19,64 +19,35 @@ function NavbarBottom(props) {
         id="navbarToggle"
       >
 
-        <div style={{ display: 'flex' }}>
+        <div className='NavbarLinks'>
           <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
+            className="NavbarLinks-Item"
           >
-            <Link className="nav-link text-dark" to="/dashboard/accountinfo">
-              <p className="signInTextDummy">Dashboard</p>
+            <Link className="nav-link NavLink" to="/">
+              Home
             </Link>
           </span>
           <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
+            className="NavbarLinks-Item"
           >
-            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
-              <p className="signInTextDummy">Home</p>
+            <Link className="nav-link NavLink" to="/shop">
+              Shop
             </Link>
           </span>
           <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
+            className="NavbarLinks-Item"
           >
-            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
-              <p className="signInTextDummy">Shop</p>
+            <Link className="nav-link NavLink" to="/store-list">
+              Store List
             </Link>
           </span>
           <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
+            className="NavbarLinks-Item"
           >
-            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
-              <p className="signInTextDummy">Store List</p>
+            <Link className="nav-link NavLink" to="/get-inspiration">
+              Get inspiration
             </Link>
           </span>
-          <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
-          >
-            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
-              <p className="signInTextDummy">Get Inspiration</p>
-            </Link>
-          </span>
-
-
         </div>
 
 
