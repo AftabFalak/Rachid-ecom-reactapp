@@ -7,9 +7,10 @@ import navbarLogo from '../../assets/images/MainLogo/navbarLogo.png';
 
 import { FaSignInAlt } from 'react-icons/fa';
 
-import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 
-import { MainLogo } from '../../assets/svgs/main-logo'
+import { MainLogo } from '../../assets/svgs/main-logo';
+import Cart from '../../assets/svgs/cart';
 
 function NavbarBottom(props) {
   return (
@@ -23,7 +24,7 @@ function NavbarBottom(props) {
           <span
             className="NavbarLinks-Item"
           >
-            <Link className="nav-link NavLink" to="/">
+            <Link className="nav-link NavLink" to="/" >
               Home
             </Link>
           </span>
@@ -62,6 +63,12 @@ function NavbarBottom(props) {
               <p className="signInText">SEARCH</p>
             </a>
           </li>
+          <li className="nav-item signInLink">
+            <a className="nav-link text-dark" href="#">
+              <AiOutlineHeart className="signInLogo" />
+              <p className="signInText">Wishlist</p>
+            </a>
+          </li>
           <li className="nav-item signInLink" onClick={props.toggleDrawer}>
             <a className="nav-link text-dark" href="#">
               <FaSignInAlt className="signInLogo" />
@@ -70,7 +77,7 @@ function NavbarBottom(props) {
           </li>
           <li className="nav-item signInLink" onClick={props.toggleDrawerCart}>
             <a className="nav-link text-dark" href="#">
-              <AiOutlineShoppingCart className="signInLogo" />
+              <i className="fa fa-cart-shopping"></i>
               <div className="CartBadge">
                 <span>4</span>
               </div>
