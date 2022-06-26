@@ -21,7 +21,7 @@
 }
 
 .ProductDetail .product-heading span a {
-  color: #f0b54d;
+  color: var(--main-color);
 }
 
 .priceView {
@@ -41,7 +41,7 @@
 }
 
 .priceView .offer {
-  color: #f0b54d;
+  color: var(--main-color);
   font-weight: 600;
   font-size: 20px;
 }
@@ -201,13 +201,13 @@
   margin-right: 10px;
 }
 .wishList .socialicon:hover {
-  color: #f0b54d;
+  color: var(--main-color);
   cursor: pointer;
 }
 .share-box {
 }
-.faq-body{
-  padding-top: 0px!important;
+.faq-body {
+  padding-top: 0px !important;
 }
 .addtowishlist i {
   margin-right: 4px;
@@ -241,9 +241,9 @@
 }
 
 .buttonOutline {
-  border-color: #f0b54d;
+  border-color: var(--main-color);
   border-width: 3px;
-  color: #f0b54d;
+  color: var(--main-color);
   font-weight: 700;
 }
 .brandName {
@@ -254,7 +254,7 @@
   margin-top: 20px;
 }
 .addButton {
-  background-color: #f0b54d;
+  background-color: var(--main-color);
   color: #ffff;
   font-size: 20px;
   border-radius: 50px;

@@ -9,6 +9,8 @@ import { FaSignInAlt } from 'react-icons/fa';
 
 import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
 
+import { MainLogo } from '../../assets/svgs/main-logo'
+
 function NavbarBottom(props) {
   return (
     <nav className="navbar navbar-expand-lg shadow p-0 custonNavbar">
@@ -16,9 +18,7 @@ function NavbarBottom(props) {
         className="collapse navbar-collapse justify-content-between"
         id="navbarToggle"
       >
-        <Link className="navbar-brand d-none d-lg-block" to="/">
-          <img src={navbarLogo} alt="" />
-        </Link>
+
         <div style={{ display: 'flex' }}>
           <span
             className="nav-item"
@@ -39,7 +39,7 @@ function NavbarBottom(props) {
             }}
           >
             <Link className="nav-link text-dark" to="/checkout/shoppingcart">
-              <p className="signInTextDummy">Checkout</p>
+              <p className="signInTextDummy">Home</p>
             </Link>
           </span>
           <span
@@ -49,40 +49,7 @@ function NavbarBottom(props) {
               marginRight: '6px',
             }}
           >
-            <Link className="nav-link text-dark" to="/vendor">
-              <p className="signInTextDummy">Vendor</p>
-            </Link>
-          </span>
-          <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
-          >
-            <Link className="nav-link text-dark" to="/store-list">
-              <p className="signInTextDummy">Store List</p>
-            </Link>
-          </span>
-          <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
-          >
-            <Link className="nav-link text-dark" to="/yourcart">
-              <p className="signInTextDummy">Your Cart</p>
-            </Link>
-          </span>
-          <span
-            className="nav-item"
-            style={{
-              border: '.5px solid rgba(0,0,0,0.1)',
-              marginRight: '6px',
-            }}
-          >
-            <Link className="nav-link text-dark" to="/shop">
+            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
               <p className="signInTextDummy">Shop</p>
             </Link>
           </span>
@@ -93,8 +60,8 @@ function NavbarBottom(props) {
               marginRight: '6px',
             }}
           >
-            <Link className="nav-link text-dark" to="/product">
-              <p className="signInTextDummy">Product</p>
+            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
+              <p className="signInTextDummy">Store List</p>
             </Link>
           </span>
           <span
@@ -104,10 +71,17 @@ function NavbarBottom(props) {
               marginRight: '6px',
             }}
           >
-            <Link className="nav-link text-dark" to="/bundle-view">
-              <p className="signInTextDummy">Bundle</p>
+            <Link className="nav-link text-dark" to="/checkout/shoppingcart">
+              <p className="signInTextDummy">Get Inspiration</p>
             </Link>
           </span>
+
+
+        </div>
+
+
+        <div>
+          <MainLogo />
         </div>
 
         <ul className="navbar-nav">

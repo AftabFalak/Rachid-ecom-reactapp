@@ -38,7 +38,7 @@
   margin-bottom: 5px;
 }
 
-.BundleProductsSlider .slide-text{
+.BundleProductsSlider .slide-text {
   flex: 1;
 }
 .BundleProductsSlider .p-brand {
@@ -51,9 +51,8 @@
 
 .BundleProductsSlider .p-price {
   font-weight: 600;
-  color: #f0b54d;
+  color: var(--main-color);
   font-size: 16px;
 }
 .slide-content .brand-container {
-
 }

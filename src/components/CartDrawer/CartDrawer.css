@@ -94,7 +94,7 @@
 }
 
 .singleOrder .price span {
-  color: #f4a51c;
+  color: var(--main-color);
 }
 
 .singleOrder .quantity {
@@ -133,13 +133,13 @@
   font-size: 18px;
 }
 .CartDrawer .bottomDiv .subTotal .subPrice {
-  color: #f4a51c;
+  color: var(--main-color);
 }
 .CartDrawer .bottomDiv .buttonsDiv {
   padding: 15px 12px;
   display: flex;
   flex-direction: column;
-  color: #f4a51c;
+  color: var(--main-color);
 }
 .CartDrawer .bottomDiv .buttonsDiv button,
 .CartDrawer .bottomDiv .buttonsDiv a {
@@ -152,6 +152,6 @@
   text-align: center;
 }
 .CartDrawer .bottomDiv .buttonsDiv .checkout {
-  background-color: #f4a51c;
+  background-color: var(--main-color);
   color: #fff;
 }

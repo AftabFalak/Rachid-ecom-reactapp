@@ -29,7 +29,7 @@
 }
 
 .BundleViewPage .product-heading span a {
-  color: #f0b54d;
+  color: var(--main-color);
   text-decoration: underline;
 }
 
@@ -47,7 +47,7 @@
   padding-bottom: 10px;
 }
 .BundleViewPage .shopthelook .button {
-  background-color: #f0b54d;
+  background-color: var(--main-color);
   border-radius: 100px;
   border: none;
   outline: none;

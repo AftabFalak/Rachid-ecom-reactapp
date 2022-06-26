@@ -85,7 +85,7 @@
 }
 
 #CartTotal .section-item .totalPrice {
-  color: #f5a71c;
+  color: var(--main-color);
   font-weight: bold;
   font-size: 18px;
   margin: 0px;
@@ -96,7 +96,7 @@
   display: flex;
 }
 #CartTotal .proceedButton {
-  background-color: #f4a51c;
+  background-color: var(--main-color);
   color: white;
   border: none;
   outline: none;
@@ -116,7 +116,7 @@
   margin-top: 20px;
 }
 #Detail .profile_email {
-  color: #f5a71c;
+  color: var(--main-color);
 }
 #Detail .profileView {
   background-color: #f7f7f7;
@@ -137,13 +137,13 @@
   font-weight: 600;
 }
 #Detail .profile_email {
-  color: '#fdd700';
+  color: var(--main-color);
 }
 #Detail .profileImage {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  resize: 'contain';
+  resize: "contain";
   margin-right: 30px;
 }
 #Detail .EditProfileLink {
@@ -171,7 +171,7 @@
 
 #Detail .buttonDiv .proceedButton {
   color: #fff;
-  background-color: #f4a51c;
+  background-color: var(--main-color);
 }
 
 #Detail .header {
@@ -233,7 +233,7 @@
   font-weight: 600;
 }
 #Review .orderList .singleOrder .price {
-  color: #fdd700;
+  color: var(--main-color);
 }
 #Review .orderList .singleOrder .size span {
   color: rgba(0, 0, 0, 0.5);
@@ -308,7 +308,7 @@
 
 #Review .buttonDiv .completeOrder {
   color: #fff;
-  background-color: #f4a51c;
+  background-color: var(--main-color);
 }
 #Payment .header {
   background-color: #f7f7f7;
@@ -338,7 +338,7 @@
 
 #Payment .buttonDiv .completeOrder {
   color: #fff;
-  background-color: #f4a51c;
+  background-color: var(--main-color);
 }
 #Payment .creditCardDiv {
   border: 1.5px solid rgba(0, 0, 0, 0.2);

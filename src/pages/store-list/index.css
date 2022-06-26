@@ -55,7 +55,7 @@
   padding: 5px 10px;
   transition: all 0.3s;
   margin-left: 5%;
-  marngi-top: 10px;
+  marngin-top: 10px;
 }
 .store-list .btn-category:hover {
   transform: scale(1.05);
@@ -161,19 +161,16 @@
   transform: rotate(45deg);
 }
 
-
-.vendor-modal-view{
+.vendor-modal-view {
   position: absolute;
   top: -21px;
   margin-top: 40px;
   padding: 10px;
   left: 0;
-
 }
-.vendor-modal-view .back-btn{
+.vendor-modal-view .back-btn {
   background-color: transparent;
   border: none;
-
 }
 
 @media (max-width: 767px) {
@@ -186,7 +183,7 @@
     max-width: 100%;
   }
   .store-list .btn-category {
-   font-size: 12px;
+    font-size: 12px;
   }
   .store-list .vendor-list .productsDropDowns {
     font-size: 12px;
@@ -203,7 +200,7 @@
   }
   .store-list .btn-category {
     font-size: 12px;
-   }
+  }
   .store-list .vendor-list .productsDropDowns {
     font-size: 12px;
   }

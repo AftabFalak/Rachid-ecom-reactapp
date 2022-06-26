@@ -25,7 +25,7 @@
   font-weight: 600;
 }
 .YourCart .orderList .singleOrder .price {
-  color: #fdd700;
+  color: var(--main-color);
 }
 .YourCart .orderList .singleOrder .size span {
   color: rgba(0, 0, 0, 0.5);
@@ -72,7 +72,7 @@
   margin-right: 15px;
 }
 .YourCart .subTotal {
-  color: #f4a51c;
+  color: var(--main-color);
   font-size: 18px;
 }
 .YourCart .price {
@@ -97,7 +97,4 @@
 
 .YourCart .quantity span:last-child {
   border: none;
-}
-
-.YourCart .price {
 }
