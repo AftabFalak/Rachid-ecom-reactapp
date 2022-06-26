@@ -28,13 +28,20 @@ const ProductMainSlider = ({ images }) => {
             return (
               <div className="heart-parent">
                 <img src={image.img} />
+
                 <button
                   className="heart-btn"
+                
+                >
+                  <i className={`fa${image.liked ? "" : "r"} fa-heart`}></i>
+                </button>
+                <button
+                  className="zoom-btn"
                   onClick={() =>
                     setData({ ...data, photoIndex: index, isOpen: true })
                   }
                 >
-                  <i className={`fa${image.liked ? "" : "r"} fa-heart`}></i>
+               <i class="fas fa-expand-arrows-alt"></i>
                 </button>
               </div>
             );

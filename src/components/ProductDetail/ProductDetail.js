@@ -29,7 +29,7 @@ import RelatedProductsSlider from "../RelatedProductsSlider";
 import Reviews from "../Reviews";
 import BundleView from "../BundleView";
 import Policies from "../core/Policies";
-import MeetSeller from '../core/MeetSeller'
+import MeetSeller from "../core/MeetSeller";
 const ProductDetail = () => {
   // const { check, setCheck } = useState(false);
   const [selection, setSelection] = useState({
@@ -37,6 +37,7 @@ const ProductDetail = () => {
     size: "",
     quantity: 1,
   });
+  const [reviewsTab,setReviewsTab]=useState(1)
 
   const cards = [
     {
@@ -81,8 +82,7 @@ const ProductDetail = () => {
       {
         img: "/Assets/images/ProductList/p1.jpeg",
         liked: false,
-      }
-   
+      },
     ],
     otherImages: ["ring.PNG", "shoe.PNG", "bag.PNG", "ring.PNG"],
     colors: ["black", "yello", "green"],
@@ -92,23 +92,36 @@ const ProductDetail = () => {
       rows: [
         {
           title: "Shipping and return policies",
-          content: <Policies/>,
+          content: <Policies />,
         },
         {
           title: "Contant your sellers",
-          content:<MeetSeller/> 
-          
+          content: <MeetSeller />,
         },
       ],
     },
   };
 
   return (
-    <div className="ProductDetail container">
+    <div className="ProductDetail container-fluid">
       <div className="row">
         <div className="col-md-4">
-          <ProductMainSlider images={product.images}  />
-          <div className="d-flex mt-4">
+          <ProductMainSlider images={product.images} />
+
+          <div className="">
+            <div className="tab-container">
+              <div onClick={()=>setReviewsTab(1)} className={`tab ${reviewsTab===1&& 'tab-active'}`}>
+                <p> Review for this item</p>
+                <span>22</span>
+              </div>
+
+              <div  onClick={()=>setReviewsTab(2)} className={`tab ${reviewsTab===2&& 'tab-active'}`}>
+                <p> Review for this shop</p>
+                <span>13</span>
+              </div>
+            </div>
+          </div>
+          {reviewsTab===1? <div className="d-flex mt-4">
             <h3>22 reviews </h3>
             <div>
               <Rating
@@ -119,7 +132,19 @@ const ProductDetail = () => {
                 className="starRaiting"
               />
             </div>
-          </div>
+          </div>:<div className="d-flex mt-4">
+            <h3>13 reviews </h3>
+            <div>
+              <Rating
+                // onClick={handleRating}
+                ratingValue={30}
+                fillColor={"gold"}
+                size={26}
+                className="starRaiting"
+              />
+            </div>
+          </div>}
+         
           <Reviews />
 
           {/* <div

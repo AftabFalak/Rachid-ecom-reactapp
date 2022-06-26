@@ -270,3 +270,31 @@
   color: gray;
   text-decoration: line-through;
 }
+
+.tab-container{
+  width: 100%;
+  border-bottom: 2px solid #EAEAEA;
+  /* overflow:scroll ; */
+  /* height: 40px; */
+}
+.tab-container .tab{
+  display: inline-block;
+  margin-right: 10px ;
+  margin-top: 10px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.tab-container .tab  p{
+  display: inline-block;
+}
+.tab-container .tab span{
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: #EAEAEA;
+
+
+}
+.tab-container .tab-active{
+  border-bottom: 2px solid black;
+}

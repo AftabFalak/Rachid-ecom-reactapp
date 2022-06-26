@@ -16,13 +16,30 @@ code {
 .heart-parent {
   position: relative;
 }
+.zoom-btn{
+  position: absolute;
+  left: 16px;
+  background-color: white;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  bottom: 16px;
+  padding: 2px 3px;
+  font-size: 16px;
+  /* displ÷ay: none; */
+
+}
 
 .heart-btn {
   position: absolute;
-  right: 0px;
+  right: 15px;
   background-color: white;
   border: none;
-  top: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 12px;
   padding: 2px 3px;
   font-size: 18px;
   display: none;

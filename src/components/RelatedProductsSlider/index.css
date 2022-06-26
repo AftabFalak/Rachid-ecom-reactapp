@@ -22,7 +22,7 @@
 .RelatedProductsSlider .slide-single img {
   width: 100%;
   object-fit: cover;
-  height: 100%;
+  height: 280px;
   /* position: absolute; */
 }
 .RelatedProductsSlider .slick-next{
