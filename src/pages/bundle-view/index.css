@@ -1,10 +1,10 @@
-.b-img {
+.main-image-container {
   position: sticky;
+  position: "-webkit-sticky";
+  top: 5px;
 }
-
 .BundleViewPage .brandLogo {
   width: 120px;
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   float: right;
   margin: 10px;
   margin-bottom: 20px;

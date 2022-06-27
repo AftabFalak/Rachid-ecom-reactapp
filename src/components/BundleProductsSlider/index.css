@@ -1,9 +1,4 @@
 .BundleProductsSlider {
-  /* max-height: 260px; */
-  /* max-width: 300px; */
-  /* margin: auto; */
-  /* height: 300px; */
-  /* overflow: hidden; */
   margin: 0px 10px;
 }
 .BundleProductsSlider .slide-single {
@@ -12,17 +7,12 @@
   justify-content: center;
   overflow: hidden;
   padding: 0px 10px;
+  position: relative;
 }
-.BundleProductsSlider .slick-slide > div {
-  /* position: absolute; */
-  /* width: 100%; */
-  /* height: 100%; */
-}
+
 .BundleProductsSlider .slide-single .p-img {
   width: 100%;
   object-fit: cover;
-  height: 320px;
-  /* position: absolute; */
 }
 .BundleProductsSlider .slick-next {
   right: -30px !important;
@@ -43,7 +33,6 @@
 }
 .BundleProductsSlider .p-brand {
   width: 80px;
-  /* height: 40px; */
   text-align: center;
   margin: 0px auto;
   margin-left: 5px;
@@ -54,5 +43,39 @@
   color: var(--main-color);
   font-size: 16px;
 }
-.slide-content .brand-container {
+
+.BundleProductsSlider .slide-single:hover .icon {
+  display: block;
+  margin-top: 0px;
+  opacity: 1;
+}
+
+.BundleProductsSlider .buttons {
+  right: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.BundleProductsSlider .buttons span {
+  display: block;
+  background-color: transparent;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  display: block;
+  height: 30px;
+  padding: 4px 7px;
+  margin: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.BundleProductsSlider .buttons .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: -37px;
+  z-index: 1;
 }
