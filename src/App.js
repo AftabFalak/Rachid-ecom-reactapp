@@ -1,24 +1,23 @@
-import React from 'react';
-import './App.css';
-import NavbarBottom from './components/NavbarBottom/NavbarBottom';
-import { useState } from 'react';
-import MainDrawer from './components/MainDrawer/MainDrawer';
-import { Routes, Route } from 'react-router-dom';
-import ProductDetail from './components/ProductDetail/ProductDetail';
-import VendorProfile from './components/VenderProfile/VenderProfile';
-import StoreList from './pages/store-list';
-import Shop from './pages/shop';
-import Dashboard from './pages/dashboard';
-import Checkout from './pages/checkout';
-import CartDrawer from './components/CartDrawer/CartDrawer';
-import YourCart from './pages/yourCart';
-import BundleViewPage from './pages/bundle-view';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import "./App.css";
+import NavbarBottom from "./components/NavbarBottom/NavbarBottom";
+import { useState } from "react";
+import MainDrawer from "./components/MainDrawer/MainDrawer";
+import { Routes, Route } from "react-router-dom";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
+import VendorProfile from "./components/VenderProfile/VenderProfile";
+import StoreList from "./pages/store-list";
+import Shop from "./pages/shop";
+import Dashboard from "./pages/dashboard";
+import Checkout from "./pages/checkout";
+import CartDrawer from "./components/CartDrawer/CartDrawer";
+import YourCart from "./pages/yourCart";
+import BundleViewPage from "./pages/bundle-view";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   const [open, setOpen] = useState({ drawerOpen: false });
   const [openCart, setOpenCart] = useState({ drawerOpenCart: false });
-
   const setDrawerOpen = (isDrawerOpen) => {
     setOpen({
       drawerOpen: isDrawerOpen,
@@ -57,11 +56,11 @@ function App() {
             <VendorProfile
               vendor={{
                 id: 1,
-                brandName: 'Outfitter',
+                brandName: "Outfitter",
                 brandDescription:
-                  'Finest engraved wood watch for your love ones.',
-                profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
-                coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif'),
+                  "Finest engraved wood watch for your love ones.",
+                profileImage: require("./assets/images/VendorProfile/brand2.PNG"),
+                coverImage: require("./assets/images/VenderCover/venderCoverPhotoavif.avif"),
               }}
             />
           }
@@ -75,6 +74,7 @@ function App() {
         <Route path="/checkout/:page" element={<Checkout />} />
       </Routes>
 
+     *
       <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
       <CartDrawer
         open={openCart.drawerOpenCart}
