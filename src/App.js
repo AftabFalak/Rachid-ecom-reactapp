@@ -74,7 +74,6 @@ function App() {
         <Route path="/checkout/:page" element={<Checkout />} />
       </Routes>
 
-     *
       <MainDrawer open={open.drawerOpen} setDrawertoggle={setDrawerOpen} />
       <CartDrawer
         open={openCart.drawerOpenCart}
