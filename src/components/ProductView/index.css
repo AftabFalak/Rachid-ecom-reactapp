@@ -3,6 +3,12 @@
   padding: 25px;
 }
 
+.ProductView .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .ProductView .brandLogo {
   width: 80px;
   /* border: 1px solid gainsboro; */
@@ -13,6 +19,8 @@
 .ProductView .product-heading {
   width: 100%;
   margin-bottom: 0px;
+  font-weight: normal;
+  color: #000;
 }
 
 .ProductView .product-heading span {
@@ -25,7 +33,7 @@
 }
 
 .priceView {
-  margin-top: 3px;
+  /* margin-top: 3px; */
   text-align: left;
 }
 

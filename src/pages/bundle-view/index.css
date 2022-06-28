@@ -1,6 +1,6 @@
 .main-image-container {
   position: sticky;
-  position: "-webkit-sticky";
+  position: '-webkit-sticky';
   top: 5px;
 }
 .BundleViewPage .brandLogo {
@@ -8,6 +8,7 @@
   float: right;
   margin: 10px;
   margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .BundleViewPage .mainViewRow {
@@ -17,8 +18,9 @@
 }
 .BundleViewPage .product-heading {
   width: 100%;
-  margin-bottom: 0px;
   color: rgb(0, 0, 0, 0.6);
+  font-weight: 500;
+  text-transform: none;
 }
 .BundleViewPage .inspired-by {
   font-size: 16px;

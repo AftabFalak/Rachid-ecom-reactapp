@@ -80,17 +80,27 @@
   display: flex;
   flex-direction: column;
 }
+.CartDrawer .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
 .singleOrder {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.singleOrder:first-child {
+  border-top: none;
 }
 .infoView {
   display: flex;
 }
 .singleOrder .orderImage {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .singleOrder .price span {
@@ -115,6 +125,36 @@
 
 .singleOrder .quantity span:last-child {
   border: none;
+}
+
+.counterButton {
+  display: flex;
+}
+
+.counterButton .logo {
+  cursor: pointer;
+  background-color: #ffff;
+  border: 2px solid rgb(232, 227, 227);
+  display: flex;
+  align-items: center;
+}
+
+.counterButton .minus-btn {
+  border-radius: 50% 0 0 50%;
+}
+
+.counterButton .plus-btn {
+  border-radius: 0 50% 50% 0;
+}
+
+.counterButton .countNumber {
+  padding: 0px;
+  background-color: #e8ecef;
+  border-top: 2px solid rgb(232, 227, 227);
+  border-bottom: 2px solid rgb(232, 227, 227);
+  text-align: center;
+  min-width: 50px;
+  font-size: 15px;
 }
 
 .CartDrawer .bottomDiv {
