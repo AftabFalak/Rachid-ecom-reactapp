@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 import "./index.css";
 const Reviews = () => {
-  const [reviewList,setReviewList] =useState( [
+  const [reviewList, setReviewList] = useState([
     {
       username: "Lenka",
       date: "08 May, 2022",
@@ -40,7 +40,7 @@ const Reviews = () => {
   ]);
 
   return (
-    <div>
+    <div className="p-3">
       {reviewList.map((review, index) => {
         return (
           <div className="reviewBox">
@@ -70,21 +70,25 @@ const Reviews = () => {
                 </div>
               </div>
               {review.helpful ? (
-                <span className="helpful" onClick={()=>{
-                    const revs=[...reviewList]
-                    revs[index].helpful=!revs[index].helpful
-                    setReviewList(revs)
-
-                }}>
+                <span
+                  className="helpful"
+                  onClick={() => {
+                    const revs = [...reviewList];
+                    revs[index].helpful = !revs[index].helpful;
+                    setReviewList(revs);
+                  }}
+                >
                   <i className="fa fa-check"></i> 1 Helpful
                 </span>
               ) : (
-                <p className="helpful" onClick={()=>{
-                    const revs=[...reviewList]
-                    revs[index].helpful=!revs[index].helpful
-                    setReviewList(revs)
-
-                }}>
+                <p
+                  className="helpful"
+                  onClick={() => {
+                    const revs = [...reviewList];
+                    revs[index].helpful = !revs[index].helpful;
+                    setReviewList(revs);
+                  }}
+                >
                   <i className="fa fa-thumbs-up"></i> Helpful?
                 </p>
               )}

@@ -9,11 +9,11 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
 
   const [formData, setFormData] = useState({
     cardNumber: "",
-    nameOnCard:"",
-    validity:"",
+    nameOnCard: "",
+    validity: "",
   });
 
-  const { cardNumber,nameOnCard,validity } = formData;
+  const { cardNumber, nameOnCard, validity } = formData;
 
   const onFormSubmit = () => {
     console.log("submit");
@@ -74,7 +74,9 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
                         </div>
 
                         <div className="buttons-div">
-                          <button onClick={()=> setOpenEditModal(true) }>Edit</button>
+                          <button onClick={() => setOpenEditModal(true)}>
+                            Edit
+                          </button>
                           <button
                             onClick={() => {
                               CardsDeleteHandler(id);
@@ -99,7 +101,7 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
             onSubmit={onFormSubmit}
             style={{ maxWidth: "99%", padding: "20px" }}
           >
-             <input
+            <input
               type="text"
               name="cardNumber"
               value={cardNumber}
@@ -117,7 +119,7 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
               onChange={onChange}
               required
             />
-              <input
+            <input
               type="text"
               name="validity"
               value={validity}
@@ -126,7 +128,7 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
               onChange={onChange}
               required
             />
-           
+
             <div className="buttonView">
               <button className="save" type="submit">
                 Save
@@ -167,7 +169,7 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
               onChange={onChange}
               required
             />
-              <input
+            <input
               type="text"
               name="validity"
               value={validity}
@@ -176,7 +178,7 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
               onChange={onChange}
               required
             />
-           
+
             <div className="buttonView">
               <button className="save" type="submit">
                 Save

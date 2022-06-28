@@ -88,12 +88,14 @@ const BudleViewPage = () => {
   };
 
   return (
-    <div className="BundleViewPage container my-5">
+    <div className="BundleViewPage p-2">
       <div className="row mainViewRow">
         <div className="col-md-7">
           <div className="main-image-container heart-parent">
             <img className="b-img" width={"100%"} src={product.image} />
-            <button className="heart-btn"><i className="far fa-heart"></i></button>
+            <button className="heart-btn">
+              <i className="far fa-heart"></i>
+            </button>
           </div>
         </div>
         <div className="col-md-5">

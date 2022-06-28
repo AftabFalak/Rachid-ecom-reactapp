@@ -6,9 +6,11 @@ const BrandGroupImages = ({ products }) => {
     <Row className="brands">
       {products.map((p) => {
         return (
-          <Col md={3} className="brand-img m-0 p-0">
+          <Col sm={3} xs={3} md={3} className="brand-img m-0 p-0">
             <div className="brand-view heart-parent">
-              <button className="heart-btn"><i className="far fa-heart"></i></button>
+              <button className="heart-btn">
+                <i className="far fa-heart"></i>
+              </button>
               <img src={p.brand} width="100%" />
             </div>
           </Col>

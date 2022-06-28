@@ -5,13 +5,13 @@ import "./index.css";
 const ProductView = ({ product, index, handleProduct }) => {
   return (
     <div className="ProductView p-0 mt-3">
-      <hr/>
+      <hr />
 
-      <div className="row">
-        <div className="col-md-4">
+      <div className="row p-0">
+        <div className="col-md-6">
           <img src={product.image} width="100%" />
         </div>
-        <div className="col-md-8">
+        <div className="col-md-6">
           <div className="top d-flex  ">
             <h4 className=" font-weight-bold product-heading">
               Fashion Clothing

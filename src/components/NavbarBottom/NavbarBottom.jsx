@@ -3,7 +3,6 @@ import React from 'react';
 import './NavbarBottom.css';
 import { Link } from 'react-router-dom';
 
-import navbarLogo from '../../assets/images/MainLogo/navbarLogo.png';
 
 import { FaSignInAlt } from 'react-icons/fa';
 
@@ -14,7 +13,7 @@ import Cart from '../../assets/svgs/cart';
 
 function NavbarBottom(props) {
   return (
-    <nav className="navbar navbar-expand-lg shadow p-0 custonNavbar">
+    <nav className="navbar navbar-expand-lg border-bottom p-0 custonNavbar">
       <nav
         className="collapse navbar-collapse justify-content-between"
         id="navbarToggle"
