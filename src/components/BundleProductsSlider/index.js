@@ -1,6 +1,6 @@
-import React from "react";
-import Slider from "react-slick";
-import "./index.css";
+import React from 'react';
+import Slider from 'react-slick';
+import './index.css';
 const BundleProductsSlider = ({ products }) => {
   let settings = {
     dots: false,
@@ -21,6 +21,10 @@ const BundleProductsSlider = ({ products }) => {
                 </span>
                 <span className="icon">
                   <i className="fa fa-heart"></i>
+                </span>
+
+                <span className="icon">
+                  <i className="fa fa-search"></i>
                 </span>
               </div>
               <img className="p-img" src={`${product.image}`} />

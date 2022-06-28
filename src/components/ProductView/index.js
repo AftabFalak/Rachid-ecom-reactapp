@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
   return (
@@ -8,13 +8,13 @@ const ProductView = ({ product, index, handleProduct }) => {
       <hr />
 
       <div className="row p-0">
-        <div className="col-md-6">
+        <div className="col-md-4">
           <img src={product.image} width="100%" />
         </div>
-        <div className="col-md-6">
-          <div className="top d-flex  ">
-            <h4 className=" font-weight-bold product-heading">
-              Fashion Clothing
+        <div className="col-md-8 p-1 product-info">
+          <div className="top d-flex">
+            <h4 className="product-heading">
+              {product.title}
               <br />
               <span>
                 By <Link to="/vendor">joseph</Link>
@@ -34,7 +34,7 @@ const ProductView = ({ product, index, handleProduct }) => {
                     <div
                       onClick={() => handleProduct({ color }, index)}
                       className={`circle ${
-                        color === product.color ? "color-selected" : ""
+                        color === product.color ? 'color-selected' : ''
                       }`}
                     >
                       <div
@@ -85,7 +85,7 @@ const ProductView = ({ product, index, handleProduct }) => {
             {product.colors && (
               <div className="sizeSelection d-flex">
                 <select className="select-size">
-                  <option value={""} selected disabled>
+                  <option value={''} selected disabled>
                     Select Size
                   </option>
                   {product.sizes.map((size) => {
@@ -93,7 +93,7 @@ const ProductView = ({ product, index, handleProduct }) => {
                       <option
                         onClick={() => handleProduct({ size }, index)}
                         className={`size ${
-                          size === product.size ? "size-selected" : ""
+                          size === product.size ? 'size-selected' : ''
                         }`}
                       >
                         {size}
@@ -104,7 +104,7 @@ const ProductView = ({ product, index, handleProduct }) => {
               </div>
             )}
           </div>
-          <button className="btn addButton mt-2">
+          <button className="btn addButton w-50">
             <i className="fa fa-shopping-cart"></i> Add to Cart
           </button>
         </div>

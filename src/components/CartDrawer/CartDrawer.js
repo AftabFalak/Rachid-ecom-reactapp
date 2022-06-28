@@ -8,12 +8,14 @@ import { BiEdit } from 'react-icons/bi';
 import GoogleButton from 'react-google-button';
 
 import { orders } from '../../pages/checkout';
-
+import { OrderDeleteHandler } from '../../pages/checkout';
 const CartDrawer = (props) => {
-  const [cartPopup, setCartPopup] = useState(false);
-  console.log(orders);
-  const [tab, setTab] = useState(1);
-  const [count, setCount] = useState(1);
+  const [selection, setSelection] = useState({
+    color: '',
+    size: '',
+    quantity: 1,
+  });
+  const [totalPrice, setTotalPrice] = useState(125);
   return (
     <div className={`CartDrawer ${!props.open ? 'closedDrawer' : ''}`}>
       <div className="header">
@@ -22,7 +24,8 @@ const CartDrawer = (props) => {
           className="closeBtn"
           onClick={() => props.setDrawertoggle(false)}
         >
-          <i className="fa fa-times timeIcon"></i> <span>Close</span>
+          <i className="fa fa-times timeIcon cursor-poniter"></i>{' '}
+          <span>Close</span>
         </button>
       </div>
       <div className="orderList">
@@ -33,26 +36,49 @@ const CartDrawer = (props) => {
                 <div className="mr-3">
                   <img src={imageUrl} alt="" className="orderImage" />
                 </div>
-                <div>
+                <div className="product-info">
                   <span className="title">{title}</span>
-                  <br />
-                  <span className="quantity">
-                    <span>
-                      <button>-</button>
-                    </span>
-                    <span className="countState">{quantity}</span>
-                    <span>
-                      <button>+</button>
-                    </span>
-                  </span>
-                  <br />
+                  <div className="counterButton mb-0">
+                    <button
+                      className="logo minus-btn"
+                      disabled={selection.quantity == 1}
+                      onClick={() => {
+                        setSelection({
+                          ...selection,
+                          quantity: selection.quantity - 1,
+                        });
+                        setTotalPrice(price);
+                      }}
+                    >
+                      <i className="fa fa-minus"></i>
+                    </button>
+                    <div className="countNumber">
+                      <span>{selection.quantity}</span>
+                    </div>
+                    <button
+                      disabled={selection.quantity === 10}
+                      className="logo plus-btn m-0"
+                      onClick={() =>
+                        setSelection({
+                          ...selection,
+                          quantity: selection.quantity + 1,
+                        })
+                      }
+                    >
+                      <i className="fa fa-plus"></i>
+                    </button>
+                  </div>
+
                   <span className="price">
-                    {quantity} x <span> ${price}</span>
+                    {selection.quantity} x <span> ${price}</span>
                   </span>
                 </div>
               </div>
               <div>
-                <i className="fa fa-times"></i>
+                <i
+                  className="fa fa-times cursor-poniter"
+                  onClick={OrderDeleteHandler(id)}
+                ></i>
               </div>
             </div>
           )
@@ -62,7 +88,9 @@ const CartDrawer = (props) => {
       <div className="bottomDiv">
         <div className="subTotal">
           <span>SUBTOTAL</span>
-          <span className="subPrice">$1, 415.0</span>
+          <span className="subPrice">
+            ${selection.quantity * totalPrice * 3}
+          </span>
         </div>
         <div className="buttonsDiv">
           <button className="viewCart">VIEW CART</button>

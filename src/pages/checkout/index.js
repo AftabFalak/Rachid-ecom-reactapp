@@ -12,7 +12,7 @@ import { BsCart, BsFillCheckCircleFill } from 'react-icons/bs';
 import { FiUser, FiCheckCircle } from 'react-icons/fi';
 import { MdPayment } from 'react-icons/md';
 
-export const orders = [
+export const initOrders = [
   {
     id: 1,
     imageUrl:
@@ -45,7 +45,12 @@ export const orders = [
   },
 ];
 
+export const OrderDeleteHandler = (id) => {
+  setOrders(() => orders.filter((el) => el.id !== id));
+};
+
 const Checkout = () => {
+  const [orders, setOrders] = useState([...initOrders]);
   const tabs = [
     {
       id: 1,
