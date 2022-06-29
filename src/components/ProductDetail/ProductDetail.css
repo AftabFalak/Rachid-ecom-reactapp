@@ -210,8 +210,7 @@
   color: var(--main-color);
   cursor: pointer;
 }
-.share-box {
-}
+
 .faq-body {
   padding-top: 0px !important;
 }
@@ -310,10 +309,7 @@
   .slide-single {
     margin-top: 10px;
   }
-  .slide-single .slide-content {
-    /* display: block !important;
-    text-align: center; */
-  }
+
   .slide-single .slide-content .p-title {
     font-size: 12px;
   }

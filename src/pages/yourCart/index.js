@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { orders } from '../checkout';
+import { initOrders } from "../checkout";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { BiEdit } from 'react-icons/bi';
+import { BiEdit } from "react-icons/bi";
 
-import CartTotal from '../../components/Layout/Checkout/CartTotals';
+import CartTotal from "../../components/Layout/Checkout/CartTotals";
 
-import './index.css';
+import "./index.css";
 const YourCart = () => {
   return (
     <div className="YourCart">
@@ -25,7 +25,7 @@ const YourCart = () => {
               </tr>
             </thead>
             <tbody>
-              {orders.map(
+              {initOrders.map(
                 (
                   { id, imageUrl, title, price, size, color, quantity },
                   index
@@ -35,7 +35,7 @@ const YourCart = () => {
                       <i className="fa fa-times timesIcon cursor-pointer"></i>
                       <img
                         src={imageUrl}
-                        style={{ width: '100px', height: '100px' }}
+                        style={{ width: "100px", height: "100px" }}
                         alt=""
                         srcset=""
                       />
