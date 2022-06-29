@@ -79,7 +79,7 @@ const BudleViewPage = () => {
       },
     ],
   });
-
+const [liked,setLiked]=useState(false)
   const handleProduct = (data, index) => {
     console.log(data, index);
     const products = [...product.products];
@@ -93,8 +93,8 @@ const BudleViewPage = () => {
         <div className="col-md-6">
           <div className="main-image-container heart-parent">
             <img className="b-img" width={'100%'} src={product.image} />
-            <button className="heart-btn">
-              <i className="far fa-heart"></i>
+            <button onClick={()=>setLiked(!liked)} className="heart-btn">
+              {liked?<span><i className="fa fa-heart"></i></span>:<div><i className="far fa-heart"></i></div> }
             </button>
           </div>
         </div>
@@ -107,7 +107,9 @@ const BudleViewPage = () => {
               </span>
             </h2>
             <div>
+              <a href='/vendor'>
               <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
+              </a>
             </div>
           </div>
           <h4 className="brand-heading">In Cooperation with</h4>
@@ -117,7 +119,7 @@ const BudleViewPage = () => {
               <button className="button">Shop the Look</button>
             </div>
             <div className="social-links">
-              <h3>Share</h3>
+              <h4 className='brand-heading'>Share</h4>
               <div className="d-flex justify-content-between align-items-center">
                 <FaFacebookF className="social-icon" />
                 <BsTwitter className="social-icon" />

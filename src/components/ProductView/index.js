@@ -20,7 +20,9 @@ const ProductView = ({ product, index, handleProduct }) => {
                 By <Link to="/vendor">joseph</Link>
               </span>
             </h4>
+            <a href='/vendor'>
             <img src={product.brand} alt="BrandLogo" className="brandLogo" />
+            </a>
           </div>
           <div className="priceView">
             <span className="oldPrice">$345.00</span>
@@ -104,7 +106,7 @@ const ProductView = ({ product, index, handleProduct }) => {
               </div>
             )}
           </div>
-          <button className="btn addButton w-50">
+          <button className="btn addButton ">
             <i className="fa fa-shopping-cart"></i> Add to Cart
           </button>
         </div>

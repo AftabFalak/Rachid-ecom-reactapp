@@ -63,6 +63,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+.BundleViewPage .shopthelook .social-links h4 {
+margin-bottom: 0px;
+font-size: 20px;
+
 }
 .BundleViewPage .shopthelook .social-icon {
   color: rgb(0, 0, 0, 0.6);

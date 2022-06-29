@@ -193,13 +193,15 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .addtowishlist {
   margin-right: 30px;
 }
 .wishList .socialheading {
-  margin-right: 20px;
+  margin-right: 10px;
   /* margin-top: 3px; */
 }
 .wishList .socialicon {
@@ -302,6 +304,9 @@
   border-bottom: 2px solid black;
 }
 
+.share-box{
+  align-items: center;
+}
 @media screen and (max-width: 800px) {
   .content-product {
     padding: 10px;

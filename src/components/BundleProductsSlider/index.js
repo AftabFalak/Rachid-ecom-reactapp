@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Slider from 'react-slick';
 import './index.css';
 const BundleProductsSlider = ({ products }) => {
@@ -9,6 +9,9 @@ const BundleProductsSlider = ({ products }) => {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+
+  const[liked, setLiked] = useState(false);
+
   return (
     <div className="BundleProductsSlider">
       <Slider {...settings}>
@@ -19,10 +22,19 @@ const BundleProductsSlider = ({ products }) => {
                 <span>
                   <i className="fa fa-cart-plus"></i>
                 </span>
-                <span className="icon">
-                  <i className="fa fa-heart"></i>
+                <span onClick={() => setLiked(!liked)}  className="icon">
+                {liked ? (
+                  <div>
+                    <i className="fa fa-heart"></i>
+                  </div>
+                ) : (
+                  <i>
+                    <i className="far fa-heart"></i>
+                  </i>
+                )}
                 </span>
 
+          
                 <span className="icon">
                   <i className="fa fa-search"></i>
                 </span>

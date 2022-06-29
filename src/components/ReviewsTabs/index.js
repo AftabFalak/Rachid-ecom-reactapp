@@ -28,7 +28,7 @@ const ReviewsTab = () => {
         </div>
       </div>
       {reviewsTab === 1 ? (
-        <div className="d-flex mt-4 p-3">
+        <div className="d-flex p-3 pb-0">
           <h3>22 reviews </h3>
           <div>
             <Rating
@@ -41,7 +41,7 @@ const ReviewsTab = () => {
           </div>
         </div>
       ) : (
-        <div className="d-flex mt-4 p-3">
+        <div className="d-flex  p-3 pb-0">
           <h3>13 reviews </h3>
           <div>
             <Rating
@@ -55,7 +55,9 @@ const ReviewsTab = () => {
         </div>
       )}
       <Reviews />
-      <PaginatedPages itemsPerPage={3} />
+      <div className="ml-5 mb-4">
+        <PaginatedPages itemsPerPage={3} />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
-import React from 'react';
-import './index.css';
-import { FaHandPaper, FaShippingFast } from 'react-icons/fa';
-import { AiOutlineGift } from 'react-icons/ai';
+import React from "react";
+import "./index.css";
+import { FaHandPaper, FaShippingFast } from "react-icons/fa";
+import { AiOutlineGift } from "react-icons/ai";
 const Policies = () => {
   return (
     <div className="Policies">
@@ -11,51 +11,51 @@ const Policies = () => {
 
       <div
         style={{
-          width: '100%',
-          height: '15px',
-          borderBottom: '2px solid #eaeaea',
-          textAlign: 'center',
+          width: "100%",
+          height: "15px",
+          borderBottom: "2px solid #eaeaea",
+          textAlign: "center",
         }}
       >
         <div className="d-flex justify-content-between">
           <span
             style={{
-              backgroundColor: '#eaeaea',
-              padding: '0px 10px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignContent: 'center',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '6px',
+              backgroundColor: "#eaeaea",
+              padding: "0px 10px",
+              borderRadius: "50%",
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "6px",
             }}
           >
             <FaHandPaper />
           </span>
           <span
             style={{
-              backgroundColor: '#eaeaea',
-              padding: '0 10px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignContent: 'center',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '6px',
+              backgroundColor: "#eaeaea",
+              padding: "0 10px",
+              borderRadius: "50%",
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "6px",
             }}
           >
             <FaShippingFast />
           </span>
           <span
             style={{
-              backgroundColor: '#eaeaea',
-              padding: '0 10px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignContent: 'center',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '6px',
+              backgroundColor: "#eaeaea",
+              padding: "0 10px",
+              borderRadius: "50%",
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "6px",
             }}
           >
             <AiOutlineGift />
@@ -81,11 +81,11 @@ const Policies = () => {
         <div className="d-flex text-left mt-4">
           <div className="mr-5">
             <p>Cost to ship</p>
-            <h2>Free</h2>
+            <h3 className="dateHeading">Free</h3>
           </div>
           <div>
             <p>Returns</p>
-            <h2>Accepted</h2>
+            <h3 className="dateHeading">Accepted</h3>
             <span>Exceptions may apply</span>
           </div>
         </div>

@@ -33,6 +33,7 @@ const ProductDetail = () => {
     size: "",
     quantity: 1,
   });
+  const [liked, setLiked] = useState(false);
 
   const cards = [
     {
@@ -116,11 +117,13 @@ const ProductDetail = () => {
                   By <Link to="/vendor">joseph</Link>
                 </span>
               </h2>
-              <img
-                src={"/Assets/images/VendorProfile/brand3.jpeg"}
-                alt="BrandLogo"
-                className="brandLogo"
-              />
+              <a href="/vendor">
+                <img
+                  src={"/Assets/images/VendorProfile/brand3.jpeg"}
+                  alt="BrandLogo"
+                  className="brandLogo"
+                />
+              </a>
             </div>
             <div className="priceView">
               <span className="oldPrice">$345.00</span>
@@ -210,10 +213,24 @@ const ProductDetail = () => {
 
             <hr />
             <div className="wishList d-flex">
-              <div className="addtowishlist">
-                <i className="fa fa-heart"></i>
-                <span> Follow Brand</span>
-              </div>
+              <button
+                onClick={() => setLiked(!liked)}
+                className="btn addtowishlist"
+              >
+                {liked ? (
+                  <div className="d-inline-block m-0">
+                    <i className="fa fa-heart"></i>
+                    <span> Unfollow Brand</span>
+                  </div>
+                ) : (
+                  <span>
+                    <i className="far fa-heart"></i>
+                    <span> Follow Brand</span>
+                  </span>
+                )}
+
+              
+              </button>
 
               <div className="d-flex share-box">
                 <span className="socialheading">Share:</span>
@@ -229,9 +246,7 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            <div className=" d-md-none">
-              <ReviewsTab />
-            </div>
+      
             <hr style={{ marginBottom: "0px" }} />
 
             <Faq data={product.faqs} />
@@ -240,6 +255,9 @@ const ProductDetail = () => {
 
             <RelatedProductsSlider images={product.otherImages} />
           </div>
+          <div className=" d-md-none">
+              <ReviewsTab />
+            </div>
         </div>
         <div className="col-md-12">
           <BundleView />

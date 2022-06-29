@@ -40,7 +40,7 @@ const Reviews = () => {
   ]);
 
   return (
-    <div className="p-3">
+    <div className="px-3">
       {reviewList.map((review, index) => {
         return (
           <div className="reviewBox">

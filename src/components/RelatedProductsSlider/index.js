@@ -52,6 +52,15 @@ const RelatedProductsSlider = ({ images }) => {
                   <i className="fa fa-search"></i>
                 </span>
               </div>
+              <div className="textArea">
+                <p>men black t-shirt</p>
+                <p>
+                  <strong>$65.34</strong>{" "}
+                  <small>
+                    <strike>$76.43</strike>
+                  </small>
+                </p>
+              </div>
               <img src={`/Assets/images/ProductList/${image}`} />
             </div>
           );

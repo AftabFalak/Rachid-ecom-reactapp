@@ -1,8 +1,9 @@
-import React from 'react';
-import BrandGroupImages from '../../BrandGroupImages';
-import BundleProductsSlider from '../../BundleProductsSlider';
-import './index.css';
+import React, { useState } from "react";
+import BrandGroupImages from "../../BrandGroupImages";
+import BundleProductsSlider from "../../BundleProductsSlider";
+import "./index.css";
 const SingleBrandView = ({ view, right }) => {
+  const [liked, setLiked] = useState(false);
   return (
     <divn>
       {right ? (
@@ -13,11 +14,22 @@ const SingleBrandView = ({ view, right }) => {
           </div>
           <div className="col-md-6">
             <div className="bundle-img position-relative">
-              <img src={view.bundle} width={'100%'} />
+              <img src={view.bundle} width={"100%"} />
               <div className="bundle-content">
                 <div>
-                  <button className="heart-btn">
-                    <i className={`fa${false ? '' : 'r'} fa-heart`}></i>
+                <button
+                    onClick={() => setLiked(!liked)}
+                    className="heart-btn"
+                  >
+                    {liked ? (
+                      <span>
+                        <i className="fa fa-heart"></i>
+                      </span>
+                    ) : (
+                      <div>
+                        <i className="far fa-heart"></i>
+                      </div>
+                    )}
                   </button>
                   <button className="shop-btn">Shoppo dec outfit</button>
                 </div>
@@ -28,8 +40,27 @@ const SingleBrandView = ({ view, right }) => {
       ) : (
         <div className="row">
           <div className="col-md-6">
-            <div className="bundle-img">
-              <img src={view.bundle} width={'100%'} height={'100%'} />
+            <div className="bundle-img position-relative">
+              <img src={view.bundle} width={"100%"} height={"100%"} />
+              <div className="bundle-content">
+                <div>
+                  <button
+                    onClick={() => setLiked(!liked)}
+                    className="heart-btn"
+                  >
+                    {liked ? (
+                      <span>
+                        <i className="fa fa-heart"></i>
+                      </span>
+                    ) : (
+                      <div>
+                        <i className="far fa-heart"></i>
+                      </div>
+                    )}
+                  </button>
+                  <button className="shop-btn">Shoppo dec outfit</button>
+                </div>
+              </div>
             </div>
             <div className="d-block d-md-none my-3 mx-2">
               <BrandGroupImages products={view.products} />

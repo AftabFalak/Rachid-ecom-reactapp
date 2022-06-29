@@ -34,12 +34,12 @@ function PaginatedPages({ itemsPerPage }) {
     <>
       <ReactPaginate
         breakLabel="..."
-        nextLabel=">"
-        className='pagination'
+        nextLabel={<i className='fa fa-arrow-right text-black'></i>}
+        className='pagination-react'
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< "
+        previousLabel={<i className='fa fa-arrow-left text-black'></i>}
         renderOnZeroPageCount={null}
       />
     </>
