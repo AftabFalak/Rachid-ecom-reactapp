@@ -1,0 +1,10 @@
+.pagination{
+
+}
+.pagination li{
+    width: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}

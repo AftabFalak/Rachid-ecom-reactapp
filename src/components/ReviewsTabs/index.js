@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import Reviews from "../Reviews";
+import ReactPaginate from "react-paginate";
+import PaginatedPages from "../Pagination";
+
 const ReviewsTab = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
   return (
@@ -52,6 +55,7 @@ const ReviewsTab = () => {
         </div>
       )}
       <Reviews />
+      <PaginatedPages itemsPerPage={3} />
     </div>
   );
 };
