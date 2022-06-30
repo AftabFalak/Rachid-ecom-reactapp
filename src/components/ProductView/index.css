@@ -3,6 +3,50 @@
   /* padding: 25px; */
 }
 
+.ProductView .imageView {
+  position: relative;
+}
+
+.ProductView .buttons {
+  right: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+.addtowishlist i {
+  margin-right: 4px;
+}
+.addtowishlist i {
+  margin-right: 4px;
+}
+.ProductView .buttons span {
+  display: block;
+  background-color: transparent;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  display: block;
+  height: 30px;
+  padding: 4px 7px;
+  margin: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.ProductView .buttons .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: -37px;
+  z-index: 1;
+}
+.ProductView .imageView:hover .icon {
+  display: block;
+  margin-top: 0px;
+  opacity: 1;
+}
+
 .ProductView .product-info {
   display: flex;
   flex-direction: column;

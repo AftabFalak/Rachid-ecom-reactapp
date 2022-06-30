@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
+  const [liked, setLiked] = useState(false);
   return (
     <div className="ProductView">
       <hr />
       <div className="row p-0">
-        <div className="col-md-4">
+        <div className="col-md-4 imageView">
+          <div className="buttons">
+            <span onClick={() => setLiked(!liked)} className="">
+              {liked ? (
+                <div>
+                  <i className="fa fa-heart"></i>
+                </div>
+              ) : (
+                <i>
+                  <i className="far fa-heart"></i>
+                </i>
+              )}
+            </span>
+            <span className="icon">
+              <i className="fa fa-search"></i>
+            </span>
+          </div>
           <img src={product.image} width="100%" />
         </div>
         <div className="col-md-8 px-3 mt-2 product-info">
           <div className="top d-flex">
-            <h4 className="product-heading">
+            <h3 className="product-heading">
               {product.title}
               <br />
               <span>
                 By <Link to="/vendor">joseph</Link>
               </span>
-            </h4>
+            </h3>
 
             <a href="/vendor">
               <img src={product.brand} alt="BrandLogo" className="brandLogo" />
