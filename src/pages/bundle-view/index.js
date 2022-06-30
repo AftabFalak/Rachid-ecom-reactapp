@@ -79,7 +79,7 @@ const BudleViewPage = () => {
       },
     ],
   });
-const [liked,setLiked]=useState(false)
+  const [liked, setLiked] = useState(false);
   const handleProduct = (data, index) => {
     console.log(data, index);
     const products = [...product.products];
@@ -92,24 +92,53 @@ const [liked,setLiked]=useState(false)
       <div className="row mainViewRow">
         <div className="col-md-6">
           <div className="main-image-container heart-parent">
+            <div className="d-md-none d-sm-block border-0">
+              <div className="d-flex align-items-start border">
+                <h2 className="product-heading">
+                  Get the Look
+                  <span className="inspired-by">
+                    Inspired By <Link to="/vendor">Joseph</Link>
+                  </span>
+                </h2>
+                <div>
+                  <a href="/vendor" className="d-flex">
+                    <img
+                      src={brandLogo}
+                      alt="BrandLogo"
+                      className="brandLogo"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
             <img className="b-img" width={'100%'} src={product.image} />
-            <button onClick={()=>setLiked(!liked)} className="heart-btn">
-              {liked?<span><i className="fa fa-heart"></i></span>:<div><i className="far fa-heart"></i></div> }
+            <button onClick={() => setLiked(!liked)} className="heart-btn">
+              {liked ? (
+                <span>
+                  <i className="fa fa-heart"></i>
+                </span>
+              ) : (
+                <div>
+                  <i className="far fa-heart"></i>
+                </div>
+              )}
             </button>
           </div>
         </div>
         <div className="col-md-6">
-          <div className="d-flex">
-            <h2 className="product-heading">
-              Get the Look
-              <span className="inspired-by">
-                Inspired By <Link to="/vendor">Joseph</Link>
-              </span>
-            </h2>
-            <div>
-              <a href='/vendor'>
-              <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
-              </a>
+          <div className="d-md-block d-sm-none d-none border-0">
+            <div className="d-flex">
+              <h2 className="product-heading">
+                Get the Look
+                <span className="inspired-by">
+                  Inspired By <Link to="/vendor">Joseph</Link>
+                </span>
+              </h2>
+              <div>
+                <a href="/vendor">
+                  <img src={brandLogo} alt="BrandLogo" className="brandLogo" />
+                </a>
+              </div>
             </div>
           </div>
           <h4 className="brand-heading">In Cooperation with</h4>
@@ -119,7 +148,7 @@ const [liked,setLiked]=useState(false)
               <button className="button">Shop the Look</button>
             </div>
             <div className="social-links">
-              <h4 className='brand-heading'>Share</h4>
+              <h4 className="brand-heading">Share</h4>
               <div className="d-flex justify-content-between align-items-center">
                 <FaFacebookF className="social-icon" />
                 <BsTwitter className="social-icon" />

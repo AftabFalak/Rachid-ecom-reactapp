@@ -4,14 +4,13 @@ import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
   return (
-    <div className="ProductView p-0 mt-3">
+    <div className="ProductView">
       <hr />
-
       <div className="row p-0">
         <div className="col-md-4">
           <img src={product.image} width="100%" />
         </div>
-        <div className="col-md-8 p-1 product-info">
+        <div className="col-md-8 px-3 mt-2 product-info">
           <div className="top d-flex">
             <h4 className="product-heading">
               {product.title}
@@ -20,8 +19,9 @@ const ProductView = ({ product, index, handleProduct }) => {
                 By <Link to="/vendor">joseph</Link>
               </span>
             </h4>
-            <a href='/vendor'>
-            <img src={product.brand} alt="BrandLogo" className="brandLogo" />
+
+            <a href="/vendor">
+              <img src={product.brand} alt="BrandLogo" className="brandLogo" />
             </a>
           </div>
           <div className="priceView">

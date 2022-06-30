@@ -1,6 +1,6 @@
 .ProductView {
   background-color: #fff;
-  padding: 25px;
+  /* padding: 25px; */
 }
 
 .ProductView .product-info {
@@ -18,9 +18,9 @@
 
 .ProductView .product-heading {
   width: 100%;
-  margin-bottom: 0px;
-  font-weight: normal;
-  color: #000;
+  color: rgb(0, 0, 0, 0.6);
+  font-weight: 500;
+  text-transform: none;
 }
 
 .ProductView .product-heading span {
@@ -213,12 +213,8 @@
   border-radius: 50px;
 }
 
-@media  screen and (max-width:1100px) {
-  
+@media screen and (max-width: 1100px) {
   .ProductView .brandLogo {
     width: 80px;
-
   }
-  
-
 }
