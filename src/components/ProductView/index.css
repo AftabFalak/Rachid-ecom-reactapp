@@ -54,7 +54,7 @@
 }
 
 .ProductView .brandLogo {
-  width: 120px;
+  width: 80px;
   /* border: 1px solid gainsboro; */
   float: right;
   margin: 5px;
@@ -257,8 +257,5 @@
   border-radius: 50px;
 }
 
-@media screen and (max-width: 1100px) {
-  .ProductView .brandLogo {
-    width: 80px;
-  }
+@media screen and (max-width: 400px) {
 }

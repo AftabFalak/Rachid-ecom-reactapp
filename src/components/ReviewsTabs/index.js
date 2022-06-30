@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Rating } from "react-simple-star-rating";
-import Reviews from "../Reviews";
-import ReactPaginate from "react-paginate";
-import PaginatedPages from "../Pagination";
+import React, { useState } from 'react';
+import { Rating } from 'react-simple-star-rating';
+import Reviews from '../Reviews';
+import ReactPaginate from 'react-paginate';
+import PaginatedPages from '../Pagination';
 
 const ReviewsTab = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
@@ -12,7 +12,7 @@ const ReviewsTab = () => {
         <div className="tab-container">
           <div
             onClick={() => setReviewsTab(1)}
-            className={`tab ${reviewsTab === 1 && "tab-active"}`}
+            className={`tab ${reviewsTab === 1 && 'tab-active'}`}
           >
             <p> Review for this item</p>
             <span>22</span>
@@ -20,7 +20,7 @@ const ReviewsTab = () => {
 
           <div
             onClick={() => setReviewsTab(2)}
-            className={`tab ${reviewsTab === 2 && "tab-active"}`}
+            className={`tab ${reviewsTab === 2 && 'tab-active'}`}
           >
             <p> Review for this shop</p>
             <span>13</span>
@@ -34,7 +34,7 @@ const ReviewsTab = () => {
             <Rating
               // onClick={handleRating}
               ratingValue={80}
-              fillColor={"gold"}
+              fillColor={'gold'}
               size={26}
               className="starRaiting"
             />
@@ -47,7 +47,7 @@ const ReviewsTab = () => {
             <Rating
               // onClick={handleRating}
               ratingValue={30}
-              fillColor={"gold"}
+              fillColor={'gold'}
               size={26}
               className="starRaiting"
             />

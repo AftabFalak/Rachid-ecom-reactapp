@@ -4,9 +4,8 @@
   top: 5px;
 }
 .BundleViewPage .brandLogo {
-  width: 120px;
+  width: 80px;
   float: right;
-  margin: 10px;
   margin-bottom: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -44,9 +43,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
-  padding-bottom: 10px;
+  margin-top: 15px;
+  /* padding-bottom: 10px; */
 }
+
 .BundleViewPage .shopthelook .button {
   background-color: var(--main-color);
   border-radius: 100px;
@@ -75,4 +75,30 @@
 .priceView {
   margin-top: 3px;
   text-align: left;
+}
+
+@media (max-width: 400px) {
+  .BundleViewPage .brandLogo {
+    width: 80px;
+  }
+
+  .BundleViewPage .coprate {
+    margin-top: 20px;
+    padding: 0px 10px;
+  }
+  .BundleViewPage .productView {
+    padding: 0px 10px;
+  }
+
+  .BundleViewPage .shopthelook .button {
+    padding: 6px 27px;
+  }
+
+  .BundleViewPage .shopthelook .social-links h4 {
+    margin-bottom: 0px;
+    font-size: 18px;
+  }
+  .BundleViewPage .shopthelook .social-icon {
+    font-size: 15px;
+  }
 }

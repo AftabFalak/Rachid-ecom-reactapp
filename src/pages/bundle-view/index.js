@@ -93,7 +93,7 @@ const BudleViewPage = () => {
         <div className="col-md-6">
           <div className="main-image-container heart-parent">
             <div className="d-md-none d-sm-block border-0">
-              <div className="d-flex align-items-start border">
+              <div className="d-flex align-items-start ">
                 <h2 className="product-heading">
                   Get the Look
                   <span className="inspired-by">
@@ -141,8 +141,10 @@ const BudleViewPage = () => {
               </div>
             </div>
           </div>
-          <h4 className="brand-heading">In Cooperation with</h4>
-          <BrandGroupImages products={product.products} />
+          <div className="coprate">
+            <h4 className="brand-heading">In Cooperation with</h4>
+            <BrandGroupImages products={product.products} />
+          </div>
           <div className="shopthelook">
             <div>
               <button className="button">Shop the Look</button>
@@ -158,11 +160,13 @@ const BudleViewPage = () => {
           </div>
           {product.products.map((prod, index) => {
             return (
-              <ProductView
-                product={prod}
-                index={index}
-                handleProduct={handleProduct}
-              />
+              <div className="productView">
+                <ProductView
+                  product={prod}
+                  index={index}
+                  handleProduct={handleProduct}
+                />
+              </div>
             );
           })}
         </div>

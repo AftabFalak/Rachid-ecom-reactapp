@@ -10,10 +10,8 @@
 }
 
 .ProductDetail .brandLogo {
-  width: 150px;
-  /* border: 1px solid gainsboro; */
+  width: 80px;
   float: right;
-  padding: 10px;
 }
 
 .ProductDetail .product-heading {
@@ -279,8 +277,6 @@
 .tab-container {
   width: 100%;
   border-bottom: 2px solid #eaeaea;
-  /* overflow:scroll ; */
-  /* height: 40px; */
 }
 .tab-container .tab {
   display: inline-block;
