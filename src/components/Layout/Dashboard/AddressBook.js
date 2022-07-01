@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Popup from "../../core/Popup";
-import InputMask from "react-input-mask";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Popup from '../../core/Popup';
+import InputMask from 'react-input-mask';
 
 const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
@@ -9,16 +9,16 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
   const [openAddNewModal, setOpenAddNewModal] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
-    address: "",
+    name: '',
+    address: '',
     mobile: 0,
-    type: "",
+    type: '',
   });
 
   const { name, address, mobile, type } = formData;
 
   const onFormSubmit = () => {
-    console.log("submit");
+    console.log('submit');
   };
   const onChange = (e) => {
     setFormData({
@@ -81,11 +81,11 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
       </div>
 
       {openEditModal && (
-        <Popup title={"Edit Address Book"}>
+        <Popup title={'Edit Address Book'}>
           <form
             className="form-t"
             onSubmit={onFormSubmit}
-            style={{ maxWidth: "99%", padding: "20px" }}
+            style={{ maxWidth: '99%', padding: '20px' }}
           >
             <input
               type="text"
@@ -114,6 +114,18 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
               className="text-dark dropd border-bold form-control mt-2"
               placeholder="Mobile"
             />
+            <div className="mt-2 ">
+              <label class="containerr">
+                Shipping
+                <input type="radio" checked="checked" name="radio" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="containerr">
+                Billing
+                <input type="radio" name="radio" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
             <div className="buttonView">
               <button className="save" type="submit">
                 Save
@@ -130,11 +142,11 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
       )}
 
       {openAddNewModal && (
-        <Popup title={"Add New Address Book"}>
+        <Popup title={'Add New Address Book'}>
           <form
             className="form-t"
             onSubmit={onFormSubmit}
-            style={{ maxWidth: "99%", padding: "20px" }}
+            style={{ maxWidth: '99%', padding: '20px' }}
           >
             <input
               type="text"

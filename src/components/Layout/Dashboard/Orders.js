@@ -1,7 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Orders = ({ orders }) => {
-  const [value, setValue] = useState('');
+  const [option, setOption] = useState('');
+  const onChangeOption = () => {
+    console.log('onChangeOption');
+  };
+
+  useEffect(() => {
+    console.log('option changed');
+  }, [option]);
+
+  const Shipped = orders.filter((item) => {
+    return item.status === 'Shipped';
+  });
+  const Pending = orders.filter((item) => {
+    return item.status === 'Pending';
+  });
+  const Canceled = orders.filter((item) => {
+    return item.status === 'Canceled';
+  });
 
   return (
     <div className="tab-pane show active" id="orders">
@@ -16,8 +33,10 @@ const Orders = ({ orders }) => {
                   name="statusFilter"
                   id="status"
                   className="status-dropdown"
+                  onChange={(e) => setOption(e)}
+                  value={option}
                 >
-                  <option value="filter" hidden>
+                  <option value="filter" hidden defaultValue>
                     Filter by Status
                   </option>
                   <option value="shipped">Shipped</option>

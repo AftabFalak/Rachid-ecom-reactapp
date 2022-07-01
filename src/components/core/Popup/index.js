@@ -3,7 +3,7 @@ import './index.css';
 
 const Popup = ({ children, title }) => {
   return (
-    <div className="AddPopup">
+    <div className="AddPopupp">
       <div className="bg-overlay"></div>
       <div className="AddPopup">
         <div className="heading">{title}</div>

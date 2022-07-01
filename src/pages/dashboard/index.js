@@ -22,14 +22,14 @@ const initAddressBook = [
     name: 'Mark Jecno',
     address: '549 Sulphur Spring Road Downers Grove, IL 60515',
     mobile: '+91 123-456-789',
-    type: 'Home',
+    type: 'Shipping',
   },
   {
     id: 2,
     name: 'Mark Jecno',
     address: '549 Sulphur Spring Road Downers Grove, IL 60515',
     mobile: '+91 123-456-789',
-    type: 'Office',
+    type: 'Billing',
   },
 ];
 const initCards = [
