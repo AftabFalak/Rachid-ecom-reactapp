@@ -1,50 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import VendorListView from "../../components/VenderListView";
-import VenderProfile from "../../components/VenderProfile/VenderProfile";
-import "./index.css";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import VendorListView from '../../components/VenderListView';
+import VenderProfile from '../../components/VenderProfile/VenderProfile';
+import './index.css';
 
-import { allCategorie } from "../../components/Gallery";
+import { allCategorie } from '../../components/Gallery';
 
 export const vendorList = [
   {
     id: 1,
-    brandName: "Outfitter",
-    brandDescription: "Finest engraved wood watch for your.",
-    profileImage: require("../../assets/images/VendorProfile/brand2.PNG"),
-    coverImage: require("../../assets/images/VenderCover/venderCoverPhotoavif.avif"),
+    brandName: 'Outfitter',
+    brandDescription: 'Finest engraved wood watch for your.',
+    profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
+    coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif'),
   },
-  // {
-  //   id: 2,
-  //   brandName: 'Huggo Boss',
-  //   brandDescription: 'Products you Love the most',
-  //   profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
-  //   coverImage: require('../../assets/images/VenderCover/brandCover.webp')
-  // },
+
   {
     id: 3,
-    brandName: "Levise",
-    brandDescription: "Shop your Dreams",
-    profileImage: require("../../assets/images/VendorProfile/brand2.PNG"),
-    coverImage: require("../../assets/images/VenderCover/venderCoverPhotoavif.avif"),
+    brandName: 'Levise',
+    brandDescription: 'Finest engraved wood watch for your.',
+    profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
+    coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif'),
   },
   {
     id: 4,
-    brandName: "JDot",
-    brandDescription: "Shop Online",
-    profileImage: require("../../assets/images/VendorProfile/brand2.PNG"),
-    coverImage: require("../../assets/images/VenderCover/venderCoverPhotoavif.avif"),
+    brandName: 'JDot',
+    brandDescription: 'Finest engraved wood watch for your',
+    profileImage: require('../../assets/images/VendorProfile/brand2.PNG'),
+    coverImage: require('../../assets/images/VenderCover/venderCoverPhotoavif.avif'),
   },
 ];
 
 const onClickVenderHandel = () => {
-  console.log("Vender Clicked");
+  console.log('Vender Clicked');
 };
 
 const StoreList = () => {
   const [vendor, setVendor] = useState(null);
   const { id } = useParams();
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -83,10 +77,13 @@ const StoreList = () => {
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
           </select>
-
         </div>
 
-        <VendorListView setShow={setShow} VendorList={vendorList} onClick={onClickVenderHandel} />
+        <VendorListView
+          setShow={setShow}
+          VendorList={vendorList}
+          onClick={onClickVenderHandel}
+        />
       </div>
 
       <div className="vendor-view d-none d-md-block">
@@ -99,14 +96,18 @@ const StoreList = () => {
         )}
       </div>
 
-      {show===true && <div className="vendor-modal-view d-block d-md-node">
-
-        
-        {vendor && (
-        <VenderProfile vendor={vendor} categorieFilterOnTop={true}  onClickBack={setShow} show={show}/>
-        )}
-      </div>}
-
+      {show === true && (
+        <div className="vendor-modal-view d-block d-md-node">
+          {vendor && (
+            <VenderProfile
+              vendor={vendor}
+              categorieFilterOnTop={true}
+              onClickBack={setShow}
+              show={show}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 };

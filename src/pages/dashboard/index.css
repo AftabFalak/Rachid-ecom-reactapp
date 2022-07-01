@@ -71,6 +71,18 @@
   color: #ff4c3b;
 }
 
+#orders .top-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#orders .status-dropdown {
+  border-radius: 20px;
+  text-align: center;
+  padding: 0px 6px;
+  font-size: 14px;
+}
 #whishlist .statusButton {
   padding: 6px 12px;
   color: #fff;

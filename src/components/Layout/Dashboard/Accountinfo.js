@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Accountinfo = () => {
-  const TOTAL_PRODUCT_LOGO = "/assetsDashboard/images/icon/dashboard/order.png";
-  const totalSaleLogo = "/assetsDashboard/images/icon/dashboard/sale.png";
+  const TOTAL_PRODUCT_LOGO = '/assetsDashboard/images/icon/dashboard/order.png';
+  const totalSaleLogo = '/assetsDashboard/images/icon/dashboard/sale.png';
   const orderPendingLogo =
-    "/assetsDashboard/images/icon/dashboard/homework.png";
+    '/assetsDashboard/images/icon/dashboard/homework.png';
 
   return (
     <div className="tab-pane show active" id="accountinfo">
@@ -21,7 +21,7 @@ const Accountinfo = () => {
       <div className="counter-section">
         <div className="row">
           <div className="col-md-4">
-            <div className="counter-box">
+            <a href="/dashboard/orders" className="counter-box">
               <img
                 src={TOTAL_PRODUCT_LOGO}
                 className="img-fluid"
@@ -31,7 +31,7 @@ const Accountinfo = () => {
                 <h3>25</h3>
                 <h5>Total Order</h5>
               </div>
-            </div>
+            </a>
           </div>
           <div className="col-md-4">
             <div className="counter-box">
@@ -43,13 +43,13 @@ const Accountinfo = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="counter-box">
+            <a href="/dashboard/wishlist" className="counter-box">
               <img src={orderPendingLogo} className="img-fluid" />
               <div>
                 <h3>50</h3>
                 <h5>Whishlist</h5>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
