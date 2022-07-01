@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Orders = ({ orders }) => {
-  const [option, setOption] = useState('');
+  const [option, setOption] = useState("");
+
+  const [orderList, setOrderList] = useState(orders);
   const onChangeOption = () => {
-    console.log('onChangeOption');
+    console.log("onChangeOption");
   };
 
   useEffect(() => {
-    console.log('option changed');
+    if (option) {
+      if (option === "All") {
+        setOrderList([...orders]);
+        return;
+      }
+      setOrderList(
+        orders.filter((item) => {
+          return item.status === option;
+        })
+      );
+    }
   }, [option]);
-
-  const Shipped = orders.filter((item) => {
-    return item.status === 'Shipped';
-  });
-  const Pending = orders.filter((item) => {
-    return item.status === 'Pending';
-  });
-  const Canceled = orders.filter((item) => {
-    return item.status === 'Canceled';
-  });
 
   return (
     <div className="tab-pane show active" id="orders">
@@ -33,15 +35,16 @@ const Orders = ({ orders }) => {
                   name="statusFilter"
                   id="status"
                   className="status-dropdown"
-                  onChange={(e) => setOption(e)}
+                  onChange={(e) => setOption(e.target.value)}
                   value={option}
                 >
                   <option value="filter" hidden defaultValue>
                     Filter by Status
                   </option>
-                  <option value="shipped">Shipped</option>
-                  <option value="pending">Pending</option>
-                  <option value="canceled">Canceled</option>s{' '}
+                  <option value="All">All</option>
+                  <option value="Shipped">Shipped</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Canceled">Canceled</option>s{" "}
                 </select>
               </div>
               <table className="table mb-0">
@@ -57,7 +60,7 @@ const Orders = ({ orders }) => {
                 </thead>
 
                 <tbody>
-                  {orders.map(
+                  {orderList.map(
                     (
                       { imageUrl, id, orderId, productDetail, status, price },
                       index
@@ -70,13 +73,7 @@ const Orders = ({ orders }) => {
                         <td>{productDetail}</td>
                         <td>
                           <span
-                            className={`${
-                              status === 'Shipped'
-                                ? 'shipped'
-                                : status === 'Canceled'
-                                ? 'canceled'
-                                : 'pending'
-                            } statusButton`}
+                            className={`${status.toLowerCase()} statusButton`}
                           >
                             {status}
                           </span>
