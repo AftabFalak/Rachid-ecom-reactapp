@@ -1,80 +1,80 @@
-import React, { useState } from 'react';
-import './VenderProfile.css';
+import React, { useState } from "react";
+import "./VenderProfile.css";
 
-import { FaShuttleVan } from 'react-icons/fa';
-import { AiFillStar, AiOutlineInstagram, AiOutlineHeart } from 'react-icons/ai';
-import { GrMail } from 'react-icons/gr';
-import { GoMail } from 'react-icons/go';
-import { FiFacebook } from 'react-icons/fi';
+import { FaShuttleVan } from "react-icons/fa";
+import { AiFillStar, AiOutlineInstagram, AiOutlineHeart } from "react-icons/ai";
+import { GrMail } from "react-icons/gr";
+import { GoMail } from "react-icons/go";
+import { FiFacebook } from "react-icons/fi";
 
-import { Rating } from 'react-simple-star-rating';
-import m2 from '../../assets/images/ProductList/2.jpg';
-import m3 from '../../assets/images/ProductList/3.jpg';
-import m4 from '../../assets/images/ProductList/4.jpg';
-import m5 from '../../assets/images/ProductList/5.jpg';
-import m6 from '../../assets/images/ProductList/6.jpg';
-import m7 from '../../assets/images/ProductList/7.jpg';
-import m8 from '../../assets/images/ProductList/7.jpg';
-import m9 from '../../assets/images/ProductList/9.jpg';
-import Gallery from '../Gallery';
-import Annoucements from '../Announcements';
+import { Rating } from "react-simple-star-rating";
+import m2 from "../../assets/images/ProductList/2.jpg";
+import m3 from "../../assets/images/ProductList/3.jpg";
+import m4 from "../../assets/images/ProductList/4.jpg";
+import m5 from "../../assets/images/ProductList/5.jpg";
+import m6 from "../../assets/images/ProductList/6.jpg";
+import m7 from "../../assets/images/ProductList/7.jpg";
+import m8 from "../../assets/images/ProductList/7.jpg";
+import m9 from "../../assets/images/ProductList/9.jpg";
+import Gallery from "../Gallery";
+import Annoucements from "../Announcements";
 
-import { COLORS } from '../../assets/colors/colors';
+import { COLORS } from "../../assets/colors/colors";
 
 export const items = [
   {
     favorite: true,
-    category: 'jacket',
+    category: "jacket",
     img: m2,
   },
   {
     favorite: true,
-    category: 'shirt',
+    category: "shirt",
     img: m3,
   },
   {
     favorite: true,
-    category: 'shirt',
+    category: "shirt",
     img: m3,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m4,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m5,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m6,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m7,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m8,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m9,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m2,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m6,
   },
   {
@@ -82,42 +82,42 @@ export const items = [
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m3,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m3,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m4,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m5,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m6,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m7,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m8,
   },
   {
     favorite: true,
-    category: 'bag',
+    category: "bag",
     img: m9,
   },
 ];
@@ -126,12 +126,12 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
 
   const photos = [
     {
-      src: 'http://example.com/example/img1.jpg',
+      src: "http://example.com/example/img1.jpg",
       width: 4,
       height: 3,
     },
     {
-      src: 'http://example.com/example/img2.jpg',
+      src: "http://example.com/example/img2.jpg",
       width: 1,
       height: 1,
     },
@@ -150,7 +150,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
           <div> </div>
         </div>
       )}
-      <div className="vendorInfoView" style={{ backgroundColor: '#F8F8F8' }}>
+      <div className="vendorInfoView">
         <div className="vendorInfoView_top">
           <div
             className="coverImage"
@@ -180,18 +180,17 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               </div>
 
               <div>
-                <p className="brandDescription">
+                <span className="brandDescription">
                   Finest engraved wood watch for your love ones.
-                </p>
+                </span>
               </div>
               <div className="venderSales">
                 <div>
-                  <AiFillStar /> <span>Star seller |</span> {'             '}
+                  <AiFillStar /> <span>Star seller | </span>
                   <span>40,284 sales |</span>
                 </div>
               </div>
               <button className="followBrandButton">
-                {' '}
                 <AiOutlineHeart className="FollowIconHeart" /> Follow Brand
                 (2.5k)
               </button>
@@ -221,19 +220,21 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               <div className="mt-4">
                 <div className="memberProfileImg m-auto"></div>
                 <p className="memberName">Paul Tian</p>
-                <GoMail className="socialLogo" />{' '}
+                <GoMail className="socialLogo" />{" "}
                 <AiOutlineInstagram className="socialLogo" />
                 <FiFacebook className="socialLogo" />
               </div>
             </div>
           </div>
         </div>
-        <Annoucements />
+        <div className="announcements">
+          <Annoucements />
+        </div>
       </div>
       <Gallery
         showFilter={false}
         cards={items}
-        heading={'Products'}
+        heading={"Products"}
         categorieFilterOnTop
       />
     </div>

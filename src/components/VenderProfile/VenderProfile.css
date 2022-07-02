@@ -1,16 +1,18 @@
 .VenderProfile {
   box-sizing: border-box;
 }
-.VenderProfile .top-bar-vendder{
+.VenderProfile .top-bar-vendder {
   display: flex;
   justify-content: space-between;
 }
-.VenderProfile .top-bar-vendder h4{
+.VenderProfile .top-bar-vendder h4 {
   text-align: center;
   align-items: center;
 }
 .VenderProfile .vendorInfoView {
   width: 100%;
+  background-color: #f8f8f8;
+  padding-bottom: 10px;
 }
 
 .VenderProfile .vendorInfoView .vendorInfoView_top {
@@ -18,11 +20,17 @@
 }
 
 .VenderProfile .vendorInfoView .followBrandButton {
-  padding: 12px 40px;
-  background-color: #ffff;
+  padding: 10px;
+  background-color: var(--white-100);
   border-radius: 15px;
   font-size: 18px;
   transition: all 0.5s;
+  width: 40%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .VenderProfile .vendorInfoView .followBrandButton:hover {
@@ -35,7 +43,7 @@
 
 .VenderProfile .vendorInfoView .vendorInfoView_top .coverImage {
   width: 100%;
-  height: 35vh;
+  height: 32vh;
   background-image: url("../../assets//images/VenderCover/venderCoverPhotoavif.avif");
   background-size: cover;
   background-position: center;
@@ -44,14 +52,14 @@
 
 .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
   position: absolute;
-  left: 40px;
-  bottom: -80px;
+  left: 30px;
+  bottom: -70px;
   overflow: hidden;
 }
 
 .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 100px;
   border: 2px solid black;
   background-image: url("../../assets/images/VendorProfile/brand2.PNG");
@@ -61,10 +69,14 @@
 }
 
 .VenderProfile .vendorInfoView .vendorInfoView_bottom {
-  margin-top: 120px;
-  padding-left: 20px;
+  margin-top: 80px;
+  padding: 0px 20px;
   background-color: "#F8F8F8";
-  padding-bottom: "20px";
+  padding-bottom: 20px;
+}
+
+.announcements {
+  padding: 0px 20px;
 }
 .vendorInfoView_bottom .brandInfoView {
   display: flex;
@@ -78,6 +90,7 @@
   padding-right: 20px;
   font-size: 35px;
   text-decoration: none;
+  color: var(--black-100);
 }
 
 .vendorInfoView_bottom .brandInfoView .or {
@@ -87,10 +100,14 @@
 .VenderProfile .vendorInfoView_bottom .brandInfoView .starRaiting {
   margin-right: 15px;
 }
-
+.VenderProfile .vendorInfoView_bottom .brandInfoView .starRaitingView {
+  display: flex;
+  align-items: center;
+}
 .VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
   font-size: 20px;
   font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .handShakeRaiting {
@@ -112,26 +129,17 @@
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .brandDescription {
-  font-size: 18px;
-  margin-top: 5px;
+  font-size: 17px;
+  margin-top: 0px;
+  color: var(--black-100);
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales {
-  font-size: 22px;
-  margin-top: 5px;
+  font-size: 18px;
+  margin: 20px 0px;
 }
-
-.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales_left {
-  margin-top: 5px;
-  font-size: 22px;
-  padding-left: 10px;
-}
-
-.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales_right {
-  font-size: 22px;
-  margin-top: 5px;
-  margin-left: 20px;
-  padding-left: 10px;
+.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales span {
+  margin: 0px 20px 0px 0px;
 }
 
 .Shipping {
@@ -161,8 +169,8 @@
 }
 
 .ShopMember .memberProfileImg {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 100px;
   overflow: "hidden";
   background-image: url("../../assets//images/memberProfile.jpg");
