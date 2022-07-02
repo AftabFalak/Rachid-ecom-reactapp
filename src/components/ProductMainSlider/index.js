@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import ImagePopupGallery from "../ImagePopupGallery";
-import "./index.css";
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import ImagePopupGallery from '../ImagePopupGallery';
+import './index.css';
 const ProductMainSlider = ({ images }) => {
   const [data, setData] = useState({
     photoIndex: 0,
@@ -29,11 +29,8 @@ const ProductMainSlider = ({ images }) => {
               <div className="heart-parent">
                 <img src={image.img} />
 
-                <button
-                  className="heart-btn"
-                
-                >
-                  <i className={`fa${image.liked ? "" : "r"} fa-heart`}></i>
+                <button className="heart-btn">
+                  <i className={`fa${image.liked ? '' : 'r'} fa-heart`}></i>
                 </button>
                 <button
                   className="zoom-btn"
@@ -41,7 +38,7 @@ const ProductMainSlider = ({ images }) => {
                     setData({ ...data, photoIndex: index, isOpen: true })
                   }
                 >
-               <i class="fas fa-expand-arrows-alt"></i>
+                  <i className="fas fa-expand-arrows-alt"></i>
                 </button>
               </div>
             );

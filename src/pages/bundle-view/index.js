@@ -143,7 +143,13 @@ const BudleViewPage = () => {
           </div>
           <div className="coprate">
             <h4 className="brand-heading">In Cooperation with</h4>
-            <BrandGroupImages products={product.products} />
+            <div className="row">
+              <div className="col-md-6 col-sm-12">
+                <BrandGroupImages products={product.products} />
+              </div>
+
+              <div className="col-md-6 col-sm-12"></div>
+            </div>
           </div>
           <div className="shopthelook">
             <div>

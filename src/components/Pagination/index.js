@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import './index.css'
-// Example items, to simulate fetching from another resources.
+import './index.css';
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-
 function PaginatedPages({ itemsPerPage }) {
-  // We start with an empty list of items.
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     setCurrentItems(items.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(items.length / itemsPerPage));
   }, [itemOffset, itemsPerPage]);
 
-  // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
@@ -31,19 +24,17 @@ function PaginatedPages({ itemsPerPage }) {
   };
 
   return (
-    <>
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel={<i className='fa fa-arrow-right text-black'></i>}
-        className='pagination-react'
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel={<i className='fa fa-arrow-left text-black'></i>}
-        renderOnZeroPageCount={null}
-      />
-    </>
+    <ReactPaginate
+      breakLabel="..."
+      nextLabel={<i className="fa fa-arrow-right text-black"></i>}
+      className="pagination-react"
+      onPageChange={handlePageClick}
+      pageRangeDisplayed={5}
+      pageCount={pageCount}
+      previousLabel={<i className="fa fa-arrow-left text-black"></i>}
+      renderOnZeroPageCount={null}
+    />
   );
 }
 
-export default PaginatedPages
+export default PaginatedPages;

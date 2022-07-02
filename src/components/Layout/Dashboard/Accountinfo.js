@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Accountinfo = () => {
   const TOTAL_PRODUCT_LOGO = '/assetsDashboard/images/icon/dashboard/order.png';
   const totalSaleLogo = '/assetsDashboard/images/icon/dashboard/sale.png';
   const orderPendingLogo =
     '/assetsDashboard/images/icon/dashboard/homework.png';
+  const navigation = useNavigate();
+  const [pend, setPend] = useState(true);
 
   return (
     <div className="tab-pane show active" id="accountinfo">
@@ -34,7 +37,13 @@ const Accountinfo = () => {
             </a>
           </div>
           <div className="col-md-4">
-            <div className="counter-box">
+            <div
+              className="counter-box"
+              onClick={() => {
+                navigation('/dashboard/orders', { pend: true });
+                console.log('PEND', pend);
+              }}
+            >
               <img src={totalSaleLogo} className="img-fluid" />
               <div>
                 <h3>5</h3>

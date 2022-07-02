@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const Orders = ({ orders }) => {
-  const [option, setOption] = useState("");
-
+const Orders = ({ orders, QuickView }) => {
+  const [option, setOption] = useState('');
   const [orderList, setOrderList] = useState(orders);
-  const onChangeOption = () => {
-    console.log("onChangeOption");
-  };
+  const [quickview, setQuickView] = useState(false);
 
   useEffect(() => {
     if (option) {
-      if (option === "All") {
+      if (option === 'All') {
         setOrderList([...orders]);
         return;
       }
@@ -44,7 +41,7 @@ const Orders = ({ orders }) => {
                   <option value="All">All</option>
                   <option value="Shipped">Shipped</option>
                   <option value="Pending">Pending</option>
-                  <option value="Canceled">Canceled</option>s{" "}
+                  <option value="Canceled">Canceled</option>s{' '}
                 </select>
               </div>
               <table className="table mb-0">
@@ -67,7 +64,14 @@ const Orders = ({ orders }) => {
                     ) => (
                       <tr key={index}>
                         <th>
-                          <img src={imageUrl} />
+                          <img
+                            src={imageUrl}
+                            style={{
+                              width: '50px',
+                              height: '50px',
+                              resize: 'contain',
+                            }}
+                          />
                         </th>
                         <th scope="row">{orderId}</th>
                         <td>{productDetail}</td>
@@ -80,7 +84,12 @@ const Orders = ({ orders }) => {
                         </td>
                         <td>${price}</td>
                         <td>
-                          <i className="fa fa-eye viewIcon"></i>
+                          <span onClick={() => setQuickView(true)}>
+                            <i className="fa fa-eye viewIcon"></i>{' '}
+                          </span>
+                          <span>
+                            <i className="fa fa-cart-arrow-down viewIcon"></i>
+                          </span>
                         </td>
                       </tr>
                     )
@@ -88,6 +97,7 @@ const Orders = ({ orders }) => {
                 </tbody>
               </table>
             </div>
+            {quickview && <QuickView />}
           </div>
         </div>
       </div>

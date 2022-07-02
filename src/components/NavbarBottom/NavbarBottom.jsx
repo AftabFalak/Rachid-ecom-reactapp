@@ -3,10 +3,13 @@ import React from 'react';
 import './NavbarBottom.css';
 import { Link } from 'react-router-dom';
 
-
 import { FaSignInAlt } from 'react-icons/fa';
 
-import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
+import {
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+  AiOutlineHeart,
+} from 'react-icons/ai';
 
 import { MainLogo } from '../../assets/svgs/main-logo';
 import Cart from '../../assets/svgs/cart';
@@ -18,38 +21,28 @@ function NavbarBottom(props) {
         className="collapse navbar-collapse justify-content-between"
         id="navbarToggle"
       >
-
-        <div className='NavbarLinks'>
-          <span
-            className="NavbarLinks-Item"
-          >
-            <Link className="nav-link NavLink" to="/" >
+        <div className="NavbarLinks">
+          <span className="NavbarLinks-Item">
+            <Link className="nav-link NavLink" to="/">
               Home
             </Link>
           </span>
-          <span
-            className="NavbarLinks-Item"
-          >
+          <span className="NavbarLinks-Item">
             <Link className="nav-link NavLink" to="/shop">
               Shop
             </Link>
           </span>
-          <span
-            className="NavbarLinks-Item"
-          >
+          <span className="NavbarLinks-Item">
             <Link className="nav-link NavLink" to="/store-list">
               Store List
             </Link>
           </span>
-          <span
-            className="NavbarLinks-Item"
-          >
+          <span className="NavbarLinks-Item">
             <Link className="nav-link NavLink" to="/get-inspiration">
               Get inspiration
             </Link>
           </span>
         </div>
-
 
         <div>
           <MainLogo />

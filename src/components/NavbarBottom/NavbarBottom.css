@@ -2,6 +2,7 @@
   display: flex;
   margin-left: 5px;
   justify-content: space-between;
+  display: block;
 }
 
 .NavbarLinks .NavbarLinks-Item {
@@ -25,6 +26,16 @@
 
 .custonNavbar {
   height: 71px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.custonNavbar .menueButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
 }
 
 .signInLink {

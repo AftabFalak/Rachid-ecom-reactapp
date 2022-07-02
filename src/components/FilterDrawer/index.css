@@ -211,7 +211,7 @@
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -260,7 +260,6 @@
   }
 }
 
-
 .containerCheckbox {
   display: block;
   position: relative;
@@ -293,29 +292,23 @@
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
 .containerCheckbox:hover input ~ .checkmarkCheckbox-drawer {
   background-color: #ccc;
 }
-
-/* When the checkbox is checked, add a blue background */
 .containerCheckbox input:checked ~ .checkmarkCheckbox-drawer {
   background-color: #000;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmarkCheckbox-drawer:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .containerCheckbox input:checked ~ .checkmarkCheckbox-drawer:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .containerCheckbox .checkmarkCheckbox-drawer:after {
   left: 6px;
   top: 3px;

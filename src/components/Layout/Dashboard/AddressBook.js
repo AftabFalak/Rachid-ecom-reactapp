@@ -115,15 +115,15 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
               placeholder="Mobile"
             />
             <div className="mt-2 ">
-              <label class="containerr">
+              <label className="containerr">
                 Shipping
                 <input type="radio" checked="checked" name="radio" />
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
               </label>
-              <label class="containerr">
+              <label className="containerr">
                 Billing
                 <input type="radio" name="radio" />
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
               </label>
             </div>
             <div className="buttonView">

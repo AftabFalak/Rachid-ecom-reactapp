@@ -1,0 +1,52 @@
+.QuickView {
+  width: 60vw;
+  height: 60vh;
+  border: 2px solid gray !important;
+  background: #fff;
+  font-weight: 600;
+  z-index: 50;
+  position: absolute;
+  border-radius: 6px;
+  /* top: 45%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  overflow: auto;
+}
+
+.bg-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #000000c9;
+  opacity: 0.6;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 49;
+}
+
+@media (max-width: 900px) {
+  .QuickView {
+    margin: 0;
+    min-width: 50vw;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .QuickView {
+    margin: 0;
+    min-width: 50vw;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,36 +1,36 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import "./CartDrawer.css";
+import React, { useState } from 'react';
+import './CartDrawer.css';
 
-import { Link } from "react-router-dom";
-import { BiEdit } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { BiEdit } from 'react-icons/bi';
 
-import GoogleButton from "react-google-button";
+import GoogleButton from 'react-google-button';
 
-import { initOrders } from "../../pages/checkout";
+import { initOrders } from '../../pages/checkout';
 const CartDrawer = (props) => {
   const [selection, setSelection] = useState({
-    color: "",
-    size: "",
+    color: '',
+    size: '',
     quantity: 1,
   });
   const [totalPrice, setTotalPrice] = useState(125);
   return (
-    <div className={`CartDrawer ${!props.open ? "closedDrawer" : ""}`}>
+    <div className={`CartDrawer ${!props.open ? 'closedDrawer' : ''}`}>
       <div className="header">
         <h5>SHOPPING CART</h5>
         <button
           className="closeBtn"
           onClick={() => props.setDrawertoggle(false)}
         >
-          <i className="fa fa-times timeIcon cursor-poniter"></i>{" "}
+          <i className="fa fa-times timeIcon cursor-poniter"></i>{' '}
           <span>Close</span>
         </button>
       </div>
       <div className="orderList">
         {initOrders.map(
           ({ id, imageUrl, title, price, size, color, quantity }, index) => (
-            <div className="singleOrder">
+            <div className="singleOrder" key={index}>
               <div className="infoView">
                 <div className="mr-3">
                   <img src={imageUrl} alt="" className="orderImage" />

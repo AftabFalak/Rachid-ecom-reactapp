@@ -16,6 +16,8 @@ import Followers from '../../components/Layout/Dashboard/Followers.js';
 
 import VendorListView from '../../components/VenderListView';
 import { vendorList } from '../store-list';
+import QuickView from '../../components/QuickView/QuickView';
+
 const initAddressBook = [
   {
     id: 1,
@@ -261,6 +263,8 @@ const Dashboard = () => {
                 VendorListView={VendorListView}
                 vendorList={vendorList}
                 setShow={setShow}
+                //
+                QuickView={QuickView}
               />
             </div>
           </div>

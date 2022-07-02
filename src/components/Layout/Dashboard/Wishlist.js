@@ -25,7 +25,14 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                     ({ id, image, orderId, productDetail, price }, index) => (
                       <tr>
                         <th>
-                          <img src={image} />
+                          <img
+                            src={image}
+                            style={{
+                              width: '50px',
+                              height: '50px',
+                              resize: 'contain',
+                            }}
+                          />
                         </th>
                         <th scope="row">{orderId}</th>
                         <td>{productDetail}</td>
@@ -35,7 +42,7 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                             <i className="fa fa-eye actioniIcons"></i>
                           </span>
                           <span>
-                            <i className="fa fa-pen actioniIcons"></i>
+                            <i className="fa fa-cart-arrow-down actioniIcons"></i>
                           </span>
                           <span onClick={() => wishlistDeleteHandler(id)}>
                             <i className="fa fa-trash actioniIcons"></i>
