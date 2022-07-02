@@ -56,7 +56,7 @@ function App() {
             <VendorProfile
               vendor={{
                 id: 1,
-                brandName: "Outfitter",
+                brandName: "Outfitter Levise",
                 brandDescription:
                   "Finest engraved wood watch for your love ones.",
                 profileImage: require("./assets/images/VendorProfile/brand2.PNG"),

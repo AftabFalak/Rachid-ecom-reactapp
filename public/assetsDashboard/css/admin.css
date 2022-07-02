@@ -1,10 +1,10 @@
 @charset "UTF-8";
 :root {
-  --theme-deafult: #ff4c3b;
+  --theme-deafult: #af8e4a;
 }
 
 .theme-color-1 {
-  --theme-deafult: #ff4c3b;
+  --theme-deafult: #af8e4a;
 }
 
 .theme-color-2 {
@@ -124,7 +124,7 @@
 }
 
 :root {
-  --theme-deafult: #ff4c3b;
+  --theme-deafult: #af8e4a;
 }
 
 @-webkit-keyframes textNoise1 {
@@ -8270,7 +8270,7 @@ header.left-header .sidenav .pixelstrap > li .lable-nav {
   background-color: #eeeeee;
 }
 header.left-header .sidenav .pixelstrap > li .lable-nav:before {
-  border-top: 5px solid #ff4c3b;
+  border-top: 5px solid #af8e4a;
 }
 header.left-header .sidenav .pixelstrap > li .lable-nav.grey-lable {
   background-color: #4d6171;
@@ -8317,7 +8317,7 @@ header.left-header
   .shopping-count {
   width: 18px;
   height: 18px;
-  background-color: #ff4c3b;
+  background-color: #af8e4a;
   color: white;
   position: absolute;
   border-radius: 100%;
@@ -11639,7 +11639,7 @@ header.stickycls {
   text-shadow: none;
 }
 .pixelstrap ul a.current {
-  background: #ff4c3b;
+  background: #af8e4a;
   color: #fff;
 }
 .pixelstrap ul a.disabled {
@@ -11821,10 +11821,10 @@ header.stickycls {
   left: 22px;
 }
 .pixelstrap li .lable-nav.lable-red {
-  background-color: #ff4c3b;
+  background-color: #af8e4a;
 }
 .pixelstrap li .lable-nav.lable-red:before {
-  border-top: 5px solid #ff4c3b;
+  border-top: 5px solid #af8e4a;
 }
 
 .sm-vertical {

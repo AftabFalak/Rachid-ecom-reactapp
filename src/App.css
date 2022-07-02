@@ -1,6 +1,10 @@
 :root {
   --main-color: #165543;
   --action-color: #af8e4a;
+  --white-100: #fff;
+  --black-100: #000;
+  --blue-100: #4285f4;
+  --blue-200: #3b5998;
 }
 
 .slick-prev,

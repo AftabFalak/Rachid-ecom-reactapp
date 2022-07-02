@@ -30,7 +30,7 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
   return (
     <div className="tab-pane show active" id="address">
       <div className="row">
-        <div className="col-12 h-100">
+        <div className="col-12">
           <div className="card dashboard-table mt-0">
             <div className="card-body table-responsive-md">
               <div className="top-sec">
