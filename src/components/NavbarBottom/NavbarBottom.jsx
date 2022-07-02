@@ -78,6 +78,47 @@ function NavbarBottom(props) {
           </li>
         </ul>
       </nav>
+      <div className='d-flex mobile-btn d-none'>
+        <div className='line-btns'>
+          
+        </div>
+        
+        <div className='logo-mob'>
+          <MainLogo />
+        </div>
+
+        <div>
+        <ul className="navbar-nav">
+          <li className="nav-item signInLink">
+            <a className="nav-link text-dark" href="#">
+              <AiOutlineSearch className="signInLogo" />
+              <p className="signInText">SEARCH</p>
+            </a>
+          </li>
+          <li className="nav-item signInLink">
+            <a className="nav-link text-dark" href="#">
+              <AiOutlineHeart className="signInLogo" />
+              <p className="signInText">Wishlist</p>
+            </a>
+          </li>
+          <li className="nav-item signInLink" onClick={props.toggleDrawer}>
+            <a className="nav-link text-dark" href="#">
+              <FaSignInAlt className="signInLogo" />
+              <p className="signInText">SING IN/UP</p>
+            </a>
+          </li>
+          <li className="nav-item signInLink" onClick={props.toggleDrawerCart}>
+            <a className="nav-link text-dark" href="#">
+              <i className="fa fa-cart-shopping"></i>
+              <div className="CartBadge">
+                <span>4</span>
+              </div>
+              <p className="signInText">$325.00</p>
+            </a>
+          </li>
+        </ul>
+        </div>
+      </div>
     </nav>
   );
 }
