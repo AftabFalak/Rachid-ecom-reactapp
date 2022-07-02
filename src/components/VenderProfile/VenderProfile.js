@@ -159,6 +159,17 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
           <div className="profilePhotoView">
             <div className="profilePhoto"></div>
           </div>
+          <button
+            className="followBrandButton d-md-none d-sm-block"
+            style={{
+              width: "20%",
+              position: "absolute",
+              top: "40%",
+              right: "10px",
+            }}
+          >
+            <AiOutlineHeart className="FollowIconHeart" /> 169
+          </button>
         </div>
 
         <div className="vendorInfoView_bottom">
@@ -190,32 +201,34 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   <span>40,284 sales |</span>
                 </div>
               </div>
-              <button className="followBrandButton">
+              <button className="followBrandButton d-md-block d-sm-none">
                 <AiOutlineHeart className="FollowIconHeart" /> Follow Brand
                 (2.5k)
               </button>
             </div>
             <div className="col-md-4  Shipping">
-              <h4 className="">stayfineofficial is a Star Seller!</h4>
-              <div className="row mt-4">
+              <h4 className="ShippingMainHeader">
+                stayfineofficial is a Star Seller!
+              </h4>
+              <div className="row mt-2">
                 <div className="col-md-6 mt-3">
                   <FaShuttleVan className="shippingLogo mb-2" />
-                  <h5>Smooth shipping</h5>
-                  <p className="shipping-description">
+                  <h5 className="shipping-heading">Smooth shipping</h5>
+                  <p className="shipping-description m-0">
                     Has a history of shipping on time with tracking
                   </p>
                 </div>
                 <div className="col-md-6 mt-3">
                   <GrMail className="shippingLogo mb-2" />
-                  <h5>Speedy replies</h5>
-                  <p className="shipping-description">
+                  <h5 className="shipping-heading">Speedy replies</h5>
+                  <p className="shipping-description m-0">
                     Has a history of replying to messages quikly.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-4  ShopMember text-center">
-              <h4 className="">Shop Member</h4>
+            <div className="col-md-4  ShopMember text-center ">
+              <h4 className="ShopMemberMainHeading">Shop Member</h4>
 
               <div className="mt-4">
                 <div className="memberProfileImg m-auto"></div>

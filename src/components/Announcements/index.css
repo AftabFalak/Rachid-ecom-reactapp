@@ -1,4 +1,21 @@
-.announcementDescription{
-    font-size: 18px;
-    line-height: 25px;
+.Announcements {
+  padding: 0px 20px;
+  color: var(--black-100) !important;
+}
+.Announcements .announcementHeading {
+  background-color: var(--white-100);
+}
+
+.announcementDescription {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 25px;
+  width: 80%;
+  color: var(--black-100) !important;
+}
+
+@media (max-width: 600px) {
+  .announcementDescription {
+    width: 100%;
+  }
 }

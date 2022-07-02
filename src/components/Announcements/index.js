@@ -2,9 +2,9 @@ import React from "react";
 import "./index.css";
 const Annoucements = () => {
   return (
-    <div className="bg-white p- Announcements">
-      <h3>Annoucements</h3>
-      <p>Updated on 23 Nov 2021</p>
+    <div className="bg-white Announcements">
+      <h3 className="m-0 announcementHeading">Annoucements</h3>
+      <span className="m-0 span">Updated on 23 Nov 2021</span>
       <p className="announcementDescription">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
