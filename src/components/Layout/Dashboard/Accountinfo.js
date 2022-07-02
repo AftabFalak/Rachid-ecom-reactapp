@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Accountinfo = () => {
-  const TOTAL_PRODUCT_LOGO = '/assetsDashboard/images/icon/dashboard/order.png';
-  const totalSaleLogo = '/assetsDashboard/images/icon/dashboard/sale.png';
+  const TOTAL_PRODUCT_LOGO = "/assetsDashboard/images/icon/dashboard/order.png";
+  const totalSaleLogo = "/assetsDashboard/images/icon/dashboard/sale.png";
   const orderPendingLogo =
-    '/assetsDashboard/images/icon/dashboard/homework.png';
+    "/assetsDashboard/images/icon/dashboard/homework.png";
   const navigation = useNavigate();
   const [pend, setPend] = useState(true);
 
@@ -40,8 +40,7 @@ const Accountinfo = () => {
             <div
               className="counter-box"
               onClick={() => {
-                navigation('/dashboard/orders', { pend: true });
-                console.log('PEND', pend);
+                navigation(`/dashboard/orders?status=Pending`);
               }}
             >
               <img src={totalSaleLogo} className="img-fluid" />
