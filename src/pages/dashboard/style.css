@@ -4,7 +4,7 @@
 }
 
 .theme-color-2 {
-  --theme-deafult: #AF8E4A;
+  --theme-deafult: #f0583d;
 }
 
 .theme-color-3 {
@@ -21425,7 +21425,7 @@ header.stickycls {
   border-radius: 0;
   background-color: #f8f8f8;
 }
-.faq-tab .nav-tabs .nav-item .nav-link.active {
+var(--main-color) {
   border: none;
   border-right: 2px solid #AF8E4A;
   border-radius: 0;
@@ -24703,7 +24703,7 @@ body.dark {
   background-color: #232323;
   color: #cfd4da;
 }
-.dark .faq-tab .nav-tabs .nav-item .nav-link.active {
+.dark var(--main-color) {
   background-color: #232323;
 }
 
@@ -28435,7 +28435,7 @@ body.dark {
   .dashboard-section .counter-section {
     margin-top: 20px;
   }
-  .faq-tab .nav-tabs .nav-item .nav-link.active {
+  var(--main-color) {
     border-bottom: 2px solid var(--theme-deafult);
     border-right: none;
   }
@@ -34161,7 +34161,7 @@ body.rtl {
   display: none;
 }
 
-.rtl .faq-tab .nav-tabs .nav-item .nav-link.active,
+.rtl var(--main-color),
 .rtl .faq-tab .nav-tabs .nav-item .nav-link:hover {
   border-right: none;
   border-left: 2px solid var(--theme-deafult);
@@ -35717,7 +35717,7 @@ body.rtl .account-setting {
   .rtl .faq-tab {
     text-align: right;
   }
-  .rtl .faq-tab .nav-tabs .nav-item .nav-link.active,
+  .rtl var(--main-color),
   .rtl .faq-tab .nav-tabs .nav-item .nav-link:hover {
     border-left: none;
   }

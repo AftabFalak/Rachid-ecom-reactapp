@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
   return (
@@ -28,9 +28,9 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                           <img
                             src={image}
                             style={{
-                              width: '50px',
-                              height: '50px',
-                              resize: 'contain',
+                              width: "50px",
+                              height: "50px",
+                              resize: "contain",
                             }}
                           />
                         </th>
@@ -39,13 +39,13 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                         <td>${price}</td>
                         <td>
                           <span>
-                            <i className="fa fa-eye actioniIcons"></i>
-                          </span>
+                            <i className="fa fa-eye actionIcons"></i>
+                          </span>{" "}
                           <span>
-                            <i className="fa fa-cart-arrow-down actioniIcons"></i>
-                          </span>
+                            <i className="fa fa-cart-arrow-down actionIcons"></i>
+                          </span>{" "}
                           <span onClick={() => wishlistDeleteHandler(id)}>
-                            <i className="fa fa-trash actioniIcons"></i>
+                            <i className="fa fa-trash actionIcons"></i>
                           </span>
                         </td>
                       </tr>

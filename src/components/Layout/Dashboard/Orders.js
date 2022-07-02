@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Orders = ({ orders, QuickView }) => {
-  const [option, setOption] = useState('');
+  const [option, setOption] = useState("");
   const [orderList, setOrderList] = useState(orders);
   const [quickview, setQuickView] = useState(false);
 
   useEffect(() => {
     if (option) {
-      if (option === 'All') {
+      if (option === "All") {
         setOrderList([...orders]);
         return;
       }
@@ -27,7 +27,6 @@ const Orders = ({ orders, QuickView }) => {
             <div className="card-body table-responsive-sm">
               <div className="top-sec">
                 <h3>My Orders</h3>
-
                 <select
                   name="statusFilter"
                   id="status"
@@ -41,7 +40,7 @@ const Orders = ({ orders, QuickView }) => {
                   <option value="All">All</option>
                   <option value="Shipped">Shipped</option>
                   <option value="Pending">Pending</option>
-                  <option value="Canceled">Canceled</option>s{' '}
+                  <option value="Canceled">Canceled</option>s{" "}
                 </select>
               </div>
               <table className="table mb-0">
@@ -67,9 +66,9 @@ const Orders = ({ orders, QuickView }) => {
                           <img
                             src={imageUrl}
                             style={{
-                              width: '50px',
-                              height: '50px',
-                              resize: 'contain',
+                              width: "50px",
+                              height: "50px",
+                              resize: "contain",
                             }}
                           />
                         </th>
@@ -85,7 +84,7 @@ const Orders = ({ orders, QuickView }) => {
                         <td>${price}</td>
                         <td>
                           <span onClick={() => setQuickView(true)}>
-                            <i className="fa fa-eye viewIcon"></i>{' '}
+                            <i className="fa fa-eye viewIcon"></i>{" "}
                           </span>
                           <span>
                             <i className="fa fa-cart-arrow-down viewIcon"></i>

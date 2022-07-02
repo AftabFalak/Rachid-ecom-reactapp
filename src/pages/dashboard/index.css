@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 #address .customAdressCard {
-  background-color: #ffff;
+  background-color: var(--white-100);
   margin: 10px 10px;
 }
 
@@ -23,7 +23,7 @@
   box-sizing: border-box;
   box-shadow: 0;
   border: 0;
-  color: #000;
+  color: var(--black-100);
   text-align: center;
   font-weight: 500;
   padding: 5px 25px;
@@ -99,7 +99,7 @@
 }
 
 #address .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
@@ -132,7 +132,7 @@
   background-color: #6c757d;
 }
 #orders .viewIcon {
-  color: #ff4c3b;
+  color: var(--action-color);
 }
 
 #orders .top-sec {
@@ -162,8 +162,8 @@
 #whishlist .canceled {
   background-color: #6c757d;
 }
-#whishlist .viewIcon {
-  color: #ff4c3b;
+#whishlist .actionIcons {
+  color: var(--action-color) !important;
 }
 
 #cards .cards-view {
@@ -233,7 +233,7 @@
   width: 60px;
 }
 #whishlist .actioniIcons {
-  color: #ff4c3b;
+  color: #af8e4a;
   margin: 0px 6px;
   cursor: pointer;
   transition: all 0.5s;
@@ -269,7 +269,7 @@
   border-radius: 3px;
 }
 #profile .save-cancel-button-view .cancel {
-  background-color: #ff4c3b;
+  background-color: #af8e4a;
 }
 #profile .save-cancel-button-view .save {
   background-color: #198754;
