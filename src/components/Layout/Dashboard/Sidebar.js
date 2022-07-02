@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const Sidebar = ({ page }) => {
   return (
     <div className="dashboard-sidebar">
@@ -20,7 +20,7 @@ const Sidebar = ({ page }) => {
         <ul className="nav nav-tabs" id="top-tab" role="tablist">
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'accountinfo' && 'active'}`}
+              className={`nav-link ${page === "accountinfo" && "active"}`}
               to="/dashboard/accountinfo"
             >
               Account Info
@@ -28,7 +28,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'address' && 'active'}`}
+              className={`nav-link ${page === "address" && "active"}`}
               to="/dashboard/address"
             >
               Address Book
@@ -36,7 +36,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'orders' && 'active'}`}
+              className={`nav-link ${page === "orders" && "active"}`}
               to="/dashboard/orders"
             >
               My Orders
@@ -44,7 +44,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'wishlist' && 'active'}`}
+              className={`nav-link ${page === "wishlist" && "active"}`}
               to="/dashboard/wishlist"
             >
               My Wishlist
@@ -52,7 +52,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'cards' && 'active'}`}
+              className={`nav-link ${page === "cards" && "active"}`}
               to="/dashboard/cards"
             >
               Saved Cards
@@ -60,7 +60,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'profile' && 'active'}`}
+              className={`nav-link ${page === "profile" && "active"}`}
               to="/dashboard/profile"
             >
               Profile
@@ -68,7 +68,7 @@ const Sidebar = ({ page }) => {
           </li>
           <li className="nav-item">
             <Link
-              className={`nav-link ${page === 'profile' && 'active'}`}
+              className={`nav-link ${page === "followers" && "active"}`}
               to="/dashboard/followers"
             >
               Followers
