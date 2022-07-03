@@ -28,8 +28,8 @@
 }
 
 .signInLink {
-  border-left: 0.5px solid rgb(222, 220, 220);
-  border-right: 0.5px solid rgb(222, 220, 220);
+  border-left: 1px solid rgb(236, 248, 228);
+  border-right: 1px solid rgb(236, 248, 228);
   position: relative;
   padding-top: 2px;
   padding-left: 10px;
@@ -41,9 +41,11 @@
   transition: all 0.5s;
 }
 .signInLogo {
-  font-size: 18px;
-  color: rgb(47, 47, 47);
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
 }
+
 .signInText {
   font-size: 14px;
   color: rgb(100, 99, 99);
@@ -61,7 +63,9 @@
 }
 
 .mobile-nav {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   padding: 5px;
   height: 51px;
   align-items: center;
@@ -91,10 +95,21 @@
 .search-mob {
   flex: 1;
   position: relative;
+  margin: 0px 10px;
+  height: 100%;
+  padding: 10px 0px;
+}
+.search-mob .mob-search-logo {
+  font-size: 24px;
+}
+.search-mob .logo-mob {
+  padding-right: 20px;
 }
 
-.logo-mob{
-  padding-right: 20px;
+.search-mob .searchCrossIconMob {
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 .search-mob input {
@@ -106,17 +121,45 @@
   padding-right: 20px;
 }
 
-.search-mob .icon-s{
+.search-mob .icon-s-mob {
   position: absolute;
-  right: 10px;
-  top: 10px;
-
+  right: 40px;
+  top: 17px;
+}
+.search-desktop {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  position: relative;
 }
 
+.search-desktop input {
+  width: 100%;
+  border: 2px solid !important;
+  border-radius: 20px !important;
+  padding: 6px;
+  padding-right: 20px;
+}
+
+.search-desktop .icon-s {
+  position: absolute;
+  right: 35px;
+  top: 23px;
+}
+
+.search-desktop .searchCrossIcon {
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
+}
 .icons-nav {
-  margin-left: 10px
+  margin-left: 10px;
 }
-.icons-nav a{
+.icons-nav a {
   padding: 4px;
-  font-size: 24px!important;
+  font-size: 24px !important;
 }

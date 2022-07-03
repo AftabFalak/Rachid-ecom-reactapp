@@ -14,8 +14,16 @@
   color: var(--black-100) !important;
 }
 
+@media (max-width: 900px) {
+  .announcementDescription {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 600px) {
   .announcementDescription {
     width: 100%;
+    text-align: center;
   }
 }
