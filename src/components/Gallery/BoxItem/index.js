@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
+import QuickView from '../../QuickView/QuickView';
 const BoxItem = ({ item }) => {
+  const [quickView, setQuickView] = useState(false);
   return (
     <div className="BoxItem">
       <div className="buttons">
@@ -10,7 +12,7 @@ const BoxItem = ({ item }) => {
         <span className="icon">
           <i className="fa fa-heart"></i>
         </span>
-        <span className="icon">
+        <span className="icon" onClick={() => setQuickView(true)}>
           <i className="fa fa-search"></i>
         </span>
       </div>
@@ -24,6 +26,7 @@ const BoxItem = ({ item }) => {
         </p>
       </div>
       <img width={'100%'} src={item.img} />
+      {quickView && <QuickView />}
     </div>
   );
 };

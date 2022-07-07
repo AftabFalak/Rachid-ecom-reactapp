@@ -92,6 +92,13 @@
 .mobile-nav .icons-nav {
   justify-content: flex-end;
 }
+
+.mobile-nav .icons-nav ul {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 .search-mob {
   flex: 1;
   position: relative;
@@ -101,6 +108,7 @@
 }
 .search-mob .mob-search-logo {
   font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .search-mob .logo-mob {
   padding-right: 20px;
@@ -110,11 +118,12 @@
   font-size: 20px;
   font-weight: normal;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .search-mob input {
   width: 100%;
-  border: 2px solid !important;
+  border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px !important;
   padding: 8px;
   margin: 0px;
@@ -139,7 +148,7 @@
 
 .search-desktop input {
   width: 100%;
-  border: 2px solid !important;
+  border: 2px solid rgba(0, 0, 0, 0.5) !important;
   border-radius: 20px !important;
   padding: 6px;
   padding-right: 20px;
@@ -155,6 +164,7 @@
   font-size: 20px;
   font-weight: normal;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
 }
 .icons-nav {
   margin-left: 10px;
@@ -163,3 +173,12 @@
   padding: 4px;
   font-size: 24px !important;
 }
+
+/* @media (max-width: 400px) {
+  .mobile-nav .icons-nav ul {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+} */

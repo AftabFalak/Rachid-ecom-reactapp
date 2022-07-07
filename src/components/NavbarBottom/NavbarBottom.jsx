@@ -65,7 +65,7 @@ function NavbarBottom(props) {
             <MainLogo />
           </div>
 
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ">
             <div>
               {!search ? (
                 <li
@@ -83,7 +83,7 @@ function NavbarBottom(props) {
                     <div className="d-flex align-items-center">
                       <input
                         type={'text'}
-                        placeholder={'Suche'}
+                        placeholder={'Search'}
                         className="mr-2"
                       />
                       <FaTimes
@@ -178,7 +178,7 @@ function NavbarBottom(props) {
           <div className="search-mob">
             <div>
               <div className="d-flex align-items-center">
-                <input type={'text'} placeholder={'Suche'} className="mr-2" />
+                <input type={'text'} placeholder={'Search'} className="mr-2" />
                 <FaTimes
                   onClick={() => setSearch(false)}
                   className="searchCrossIconMob"

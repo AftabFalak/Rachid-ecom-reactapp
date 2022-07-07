@@ -194,8 +194,6 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               position: 'absolute',
               top: '-40px',
               right: '20px',
-              display: 'flex',
-              alignItems: 'center',
             }}
           >
             <Rating
@@ -203,9 +201,20 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               ratingValue={80}
               fillColor={COLORS.YELLOW_100}
               size={20}
-              className="starRaiting"
+              className="starRaiting m-0"
             />
-            <span className="raitingPointSmall">(250)</span>
+            <span className="raitingPointSmall m-0 mb-0">(250)</span>
+            <div>
+              <a href="https://mail.google.com/">
+                <GoMail className="socialLogoSmall" />{' '}
+              </a>
+              <a href="instagram.com">
+                <AiOutlineInstagram className="socialLogoSmall" />
+              </a>
+              <a href="facebook.com">
+                <FiFacebook className="socialLogoSmall" />
+              </a>
+            </div>
           </div>
           <div className="row">
             <div className="col-md-5 brandInfoView">
@@ -250,8 +259,8 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                 )}
               </button>
             </div>
-            <div className="col-md-4 Shipping ">
-              <h4 className="ShippingMainHeader d-none d-md-block d-sm-none">
+            <div className="col-md-4 Shipping d-none d-md-block">
+              <h4 className="ShippingMainHeader">
                 stayfineofficial is a Star Seller!
               </h4>
               <div className="row">
@@ -271,6 +280,18 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                 </div>
               </div>
             </div>
+            <div className="venderSales d-md-none">
+              <span className="align-items-center mr-2">
+                <FaShuttleVan className="shippingLogo" /> {'   '}
+                <span className="shipping-heading">Smooth shipping</span>|
+                {'   '}
+              </span>
+              <span className="align-items-center">
+                <GrMail className="shippingLogo" /> {'   '}
+                <spaan className="shipping-heading">Speedy replies</spaan>
+              </span>
+            </div>
+
             <div className="col-md-3 ShopMember text-center d-none d-md-block d-sm-none">
               <h4 className="ShopMemberMainHeading">Shop Member</h4>
 

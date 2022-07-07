@@ -1,5 +1,6 @@
 .VenderProfile {
   box-sizing: border-box;
+  margin-top: 0px;
 }
 .VenderProfile .top-bar-vendder {
   display: flex;
@@ -20,12 +21,11 @@
 }
 
 .VenderProfile .vendorInfoView .followBrandButton {
-  padding: 10px 0px;
+  padding: 12px 0px;
   background-color: var(--white-100);
   border-radius: 15px;
-  font-size: 14px;
+  font-size: 20px;
   transition: all 0.5s;
-  width: 50%;
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -34,9 +34,10 @@
 }
 
 .VenderProfile .vendorInfoView .followBrandButtonSmall {
-  padding: 5px 0px;
-
+  padding: 10px 0px;
+  font-size: 20px !important;
   border: none;
+  border-radius: 100px;
 }
 
 .VenderProfile .vendorInfoView .followBrandButton .FollowIconHeart {
@@ -141,9 +142,15 @@
   color: var(--black-100);
 }
 
-.VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales {
+.VenderProfile .venderSales {
   font-size: 18px;
   margin: 10px 0px;
+}
+.VenderProfile .socialLogoSmall {
+  margin-top: 5px;
+  font-size: 23px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
 }
 .VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales span {
   margin: 0px 20px 0px 0px;
@@ -209,6 +216,13 @@
   font-size: 28px;
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1100px) {
+  .VenderProfile .vendorInfoView .followBrandButton {
+    font-size: 15px;
+    width: 60%;
+  }
 }
 @media (max-width: 767.98px) {
   .VenderProfile {

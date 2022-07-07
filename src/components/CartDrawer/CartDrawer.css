@@ -61,18 +61,21 @@
   padding: 5px;
   transform: translate(-50%, -50%);
 }
-.CartDrawer .closeBtn {
+.CartDrawer .closeBtnn {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 15px;
   font-size: 16px;
-  top: 10px;
-  padding: 10px 12px;
-  cursor: pointer;
+  background-color: gainsboro;
+  padding: 5px 10px;
   outline: none;
   border: none;
-  background-color: transparent;
   color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.CartDrawer .closeBtnn:hover {
+  color: var(--black-100);
 }
 .CartDrawer .closeBtn .timeIcon {
   font-weight: normal;

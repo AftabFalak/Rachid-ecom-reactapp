@@ -20,11 +20,10 @@ const CartDrawer = (props) => {
       <div className="header">
         <h5>SHOPPING CART</h5>
         <button
-          className="closeBtn"
+          className="closeBtnn"
           onClick={() => props.setDrawertoggle(false)}
         >
-          <i className="fa fa-times timeIcon cursor-poniter"></i>{' '}
-          <span>Close</span>
+          <i className="fa fa-times"></i>
         </button>
       </div>
       <div className="orderList">

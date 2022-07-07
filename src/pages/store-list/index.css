@@ -140,7 +140,7 @@
 }
 
 .checkmarkCheckbox:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -163,10 +163,11 @@
 
 .vendor-modal-view {
   position: absolute;
-  top: -21px;
-  margin-top: 40px;
-  padding: 10px;
+  top: 0;
   left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: var(--white-100);
 }
 .vendor-modal-view .back-btn {
   background-color: transparent;
