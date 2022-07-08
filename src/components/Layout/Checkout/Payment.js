@@ -87,10 +87,10 @@ const Payment = ({ orders }) => {
                       placeholder="Card Number"
                     />
                     <button
-                      className="w-100 btn-outline-primary my-2 bg-light form-control"
+                      className="w-100 my-2 form-control pymentSubmit"
                       type="submit"
                     >
-                      Submit
+                      <span className="subSpan">Submit</span>
                     </button>
                   </div>
                 </div>
@@ -108,7 +108,9 @@ const Payment = ({ orders }) => {
           </div>
 
           <div className="buttonDiv">
-            <button className="backButton">{'< '}Back</button>
+            <Link to="/checkout/detail" className="backButton">
+              {'< '}Back
+            </Link>
             <Link to="/checkout/review" className="completeOrder">
               Review Your Order{' >'}
             </Link>

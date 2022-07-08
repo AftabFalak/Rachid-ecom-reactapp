@@ -26,6 +26,7 @@
   border-radius: 15px;
   font-size: 20px;
   transition: all 0.5s;
+  width: 37%;
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
   display: flex;

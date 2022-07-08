@@ -73,7 +73,9 @@ const Review = ({ orders }) => {
             </div>
           </div>
           <div className="buttonDiv">
-            <button className="backButton">{'< '}Back</button>
+            <Link to="/checkout/payment" className="backButton">
+              {'< '}Back
+            </Link>
             <button className="completeOrder">Complete order {' >'}</button>
           </div>
         </div>

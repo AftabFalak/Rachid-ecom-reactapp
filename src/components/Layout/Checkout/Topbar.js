@@ -7,17 +7,17 @@ const Topbar = ({ page, tabs }) => {
   const [arr, setArr] = useState([]);
   return (
     <div id="checkout-topbar">
-      {tabs.map(({ link, endPoint, icon, title, id }, index) => (
+      {tabs.map(({ link, endPoint, icon, iconActive, title, id }, index) => (
         <Link to={link} className="singleTab" onClick={() => setArr([])}>
           {page === endPoint ? (
             <div className="checkedIconDiv">
-              <BsFillCheckCircleFill className="checkedIcon" />
+              <BsFillCheckCircleFill className={`checkedIcon`} />
             </div>
           ) : (
             <></>
           )}
-          {icon}
-          <p>
+          {page === endPoint ? iconActive : icon}
+          <p className={`${page === endPoint && 'activeText'}`}>
             {id}- {title}
           </p>
         </Link>

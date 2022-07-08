@@ -67,7 +67,7 @@
   top: 15px;
   font-size: 16px;
   background-color: gainsboro;
-  padding: 5px 10px;
+  padding: 5px 11px;
   outline: none;
   border: none;
   color: rgba(0, 0, 0, 0.4);
@@ -196,6 +196,6 @@
   text-align: center;
 }
 .CartDrawer .bottomDiv .buttonsDiv .checkout {
-  background-color: var(--main-color);
+  background-color: var(--action-color);
   color: #fff;
 }

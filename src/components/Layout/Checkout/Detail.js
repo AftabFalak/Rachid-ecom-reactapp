@@ -106,7 +106,9 @@ const Detail = () => {
               <span>Same as shipping address</span>
             </div>
             <div className="buttonDiv">
-              <button className="backButton">{' < '}Back to cart</button>
+              <Link to="/yourcart" className="backButton">
+                {' < '}Back to cart
+              </Link>
               <Link to="/checkout/payment" className="proceedButton">
                 Proceed to payment {' > '}
               </Link>
