@@ -62,7 +62,9 @@ function NavbarBottom(props) {
           </div>
 
           <div>
-            <MainLogo />
+            <Link to="/">
+              <MainLogo />
+            </Link>
           </div>
 
           <ul className="navbar-nav ">

@@ -166,7 +166,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
             <div className="profilePhoto"></div>
           </div>
           <button
-            className="followBrandButtonSmall followBrandButton d-md-none d-sm-block"
+            className="followBrandButtonSmall d-md-none d-sm-block"
             onClick={() => setFavorite(!favorite)}
             style={{
               width: '20%',

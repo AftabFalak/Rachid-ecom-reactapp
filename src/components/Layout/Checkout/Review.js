@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import OrderSummary from './OrderSummary';
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
 const Review = ({ orders }) => {
+  const [edit, setEdit] = useState(false);
+  const [selection, setSelection] = useState({
+    color: '',
+    size: '',
+    quantity: 1,
+  });
+  const [totalPrice, setTotalPrice] = useState(125);
+
   return (
     <div id="Review">
       <div className="row">
@@ -37,12 +45,59 @@ const Review = ({ orders }) => {
                     </div>
                   </div>
                   <div>
-                    <p className="quantityOrder">
-                      <span>Quantity:</span> {quantity}
-                    </p>
-                    <Link to="/dashboard/profile" className="EditOrderLink">
-                      <BiEdit className="editIcon" /> Edit
-                    </Link>
+                    {!edit ? (
+                      <p className="quantityOrder">
+                        <span>Quantity:</span> {quantity}
+                      </p>
+                    ) : (
+                      <div className="counterButton mb-3">
+                        <button
+                          className="logo minus-btn"
+                          disabled={selection.quantity == 1}
+                          onClick={() => {
+                            setSelection({
+                              ...selection,
+                              quantity: selection.quantity - 1,
+                            });
+                            setTotalPrice(price);
+                          }}
+                        >
+                          <i className="fa fa-minus"></i>
+                        </button>
+                        <div className="countNumber">
+                          <span>{selection.quantity}</span>
+                        </div>
+                        <button
+                          disabled={selection.quantity === 10}
+                          className="logo plus-btn m-0"
+                          onClick={() =>
+                            setSelection({
+                              ...selection,
+                              quantity: selection.quantity + 1,
+                            })
+                          }
+                        >
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </div>
+                    )}
+                    {!edit ? (
+                      <Link
+                        to="#"
+                        className="EditOrderLink"
+                        onClick={() => setEdit(!edit)}
+                      >
+                        <BiEdit className="editIcon" /> Edit
+                      </Link>
+                    ) : (
+                      <Link
+                        to="#"
+                        className="EditOrderLinkConfirm"
+                        onClick={() => setEdit(!edit)}
+                      >
+                        <BiEdit className="editIcon" /> Confirm
+                      </Link>
+                    )}
                   </div>
                 </div>
               )
