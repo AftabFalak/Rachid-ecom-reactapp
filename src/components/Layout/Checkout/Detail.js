@@ -27,7 +27,12 @@ const Detail = () => {
                 <span className="rewardPoint">Reward Points:{rewardPoint}</span>
               </div>
             </div>
-            <div>
+            <div className="d-md-none d-sm-block EditProfileLinkMobile">
+              <Link to="/dashboard/profile" className="EditProfileLinkSmall">
+                <BiEdit />
+              </Link>
+            </div>
+            <div className="d-none d-md-block">
               <Link to="/dashboard/profile" className="EditProfileLink">
                 <BiEdit /> Edit Profile
               </Link>

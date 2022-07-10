@@ -3,6 +3,8 @@ import OrderSummary from './OrderSummary';
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
+import { AiOutlineCheckCircle } from 'react-icons/ai';
+
 const Review = ({ orders }) => {
   const [edit, setEdit] = useState(false);
   const [selection, setSelection] = useState({
@@ -92,10 +94,12 @@ const Review = ({ orders }) => {
                     ) : (
                       <Link
                         to="#"
-                        className="EditOrderLinkConfirm"
+                        className="EditOrderLinkConfirm d-flex align-items-center justify-content-center"
                         onClick={() => setEdit(!edit)}
                       >
-                        <BiEdit className="editIcon" /> Confirm
+                        <AiOutlineCheckCircle className="editIcon mr-1" />
+                        {'  '}
+                        Confirm
                       </Link>
                     )}
                   </div>

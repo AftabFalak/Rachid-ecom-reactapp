@@ -204,7 +204,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               className="starRaiting m-0"
             />
             <span className="raitingPointSmall m-0 mb-0">(250)</span>
-            <div>
+            <div className="d-flex justify-content-center">
               <a href="https://mail.google.com/">
                 <GoMail className="socialLogoSmall" />{' '}
               </a>
@@ -232,9 +232,9 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                 </div>
               </div>
               <div>
-                <span className="brandDescription">
+                <p className="brandDescription">
                   Finest engraved wood watch for your love ones.
-                </span>
+                </p>
               </div>
               <div className="venderSales">
                 <div>
@@ -280,7 +280,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                 </div>
               </div>
             </div>
-            <div className="venderSales d-md-none">
+            <div className="shippingType d-md-none">
               <span className="align-items-center mr-2">
                 <FaShuttleVan className="shippingLogo" /> {'   '}
                 <span className="shipping-heading">Smooth shipping</span>|

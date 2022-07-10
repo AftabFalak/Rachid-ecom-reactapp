@@ -1,14 +1,7 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-
-import { BiEdit } from 'react-icons/bi';
-
-import { initOrders } from '../checkout';
-import CartTotal from '../../components/Layout/Checkout/CartTotals';
-
-import './index.css';
-const YourCart = () => {
+import { initOrders } from '../../../pages/checkout';
+import CartTotal from './CartTotals';
+const ShopingCart = () => {
   return (
     <div className="YourCart">
       <h2>Your Cart</h2>
@@ -69,4 +62,4 @@ const YourCart = () => {
   );
 };
 
-export default YourCart;
+export default ShopingCart;

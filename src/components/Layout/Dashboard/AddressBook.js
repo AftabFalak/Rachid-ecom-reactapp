@@ -175,6 +175,18 @@ const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
               className="text-dark dropd border-bold form-control mt-2"
               placeholder="Mobile"
             />
+            <div className="mt-2 ">
+              <label className="containerr">
+                Shipping
+                <input type="radio" checked="checked" name="radio" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="containerr">
+                Billing
+                <input type="radio" name="radio" />
+                <span className="checkmark"></span>
+              </label>
+            </div>
             <div className="buttonView">
               <button className="save" type="submit">
                 Save

@@ -8,6 +8,8 @@ import Detail from '../../components/Layout/Checkout/Detail';
 import Payment from '../../components/Layout/Checkout/Payment';
 import Review from '../../components/Layout/Checkout/Review';
 
+import ShopingCart from '../../components/Layout/Checkout/ShopingCart';
+
 import { BsCart, BsFillCheckCircleFill } from 'react-icons/bs';
 import { FiUser, FiCheckCircle } from 'react-icons/fi';
 import { MdPayment } from 'react-icons/md';
@@ -55,7 +57,7 @@ const Checkout = () => {
     {
       id: 1,
       title: 'Shopping Cart',
-      link: '/yourcart',
+      link: '/checkout/shoppingcart',
       endPoint: 'shoppingcart',
       icon: <BsCart className="TabIcon" />,
       iconActive: <BsCart className="TabIconActive" />,
@@ -91,6 +93,9 @@ const Checkout = () => {
   const params = useParams();
 
   switch (params.page) {
+    case 'shoppingcart':
+      Page = ShopingCart;
+      break;
     case 'detail':
       Page = Detail;
       break;

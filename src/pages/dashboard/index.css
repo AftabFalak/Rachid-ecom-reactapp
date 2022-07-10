@@ -67,7 +67,9 @@
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
+  color: gray;
+  font-weight: normal;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -82,7 +84,7 @@
 
 #address .checkmark {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   height: 16px;
   width: 16px;
@@ -95,11 +97,11 @@
 }
 
 #address .containerr input:checked ~ .checkmark {
-  background-color: #165543;
+  background-color: var(--action-color);
 }
 
 #address .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }

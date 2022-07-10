@@ -157,6 +157,13 @@
   margin: 0px 20px 0px 0px;
 }
 
+.VenderProfile .shippingType {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+\ .VenderProfile .vendorInfoView_bottom .brandInfoView .shippingType span {
+  margin: 0px 20px 0px 0px;
+}
 .Shipping {
   color: var(--black-100) !important;
   display: flex;
@@ -219,7 +226,7 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 900) {
+@media (max-width: 900px) {
   .VenderProfile {
     text-align: center;
   }
@@ -233,6 +240,21 @@
 
   .brandInfoView .brandName {
     flex: 1;
+    text-align: left;
+  }
+  .brandInfoView .brandDescription {
+    text-align: left !important;
+    margin: 0;
+  }
+
+  .brandInfoView .venderSales {
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  .shippingType {
+    text-align: left !important;
+    margin-top: 0px;
   }
 
   .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
@@ -253,13 +275,14 @@
 
   .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
     position: absolute;
-    left: 40% !important;
+    left: 40px !important;
     bottom: -36px !important;
   }
 
   .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
     width: 100px !important;
     height: 100px !important;
+    border: 1px solid gray !important;
   }
 
   .vendorInfoView_bottom .brandInfoView {
