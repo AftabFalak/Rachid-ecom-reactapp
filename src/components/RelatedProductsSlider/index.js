@@ -1,6 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
-import "./index.css";
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import QuickView from '../QuickView/QuickView';
+import './index.css';
 const RelatedProductsSlider = ({ images }) => {
   let settings = {
     dots: false,
@@ -35,6 +36,7 @@ const RelatedProductsSlider = ({ images }) => {
       },
     ],
   };
+  const [quick, setQuick] = useState(false);
   return (
     <div className="RelatedProductsSlider">
       <Slider {...settings}>
@@ -48,14 +50,14 @@ const RelatedProductsSlider = ({ images }) => {
                 <span className="icon">
                   <i className="fa fa-heart"></i>
                 </span>
-                <span className="icon">
+                <span className="icon" onClick={() => setQuick(true)}>
                   <i className="fa fa-search"></i>
                 </span>
               </div>
               <div className="textArea">
                 <p>men black t-shirt</p>
                 <p>
-                  <strong>$65.34</strong>{" "}
+                  <strong>$65.34</strong>{' '}
                   <small>
                     <strike>$76.43</strike>
                   </small>
@@ -66,6 +68,7 @@ const RelatedProductsSlider = ({ images }) => {
           );
         })}
       </Slider>
+      {quick && <QuickView setQuick={setQuick} />}
     </div>
   );
 };

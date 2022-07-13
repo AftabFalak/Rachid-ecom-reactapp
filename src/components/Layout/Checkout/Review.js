@@ -7,6 +7,8 @@ import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 const Review = ({ orders }) => {
   const [edit, setEdit] = useState(false);
+  const [editId, setEditId] = useState(0);
+
   const [selection, setSelection] = useState({
     color: '',
     size: '',
@@ -87,7 +89,9 @@ const Review = ({ orders }) => {
                       <Link
                         to="#"
                         className="EditOrderLink"
-                        onClick={() => setEdit(!edit)}
+                        onClick={() => {
+                          setEdit(!edit);
+                        }}
                       >
                         <BiEdit className="editIcon" /> Edit
                       </Link>

@@ -43,7 +43,7 @@ const Home = () => {
     <div className="Home">
       <MainCarosuel />
 
-      <div className="m-5 bg-dark">
+      <div className="m-5 bg-light">
         <Slider {...settings}>
           <div className="slide-single">
             <TbShirt style={{ fontSize: '30px' }} />

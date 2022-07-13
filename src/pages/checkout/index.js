@@ -112,7 +112,11 @@ const Checkout = () => {
   return (
     <section className="container">
       <Topbar page={params.page} tabs={tabs} />
-      <Page orders={orders} />
+      <Page
+        orders={orders}
+        setOrders={setOrders}
+        OrderDeleteHandler={OrderDeleteHandler}
+      />
     </section>
   );
 };

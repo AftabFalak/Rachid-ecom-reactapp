@@ -81,9 +81,10 @@
 }
 
 .MainDrawer .selected-tab {
-  border-bottom: 2px solid var(--action-color);
+  border-bottom: 3px solid var(--action-color);
   color: var(--black-100);
   font-weight: 500;
+  color: var(--action-color);
 }
 
 .MainDrawer .divider {

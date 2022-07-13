@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { createContext } from 'react';
+
 import './App.css';
 import NavbarBottom from './components/NavbarBottom/NavbarBottom';
 import { useState } from 'react';
@@ -19,6 +20,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
+  const Data = createContext();
   const [open, setOpen] = useState({ drawerOpen: false });
   const [openCart, setOpenCart] = useState({ drawerOpenCart: false });
   const setDrawerOpen = (isDrawerOpen) => {

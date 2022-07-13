@@ -14,7 +14,12 @@
 .CartDrawer .forgotPassword {
   color: #007bff;
 }
-
+.CartDrawer .closeDiv {
+  cursor: pointer;
+}
+.CartDrawer .closeDiv .closeIcon {
+  font-size: 19px;
+}
 .closedDrawer {
   right: -350px;
 }
@@ -131,11 +136,11 @@
   border: none;
 }
 
-.counterButton {
+.CartDrawer .singleOrder .counterButton {
   display: flex;
 }
 
-.counterButton .logo {
+.CartDrawer .singleOrder .counterButton .logo {
   cursor: pointer;
   background-color: #ffff;
   border: 2px solid rgb(232, 227, 227);
@@ -143,22 +148,23 @@
   align-items: center;
 }
 
-.counterButton .minus-btn {
+.CartDrawer .singleOrder .counterButton .minus-btn {
   border-radius: 50% 0 0 50%;
 }
 
-.counterButton .plus-btn {
+.CartDrawer .singleOrder .counterButton .plus-btn {
   border-radius: 0 50% 50% 0;
 }
 
-.counterButton .countNumber {
-  padding: 0px;
+.CartDrawer .singleOrder .counterButton .countNumber {
+  padding: 5px 3px;
   background-color: #e8ecef;
   border-top: 2px solid rgb(232, 227, 227);
   border-bottom: 2px solid rgb(232, 227, 227);
+  font-size: 20px;
   text-align: center;
-  min-width: 50px;
-  font-size: 15px;
+  min-width: 40px;
+  font-size: 22px;
 }
 
 .CartDrawer .bottomDiv {

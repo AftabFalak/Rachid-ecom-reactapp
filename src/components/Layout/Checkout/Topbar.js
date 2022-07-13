@@ -5,6 +5,8 @@ import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 const Topbar = ({ page, tabs }) => {
   const [arr, setArr] = useState([]);
+  const [checked, setChecked] = useState(true);
+
   return (
     <div id="checkout-topbar">
       {tabs.map(({ link, endPoint, icon, iconActive, title, id }, index) => (
