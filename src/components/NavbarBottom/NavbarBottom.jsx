@@ -145,7 +145,7 @@ function NavbarBottom(props) {
                   <a className="" href="#">
                     <AiOutlineSearch
                       className="signInLogo"
-                      style={{ fontSize: '24px' }}
+                      style={{ fontSize: '20px' }}
                     />
                   </a>
                 </li>
@@ -153,7 +153,7 @@ function NavbarBottom(props) {
                   <a className="" href="/dashboard/wishlist">
                     <AiOutlineHeart
                       className="signInLogo"
-                      style={{ fontSize: '24px' }}
+                      style={{ fontSize: '20px' }}
                     />
                   </a>
                 </li>
@@ -161,7 +161,7 @@ function NavbarBottom(props) {
                   <a className="" href="#" onClick={props.toggleDrawer}>
                     <AiOutlineUser
                       className="signInLogo"
-                      style={{ fontSize: '24px' }}
+                      style={{ fontSize: '20px' }}
                     />
                   </a>
                 </li>
@@ -169,7 +169,7 @@ function NavbarBottom(props) {
                   <a className="" href="#">
                     <AiOutlineShoppingCart
                       className="signInLogo"
-                      style={{ fontSize: '24px' }}
+                      style={{ fontSize: '20px' }}
                     />
                   </a>
                 </li>

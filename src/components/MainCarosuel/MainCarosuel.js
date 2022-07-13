@@ -17,31 +17,46 @@ const MainCarosuel = () => {
           <div className="carousel-item active">
             <img
               className="d-block "
-              src={require('../../assets/images/Home/main.jpg')}
+              src={require('../../assets/images/Home/mainn.png')}
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Heading</h5>
-              <p>Paragraph</p>
+              <h5 className="text-light">Heading</h5>
+              <p className="text-light">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+                eos molestias distinctio dolor exercitationem ullam possimus
+                repudiandae iste inventore repellat eius similique, earum fugit
+                error voluptatem ab impedit aliquid! Ex.
+              </p>
             </div>
           </div>
           <div className="carousel-item">
             <img
               className="d-block "
-              src={require('../../assets/images/Home/main.jpg')}
+              src={require('../../assets/images/Home/mainn.png')}
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Heading</h5>
-              <p>Paragraph</p>
+              <h5 className="text-light">Heading</h5>
+              <p className="text-light">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+                eos molestias distinctio dolor exercitationem ullam possimus
+                repudiandae iste inventore repellat eius similique, earum fugit
+                error voluptatem ab impedit aliquid! Ex.
+              </p>
             </div>
           </div>
           <div className="carousel-item">
             <img
               className="d-block "
-              src={require('../../assets/images/Home/main.jpg')}
+              src={require('../../assets/images/Home/mainn.png')}
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Heading</h5>
-              <p>Paragraph</p>
+              <h5 className="text-light">Heading</h5>
+              <p className="text-light">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+                eos molestias distinctio dolor exercitationem ullam possimus
+                repudiandae iste inventore repellat eius similique, earum fugit
+                error voluptatem ab impedit aliquid! Ex.
+              </p>
             </div>
           </div>
         </div>

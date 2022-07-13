@@ -43,17 +43,10 @@ const Home = () => {
     <div className="Home">
       <MainCarosuel />
 
-      <div className="m-5">
+      <div className="m-5 bg-dark">
         <Slider {...settings}>
           <div className="slide-single">
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
-            <TbShirt />
+            <TbShirt style={{ fontSize: '30px' }} />
           </div>
         </Slider>
       </div>
