@@ -11,6 +11,8 @@ import {
   AiOutlineHeart,
   AiOutlineUser,
 } from 'react-icons/ai';
+import { IoCloseOutline } from 'react-icons/io5';
+
 
 import { BsCart2 } from 'react-icons/bs';
 
@@ -26,6 +28,8 @@ import MobileMenuDrawer from '../MobileMenuDrawer';
 function NavbarBottom(props) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState(false);
+
+  const [searchText, setSearchText] = useState('')
 
   const toggleOpenDrawer = () => {
     setOpen(!open);
@@ -68,7 +72,7 @@ function NavbarBottom(props) {
           </div>
 
           <ul className="navbar-nav ">
-            <div>
+            <div style={{ width: '250px', display:'flex', justifyContent:'flex-end', alignItems:'center'}}>
               {!search ? (
                 <li
                   className="nav-item signInLink"
@@ -87,15 +91,19 @@ function NavbarBottom(props) {
                         type={'text'}
                         placeholder={'Search'}
                         className="mr-2"
+                        onChange={(e) => setSearchText(e.target.value)}
+                        value={searchText}
+                        name="search"
                       />
-                      <FaTimes
-                        onClick={() => setSearch(false)}
-                        className="searchCrossIcon"
+                    
+                      <IoCloseOutline
+                           onClick={() => setSearch(false)}
+                           className="searchCrossIcon"
                       />
                     </div>
-                    <div className="icon-s">
+                    {searchText.length <= 0 && <div className="icon-s">
                       <AiOutlineSearch className="signInLogo" />
-                    </div>
+                    </div>}
                   </div>
                 </div>
               )}
@@ -125,6 +133,10 @@ function NavbarBottom(props) {
           </ul>
         </nav>
       </nav>
+
+
+
+      {/* small screen */}
 
       <div className="d-block d-lg-none">
         {!search ? (
