@@ -171,6 +171,14 @@
   border-radius: 8px;
   padding: 5px 6px;
 }
+
+.countrySelect {
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 5px 6px;
+}
+
 /* ///////////////////// custom radio ////////////////////// */
 .container {
   display: block;
@@ -211,7 +219,7 @@
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -261,9 +269,9 @@
 }
 
 .containerCheckbox {
-  display: block;
-  position: relative;
-  padding-left: 30px;
+  display: block !important;
+  position: relative !important;
+  padding-left: 30px !important;
   margin-top: 8px;
   cursor: pointer;
   font-size: 14px;
@@ -285,7 +293,7 @@
 /* Create a custom checkbox */
 .checkmarkCheckbox-drawer {
   position: absolute;
-  top: -10px;
+  top: 0 !important;
   left: 0;
   height: 18px;
   width: 18px;
@@ -300,7 +308,7 @@
 }
 
 .checkmarkCheckbox-drawer:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }

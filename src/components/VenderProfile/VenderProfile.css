@@ -101,12 +101,13 @@
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .starRaiting {
-  margin-right: 15px;
+  margin-right: 3px;
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .starRaitingView {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .VenderProfile .vendorInfoView_bottom .brandInfoView .raitingPoint {
@@ -161,7 +162,7 @@
   font-size: 18px;
   margin: 10px 0px;
 }
-\ .VenderProfile .vendorInfoView_bottom .brandInfoView .shippingType span {
+.VenderProfile .vendorInfoView_bottom .brandInfoView .shippingType span {
   margin: 0px 20px 0px 0px;
 }
 .Shipping {
@@ -226,74 +227,69 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 900px) {
-  .VenderProfile {
-    text-align: center;
+@media (max-width: 440px) {
+  .VenderProfile .vendorInfoView .vendorInfoView_bottom {
+    margin-top: 60px;
+    padding: 0px 12px;
+    padding-bottom: 8px;
   }
-  .brandInfoView > div {
-    display: block !important;
-  }
-
-  .brandInfoView .or {
-    display: none;
-  }
-
-  .brandInfoView .brandName {
-    flex: 1;
-    text-align: left;
-  }
-  .brandInfoView .brandDescription {
-    text-align: left !important;
-    margin: 0;
-  }
-
-  .brandInfoView .venderSales {
-    text-align: left;
-    margin-top: 6px;
-  }
-
-  .shippingType {
-    text-align: left !important;
-    margin-top: 0px;
-  }
-
-  .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
-    left: 30px;
-    bottom: -50px;
-  }
-
-  .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .VenderProfile .vendorInfoView .vendorInfoView_top .coverImage {
-    height: 20vh;
-  }
-
   .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhotoView {
     position: absolute;
-    left: 40px !important;
-    bottom: -36px !important;
+    left: 30px;
+    bottom: -40px;
   }
-
   .VenderProfile .vendorInfoView .vendorInfoView_top .profilePhoto {
-    width: 100px !important;
-    height: 100px !important;
-    border: 1px solid gray !important;
+    width: 80px;
+    height: 80px;
   }
 
-  .vendorInfoView_bottom .brandInfoView {
-    justify-content: center;
-    text-align: center;
+  .VenderProfile .vendorInfoView .vendorInfoView_top .coverImage {
+    height: 22vh;
   }
 
-  .Shipping {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    text-align: center;
+  .starRaitingView .raitingPoint {
+    font-size: 10px !important;
+  }
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .brandName {
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .brandDescription {
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .ShopMember .ShopMemberMainHeading {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .ShopMember .memberProfileImg {
+    width: 35px;
+    height: 35px;
+  }
+  .ShopMember .memberName {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .ShopMember .socialLogo {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .VenderProfile .venderSales {
+    font-size: 15px;
+    margin: 0px 0px;
+  }
+
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .venderSales span {
+    margin: 0px 5px 0px 0px;
+  }
+  .VenderProfile .shippingType {
+    font-size: 12px;
+    margin: 10px 0px;
+  }
+  .VenderProfile .vendorInfoView_bottom .brandInfoView .shippingType span {
+    margin: 0px 5px 0px 0px;
   }
 }

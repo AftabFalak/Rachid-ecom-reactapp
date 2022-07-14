@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import "./index.css";
+import React, { useState } from 'react';
+import './index.css';
 
-import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowLeft } from 'react-icons/bs';
 const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();
-  const [categoryBoxShow, setCategoryBoxShow] = useState(false)
+  const [categoryBoxShow, setCategoryBoxShow] = useState(false);
 
   const onClickItem = (index) => {
     const item = allCategorie.forEach((el) => {
@@ -15,25 +15,24 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   };
 
   const handleOnClick = () => {
-
-    setCategoryBoxShow(true)
-
-  }
+    setCategoryBoxShow(true);
+  };
 
   const handleOnBlur = () => {
-    setCategoryBoxShow(false)
-    console.log("ddd")
-  }
+    setCategoryBoxShow(false);
+    console.log('ddd');
+  };
 
   return (
     <>
-      {categoryBoxShow && 
-        <div className="backdrop-invisible"></div> }
+      {categoryBoxShow && <div className="backdrop-invisible"></div>}
 
-      <div className={`FilterDrawer ${!open ? "closed" : ""}`}>
-
-      {categoryBoxShow && <>
-        <div className="backdrop-invisible" onClick={handleOnBlur}></div> </>}
+      <div className={`FilterDrawer ${!open ? 'closed' : ''}`}>
+        {categoryBoxShow && (
+          <>
+            <div className="backdrop-invisible" onClick={handleOnBlur}></div>{' '}
+          </>
+        )}
         <div className="head">
           <h5>Filters</h5>
           <button className="close" onClick={() => drawertoggle()}>
@@ -44,43 +43,48 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
             {tab === 1 ? (
               <div
                 className="Tab_1 ScrollVieww"
-                style={{ height: "85vh", overfollowY: "scroll" }}
+                style={{ height: '85vh', overfollowY: 'scroll' }}
               >
                 <p>Filter By Category</p>
 
-                <div className="category-container-drawer" tabIndex={1} onClick={handleOnClick}  >
+                <div
+                  className="category-container-drawer"
+                  tabIndex={1}
+                  onClick={handleOnClick}
+                >
                   <button className="btn-category">All Categories</button>
 
-                  {categoryBoxShow && <>
-                    <div className="backdrop-invisible"></div>
-                    <ul className="list">
-                      {allCategorie.map((item, index) => {
-                        return (
-                          <li
-                            key={index}
-                            className="list_item d-flex"
-                            onClick={() => onClickItem(index)}
-                          >
-                            <p
-                              className="m-0"
-                              onClick={() => setSelectedCategory(item.categorie)}
+                  {categoryBoxShow && (
+                    <>
+                      <div className="backdrop-invisible"></div>
+                      <ul className="list">
+                        {allCategorie.map((item, index) => {
+                          return (
+                            <li
+                              key={index}
+                              className="list_item d-flex"
+                              onClick={() => onClickItem(index)}
                             >
-                              {item.categorie}{" "}
-                            </p>
-                            {item.categorie === selectedCategory}
+                              <p
+                                className="m-0"
+                                onClick={() =>
+                                  setSelectedCategory(item.categorie)
+                                }
+                              >
+                                {item.categorie}{' '}
+                              </p>
+                              {item.categorie === selectedCategory}
 
-                            <label className="containerCheckbox justify-content-end">
-                              <input type="checkbox" />
-                              <span className="checkmarkCheckbox-drawer"></span>
-                            </label>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </>
-
-                  }
-
+                              <label className="containerCheckbox justify-content-end">
+                                <input type="checkbox" />
+                                <span className="checkmarkCheckbox-drawer"></span>
+                              </label>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </>
+                  )}
                 </div>
 
                 <div className="filtersList">
@@ -89,26 +93,28 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                     <label className="containerCheckbox">
                       Free Dilevery
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                     <label className="containerCheckbox">
                       On sale
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                   </div>
                   <div className="dilevery my-3">
-                    <span className="font-weight-bold">Ready to dispatch in</span>
+                    <span className="font-weight-bold">
+                      Ready to dispatch in
+                    </span>
 
                     <label className="containerCheckbox">
                       1 business day
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                     <label className="containerCheckbox">
                       1–3 business days
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                   </div>
 
@@ -116,32 +122,62 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                     <span className="font-weight-bold">Price ($)</span>
                     <label className="container">
                       Any Price
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       Under USD 25
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       USD 25 to USD 50
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       USD 50 to USD 100
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       Over USD 100
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       Custom
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
 
@@ -169,17 +205,32 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
 
                     <label className="container">
                       <span>Anywhere</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       <span>Pakistan</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       <span>Custom</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
 
@@ -198,18 +249,33 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                     <span className="font-weight-bold">Item Type</span>
                     <label className="container">
                       <span>All Times</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
 
                     <label className="container">
                       <span>Handmade</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">
                       <span>Vintage</span>
-                      <input type="radio" checked="checked" name="radio" className="contInput"/>
+                      <input
+                        type="radio"
+                        checked="checked"
+                        name="radio"
+                        className="contInput"
+                      />
                       <span className="checkmark"></span>
                     </label>
                   </div>
@@ -219,22 +285,26 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                     <label className="containerCheckbox">
                       Accepts Etsy gift cards
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                     <label className="containerCheckbox">
                       Can be gift-wrapped
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                     <label className="containerCheckbox">
                       Customisable
                       <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
+                      <span className="checkmarkCheckbox-drawer"></span>
                     </label>
                   </div>
 
                   <div className="my-3">
-                    <select name="country" id="country" className="countrySelect">
+                    <select
+                      name="country"
+                      id="country"
+                      className="countrySelect"
+                    >
                       <option value="germany">Germany</option>
                       <option value="pakistan">Pakistan</option>
                     </select>
@@ -289,7 +359,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                   <button className="btn btn-back" onClick={() => setTab(1)}>
                     <span className="backArrowIcon">
                       <BsArrowLeft />
-                    </span>{" "}
+                    </span>{' '}
                     Back
                   </button>
                   <button className="btn btn-black" onClick={drawertoggle}>
@@ -302,7 +372,6 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
         </div>
       </div>
     </>
-
   );
 };
 

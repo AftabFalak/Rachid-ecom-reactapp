@@ -188,44 +188,106 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
         </div>
 
         <div className="vendorInfoView_bottom">
-          <div
-            className="starRaitingView d-md-none d-sm-block "
-            style={{
-              position: 'absolute',
-              top: '-40px',
-              right: '20px',
-            }}
-          >
-            <Rating
-              onClick={handleRating}
-              ratingValue={80}
-              fillColor={COLORS.YELLOW_100}
-              size={20}
-              className="starRaiting m-0"
-            />
-            <span className="raitingPointSmall m-0 mb-0">(250)</span>
-            <div className="d-flex justify-content-center">
-              <a href="https://mail.google.com/">
-                <GoMail className="socialLogoSmall" />{' '}
-              </a>
-              <a href="instagram.com">
-                <AiOutlineInstagram className="socialLogoSmall" />
-              </a>
-              <a href="facebook.com">
-                <FiFacebook className="socialLogoSmall" />
-              </a>
+          <div className="d-sm-none d-none d-md-block">
+            <div className="row">
+              <div className="col-md-5 brandInfoView">
+                <div className="d-flex align-items-center">
+                  <h3 className="brandName m-0">{vendor.brandName}</h3>
+                  <div className="starRaitingView">
+                    <Rating
+                      onClick={handleRating}
+                      ratingValue={80}
+                      fillColor={COLORS.YELLOW_100}
+                      size={22}
+                      className="starRaiting"
+                    />
+                    <span className="raitingPoint">(250)</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="brandDescription">
+                    Finest engraved wood watch for your love ones.
+                  </p>
+                </div>
+                <div className="venderSales">
+                  <div>
+                    <AiFillStar /> <span>Star seller | </span>
+                    <span>40,284 sales |</span>
+                  </div>
+                </div>
+                <button
+                  className="followBrandButton d-none d-md-block d-sm-none"
+                  onClick={() => setFavorite(!favorite)}
+                >
+                  {favorite ? (
+                    <span>
+                      <AiFillHeart className="FollowIconHeart" /> Unfollow Brand
+                      (169)
+                    </span>
+                  ) : (
+                    <div>
+                      <AiOutlineHeart className="FollowIconHeart" /> Follow
+                      Brand (168)
+                    </div>
+                  )}
+                </button>
+
+                <div className="shippingType d-md-none d-sm-block">
+                  <span className="align-items-center mr-2">
+                    <FaShuttleVan className="shippingLogo" /> {'   '}
+                    <span className="shipping-heading">Smooth shipping</span>|
+                    {'   '}
+                  </span>
+                  <span className="align-items-center">
+                    <GrMail className="shippingLogo" /> {'   '}
+                    <spaan className="shipping-heading">Speedy replies</spaan>
+                  </span>
+                </div>
+              </div>
+              <div className="col-md-4 Shipping d-none d-md-block d-sm-none">
+                <h4 className="ShippingMainHeader">
+                  stayfineofficial is a Star Seller!
+                </h4>
+                <div className="row">
+                  <div className="col-md-6 mt-3">
+                    <FaShuttleVan className="shippingLogo mb-2" />
+                    <h5 className="shipping-heading">Smooth shipping</h5>
+                    <p className="shipping-description m-0">
+                      Has a history of shipping on time with tracking
+                    </p>
+                  </div>
+                  <div className="col-md-6 mt-3">
+                    <GrMail className="shippingLogo mb-2" />
+                    <h5 className="shipping-heading">Speedy replies</h5>
+                    <p className="shipping-description m-0">
+                      Has a history of replying to messages quikly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 ShopMember text-center d-md-block d-sm-block">
+                <h4 className="ShopMemberMainHeading">Shop Owner</h4>
+                <div className="mt-4">
+                  <div className="memberProfileImg m-auto"></div>
+                  <p className="memberName">Paul Tian</p>
+                  <GoMail className="socialLogo" />{' '}
+                  <AiOutlineInstagram className="socialLogo" />
+                  <FiFacebook className="socialLogo" />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-5 brandInfoView">
-              <div className="d-flex justify-content-start align-items-center">
-                <h3 className="brandName">{vendor.brandName}</h3>
-                <div className="starRaitingView d-none d-md-block d-sm-none">
+          {/* /////////////////////////////////////////////////////////// */}
+          <div className="d-flex align-items-center justify-content-between d-md-none d-sm-block">
+            <div className="brandInfoView ">
+              <div className="d-flex align-items-center">
+                <h3 className="brandName m-0">{vendor.brandName}</h3>
+                <div className="starRaitingView">
                   <Rating
                     onClick={handleRating}
                     ratingValue={80}
                     fillColor={COLORS.YELLOW_100}
-                    size={26}
+                    size={16}
                     className="starRaiting"
                   />
                   <span className="raitingPoint">(250)</span>
@@ -233,7 +295,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               </div>
               <div>
                 <p className="brandDescription">
-                  Finest engraved wood watch for your love ones.
+                  Finest engraved wood watch your love.
                 </p>
               </div>
               <div className="venderSales">
@@ -258,49 +320,29 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </div>
                 )}
               </button>
-            </div>
-            <div className="col-md-4 Shipping d-none d-md-block">
-              <h4 className="ShippingMainHeader">
-                stayfineofficial is a Star Seller!
-              </h4>
-              <div className="row">
-                <div className="col-md-6 mt-3">
-                  <FaShuttleVan className="shippingLogo mb-2" />
-                  <h5 className="shipping-heading">Smooth shipping</h5>
-                  <p className="shipping-description m-0">
-                    Has a history of shipping on time with tracking
-                  </p>
-                </div>
-                <div className="col-md-6 mt-3">
-                  <GrMail className="shippingLogo mb-2" />
-                  <h5 className="shipping-heading">Speedy replies</h5>
-                  <p className="shipping-description m-0">
-                    Has a history of replying to messages quikly.
-                  </p>
-                </div>
+
+              <div className="shippingType d-md-none d-sm-block">
+                <span className="align-items-center mr-2">
+                  <FaShuttleVan className="shippingLogo" /> {'   '}
+                  <span className="shipping-heading">Smooth shipping</span>|
+                  {'   '}
+                </span>
+                <span className="align-items-center">
+                  <GrMail className="shippingLogo" /> {'   '}
+                  <spaan className="shipping-heading">Speedy replies</spaan>
+                </span>
               </div>
             </div>
-            <div className="shippingType d-md-none">
-              <span className="align-items-center mr-2">
-                <FaShuttleVan className="shippingLogo" /> {'   '}
-                <span className="shipping-heading">Smooth shipping</span>|
-                {'   '}
-              </span>
-              <span className="align-items-center">
-                <GrMail className="shippingLogo" /> {'   '}
-                <spaan className="shipping-heading">Speedy replies</spaan>
-              </span>
-            </div>
-
-            <div className="col-md-3 ShopMember text-center d-none d-md-block d-sm-none">
-              <h4 className="ShopMemberMainHeading">Shop Member</h4>
-
-              <div className="mt-4">
+            <div className="ShopMember text-center d-md-block d-sm-block ">
+              <h4 className="ShopMemberMainHeading">Shop Owner</h4>
+              <div className="mt-1">
                 <div className="memberProfileImg m-auto"></div>
                 <p className="memberName">Paul Tian</p>
-                <GoMail className="socialLogo" />{' '}
-                <AiOutlineInstagram className="socialLogo" />
-                <FiFacebook className="socialLogo" />
+                <div className="mt-2">
+                  <GoMail className="socialLogo" />{' '}
+                  <AiOutlineInstagram className="socialLogo" />
+                  <FiFacebook className="socialLogo" />
+                </div>
               </div>
             </div>
           </div>

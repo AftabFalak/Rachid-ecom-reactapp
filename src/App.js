@@ -15,6 +15,7 @@ import CartDrawer from './components/CartDrawer/CartDrawer';
 import YourCart from './pages/yourCart';
 import BundleViewPage from './pages/bundle-view';
 import Home from './pages/home';
+import GetInspiration from './pages/getInspiration';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/yourcart" element={<YourCart />} />
         <Route path="/bundle-view" element={<BundleViewPage />} />
         <Route path="/product" element={<ProductDetail />} />
+        <Route path="/get-inspiration" element={<GetInspiration />} />
 
         <Route
           path="/vendor"
