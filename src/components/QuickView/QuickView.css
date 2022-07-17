@@ -40,19 +40,19 @@
   z-index: 900000000000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .QuickView {
-    margin: 0;
-    min-width: 50vw;
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  
+
+    width: 90%;
+    height: 80%;
+
+    top: 10%;
+    left: 5%;
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .QuickView {
     margin: 0;
     min-width: 50vw;
@@ -62,4 +62,4 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-}
+} */

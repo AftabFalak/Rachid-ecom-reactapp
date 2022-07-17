@@ -21,12 +21,13 @@
 }
 
 .VenderProfile .vendorInfoView .followBrandButton {
-  padding: 12px 0px;
+  padding: 12px 15px;
   background-color: var(--white-100);
   border-radius: 15px;
   font-size: 20px;
   transition: all 0.5s;
-  width: 40%;
+  width: auto;
+  max-width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
   display: flex;

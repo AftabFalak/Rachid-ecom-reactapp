@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import FilterDrawer from '../FilterDrawer';
 import BoxItem from './BoxItem';
+import QuickView from '../QuickView/QuickView';
+
 import './index.css';
 
 export const allCategorie = [
@@ -126,7 +128,7 @@ const Gallery = ({
   const toggleOpenDrawer = () => {
     setOpen(!open);
   };
-
+  const [quick, setQuick] = useState(false);
   const [filters, setFilters] = useState({
     category: 'All Categories',
     offers: '',
@@ -204,10 +206,10 @@ const Gallery = ({
           columnClassName="my-masonry-grid_column"
         >
           {cards.map((item, index) => {
-            return <BoxItem key={`card-${index}`} item={item} />;
+            return <BoxItem key={`card-${index}`} setQuick={setQuick} item={item} />;
           })}
         </Masonry>
-
+        {quick && <QuickView setQuick={setQuick} />}
         {open && (
           <FilterDrawer
             open={open}

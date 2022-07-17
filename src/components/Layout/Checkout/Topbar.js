@@ -11,15 +11,15 @@ const Topbar = ({ page, tabs }) => {
     <div id="checkout-topbar">
       {tabs.map(({ link, endPoint, icon, iconActive, title, id }, index) => (
         <Link to={link} className="singleTab" onClick={() => setArr([])}>
-          {page === endPoint ? (
+          {tabs.findIndex(t=>page===t.endPoint)>=id ? (
             <div className="checkedIconDiv">
               <BsFillCheckCircleFill className={`checkedIcon`} />
             </div>
           ) : (
-            <></>
+            <> </>
           )}
-          {page === endPoint ? iconActive : icon}
-          <p className={`${page === endPoint && 'activeText'}`}>
+          {(page === endPoint || tabs.findIndex(t=>page===t.endPoint)>=id) ? iconActive : icon}
+          <p className={`${(page === endPoint || tabs.findIndex(t=>page===t.endPoint)>=id) && 'activeText'}`}>
             {id}- {title}
           </p>
         </Link>

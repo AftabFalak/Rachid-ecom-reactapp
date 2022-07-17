@@ -215,6 +215,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                     <span>40,284 sales |</span>
                   </div>
                 </div>
+                <div>
                 <button
                   className="followBrandButton d-none d-md-block d-sm-none"
                   onClick={() => setFavorite(!favorite)}
@@ -231,7 +232,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                     </div>
                   )}
                 </button>
-
+                </div>
                 <div className="shippingType d-md-none d-sm-block">
                   <span className="align-items-center mr-2">
                     <FaShuttleVan className="shippingLogo" /> {'   '}

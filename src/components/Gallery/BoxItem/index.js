@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './index.css';
 import QuickView from '../../QuickView/QuickView';
-const BoxItem = ({ item }) => {
-  const [quick, setQuick] = useState(false);
+const BoxItem = ({ item ,quick, setQuick}) => {
+
 
   return (
     <div className="BoxItem">
@@ -27,7 +27,7 @@ const BoxItem = ({ item }) => {
         </p>
       </div>
       <img width={'100%'} src={item.img} />
-      {quick && <QuickView setQuick={setQuick} />}
+      
     </div>
   );
 };
