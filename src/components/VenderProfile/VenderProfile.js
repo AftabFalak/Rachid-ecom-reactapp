@@ -232,7 +232,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                     </div>
                   )}
                 </button>
-                </div>
+                </div>  
                 <div className="shippingType d-md-none d-sm-block">
                   <span className="align-items-center mr-2">
                     <FaShuttleVan className="shippingLogo" /> {'   '}

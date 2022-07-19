@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './index.css';
-import QuickView from '../../QuickView/QuickView';
 const BoxItem = ({ item ,quick, setQuick}) => {
 
 
