@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import ImagePopupGallery from '../ImagePopupGallery';
 import './index.css';
-const ProductMainSlider = ({ images }) => {
+const ProductMainSlider = ({ images ,viewDetail }) => {
   const [data, setData] = useState({
     photoIndex: 0,
     isOpen: false,
@@ -40,6 +40,14 @@ const ProductMainSlider = ({ images }) => {
                 >
                   <i className="fas fa-expand-arrows-alt"></i>
                 </button>
+
+                {viewDetail&&<a
+                  className="view-detail-btn"
+                  href='/product'
+     
+                >
+                View Details
+                </a>}
               </div>
             );
           })}

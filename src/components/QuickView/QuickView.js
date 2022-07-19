@@ -1,22 +1,22 @@
-import React from 'react';
-import './QuickView.css';
-import ProductMainSlider from '../ProductMainSlider';
-import ProductDetail from '../ProductDetail/ProductDetail';
+import React from "react";
+import "./QuickView.css";
+import ProductMainSlider from "../ProductMainSlider";
+import ProductDetail from "../ProductDetail/ProductDetail";
 
-import { IoCloseOutline } from 'react-icons/io5';
+import { IoCloseOutline } from "react-icons/io5";
 const QuickView = ({ open, handleToggle, setQuick }) => {
   const product = {
     images: [
       {
-        img: '/Assets/images/ProductList/p1.jpeg',
+        img: "/Assets/images/ProductList/p1.jpeg",
         liked: false,
       },
       {
-        img: '/Assets/images/ProductList/p1.jpeg',
+        img: "/Assets/images/ProductList/p1.jpeg",
         liked: true,
       },
       {
-        img: '/Assets/images/ProductList/p1.jpeg',
+        img: "/Assets/images/ProductList/p1.jpeg",
         liked: false,
       },
     ],
@@ -34,7 +34,7 @@ const QuickView = ({ open, handleToggle, setQuick }) => {
         </button>
       </div>
       <div className="QuickView">
-        <ProductDetail quickView />
+        <ProductDetail setQuick={setQuick} viewDetail quickView />
       </div>
     </>
   );

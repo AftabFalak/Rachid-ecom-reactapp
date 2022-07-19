@@ -4,13 +4,13 @@ import BundleView from '../../components/BundleView';
 
 import { TbShirt } from 'react-icons/tb';
 import Slider from 'react-slick';
-
+import './index.css'
 const Home = () => {
   let settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 7,
     slidesToScroll: 1,
     responsive: [
       {
@@ -43,10 +43,45 @@ const Home = () => {
     <div className="Home">
       <MainCarosuel />
 
-      <div className="m-5 bg-light">
+      <div className="m-5 bg-light slide-parent">
         <Slider {...settings}>
           <div className="slide-single">
-            <TbShirt style={{ fontSize: '30px' }} />
+          <img src='/Assets/images/brand-logos/art.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/bea.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/fur.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/com.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/sprt.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/art.jpeg'/>
+
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/art.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/bea.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/fur.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/com.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/sprt.jpeg'/>
+          </div>
+          <div className="slide-single">
+          <img src='/Assets/images/brand-logos/art.jpeg'/>
+          
           </div>
         </Slider>
       </div>

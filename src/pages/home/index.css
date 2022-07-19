@@ -1,0 +1,14 @@
+.Home .slide-parent .slide-single{
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+}
+.Home .slide-parent .slick-slide  div{
+
+    height: 100%!important;
+}
+
+.Home .slide-parent img{
+    max-width: 120px;
+    margin: auto;
+}
