@@ -128,9 +128,15 @@ const CartDrawer = (props) => {
           </span>
         </div>
         <div className="buttonsDiv">
-          <button className="viewCart">VIEW CART</button>
           <Link
-            to="/yourcart"
+            to="/checkout/detail"
+            className="view-cart"
+            onClick={() => props.setDrawertoggle(false)}
+          >
+            VIEW CART
+          </Link>
+          <Link
+            to="/checkout/shoppingcart"
             className="checkout"
             onClick={() => props.setDrawertoggle(false)}
           >

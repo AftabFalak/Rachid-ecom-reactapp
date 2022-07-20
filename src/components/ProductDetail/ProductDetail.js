@@ -1,33 +1,33 @@
-import React, { useState } from "react";
-import "./ProductDetail.css";
-import Faq from "react-faq-component";
+import React, { useState } from 'react';
+import './ProductDetail.css';
+import Faq from 'react-faq-component';
 
-import productImage from "../../assets/images/ProductCardImage/brand.png";
-import card1 from "../../assets/images/ProductCardImage/shoe.PNG";
-import card2 from "../../assets/images/ProductCardImage/ring.PNG";
-import card3 from "../../assets/images/ProductCardImage/bag.PNG";
+import productImage from '../../assets/images/ProductCardImage/brand.png';
+import card1 from '../../assets/images/ProductCardImage/shoe.PNG';
+import card2 from '../../assets/images/ProductCardImage/ring.PNG';
+import card3 from '../../assets/images/ProductCardImage/bag.PNG';
 
-import brandLogo from "../../assets/images/VendorProfile/brand2.PNG";
+import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
 
-import { FaFacebookF } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
-import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF } from 'react-icons/fa';
+import { BsTwitter } from 'react-icons/bs';
+import { AiFillInstagram } from 'react-icons/ai';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Link } from "react-router-dom";
-import ProductMainSlider from "../ProductMainSlider";
-import RelatedProductsSlider from "../RelatedProductsSlider";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Link } from 'react-router-dom';
+import ProductMainSlider from '../ProductMainSlider';
+import RelatedProductsSlider from '../RelatedProductsSlider';
 
-import BundleView from "../BundleView";
-import Policies from "../core/Policies";
-import MeetSeller from "../core/MeetSeller";
-import ReviewsTab from "../ReviewsTabs";
-import { IoCloseOutline } from "react-icons/io5";
+import BundleView from '../BundleView';
+import Policies from '../core/Policies';
+import MeetSeller from '../core/MeetSeller';
+import ReviewsTab from '../ReviewsTabs';
+import { IoCloseOutline } from 'react-icons/io5';
 const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
   // const { check, setCheck } = useState(false);
   const [selection, setSelection] = useState({
-    color: "",
-    size: "",
+    color: '',
+    size: '',
     quantity: 1,
   });
   const [liked, setLiked] = useState(false);
@@ -35,8 +35,8 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
   const cards = [
     {
       image: card1,
-      brandName: "Outfitter",
-      productTitle: "Bag",
+      brandName: 'Outfitter',
+      productTitle: 'Bag',
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -44,8 +44,8 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
     },
     {
       image: card2,
-      brandName: "Levise",
-      productTitle: "Bag",
+      brandName: 'Levise',
+      productTitle: 'Bag',
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -53,8 +53,8 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
     },
     {
       image: card3,
-      brandName: "Denizen",
-      productTitle: "Bag",
+      brandName: 'Denizen',
+      productTitle: 'Bag',
       stock: 4,
       price: 344.4,
       oldPrice: 344.4,
@@ -65,30 +65,30 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
   const product = {
     images: [
       {
-        img: "/Assets/images/ProductList/p1.jpeg",
+        img: '/Assets/images/ProductList/p1.jpeg',
         liked: false,
       },
       {
-        img: "/Assets/images/ProductList/p1.jpeg",
+        img: '/Assets/images/ProductList/p1.jpeg',
         liked: true,
       },
       {
-        img: "/Assets/images/ProductList/p1.jpeg",
+        img: '/Assets/images/ProductList/p1.jpeg',
         liked: false,
       },
     ],
-    otherImages: ["ring.PNG", "shoe.PNG", "bag.PNG", "ring.PNG"],
-    colors: ["black", "yello", "green"],
-    sizes: ["L", "XL", "XXL"],
+    otherImages: ['ring.PNG', 'shoe.PNG', 'bag.PNG', 'ring.PNG'],
+    colors: ['black', 'yello', 'green'],
+    sizes: ['L', 'XL', 'XXL'],
     faqs: {
-      title: "",
+      title: '',
       rows: [
         {
-          title: "Shipping and return policies",
+          title: 'Shipping and return policies',
           content: <Policies />,
         },
         {
-          title: "Contant your sellers",
+          title: 'Contant your sellers',
           content: <MeetSeller />,
         },
       ],
@@ -101,14 +101,14 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
         <div className="col-md-5">
           <ProductMainSlider viewDetail={viewDetail} images={product.images} />
 
-          <button
+          {/* <button
             className="clsButton"
             onClick={() => {
               setQuick(false);
             }}
           >
             <IoCloseOutline />
-          </button>
+          </button> */}
           {!quickView && (
             <div className="d-none d-md-block">
               <ReviewsTab />
@@ -127,7 +127,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
               </h2>
               <a href="/vendor">
                 <img
-                  src={"/Assets/images/VendorProfile/brand3.jpeg"}
+                  src={'/Assets/images/VendorProfile/brand3.jpeg'}
                   alt="BrandLogo"
                   className="brandLogo"
                 />
@@ -153,7 +153,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
                       <div
                         onClick={() => setSelection({ ...selection, color })}
                         className={`circle ${
-                          color === selection.color ? "color-selected" : ""
+                          color === selection.color ? 'color-selected' : ''
                         }`}
                       >
                         <div
@@ -175,7 +175,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
                           setSelection({ ...selection, size: size })
                         }
                         className={`size ${
-                          size === selection.size ? "size-selected" : ""
+                          size === selection.size ? 'size-selected' : ''
                         }`}
                       >
                         <p className="w-100 m-0 mb-1">{size}</p>
@@ -252,7 +252,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
               </div>
             </div>
 
-            <hr style={{ marginBottom: "0px" }} />
+            <hr style={{ marginBottom: '0px' }} />
 
             {!quickView && <Faq data={product.faqs} />}
 

@@ -2,17 +2,14 @@
 import React, { useState } from 'react';
 import './NavbarBottom.css';
 import { Link } from 'react-router-dom';
-
-import { FaTimes } from 'react-icons/fa';
-
 import {
   AiOutlineSearch,
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineUser,
 } from 'react-icons/ai';
-import { IoCloseOutline } from 'react-icons/io5';
 
+import { IoCloseOutline } from 'react-icons/io5';
 
 import { BsCart2 } from 'react-icons/bs';
 
@@ -29,7 +26,7 @@ function NavbarBottom(props) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState(false);
 
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState('');
 
   const toggleOpenDrawer = () => {
     setOpen(!open);
@@ -59,8 +56,8 @@ function NavbarBottom(props) {
               </Link>
             </span>
             <span className="NavbarLinks-Item">
-              <Link className="nav-link NavLink" to="/get-inspiration">
-                Get inspiration
+              <Link className="nav-link NavLink" to="/dashboard/accountInfo">
+                My Dashboard
               </Link>
             </span>
           </div>
@@ -72,7 +69,14 @@ function NavbarBottom(props) {
           </div>
 
           <ul className="navbar-nav ">
-            <div style={{ width: '250px', display:'flex', justifyContent:'flex-end', alignItems:'center'}}>
+            <div
+              style={{
+                width: '250px',
+                display: 'flex',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+              }}
+            >
               {!search ? (
                 <li
                   className="nav-item signInLink"
@@ -95,24 +99,30 @@ function NavbarBottom(props) {
                         value={searchText}
                         name="search"
                       />
-                    
+
                       <IoCloseOutline
-                           onClick={() => setSearch(false)}
-                           className="searchCrossIcon"
+                        onClick={() => setSearch(false)}
+                        className="searchCrossIcon"
                       />
                     </div>
-                    {searchText.length <= 0 && <div className="icon-s">
-                      <AiOutlineSearch className="signInLogo" />
-                    </div>}
+                    {searchText.length <= 0 && (
+                      <div className="icon-s">
+                        <AiOutlineSearch className="signInLogo" />
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
             </div>
             <li className="nav-item signInLink">
-              <a className="nav-link text-dark" href="#">
+              <Link
+                to="/dashboard/wishlist"
+                className="nav-link text-dark"
+                href="#"
+              >
                 <IoIosHeartEmpty className="signInLogo" />
                 <p className="signInText">Wishlist</p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item signInLink" onClick={props.toggleDrawer}>
               <a className="nav-link text-dark" href="#">
@@ -133,8 +143,6 @@ function NavbarBottom(props) {
           </ul>
         </nav>
       </nav>
-
-
 
       {/* small screen */}
 
@@ -177,7 +185,7 @@ function NavbarBottom(props) {
                     />
                   </a>
                 </li>
-                <li className="mob-li" onClick={props.toggleDrawer}>
+                <li className="mob-li" onClick={props.toggleDrawerCart}>
                   <a className="" href="#">
                     <AiOutlineShoppingCart
                       className="signInLogo"
@@ -193,9 +201,9 @@ function NavbarBottom(props) {
             <div>
               <div className="d-flex align-items-center">
                 <input type={'text'} placeholder={'Search'} className="mr-2" />
-                <FaTimes
+                <IoCloseOutline
                   onClick={() => setSearch(false)}
-                  className="searchCrossIconMob"
+                  className="search-cross-iconMob"
                 />
               </div>
 

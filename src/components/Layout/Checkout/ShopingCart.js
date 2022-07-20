@@ -11,7 +11,6 @@ const ShopingCart = ({ orders, OrderDeleteHandler }) => {
 
   return (
     <div id="ShoppingCart">
-      <h2>Your Cart</h2>
       <div className="row">
         <div className="col-md-8 ">
           <table className="table">

@@ -54,7 +54,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/yourcart" element={<YourCart />} />
         <Route path="/bundle-view" element={<BundleViewPage />} />
-        <Route path="/product" element={<ProductDetail />} />
+        <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/get-inspiration" element={<GetInspiration />} />
 
         <Route

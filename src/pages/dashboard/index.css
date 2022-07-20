@@ -133,8 +133,10 @@
 #orders .canceled {
   background-color: #6c757d;
 }
-#orders .viewIcon {
+#orders .actionIcons {
   color: var(--action-color);
+  font-size: 22px;
+  margin: 0px 2px;
 }
 
 #orders .top-sec {
@@ -165,6 +167,8 @@
 }
 #whishlist .actionIcons {
   color: var(--action-color) !important;
+  font-size: 22px;
+  margin: 0px 2px;
 }
 
 #cards .cards-view {

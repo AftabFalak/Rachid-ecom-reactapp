@@ -206,10 +206,12 @@ const Gallery = ({
           columnClassName="my-masonry-grid_column"
         >
           {cards.map((item, index) => {
-            return <BoxItem key={`card-${index}`} setQuick={setQuick} item={item} />;
+            return (
+              <BoxItem key={`card-${index}`} setQuick={setQuick} item={item} />
+            );
           })}
         </Masonry>
-        {quick && <QuickView setQuick={setQuick} />}
+        {quick && <QuickView onClose={() => setQuick(false)} />}
         {open && (
           <FilterDrawer
             open={open}

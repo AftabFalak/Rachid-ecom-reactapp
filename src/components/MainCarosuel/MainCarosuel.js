@@ -19,7 +19,7 @@ const MainCarosuel = () => {
               className="d-block "
               src={require('../../assets/images/Home/mainn.png')}
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
               <h5 className="text-light">Heading</h5>
               <p className="text-light">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
@@ -34,7 +34,7 @@ const MainCarosuel = () => {
               className="d-block "
               src={require('../../assets/images/Home/mainn.png')}
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
               <h5 className="text-light">Heading</h5>
               <p className="text-light">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
@@ -49,7 +49,7 @@ const MainCarosuel = () => {
               className="d-block "
               src={require('../../assets/images/Home/mainn.png')}
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
               <h5 className="text-light">Heading</h5>
               <p className="text-light">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint

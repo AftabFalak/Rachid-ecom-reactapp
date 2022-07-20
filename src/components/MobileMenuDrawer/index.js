@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 import './index.css';
 
+import { IoCloseOutline } from 'react-icons/io5';
 const MobileMenuDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();
@@ -40,35 +40,35 @@ const MobileMenuDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
               <img width={'150px'} src={'/Assets/images/MainLogo/logo.jpeg'} />
             </div>
             <button className="closeButton" onClick={() => drawertoggle()}>
-              <i className="fa fa-times cross-icon"></i>
+              <IoCloseOutline className="searchCrossIcon" />
             </button>
           </div>
           <div className="menu-list">
             <ul>
               <li className="list-item border-bottom">
-                <a href={'/home'} className="link">
+                <Link to="/" className="link">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="list-item border-bottom">
-                <a href={'/shop'} className="link">
+                <Link to="/shop" className="link">
                   Shop
-                </a>
+                </Link>
               </li>
               <li className="list-item border-bottom">
-                <a href={'/store-list'} className="link">
+                <Link to="/store-list" className="link">
                   Store-list
-                </a>
+                </Link>
               </li>
               <li className="list-item border-bottom">
-                <a href={'/inspiration'} className="link">
+                <Link to="/inspiration" className="link">
                   Get Inspiration
-                </a>
+                </Link>
               </li>
               <li className="list-item border-bottom">
-                <a href={'/dashboard/accountInfo'} className="link">
+                <Link to="/dashboard/accountInfo" className="link">
                   My Dashboard
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

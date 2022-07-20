@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
+import { IoTrashBinOutline, IoCartOutline } from 'react-icons/io5';
+import { AiOutlineEye } from 'react-icons/ai';
+
+const Wishlist = ({ wishList, wishlistDeleteHandler, QuickView }) => {
+  const [quickviewModal, setQuickViewModal] = useState(undefined);
+
   return (
     <div className="tab-pane show active" id="whishlist">
       <div className="row">
@@ -28,9 +33,9 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                           <img
                             src={image}
                             style={{
-                              width: "50px",
-                              height: "50px",
-                              resize: "contain",
+                              width: '50px',
+                              height: '50px',
+                              resize: 'contain',
                             }}
                           />
                         </th>
@@ -38,14 +43,14 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
                         <td>{productDetail}</td>
                         <td>${price}</td>
                         <td>
+                          <span onClick={() => setQuickViewModal(true)}>
+                            <AiOutlineEye className="actionIcons" />
+                          </span>
                           <span>
-                            <i className="fa fa-eye actionIcons"></i>
-                          </span>{" "}
-                          <span>
-                            <i className="fa fa-cart-arrow-down actionIcons"></i>
-                          </span>{" "}
+                            <IoCartOutline className="actionIcons" />
+                          </span>{' '}
                           <span onClick={() => wishlistDeleteHandler(id)}>
-                            <i className="fa fa-trash actionIcons"></i>
+                            <IoTrashBinOutline className="actionIcons" />
                           </span>
                         </td>
                       </tr>
@@ -57,6 +62,11 @@ const Wishlist = ({ wishList, wishlistDeleteHandler }) => {
           </div>
         </div>
       </div>
+      {quickviewModal ? (
+        <QuickView onClose={() => setQuickViewModal(false)} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

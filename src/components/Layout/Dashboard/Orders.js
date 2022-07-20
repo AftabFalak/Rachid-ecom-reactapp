@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
-import queryString from "query-string";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
+
+import { useNavigate } from 'react-router-dom';
+import { AiOutlineEye } from 'react-icons/ai';
+import { IoCartOutline } from 'react-icons/io5';
+
 const Orders = ({ orders, QuickView }) => {
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState('');
   const [orderList, setOrderList] = useState(orders);
   const [quickview, setQuickView] = useState(false);
   const navigation = useNavigate();
   const query = queryString.parse(window.location.search);
 
   useEffect(() => {
-    if (!query.status || query.status === "All") {
+    if (!query.status || query.status === 'All') {
       setOrderList([...orders]);
       setOption(query.status);
       return;
@@ -48,7 +52,7 @@ const Orders = ({ orders, QuickView }) => {
                     <option value="All">All</option>
                     <option value="Shipped">Shipped</option>
                     <option value="Pending">Pending</option>
-                    <option value="Canceled">Canceled</option>s{" "}
+                    <option value="Canceled">Canceled</option>s{' '}
                   </select>
                 </div>
                 <table className="table mb-0">
@@ -74,9 +78,9 @@ const Orders = ({ orders, QuickView }) => {
                             <img
                               src={imageUrl}
                               style={{
-                                width: "50px",
-                                height: "50px",
-                                resize: "contain",
+                                width: '50px',
+                                height: '50px',
+                                resize: 'contain',
                               }}
                             />
                           </th>
@@ -92,10 +96,10 @@ const Orders = ({ orders, QuickView }) => {
                           <td>${price}</td>
                           <td>
                             <span onClick={() => setQuickView(true)}>
-                              <i className="fa fa-eye viewIcon"></i>{" "}
+                              <AiOutlineEye className="actionIcons" />
                             </span>
                             <span>
-                              <i className="fa fa-cart-arrow-down viewIcon"></i>
+                              <IoCartOutline className="actionIcons" />
                             </span>
                           </td>
                         </tr>
@@ -108,11 +112,13 @@ const Orders = ({ orders, QuickView }) => {
           </div>
         </div>
       </div>
-      {quickview && (
+      {quickview ? (
         <QuickView
           open={quickview}
           handleToggle={() => setQuickView(!quickview)}
         />
+      ) : (
+        <></>
       )}
     </>
   );

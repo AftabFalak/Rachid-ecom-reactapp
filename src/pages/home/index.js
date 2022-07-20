@@ -4,7 +4,7 @@ import BundleView from '../../components/BundleView';
 
 import { TbShirt } from 'react-icons/tb';
 import Slider from 'react-slick';
-import './index.css'
+import './index.css';
 const Home = () => {
   let settings = {
     dots: false,
@@ -46,49 +46,48 @@ const Home = () => {
       <div className="m-5 bg-light slide-parent">
         <Slider {...settings}>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/art.jpeg'/>
+            <img src="/Assets/images/brand-logos/art.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/bea.jpeg'/>
+            <img src="/Assets/images/brand-logos/bea.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/fur.jpeg'/>
+            <img src="/Assets/images/brand-logos/fur.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/com.jpeg'/>
+            <img src="/Assets/images/brand-logos/com.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/sprt.jpeg'/>
+            <img src="/Assets/images/brand-logos/sprt.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/art.jpeg'/>
-
+            <img src="/Assets/images/brand-logos/art.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/art.jpeg'/>
+            <img src="/Assets/images/brand-logos/art.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/bea.jpeg'/>
+            <img src="/Assets/images/brand-logos/bea.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/fur.jpeg'/>
+            <img src="/Assets/images/brand-logos/fur.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/com.jpeg'/>
+            <img src="/Assets/images/brand-logos/com.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/sprt.jpeg'/>
+            <img src="/Assets/images/brand-logos/sprt.jpeg" />
           </div>
           <div className="slide-single">
-          <img src='/Assets/images/brand-logos/art.jpeg'/>
-          
+            <img src="/Assets/images/brand-logos/art.jpeg" />
           </div>
         </Slider>
       </div>
-
-      <BundleView />
-      <BundleView right={false} />
-      <BundleView />
+      <div>
+        <BundleView header={false} />
+        <BundleView header={false} />
+        <BundleView header={false} />
+      </div>
     </div>
   );
 };

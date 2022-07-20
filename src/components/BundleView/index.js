@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import SingleBrandView from './SingleBrandView';
 
-const BundleView = ({ right }) => {
+const BundleView = ({ header, right }) => {
   const [tab, setTab] = useState(1);
 
   const views = [
@@ -98,29 +98,31 @@ const BundleView = ({ right }) => {
 
   return (
     <div className="BundleView p-3">
-      <div className="getInspiration">
-        <h2>Get Inspiration</h2>
-        <div className="LookButtons">
-          <button
-            onClick={() => setTab(1)}
-            className={`lookBtn ${tab === 1 && 'activeLook'}`}
-          >
-            Look A
-          </button>
-          <button
-            onClick={() => setTab(2)}
-            className={`lookBtn ${tab === 2 && 'activeLook'}`}
-          >
-            Look B
-          </button>
-          <button
-            onClick={() => setTab(3)}
-            className={`lookBtn ${tab === 3 && 'activeLook'}`}
-          >
-            Look C
-          </button>
+      {(header || header === undefined) && (
+        <div className="getInspiration">
+          <h2>Get Inspiration</h2>
+          <div className="LookButtons">
+            <button
+              onClick={() => setTab(1)}
+              className={`lookBtn ${tab === 1 && 'activeLook'}`}
+            >
+              Look A
+            </button>
+            <button
+              onClick={() => setTab(2)}
+              className={`lookBtn ${tab === 2 && 'activeLook'}`}
+            >
+              Look B
+            </button>
+            <button
+              onClick={() => setTab(3)}
+              className={`lookBtn ${tab === 3 && 'activeLook'}`}
+            >
+              Look C
+            </button>
+          </div>
         </div>
-      </div>
+      )}
       <SingleBrandView view={views[tab - 1]} right />
     </div>
   );

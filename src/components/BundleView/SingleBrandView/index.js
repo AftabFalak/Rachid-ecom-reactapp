@@ -6,7 +6,7 @@ const SingleBrandView = ({ view, right }) => {
   const [liked, setLiked] = useState(false);
   return (
     <divn>
-      {right ? (
+      {!right ? (
         <div className="row">
           <div className="col-md-6">
             <BundleProductsSlider products={view.products} />

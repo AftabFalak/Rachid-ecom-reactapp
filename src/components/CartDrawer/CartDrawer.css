@@ -189,10 +189,8 @@
   padding: 15px 12px;
   display: flex;
   flex-direction: column;
-  color: var(--main-color);
 }
-.CartDrawer .bottomDiv .buttonsDiv button,
-.CartDrawer .bottomDiv .buttonsDiv a {
+.CartDrawer .bottomDiv .buttonsDiv .view-cart {
   margin: 3px 0px;
   border: none;
   outline: none;
@@ -200,8 +198,15 @@
   border-radius: 20px;
   background-color: #f7f7f7;
   text-align: center;
+  color: black;
 }
 .CartDrawer .bottomDiv .buttonsDiv .checkout {
+  margin: 3px 0px;
+  border: none;
+  outline: none;
+  padding: 9px 0px;
+  border-radius: 20px;
+  text-align: center;
   background-color: var(--action-color);
   color: #fff;
 }

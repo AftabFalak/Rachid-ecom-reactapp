@@ -114,8 +114,8 @@
   padding-right: 20px;
 }
 
-.search-mob .searchCrossIconMob {
-  font-size: 20px;
+.search-mob .search-cross-iconMob {
+  font-size: 30px;
   font-weight: normal;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
@@ -132,7 +132,7 @@
 
 .search-mob .icon-s-mob {
   position: absolute;
-  right: 40px;
+  right: 45px;
   top: 17px;
 }
 .search-desktop {

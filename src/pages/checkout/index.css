@@ -252,7 +252,7 @@
   color: white;
   border: none;
   outline: none;
-  padding: 5px 0px;
+  padding: 10px 0px;
   font-weight: bold;
   text-align: center;
   width: 95%;
@@ -576,12 +576,14 @@
   justify-content: space-between;
 }
 #Payment .creditCardDiv .creditCardFooter {
-  border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding: 12px 12px;
   font-size: 15px;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 #Payment .creditCardDiv .creditCardHeader .circleIcon,
 #Payment .creditCardDiv .creditCardFooter .circleIcon {
@@ -591,6 +593,7 @@
 }
 #Payment .creditCardDiv .creditMain {
   padding: 12px;
+  margin: 0;
 }
 
 #Payment .creditCardDiv .creditMain .cardLogos {
@@ -622,6 +625,7 @@
   }
   #checkout-topbar .singleTab .checkedIcon {
     font-size: 14px;
+    color: #e6f9f0;
   }
 
   #checkout-topbar .singleTab .TabIcon {
