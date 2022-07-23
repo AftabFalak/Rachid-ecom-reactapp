@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const CartTotal = ({ proceedButton }) => {
+const CartTotal = ({ title, navigate }) => {
   return (
     <div id="CartTotal">
       <div className="Header">
@@ -20,13 +20,12 @@ const CartTotal = ({ proceedButton }) => {
           <span className="totalPrice value">$360.00</span>
         </div>
       </div>
-      {proceedButton && (
-        <div className="buttonDivProceed">
-          <Link to="/checkout/detail" className="proceedButton">
-            Proceed To Checkout
-          </Link>
-        </div>
-      )}
+
+      <div className="buttonDivProceed">
+        <Link to={navigate} className="proceedButton">
+          {title}
+        </Link>
+      </div>
     </div>
   );
 };

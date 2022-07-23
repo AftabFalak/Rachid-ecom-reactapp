@@ -34,9 +34,9 @@ function NavbarBottom(props) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg d-none d-lg-block border-bottom p-0 custonNavbar">
+      <nav className="navbar navbar-expand-lg d-none d-lg-block border-bottom p-0 customNavbar">
         <nav
-          className="collapse navbar-collapse justify-content-between"
+          className="collapse navbar-collapse d-flex justify-content-between"
           id="navbarToggle"
         >
           <div className="NavbarLinks">
@@ -68,13 +68,16 @@ function NavbarBottom(props) {
             </Link>
           </div>
 
-          <ul className="navbar-nav ">
+          <ul className="navbar-nav">
             <div
               style={{
-                width: '250px',
-                display: 'flex',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
+                // width: '250px',
+                // position: 'relative',
+                // display: 'flex',
+                // justifyContent: 'flex-end',
+                // alignItems: 'center',
+                // border: '1px solid red',
+                position: 'relative',
               }}
             >
               {!search ? (

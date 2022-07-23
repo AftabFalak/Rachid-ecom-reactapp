@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import OrderSummary from './OrderSummary';
+
+import CartTotal from './CartTotals';
 import { Link } from 'react-router-dom';
 
 import { FiCreditCard } from 'react-icons/fi';
@@ -216,7 +217,10 @@ const Payment = ({ orders }) => {
           </div>
         </div>
         <div className="col-md-4">
-          <OrderSummary />
+          <CartTotal
+            title={'Proceed To Review'}
+            navigate={'/checkout/review'}
+          />
         </div>
       </div>
     </div>

@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import './index.css';
-const BoxItem = ({ item ,quick, setQuick}) => {
+import { BsCartPlus } from 'react-icons/bs';
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
 
-
+const BoxItem = ({ item, quick, setQuick }) => {
+  const [like, setLike] = useState(false);
   return (
     <div className="BoxItem">
       <div className="buttons">
         <span>
-          <i className="fa fa-cart-plus"></i>
+          <BsCartPlus />
         </span>
-        <span className="icon">
-          <i className="fa fa-heart"></i>
+
+        <span onClick={() => setLike(!like)} className="icon">
+          {!like ? <AiOutlineHeart /> : <AiFillHeart />}
         </span>
+
         <span className="icon" onClick={() => setQuick(true)}>
-          <i className="fa fa-search"></i>
+          <AiOutlineSearch />
         </span>
       </div>
       <div className="textArea">
@@ -26,7 +30,6 @@ const BoxItem = ({ item ,quick, setQuick}) => {
         </p>
       </div>
       <img width={'100%'} src={item.img} />
-      
     </div>
   );
 };

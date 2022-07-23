@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import OrderSummary from './OrderSummary';
+import CartTotal from './CartTotals';
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
@@ -143,7 +143,7 @@ const Review = ({ orders }) => {
           </div>
         </div>
         <div className="col-md-4">
-          <OrderSummary />
+          <CartTotal title={'Complete Order'} navigate={'/checkout/review'} />
         </div>
       </div>
     </div>

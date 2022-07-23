@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 const Annoucements = () => {
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+      setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className="announcementDescription">
+        {isReadMore ? text.slice(0, 180) : text}
+        <span onClick={toggleReadMore} className="read-or-hide">
+          {isReadMore ? '...read more' : ' show less'}
+        </span>
+      </p>
+    );
+  };
+
   return (
     <div className="bg-white Announcements">
       <h3 className="m-0 announcementHeading">Annoucements</h3>
       <span className="m-0 span">Updated on 23 Nov 2021</span>
-      <p className="announcementDescription">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only
-        five.
-      </p>
+      <ReadMore>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
+        nostrum, ad iste facere illum voluptatum. Illum eum voluptatem ab dolor,
+        libero qui cupiditate natus iste necessitatibus quam non? Eos, tempore
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta ex
+        aliquid beatae rerum
+      </ReadMore>
     </div>
   );
 };

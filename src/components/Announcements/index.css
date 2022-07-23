@@ -14,6 +14,11 @@
   color: var(--black-100) !important;
 }
 
+.read-or-hide {
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+  color: #1673ba;
+}
 @media (max-width: 900px) {
   .announcementDescription {
     width: 100%;

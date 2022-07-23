@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { IoTrashBinOutline, IoCartOutline } from 'react-icons/io5';
 import { AiOutlineEye } from 'react-icons/ai';
 
+import { BsCartPlus } from 'react-icons/bs';
+
 const Wishlist = ({ wishList, wishlistDeleteHandler, QuickView }) => {
   const [quickviewModal, setQuickViewModal] = useState(undefined);
 
@@ -47,7 +49,7 @@ const Wishlist = ({ wishList, wishlistDeleteHandler, QuickView }) => {
                             <AiOutlineEye className="actionIcons" />
                           </span>
                           <span>
-                            <IoCartOutline className="actionIcons" />
+                            <BsCartPlus className="actionIcons" />
                           </span>{' '}
                           <span onClick={() => wishlistDeleteHandler(id)}>
                             <IoTrashBinOutline className="actionIcons" />

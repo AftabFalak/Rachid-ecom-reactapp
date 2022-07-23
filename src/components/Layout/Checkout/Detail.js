@@ -121,7 +121,10 @@ const Detail = () => {
           </div>
         </div>
         <div className="col-md-4">
-          <CartTotal proceedButton={true} />
+          <CartTotal
+            title={'Proceed To Payment'}
+            navigate={'/checkout/payment'}
+          />
         </div>
       </div>
     </div>

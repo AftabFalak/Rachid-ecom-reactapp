@@ -126,6 +126,7 @@ export const items = [
     img: m9,
   },
 ];
+
 const VenderProfile = ({ vendor, show, onClickBack }) => {
   const [rating, setRating] = useState(0);
   const [favorite, setFavorite] = useState(false);
@@ -216,23 +217,23 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </div>
                 </div>
                 <div>
-                <button
-                  className="followBrandButton d-none d-md-block d-sm-none"
-                  onClick={() => setFavorite(!favorite)}
-                >
-                  {favorite ? (
-                    <span>
-                      <AiFillHeart className="FollowIconHeart" /> Unfollow Brand
-                      (169)
-                    </span>
-                  ) : (
-                    <div>
-                      <AiOutlineHeart className="FollowIconHeart" /> Follow
-                      Brand (168)
-                    </div>
-                  )}
-                </button>
-                </div>  
+                  <button
+                    className="followBrandButton d-none d-md-block d-sm-none"
+                    onClick={() => setFavorite(!favorite)}
+                  >
+                    {favorite ? (
+                      <span>
+                        <AiFillHeart className="FollowIconHeart" /> Unfollow
+                        Brand (169)
+                      </span>
+                    ) : (
+                      <div>
+                        <AiOutlineHeart className="FollowIconHeart" /> Follow
+                        Brand (168)
+                      </div>
+                    )}
+                  </button>
+                </div>
                 <div className="shippingType d-md-none d-sm-block">
                   <span className="align-items-center mr-2">
                     <FaShuttleVan className="shippingLogo" /> {'   '}

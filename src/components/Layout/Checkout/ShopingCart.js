@@ -12,7 +12,7 @@ const ShopingCart = ({ orders, OrderDeleteHandler }) => {
   return (
     <div id="ShoppingCart">
       <div className="row">
-        <div className="col-md-8 ">
+        <div className="col-md-8">
           <table className="table">
             <thead>
               <tr>
@@ -87,7 +87,10 @@ const ShopingCart = ({ orders, OrderDeleteHandler }) => {
           </table>
         </div>
         <div className="col-md-4">
-          <CartTotal proceedButton={true} />
+          <CartTotal
+            title={'Proceed To Chckout'}
+            navigate={'/checkout/detail'}
+          />
         </div>
       </div>
     </div>
