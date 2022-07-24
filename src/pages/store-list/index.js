@@ -39,6 +39,7 @@ const StoreList = () => {
   const [vendor, setVendor] = useState(null);
   const { id } = useParams();
   const [show, setShow] = useState(false);
+  const [list, setList] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -53,21 +54,27 @@ const StoreList = () => {
       <div className="vendor-list p-3">
         <div className="mb-2">
           <div className="category-container">
-            <button className="btn-category">All Categories</button>
-            <ul className="list">
-              {allCategorie.map((item, index) => {
-                return (
-                  <li key={index} className="list_item d-flex">
-                    <p className="m-0">{item.categorie} </p>
+            <button className="btn-category" onClick={() => setList(!list)}>
+              All Categories
+            </button>
+            {list ? (
+              <ul className="list">
+                {allCategorie.map((item, index) => {
+                  return (
+                    <li key={index} className="list_item d-flex">
+                      <p className="m-0">{item.categorie} </p>
 
-                    <label className="containerCheckbox justify-content-end">
-                      <input type="checkbox" />
-                      <span className="checkmarkCheckbox"></span>
-                    </label>
-                  </li>
-                );
-              })}
-            </ul>
+                      <label className="containerCheckbox justify-content-end">
+                        <input type="checkbox" />
+                        <span className="checkmarkCheckbox"></span>
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <></>
+            )}
           </div>
 
           <select name="cars" id="cars" className="productsDropDowns">

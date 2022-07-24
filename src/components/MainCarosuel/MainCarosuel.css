@@ -1,0 +1,8 @@
+.inner-section {
+  background-color: rgb(159, 185, 120);
+  height: 500px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
