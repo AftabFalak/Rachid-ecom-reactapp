@@ -6,6 +6,8 @@ import QuickView from '../QuickView/QuickView';
 
 import './index.css';
 
+import { FiFilter } from 'react-icons/fi';
+
 export const allCategorie = [
   {
     categorie: 'Home & Living',
@@ -156,7 +158,7 @@ const Gallery = ({
         <div className="productDropDownsView">
           {showFilter && (
             <button className="btn btn-filters" onClick={() => setOpen(true)}>
-              <i className="fa fa-filter"></i> Filters
+              <FiFilter /> Filters
             </button>
           )}
           {categorieFilterOnTop && (
