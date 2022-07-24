@@ -39,7 +39,7 @@ const MainCarosuel = () => {
   };
 
   return (
-    <div className="MainCarosuel" style={{ position: 'relative' }}>
+    <div id="MainCarosuel">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
@@ -52,34 +52,71 @@ const MainCarosuel = () => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img
-              className="d-block "
-              src={require('../../assets/images/Home/mainn.png')}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <div className="inner-section">
-                <div>
-                  <h5 className="text-light">Heading</h5>
-                  <p className="text-light">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Sint eos molestias distinctio dolor exercitationem ullam
-                    possimus repudiandae iste inventore repellat eius similique,
-                    earum fugit error voluptatem ab impedit aliquid! Ex.
-                  </p>
-                </div>
-                <div
-                  className="mx-5"
-                  style={{ backgroundColor: 'transparent' }}
-                >
+            <div style={{ position: 'relative' }}>
+              <img
+                className="d-block "
+                src={require('../../assets/images/Home/mainn.png')}
+              />
+              <div className="carousel-caption inner-section">
+                <div className="m-5">
                   <Slider {...settings}>
                     <div className="slide-single">
-                      <img src="/Assets/images/brand-logos/com.jpeg" />
+                      <h2 className="single-product-heading">
+                        Red Leather Jacket.
+                      </h2>
+                      <div
+                        style={{
+                          textAlign: 'center',
+                          alignContent: 'center',
+                        }}
+                      >
+                        <div
+                          style={{
+                            border: '1px solid red',
+                          }}
+                        >
+                          <img
+                            src="https://resources.mandmdirect.com/Images/_default/j/j/5/jj5767_1_large.jpg"
+                            style={{
+                              width: '80px',
+                              height: '80px',
+                              resize: 'contain',
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="priceDiv text-align-center">
+                        <p className="single-product-price">$250.00</p>
+                      </div>
+                      <div className="buttonDiv">
+                        <button className="single-product-button">
+                          Go To Shop
+                        </button>
+                      </div>
                     </div>
+
                     <div className="slide-single">
-                      <img src="/Assets/images/brand-logos/sprt.jpeg" />
-                    </div>
-                    <div className="slide-single">
-                      <img src="/Assets/images/brand-logos/art.jpeg" />
+                      <h2 className="single-product-heading">
+                        Green Hoodi Jacket.
+                      </h2>
+                      <div>
+                        <img
+                          src="https://qph.cf2.quoracdn.net/main-qimg-9849ddf9c427d3389790aa52dab826c3-lq"
+                          style={{
+                            width: '80px',
+                            height: '80px',
+                            resize: 'contain',
+                          }}
+                        />
+                      </div>
+                      <div className="priceDiv text-align-center">
+                        <p className="single-product-price">$250.00</p>
+                      </div>
+                      <div className="buttonDiv">
+                        <button className="single-product-button">
+                          Go To Shop
+                        </button>
+                      </div>
                     </div>
                   </Slider>
                 </div>
@@ -87,7 +124,7 @@ const MainCarosuel = () => {
             </div>
           </div>
 
-          <div className="carousel-item">
+          {/* <div className="carousel-item">
             <img
               className="d-block "
               src={require('../../assets/images/Home/mainn.png')}
@@ -120,7 +157,7 @@ const MainCarosuel = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <a
           className="carousel-control-prev"

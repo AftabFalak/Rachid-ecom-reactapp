@@ -279,7 +279,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
               </div>
             </div>
           </div>
-          {/* /////////////////////////////////////////////////////////// */}
+          {/* ///// */}
           <div className="d-flex align-items-center justify-content-between d-md-none d-sm-block">
             <div className="brandInfoView ">
               <div className="d-flex align-items-center">

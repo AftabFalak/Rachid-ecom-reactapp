@@ -1,8 +1,39 @@
-.inner-section {
-  background-color: rgb(159, 185, 120);
-  height: 500px;
-  width: 350px;
+#MainCarosuel .inner-section {
+  background-color: #b8ccc6;
+  height: 100%;
+  width: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#MainCarosuel .imageMain {
+  background-image: url('../../assets/images/Home/mainn.png');
+  background-size: contain;
+}
+#MainCarosuel .single-product-heading {
+  font-weight: normal;
+  color: var(--white-100);
+}
+#MainCarosuel .priceDiv {
+  text-align: center;
+  margin: 10px 0px;
+}
+#MainCarosuel .priceDiv .single-product-price {
+  color: var(--white-100);
+}
+#MainCarosuel .buttonDiv {
+  text-align: center;
+}
+#MainCarosuel .buttonDiv .single-product-button {
+  border: 1px solid var(--white-100);
+  padding: 8px 12px;
+  font-weight: 500;
+  width: auto;
+  color: var(--white-100);
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
