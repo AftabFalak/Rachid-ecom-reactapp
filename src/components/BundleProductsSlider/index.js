@@ -1,6 +1,11 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import './index.css';
+import { BsCartPlus } from 'react-icons/bs';
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+
+import QuickView from '../QuickView/QuickView';
+
 const BundleProductsSlider = ({ products }) => {
   let settings = {
     dots: false,
@@ -10,7 +15,8 @@ const BundleProductsSlider = ({ products }) => {
     slidesToScroll: 1,
   };
 
-  const[liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(false);
+  const [quickView, setQuickView] = useState(false);
 
   return (
     <div className="BundleProductsSlider">
@@ -20,23 +26,14 @@ const BundleProductsSlider = ({ products }) => {
             <div className="slide-single">
               <div className="buttons">
                 <span>
-                  <i className="fa fa-cart-plus"></i>
+                  <BsCartPlus />
                 </span>
-                <span onClick={() => setLiked(!liked)}  className="icon">
-                {liked ? (
-                  <div>
-                    <i className="fa fa-heart"></i>
-                  </div>
-                ) : (
-                  <i>
-                    <i className="far fa-heart"></i>
-                  </i>
-                )}
+                <span onClick={() => setLiked(!liked)} className="icon">
+                  {liked ? <AiFillHeart /> : <AiOutlineHeart />}
                 </span>
 
-          
-                <span className="icon">
-                  <i className="fa fa-search"></i>
+                <span className="icon" onClick={() => setQuickView(true)}>
+                  <AiOutlineSearch />
                 </span>
               </div>
               <img className="p-img" src={`${product.image}`} />
@@ -46,13 +43,16 @@ const BundleProductsSlider = ({ products }) => {
                   <p className="p-price">{product.price}</p>
                 </div>
                 <div className="brand-container">
-                  <img className="p-brand" src={product.brand} />
+                  <a href="/vendor">
+                    <img className="p-brand" src={product.brand} />
+                  </a>
                 </div>
               </div>
             </div>
           );
         })}
       </Slider>
+      {quickView && <QuickView onClose={() => setQuickView(false)} />}
     </div>
   );
 };

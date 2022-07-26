@@ -1,13 +1,14 @@
 #MainCarosuel .inner-section {
   background-color: #b8ccc6;
   height: 100%;
-  width: 450px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.9;
 }
 #MainCarosuel .imageMain {
   background-image: url('../../assets/images/Home/mainn.png');

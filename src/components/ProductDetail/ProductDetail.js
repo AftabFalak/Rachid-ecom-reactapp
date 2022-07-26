@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 import './ProductDetail.css';
 import Faq from 'react-faq-component';
 
-import productImage from '../../assets/images/ProductCardImage/brand.png';
-import card1 from '../../assets/images/ProductCardImage/shoe.PNG';
-import card2 from '../../assets/images/ProductCardImage/ring.PNG';
-import card3 from '../../assets/images/ProductCardImage/bag.PNG';
-
-import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
-
 import { FaFacebookF } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
@@ -23,44 +16,14 @@ import Policies from '../core/Policies';
 import MeetSeller from '../core/MeetSeller';
 import ReviewsTab from '../ReviewsTabs';
 import { IoCloseOutline } from 'react-icons/io5';
-const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
-  // const { check, setCheck } = useState(false);
+
+const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
   const [selection, setSelection] = useState({
     color: '',
     size: '',
     quantity: 1,
   });
   const [liked, setLiked] = useState(false);
-
-  const cards = [
-    {
-      image: card1,
-      brandName: 'Outfitter',
-      productTitle: 'Bag',
-      stock: 4,
-      price: 344.4,
-      oldPrice: 344.4,
-      brandLogo: brandLogo,
-    },
-    {
-      image: card2,
-      brandName: 'Levise',
-      productTitle: 'Bag',
-      stock: 4,
-      price: 344.4,
-      oldPrice: 344.4,
-      brandLogo: brandLogo,
-    },
-    {
-      image: card3,
-      brandName: 'Denizen',
-      productTitle: 'Bag',
-      stock: 4,
-      price: 344.4,
-      oldPrice: 344.4,
-      brandLogo: brandLogo,
-    },
-  ];
 
   const product = {
     images: [
@@ -99,16 +62,23 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
     <div className="ProductDetail container-fluid p-1">
       <div className="row">
         <div className="col-md-5">
-          <ProductMainSlider viewDetail={viewDetail} images={product.images} />
-
-          {/* <button
-            className="clsButton"
-            onClick={() => {
-              setQuick(false);
-            }}
-          >
-            <IoCloseOutline />
-          </button> */}
+          <ProductMainSlider
+            viewDetail={viewDetail}
+            images={product.images}
+            onClose={onClose}
+          />
+          {cross || cross === true ? (
+            <button
+              className="clsButton d-md-none"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              <IoCloseOutline />
+            </button>
+          ) : (
+            <></>
+          )}
           {!quickView && (
             <div className="d-none d-md-block">
               <ReviewsTab />
@@ -262,7 +232,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail }) => {
           </div>
 
           {!quickView && (
-            <div className=" d-md-none">
+            <div className="d-md-none">
               <ReviewsTab />
             </div>
           )}

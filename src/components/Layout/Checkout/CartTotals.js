@@ -4,7 +4,7 @@ const CartTotal = ({ title, navigate }) => {
   return (
     <div id="CartTotal">
       <div className="Header">
-        <span>CART TOTALS</span>
+        <span>CART TOTAL</span>
       </div>
       <div className="Section">
         <div className="d-flex justify-content-between section-item">

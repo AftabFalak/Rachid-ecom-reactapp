@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'reactstrap';
+
+import { Link } from 'react-router-dom';
+
 import './index.css';
 
 const BrandGroupImages = ({ products }) => {
   const [liked, setLiked] = useState(false);
   return (
     <Row className="brands">
-      {products.map((p) => {
+      {products.map((p, index) => {
         return (
-          <Col sm={3} xs={3} md={3} className="brand-img m-0 p-0">
+          <Col sm={3} xs={3} md={3} className="brand-img m-0 p-0" key={index}>
             <div className="brand-view heart-parent">
               <button onClick={() => setLiked(!liked)} className="heart-btn">
                 {liked ? (
@@ -21,7 +24,9 @@ const BrandGroupImages = ({ products }) => {
                   </div>
                 )}
               </button>
-              <img src={p.brand} width="100%" />
+              <a href="/vendor">
+                <img src={p.brand} width="100%" />
+              </a>
             </div>
           </Col>
         );

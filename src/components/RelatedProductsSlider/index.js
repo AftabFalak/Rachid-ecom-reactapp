@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import QuickView from '../QuickView/QuickView';
+
+import { BsCartPlus } from 'react-icons/bs';
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+
 import './index.css';
 const RelatedProductsSlider = ({ images }) => {
   let settings = {
@@ -37,6 +41,8 @@ const RelatedProductsSlider = ({ images }) => {
     ],
   };
   const [quick, setQuick] = useState(false);
+  const [like, setLike] = useState(false);
+
   return (
     <div className="RelatedProductsSlider">
       <Slider {...settings}>
@@ -45,13 +51,13 @@ const RelatedProductsSlider = ({ images }) => {
             <div className="slide-single">
               <div className="buttons">
                 <span>
-                  <i className="fa fa-cart-plus"></i>
+                  <BsCartPlus />
                 </span>
-                <span className="icon">
-                  <i className="fa fa-heart"></i>
+                <span className="icon" onClick={() => setLike(!like)}>
+                  {like ? <AiFillHeart /> : <AiOutlineHeart />}
                 </span>
                 <span className="icon" onClick={() => setQuick(true)}>
-                  <i className="fa fa-search"></i>
+                  <AiOutlineSearch />
                 </span>
               </div>
               <div className="textArea">
@@ -68,7 +74,7 @@ const RelatedProductsSlider = ({ images }) => {
           );
         })}
       </Slider>
-      {quick && <QuickView setQuick={setQuick} />}
+      {quick && <QuickView onClose={() => setQuick(false)} />}
     </div>
   );
 };

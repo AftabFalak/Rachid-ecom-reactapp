@@ -123,7 +123,7 @@ const BundleView = ({ header, right }) => {
           </div>
         </div>
       )}
-      <SingleBrandView view={views[tab - 1]} right />
+      <SingleBrandView view={views[tab - 1]} right={right} />
     </div>
   );
 };

@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import ImagePopupGallery from '../ImagePopupGallery';
 import './index.css';
-const ProductMainSlider = ({ images ,viewDetail }) => {
+
+import { Link } from 'react-router-dom';
+
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+
+const ProductMainSlider = ({ images, viewDetail, onClose, cross }) => {
   const [data, setData] = useState({
     photoIndex: 0,
     isOpen: false,
     images: images.map((i) => i.img),
   });
+  const [like, setLike] = useState(false);
   useEffect(() => {
     setData({ ...data, images: images.map((i) => i.img) });
   }, [images]);
@@ -29,9 +35,14 @@ const ProductMainSlider = ({ images ,viewDetail }) => {
               <div className="heart-parent">
                 <img src={image.img} />
 
-                <button className="heart-btn">
-                  <i className={`fa${image.liked ? '' : 'r'} fa-heart`}></i>
+                <button
+                  className="heart-btn"
+                  style={{ position: 'absolute', left: '10px', top: '15px' }}
+                  onClick={() => setLike(!like)}
+                >
+                  {like ? <AiFillHeart /> : <AiOutlineHeart />}
                 </button>
+
                 <button
                   className="zoom-btn"
                   onClick={() =>
@@ -41,13 +52,15 @@ const ProductMainSlider = ({ images ,viewDetail }) => {
                   <i className="fas fa-expand-arrows-alt"></i>
                 </button>
 
-                {viewDetail&&<a
-                  className="view-detail-btn"
-                  href='/product'
-     
-                >
-                View Details
-                </a>}
+                {viewDetail && (
+                  <Link
+                    className="view-detail-btn"
+                    to="/product-detail"
+                    onClick={() => onClose()}
+                  >
+                    View Detail
+                  </Link>
+                )}
               </div>
             );
           })}

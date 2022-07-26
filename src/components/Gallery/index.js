@@ -7,6 +7,7 @@ import QuickView from '../QuickView/QuickView';
 import './index.css';
 
 import { FiFilter } from 'react-icons/fi';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 export const allCategorie = [
   {
@@ -141,20 +142,18 @@ const Gallery = ({
     orderingOption: { cards: false, wrapped: false, custom: false },
   });
 
-  const handleMouseOver = () => {
-    setCategoryBoxShow(true);
-  };
-  const handleOnBlur = () => {
-    setCategoryBoxShow(false);
-    console.log('ddd');
-  };
   return (
     <>
       {categoryBoxShow && (
-        <div className="backdrop-invisible" onClick={handleOnBlur}></div>
+        <div
+          className="backdrop-invisible"
+          onClick={() => {
+            setCategoryBoxShow(false);
+          }}
+        ></div>
       )}
       <div className="Gallery">
-        <h3>{heading}</h3>
+        {/* <h3>{heading}</h3> */}
         <div className="productDropDownsView">
           {showFilter && (
             <button className="btn btn-filters" onClick={() => setOpen(true)}>
@@ -165,28 +164,34 @@ const Gallery = ({
             <div
               className="category-container"
               tabIndex={1}
-              onMouseOver={handleMouseOver}
+              onClick={() => setCategoryBoxShow(!categoryBoxShow)}
             >
-              <button className="btn-category">All Categories</button>
-              {categoryBoxShow && (
-                <>
-                  <div className="backdrop-invisible"></div>
-                  <ul className="list">
-                    {allCategorie.map((item, index) => {
-                      return (
-                        <li key={index} className="list_item d-flex">
-                          <p className="m-0">{item.categorie} </p>
+              <button className="btn-category">
+                search by Categories {'  '}
+                {categoryBoxShow ? <FaAngleUp /> : <FaAngleDown />}
+              </button>
 
-                          <label className="containerCheckbox justify-content-end">
-                            <input type="checkbox" />
-                            <span className="checkmarkCheckbox"></span>
-                          </label>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </>
-              )}
+              {/* {categoryBoxShow ? ( */}
+              <>
+                <div className="backdrop-invisible"></div>
+                <ul className="list">
+                  {allCategorie.map((item, index) => {
+                    return (
+                      <li key={index} className="list_item d-flex">
+                        <p className="m-0">{item.categorie} </p>
+
+                        <label className="containerCheckbox justify-content-end">
+                          <input type="checkbox" />
+                          <span className="checkmarkCheckbox"></span>
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </>
+              {/* ) : (
+                <></>
+              )} */}
             </div>
           )}
           <select name="cars" id="cars" className="productsDropDowns">

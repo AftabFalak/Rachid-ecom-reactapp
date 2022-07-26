@@ -11,7 +11,7 @@ import {
 import { GrMail } from 'react-icons/gr';
 import { GoMail } from 'react-icons/go';
 import { FiFacebook } from 'react-icons/fi';
-
+import BundleView from '../BundleView';
 import { Rating } from 'react-simple-star-rating';
 import m2 from '../../assets/images/ProductList/2.jpg';
 import m3 from '../../assets/images/ProductList/3.jpg';
@@ -130,6 +130,7 @@ export const items = [
 const VenderProfile = ({ vendor, show, onClickBack }) => {
   const [rating, setRating] = useState(0);
   const [favorite, setFavorite] = useState(false);
+  const [reviewsTab, setReviewsTab] = useState(1);
 
   const photos = [
     {
@@ -246,7 +247,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </span>
                 </div>
               </div>
-              <div className="col-md-4 Shipping d-none d-md-block d-sm-none">
+              <div className="col-md-4 Shipping d-none d-md-block d-sm-none ">
                 <h4 className="ShippingMainHeader">
                   stayfineofficial is a Star Seller!
                 </h4>
@@ -353,12 +354,35 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
           <Annoucements />
         </div>
       </div>
-      <Gallery
-        showFilter={false}
-        cards={items}
-        heading={'Products'}
-        categorieFilterOnTop
-      />
+      <div className="tab-container-profile">
+        <div
+          onClick={() => setReviewsTab(1)}
+          className={`tab ${reviewsTab === 1 && 'tab-active'}`}
+        >
+          <p> {vendor.brandName}'s Products</p>
+        </div>
+
+        <div
+          onClick={() => setReviewsTab(2)}
+          className={`tab ${reviewsTab === 2 && 'tab-active'}`}
+        >
+          <p>Get Inspiration</p>
+        </div>
+      </div>
+      {reviewsTab === 1 ? (
+        <Gallery
+          showFilter={false}
+          cards={items}
+          heading={'Products'}
+          categorieFilterOnTop
+        />
+      ) : (
+        <div>
+          <BundleView header={false} />
+          <BundleView header={false} />
+          <BundleView header={false} />
+        </div>
+      )}
     </div>
   );
 };

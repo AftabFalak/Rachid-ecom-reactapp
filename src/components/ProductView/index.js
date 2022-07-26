@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
+import { BsCartPlus } from 'react-icons/bs';
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
 
 const ProductView = ({ product, index, handleProduct }) => {
   const [liked, setLiked] = useState(false);
@@ -123,8 +125,8 @@ const ProductView = ({ product, index, handleProduct }) => {
               </div>
             )}
           </div>
-          <button className="btn addButton ">
-            <i className="fa fa-shopping-cart"></i> Add to Cart
+          <button className="btn addButton">
+            <BsCartPlus className="cartPlus" /> Add to Cart
           </button>
         </div>
       </div>

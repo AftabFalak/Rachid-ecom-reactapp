@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainCarosuel from '../../components/MainCarosuel/MainCarosuel';
 import BundleView from '../../components/BundleView';
 
 import { TbShirt } from 'react-icons/tb';
 import Slider from 'react-slick';
 import './index.css';
+import Gallery from '../../components/Gallery';
+import { items } from '../../components/VenderProfile/VenderProfile';
 const Home = () => {
+  const [reviewsTab, setReviewsTab] = useState(1);
   let settings = {
     dots: false,
     infinite: true,
@@ -39,6 +42,7 @@ const Home = () => {
       },
     ],
   };
+
   return (
     <div className="Home">
       <MainCarosuel />
@@ -83,9 +87,39 @@ const Home = () => {
           </div>
         </Slider>
       </div>
+      {/* <div className="tab-container-profile">
+        <div
+          onClick={() => setReviewsTab(1)}
+          className={`tab ${reviewsTab === 1 && 'tab-active'}`}
+        >
+          <p> Outfitter's Products</p>
+        </div>
+
+        <div
+          onClick={() => setReviewsTab(2)}
+          className={`tab ${reviewsTab === 2 && 'tab-active'}`}
+        >
+          <p>Get Inspiration</p>
+        </div>
+      </div> */}
+      {/* {reviewsTab === 1 ? (
+        <Gallery
+          showFilter={false}
+          cards={items}
+          heading={'Products'}
+          categorieFilterOnTop
+        />
+      ) : (
+        <div>
+          <BundleView header={false} />
+          <BundleView header={false} rigt={true} />
+          <BundleView header={false} />
+        </div>
+      )} */}
+
       <div>
         <BundleView header={false} />
-        <BundleView header={false} />
+        <BundleView header={false} rigt={true} />
         <BundleView header={false} />
       </div>
     </div>

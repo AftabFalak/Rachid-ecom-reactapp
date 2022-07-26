@@ -49,6 +49,7 @@
 
 #checkout-topbar .singleTab .TabIconActive {
   color: var(--action-color);
+  /* color: rgba(0, 0, 0, 0.5); */
   font-size: 24px;
 }
 
@@ -252,9 +253,9 @@
   color: white;
   border: none;
   outline: none;
-  padding: 9px 0px;
+  padding: 8px 0px;
   text-align: center;
-  width: 95%;
+  width: 72%;
   margin: auto;
   border-radius: 20px;
   font-weight: 600;

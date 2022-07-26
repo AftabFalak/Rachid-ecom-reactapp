@@ -8,12 +8,20 @@ const Annoucements = () => {
       setIsReadMore(!isReadMore);
     };
     return (
-      <p className="announcementDescription">
-        {isReadMore ? text.slice(0, 180) : text}
-        <span onClick={toggleReadMore} className="read-or-hide">
-          {isReadMore ? '...read more' : ' show less'}
-        </span>
-      </p>
+      <>
+        <p className="announcementDescription d-none d-md-block">
+          {isReadMore ? text.slice(0, 120) : text}
+          <span onClick={toggleReadMore} className="read-or-hide">
+            {isReadMore ? '...read more' : ' show less'}
+          </span>
+        </p>
+        <p className="announcementDescription d-sm-block d-md-none">
+          {isReadMore ? text.slice(0, 70) : text}
+          <span onClick={toggleReadMore} className="read-or-hide">
+            {isReadMore ? '...read more' : ' show less'}
+          </span>
+        </p>
+      </>
     );
   };
 

@@ -3,6 +3,8 @@ import './MainCarosuel.css';
 
 import Slider from 'react-slick';
 
+import { Link } from 'react-router-dom';
+
 const MainCarosuel = () => {
   let settings = {
     dots: false,
@@ -61,61 +63,83 @@ const MainCarosuel = () => {
                 <div className="m-5">
                   <Slider {...settings}>
                     <div className="slide-single">
-                      <h2 className="single-product-heading">
-                        Red Leather Jacket.
-                      </h2>
                       <div
                         style={{
-                          textAlign: 'center',
-                          alignContent: 'center',
+                          height: '380px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
                         }}
                       >
-                        <div
-                          style={{
-                            border: '1px solid red',
-                          }}
-                        >
-                          <img
-                            src="https://resources.mandmdirect.com/Images/_default/j/j/5/jj5767_1_large.jpg"
+                        <h2 className="single-product-heading">
+                          Red Leather Jacket.
+                        </h2>
+
+                        <div>
+                          <div
                             style={{
-                              width: '80px',
-                              height: '80px',
-                              resize: 'contain',
+                              display: 'flex',
+                              justifyContent: 'center',
                             }}
-                          />
+                          >
+                            <img
+                              src="https://resources.mandmdirect.com/Images/_default/j/j/5/jj5767_1_large.jpg"
+                              style={{
+                                width: '100px',
+                                height: '100px',
+                                resize: 'contain',
+                              }}
+                            />
+                          </div>
+                          <div className="priceDiv text-align-center">
+                            <p className="single-product-price">$250.00</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="priceDiv text-align-center">
-                        <p className="single-product-price">$250.00</p>
-                      </div>
-                      <div className="buttonDiv">
-                        <button className="single-product-button">
-                          Go To Shop
-                        </button>
+                        <div className="buttonDiv">
+                          <button to="/shop" className="single-product-button">
+                            Go To Shop
+                          </button>
+                        </div>
                       </div>
                     </div>
 
                     <div className="slide-single">
-                      <h2 className="single-product-heading">
-                        Green Hoodi Jacket.
-                      </h2>
-                      <div>
-                        <img
-                          src="https://qph.cf2.quoracdn.net/main-qimg-9849ddf9c427d3389790aa52dab826c3-lq"
-                          style={{
-                            width: '80px',
-                            height: '80px',
-                            resize: 'contain',
-                          }}
-                        />
-                      </div>
-                      <div className="priceDiv text-align-center">
-                        <p className="single-product-price">$250.00</p>
-                      </div>
-                      <div className="buttonDiv">
-                        <button className="single-product-button">
-                          Go To Shop
-                        </button>
+                      <div
+                        style={{
+                          height: '380px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                        }}
+                      >
+                        <h2 className="single-product-heading">
+                          Green Hoodi Jacket.
+                        </h2>
+                        <div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                            }}
+                          >
+                            <img
+                              src="https://qph.cf2.quoracdn.net/main-qimg-9849ddf9c427d3389790aa52dab826c3-lq"
+                              style={{
+                                width: '100px',
+                                height: '100px',
+                                resize: 'contain',
+                              }}
+                            />
+                          </div>
+                          <div className="priceDiv text-align-center">
+                            <p className="single-product-price">$250.00</p>
+                          </div>
+                        </div>
+                        <div className="buttonDiv">
+                          <button className="single-product-button">
+                            Go To Shop
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </Slider>

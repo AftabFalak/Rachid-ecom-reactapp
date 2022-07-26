@@ -54,21 +54,21 @@
   .QuickView .clsButton {
     display: block;
     background-color: transparent;
-    color: black;
+    color: var(--black-100);
     border: none;
     outline: none;
-    /* border-radius: 50%; */
     padding: 0px 0px;
-    font-size: 44px;
+    font-size: 34px;
     position: absolute;
     top: 0px;
-    right: 5px;
-    height: 40px;
+    right: 10px;
     background-color: white;
+    height: 26px;
+    text-align: center;
     opacity: 1 !important;
     z-index: 51;
   }
-  .QuickView .clsButton svg{
+  .QuickView .clsButton svg {
     margin-top: -36px;
   }
 }

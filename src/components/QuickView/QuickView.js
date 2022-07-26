@@ -4,6 +4,7 @@ import ProductMainSlider from '../ProductMainSlider';
 import ProductDetail from '../ProductDetail/ProductDetail';
 
 import { IoCloseOutline } from 'react-icons/io5';
+
 const QuickView = ({ setQuick, onClose }) => {
   const product = {
     images: [
@@ -34,7 +35,13 @@ const QuickView = ({ setQuick, onClose }) => {
         </button>
       </div>
       <div className="QuickView">
-        <ProductDetail setQuick={setQuick} viewDetail quickView />
+        <ProductDetail
+          setQuick={setQuick}
+          viewDetail
+          quickView
+          onClose={onClose}
+          cross={true}
+        />
       </div>
     </>
   );

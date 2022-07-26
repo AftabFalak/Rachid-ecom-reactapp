@@ -18,16 +18,8 @@ const Topbar = ({ page, tabs }) => {
           ) : (
             <> </>
           )}
-          {page === endPoint || tabs.findIndex((t) => page === t.endPoint) >= id
-            ? iconActive
-            : icon}
-          <p
-            className={`${
-              (page === endPoint ||
-                tabs.findIndex((t) => page === t.endPoint) >= id) &&
-              'activeTex'
-            }`}
-          >
+          {page === endPoint ? iconActive : icon}
+          <p>
             {id}- {title}
           </p>
         </Link>

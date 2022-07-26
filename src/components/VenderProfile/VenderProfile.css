@@ -166,12 +166,40 @@
 .VenderProfile .vendorInfoView_bottom .brandInfoView .shippingType span {
   margin: 0px 20px 0px 0px;
 }
-.Shipping {
+
+.VenderProfile .tab-container-profile {
+  width: 100%;
+  padding: 12px 15px !important;
+}
+.VenderProfile .tab-container-profile .tab {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: -2px;
+  cursor: pointer;
+  text-align: left;
+}
+.VenderProfile .tab-container-profile .tab p {
+  display: inline-block;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: 0;
+}
+
+.VenderProfile .tab-container-profile .tab-active {
+  border-bottom: 2px solid var(--main-color);
+}
+@media screen and (max-width: 400px) {
+  .VenderProfile .tab-container-profile .tab {
+    font-size: 12px;
+  }
+}
+.VenderProfile .Shipping {
   color: var(--black-100) !important;
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  justify-content: flex-start;
+  justify-content: space-between !important;
   flex-wrap: nowrap;
 }
 
@@ -202,12 +230,11 @@
   color: gray;
 }
 .ShopMember .ShopMemberMainHeading {
-  font-size: 20px;
   font-weight: 500;
 }
 .ShopMember .memberProfileImg {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
   overflow: 'hidden';
   background-image: url('../../assets//images/memberProfile.jpg');

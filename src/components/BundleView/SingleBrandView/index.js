@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import BrandGroupImages from '../../BrandGroupImages';
 import BundleProductsSlider from '../../BundleProductsSlider';
 import './index.css';
+import { Link } from 'react-router-dom';
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+
 const SingleBrandView = ({ view, right }) => {
   const [liked, setLiked] = useState(false);
   return (
     <divn>
-      {!right ? (
+      {right ? (
         <div className="row">
           <div className="col-md-6">
             <BundleProductsSlider products={view.products} />
@@ -23,15 +26,17 @@ const SingleBrandView = ({ view, right }) => {
                   >
                     {liked ? (
                       <span>
-                        <i className="fa fa-heart"></i>
+                        <AiFillHeart />
                       </span>
                     ) : (
                       <div>
-                        <i className="far fa-heart"></i>
+                        <AiOutlineHeart />
                       </div>
                     )}
                   </button>
-                  <button className="shop-btn">Shop the Look</button>
+                  <Link to="/product-detail" className="shop-btn">
+                    Shop the Look
+                  </Link>
                 </div>
               </div>
             </div>
@@ -58,7 +63,9 @@ const SingleBrandView = ({ view, right }) => {
                       </div>
                     )}
                   </button>
-                  <button className="shop-btn">Shop the Look</button>
+                  <Link to="/product-detail" className="shop-btn">
+                    Shop the Look
+                  </Link>
                 </div>
               </div>
             </div>
