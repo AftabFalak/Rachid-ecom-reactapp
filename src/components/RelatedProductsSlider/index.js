@@ -69,7 +69,10 @@ const RelatedProductsSlider = ({ images }) => {
                   </small>
                 </p>
               </div>
-              <img src={`/Assets/images/ProductList/${image}`} />
+              <img
+                src={`/Assets/images/ProductList/${image}`}
+                className="singleImage"
+              />
             </div>
           );
         })}

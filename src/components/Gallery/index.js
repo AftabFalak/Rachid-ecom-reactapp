@@ -6,7 +6,7 @@ import QuickView from '../QuickView/QuickView';
 
 import './index.css';
 
-import { FiFilter } from 'react-icons/fi';
+import { AiOutlineMenuFold } from 'react-icons/ai';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 export const allCategorie = [
@@ -153,47 +153,49 @@ const Gallery = ({
         ></div>
       )}
       <div className="Gallery">
-        {/* <h3>{heading}</h3> */}
+        {/* /////////////////////////////////////////////////////////////////////////// */}
+
         <div className="productDropDownsView">
           {showFilter && (
             <button className="btn btn-filters" onClick={() => setOpen(true)}>
-              <FiFilter /> Filters
+              <AiOutlineMenuFold /> <span className="ml-1">All Filters</span>
             </button>
           )}
+
           {categorieFilterOnTop && (
-            <div
-              className="category-container"
-              tabIndex={1}
-              onClick={() => setCategoryBoxShow(!categoryBoxShow)}
-            >
-              <button className="btn-category">
+            <div className="category-container" tabIndex={1}>
+              <button
+                className="btn-category"
+                onClick={() => setCategoryBoxShow(!categoryBoxShow)}
+              >
                 search by Categories {'  '}
                 {categoryBoxShow ? <FaAngleUp /> : <FaAngleDown />}
               </button>
 
-              {/* {categoryBoxShow ? ( */}
-              <>
-                <div className="backdrop-invisible"></div>
-                <ul className="list">
-                  {allCategorie.map((item, index) => {
-                    return (
-                      <li key={index} className="list_item d-flex">
-                        <p className="m-0">{item.categorie} </p>
+              {categoryBoxShow ? (
+                <>
+                  <div className="backdrop-invisible"></div>
+                  <ul className="list">
+                    {allCategorie.map((item, index) => {
+                      return (
+                        <li key={index} className="list_item d-flex">
+                          <p className="m-0">{item.categorie} </p>
 
-                        <label className="containerCheckbox justify-content-end">
-                          <input type="checkbox" />
-                          <span className="checkmarkCheckbox"></span>
-                        </label>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </>
-              {/* ) : (
+                          <label className="containerCheckbox justify-content-end">
+                            <input type="checkbox" />
+                            <span className="checkmarkCheckbox"></span>
+                          </label>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              ) : (
                 <></>
-              )} */}
+              )}
             </div>
           )}
+
           <select name="cars" id="cars" className="productsDropDowns">
             <option selected disabled hidden>
               Sort by: Relevency
@@ -201,6 +203,8 @@ const Gallery = ({
             <option value="audi">Audi</option>
           </select>
         </div>
+
+        {/* /////////////////////////////////////////////////////////////////////// */}
 
         <Masonry
           breakpointCols={{

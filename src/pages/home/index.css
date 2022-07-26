@@ -2,6 +2,12 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Home .slide-parent .slide-single:hover {
+  transform: scale(1.1);
 }
 .Home .slide-parent .slick-slide div {
   height: 100% !important;

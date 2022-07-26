@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 10px;
+  padding: 5px;
   position: relative;
 }
 .RelatedProductsSlider .slick-slide > div {
@@ -89,4 +89,13 @@
 }
 .RelatedProductsSlider .slide-single:hover .textArea {
   opacity: 1;
+}
+
+@media (max-width: 400px) {
+  .RelatedProductsSlider .slide-single {
+    width: 100%;
+  }
+  .RelatedProductsSlider .singleImage {
+    height: 220px !important;
+  }
 }

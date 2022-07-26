@@ -190,7 +190,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
             </div>
 
             <hr />
-            <div className="wishList d-flex">
+            <div className="wishList d-flex  align-items-center">
               <button
                 onClick={() => setLiked(!liked)}
                 className="btn addtowishlist"
@@ -208,7 +208,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
                 )}
               </button>
 
-              <div className="d-flex share-box">
+              <div className="d-flex share-box jusify-content-center align-items-center">
                 <span className="socialheading">Share:</span>
                 <span className="socialicon">
                   <FaFacebookF />

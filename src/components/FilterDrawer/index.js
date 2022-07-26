@@ -62,7 +62,7 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                           return (
                             <li
                               key={index}
-                              className="list_item d-flex"
+                              className="list_item d-flex align-items-center"
                               onClick={() => onClickItem(index)}
                             >
                               <p
@@ -73,11 +73,10 @@ const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
                               >
                                 {item.categorie}{' '}
                               </p>
-                              {item.categorie === selectedCategory}
 
                               <label className="containerCheckbox justify-content-end">
                                 <input type="checkbox" />
-                                <span className="checkmarkCheckbox-drawer"></span>
+                                <span className="checkmarkCheckbox-drawer-dropdown"></span>
                               </label>
                             </li>
                           );
