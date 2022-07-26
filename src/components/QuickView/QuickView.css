@@ -1,14 +1,14 @@
 .QuickView {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   border: 2px solid gray !important;
   background: #fff;
   font-weight: 600;
   z-index: 50;
   position: fixed;
   border-radius: 6px;
-  top: 10%;
-  left: 10%;
+  top: 5%;
+  left: 5%;
   overflow: auto;
 }
 
@@ -33,9 +33,9 @@
   border-radius: 50%;
   padding: 0px 10px;
   font-size: 44px;
-  position: absolute;
-  top: 7px;
-  right: 25px;
+  position: absolute; 
+    top: -8px;
+right: 1px;
   opacity: 1 !important;
   z-index: 900000000000;
 }

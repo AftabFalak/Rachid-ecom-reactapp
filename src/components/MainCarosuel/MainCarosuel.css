@@ -38,3 +38,24 @@
   outline: none;
   box-shadow: none;
 }
+
+#MainCarosuel .inner-section .slick-arrow{
+
+   top: auto;
+   bottom: -18px;
+
+}
+
+#MainCarosuel .carousel-control-prev,#MainCarosuel .carousel-control-next{
+  z-index: 45!important;
+}
+
+
+#MainCarosuel .carousel-control-prev span{
+ 
+  margin-left: -120px;
+}
+#MainCarosuel .carousel-control-next span{
+ 
+  margin-right: -120px;
+}

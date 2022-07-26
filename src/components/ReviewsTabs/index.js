@@ -3,11 +3,11 @@ import { Rating } from 'react-simple-star-rating';
 import Reviews from '../Reviews';
 import ReactPaginate from 'react-paginate';
 import PaginatedPages from '../Pagination';
-
+import './index.css'
 const ReviewsTab = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
   return (
-    <div>
+    <div className='ReviewsTab'>
       <div className="p-3">
         <div className="tab-container">
           <div

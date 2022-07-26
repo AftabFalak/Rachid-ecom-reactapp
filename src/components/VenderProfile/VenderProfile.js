@@ -255,16 +255,12 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   <div className="col-md-6 mt-3">
                     <FaShuttleVan className="shippingLogo mb-2" />
                     <h5 className="shipping-heading">Smooth shipping</h5>
-                    <p className="shipping-description m-0">
-                      Has a history of shipping on time with tracking
-                    </p>
+                    
                   </div>
                   <div className="col-md-6 mt-3">
                     <GrMail className="shippingLogo mb-2" />
                     <h5 className="shipping-heading">Speedy replies</h5>
-                    <p className="shipping-description m-0">
-                      Has a history of replying to messages quikly.
-                    </p>
+                   
                   </div>
                 </div>
               </div>

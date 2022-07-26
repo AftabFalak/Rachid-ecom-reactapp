@@ -32,9 +32,8 @@
   border-right: 1px solid rgb(236, 248, 228);
   position: relative;
   padding-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
   text-align: center;
+  width: 92.41px;
 }
 .signInLink:hover {
   background-color: rgb(235, 233, 233);
@@ -136,14 +135,15 @@
   top: 17px;
 }
 .search-desktop {
-  margin: 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   text-align: center;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
+  width: 92.41px;
+  
 }
 
 .search-desktop input {
