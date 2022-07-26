@@ -192,7 +192,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
         <div className="vendorInfoView_bottom">
           <div className="d-sm-none d-none d-md-block">
             <div className="row">
-              <div className="col-md-5 brandInfoView">
+              <div className="col-md-5 brandInfoView border">
                 <div className="d-flex align-items-center">
                   <h3 className="brandName m-0">{vendor.brandName}</h3>
                   <div className="starRaitingView">
@@ -247,7 +247,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </span>
                 </div>
               </div>
-              <div className="col-md-4 Shipping d-none d-md-block d-sm-none ">
+              <div className="col-md-4 Shipping d-none d-md-block d-sm-none border ">
                 <h4 className="ShippingMainHeader">
                   stayfineofficial is a Star Seller!
                 </h4>
@@ -268,7 +268,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 ShopMember text-center d-md-block d-sm-block">
+              <div className="col-md-3 ShopMember text-center d-md-block d-sm-block border">
                 <h4 className="ShopMemberMainHeading">Shop Owner</h4>
                 <div className="mt-4">
                   <div className="memberProfileImg m-auto"></div>
