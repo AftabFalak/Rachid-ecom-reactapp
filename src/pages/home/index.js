@@ -42,7 +42,7 @@ const Home = () => {
   };
 
   return (
-    <div className="Home">
+    <div id="Home">
       <MainCarosuel />
 
       <div className="m-3 bg-light slide-parent">

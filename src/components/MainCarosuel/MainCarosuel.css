@@ -18,8 +18,17 @@
   flex-direction: column;
   justify-content: center;
   opacity: 0.9;
-  position: absolute;
-  top: 20px;
+padding: 15px 0px;
+}
+#MainCarosuel .inner-section-small .single-product-heading-small {
+  color: var(--white-100);
+  font-weight: normal;
+  text-align: center;
+  font-size: 44px;
+}
+#MainCarosuel .priceDiv .single-product-price-small {
+  color: var(--white-100);
+  font-weight: 28px!important;
 }
 
 #MainCarosuel .single-product-heading {

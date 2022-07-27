@@ -113,6 +113,7 @@ const StoreList = () => {
               categorieFilterOnTop={true}
               onClickBack={setShow}
               show={show}
+              storListMargin={true}
             />
           )}
         </div>
