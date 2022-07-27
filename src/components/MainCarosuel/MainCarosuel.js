@@ -20,8 +20,8 @@ const MainCarosuel = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -29,16 +29,16 @@ const MainCarosuel = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -56,15 +56,15 @@ const MainCarosuel = () => {
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div className="carousel-inner">
+        <div className="carousel-inner d-none d-md-block">
           <div className="carousel-item active">
             <div style={{ position: 'relative' }}>
               <img
-                className="d-block "
+                className="d-block"
                 src={require('../../assets/images/Home/mainn.png')}
               />
-              <div className="carousel-caption inner-section">
-                <div className="m-5">
+              <div className="carousel-caption inner-section d-none d-md-block">
+                <div>
                   <Slider {...settings}>
                     <div className="slide-single">
                       <div
@@ -157,14 +157,15 @@ const MainCarosuel = () => {
               </div>
             </div>
           </div>
+
           <div className="carousel-item">
             <div style={{ position: 'relative' }}>
               <img
                 className="d-block "
                 src={require('../../assets/images/Home/main2.png')}
               />
-              <div className="carousel-caption inner-section">
-                <div className="m-5">
+              <div className="carousel-caption inner-section d-none d-md-block">
+                <div>
                   <Slider {...settings}>
                     <div className="slide-single">
                       <div
@@ -258,6 +259,7 @@ const MainCarosuel = () => {
             </div>
           </div>
         </div>
+
         <a
           className="carousel-control-prev"
           href="#carouselExampleIndicators"
