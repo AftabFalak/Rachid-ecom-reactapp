@@ -10,6 +10,7 @@
   left: 0;
   opacity: 0.9;
 }
+
 #MainCarosuel .imageMain {
   background-image: url('../../assets/images/Home/mainn.png');
   background-size: contain;
@@ -39,23 +40,25 @@
   box-shadow: none;
 }
 
-#MainCarosuel .inner-section .slick-arrow{
-
-   top: auto;
-   bottom: -18px;
-
+#MainCarosuel .inner-section .slick-arrow {
+  top: auto;
+  bottom: -18px;
 }
 
-#MainCarosuel .carousel-control-prev,#MainCarosuel .carousel-control-next{
-  z-index: 45!important;
+#MainCarosuel .carousel-control-prev,
+#MainCarosuel .carousel-control-next {
+  z-index: 45 !important;
 }
 
-
-#MainCarosuel .carousel-control-prev span{
- 
+#MainCarosuel .carousel-control-prev span {
   margin-left: -120px;
 }
-#MainCarosuel .carousel-control-next span{
- 
+#MainCarosuel .carousel-control-next span {
   margin-right: -120px;
+}
+
+@media (max-width: 400px) {
+  #MainCarosuel .inner-section {
+    width: 100%;
+  }
 }

@@ -129,6 +129,8 @@ const Gallery = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [categoryBoxShow, setCategoryBoxShow] = useState(false);
+  const [relvencyBoxShow, setRelvencyBoxShow] = useState(false);
+
   const toggleOpenDrawer = () => {
     setOpen(!open);
   };
@@ -150,6 +152,7 @@ const Gallery = ({
           className="backdrop-invisible"
           onClick={() => {
             setCategoryBoxShow(false);
+            setRelvencyBoxShow(false);
           }}
         ></div>
       )}
@@ -195,12 +198,37 @@ const Gallery = ({
             </div>
           )}
 
-          <select name="cars" id="cars" className="productsDropDowns">
+          {/* <select name="cars" id="cars" className="productsDropDowns">
             <option selected disabled hidden>
               Sort by: Relevency
             </option>
             <option value="audi">Audi</option>
-          </select>
+          </select> */}
+
+          {categorieFilterOnTop && (
+            <div className="category-container" tabIndex={1}>
+              <button
+                className="btn-category"
+                onClick={() => setRelvencyBoxShow(!relvencyBoxShow)}
+              >
+                Sort by: Relevency
+                {relvencyBoxShow ? <FaAngleUp /> : <FaAngleDown />}
+              </button>
+
+              {relvencyBoxShow ? (
+                <>
+                  <div className="backdrop-invisible"></div>
+                  <ul className="relevensyList">
+                    <li className="list_item d-flex">
+                      <p className="m-0">Audi </p>
+                    </li>
+                  </ul>
+                </>
+              ) : (
+                <></>
+              )}
+            </div>
+          )}
         </div>
 
         <Masonry

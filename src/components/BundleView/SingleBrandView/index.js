@@ -8,11 +8,12 @@ import BundleProductsSlider from '../../BundleProductsSlider';
 
 import './index.css';
 
-const SingleBrandView = ({ view, right }) => {
+const SingleBrandView = ({ view, rotate }) => {
   const [liked, setLiked] = useState(false);
+  console.log('valval', rotate);
   return (
-    <divn>
-      {right ? (
+    <div>
+      {!rotate ? (
         <div className="row">
           <div className="col-md-6">
             <BundleProductsSlider products={view.products} />
@@ -84,7 +85,7 @@ const SingleBrandView = ({ view, right }) => {
           </div>
         </div>
       )}
-    </divn>
+    </div>
   );
 };
 

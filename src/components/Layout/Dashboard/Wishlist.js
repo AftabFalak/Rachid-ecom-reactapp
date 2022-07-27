@@ -45,13 +45,22 @@ const Wishlist = ({ wishList, wishlistDeleteHandler, QuickView }) => {
                         <td>{productDetail}</td>
                         <td>${price}</td>
                         <td>
-                          <span onClick={() => setQuickViewModal(true)}>
+                          <span
+                            onClick={() => setQuickViewModal(true)}
+                            style={{ cursor: 'pointer' }}
+                          >
                             <AiOutlineEye className="actionIcons" />
                           </span>
                           <span>
-                            <BsCartPlus className="actionIcons" />
+                            <BsCartPlus
+                              className="actionIcons"
+                              style={{ cursor: 'pointer' }}
+                            />
                           </span>{' '}
-                          <span onClick={() => wishlistDeleteHandler(id)}>
+                          <span
+                            onClick={() => wishlistDeleteHandler(id)}
+                            style={{ cursor: 'pointer' }}
+                          >
                             <IoTrashBinOutline className="actionIcons" />
                           </span>
                         </td>

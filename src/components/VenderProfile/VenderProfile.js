@@ -372,9 +372,9 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
         />
       ) : (
         <div>
-          <BundleView header={false} />
-          <BundleView header={false} />
-          <BundleView header={false} />
+          <BundleView header={false} rotate={true} />
+          <BundleView header={false} rotate={false} />
+          <BundleView header={false} rotate={true} />
         </div>
       )}
     </div>

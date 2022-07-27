@@ -4,7 +4,7 @@ import SingleBrandView from './SingleBrandView';
 
 import './index.css';
 
-const BundleView = ({ header, right }) => {
+const BundleView = ({ header, rotate }) => {
   const [tab, setTab] = useState(1);
 
   const views = [
@@ -125,7 +125,7 @@ const BundleView = ({ header, right }) => {
           </div>
         </div>
       )}
-      <SingleBrandView view={views[tab - 1]} right={right} />
+      <SingleBrandView view={views[tab - 1]} rotate={rotate} />
     </div>
   );
 };

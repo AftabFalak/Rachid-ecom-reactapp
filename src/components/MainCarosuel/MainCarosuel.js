@@ -1,9 +1,15 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+import { useNavigate } from 'react-router-dom';
+
 import './MainCarosuel.css';
 
 const MainCarosuel = () => {
+  const navigate = useNavigate();
+  const handelClick = () => {
+    navigate('/shop');
+  };
   let settings = {
     dots: false,
     infinite: true,
@@ -94,7 +100,10 @@ const MainCarosuel = () => {
                           </div>
                         </div>
                         <div className="buttonDiv">
-                          <button to="/shop" className="single-product-button">
+                          <button
+                            onClick={handelClick}
+                            className="single-product-button"
+                          >
                             Go To Shop
                           </button>
                         </div>
@@ -134,7 +143,10 @@ const MainCarosuel = () => {
                           </div>
                         </div>
                         <div className="buttonDiv">
-                          <button className="single-product-button">
+                          <button
+                            onClick={handelClick}
+                            className="single-product-button"
+                          >
                             Go To Shop
                           </button>
                         </div>
@@ -145,41 +157,106 @@ const MainCarosuel = () => {
               </div>
             </div>
           </div>
+          <div className="carousel-item">
+            <div style={{ position: 'relative' }}>
+              <img
+                className="d-block "
+                src={require('../../assets/images/Home/main2.png')}
+              />
+              <div className="carousel-caption inner-section">
+                <div className="m-5">
+                  <Slider {...settings}>
+                    <div className="slide-single">
+                      <div
+                        style={{
+                          height: '380px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                        }}
+                      >
+                        <h2 className="single-product-heading">
+                          Red Leather Jacket.
+                        </h2>
 
-          {/* <div className="carousel-item">
-            <img
-              className="d-block "
-              src={require('../../assets/images/Home/mainn.png')}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <div className="inner-section">
-                <h5 className="text-light">Heading</h5>
-                <p className="text-light">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
-                  eos molestias distinctio dolor exercitationem ullam possimus
-                  repudiandae iste inventore repellat eius similique, earum
-                  fugit error voluptatem ab impedit aliquid! Ex.
-                </p>
+                        <div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                            }}
+                          >
+                            <img
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebpCF1h7kO8JojWabWZsFt5gZvd8yR95OlQ&usqp=CAU"
+                              style={{
+                                width: '100px',
+                                height: '100px',
+                                resize: 'contain',
+                              }}
+                            />
+                          </div>
+                          <div className="priceDiv text-align-center">
+                            <p className="single-product-price">$250.00</p>
+                          </div>
+                        </div>
+                        <div className="buttonDiv">
+                          <button
+                            onClick={handelClick}
+                            className="single-product-button"
+                          >
+                            Go To Shop
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="slide-single">
+                      <div
+                        style={{
+                          height: '380px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                        }}
+                      >
+                        <h2 className="single-product-heading">
+                          Green Hoodi Jacket.
+                        </h2>
+                        <div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                            }}
+                          >
+                            <img
+                              src="https://www.billerudkorsnas.com/globalassets/managed-packaging/shoes-kuru.png"
+                              style={{
+                                width: '100px',
+                                height: '100px',
+                                resize: 'contain',
+                              }}
+                            />
+                          </div>
+                          <div className="priceDiv text-align-center">
+                            <p className="single-product-price">$250.00</p>
+                          </div>
+                        </div>
+                        <div className="buttonDiv">
+                          <button
+                            onClick={handelClick}
+                            className="single-product-button"
+                          >
+                            Go To Shop
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
               </div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img
-              className="d-block "
-              src={require('../../assets/images/Home/mainn.png')}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <div className="inner-section">
-                <h5 className="text-light">Heading</h5>
-                <p className="text-light">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
-                  eos molestias distinctio dolor exercitationem ullam possimus
-                  repudiandae iste inventore repellat eius similique, earum
-                  fugit error voluptatem ab impedit aliquid! Ex.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
         <a
           className="carousel-control-prev"
