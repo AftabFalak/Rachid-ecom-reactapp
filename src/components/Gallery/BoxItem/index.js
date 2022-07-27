@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import './index.css';
+
 import { BsCartPlus } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+
+import './index.css';
 
 const BoxItem = ({ item, quick, setQuick }) => {
+  const navigate = useNavigate();
   const [like, setLike] = useState(false);
+
+  const handleClick = () => {
+    navigate('/product-detail');
+  };
   return (
     <div className="BoxItem">
       <div className="buttons">
@@ -29,7 +37,7 @@ const BoxItem = ({ item, quick, setQuick }) => {
           </small>
         </p>
       </div>
-      <img width={'100%'} src={item.img} />
+      <img width={'100%'} src={item.img} onClick={handleClick} />
     </div>
   );
 };

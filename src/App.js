@@ -1,10 +1,10 @@
 import React, { createContext } from 'react';
 
-import './App.css';
-import NavbarBottom from './components/NavbarBottom/NavbarBottom';
 import { useState } from 'react';
-import MainDrawer from './components/MainDrawer/MainDrawer';
 import { Routes, Route } from 'react-router-dom';
+
+import NavbarBottom from './components/NavbarBottom/NavbarBottom';
+import MainDrawer from './components/MainDrawer/MainDrawer';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import VendorProfile from './components/VenderProfile/VenderProfile';
 import StoreList from './pages/store-list';
@@ -16,6 +16,8 @@ import YourCart from './pages/yourCart';
 import BundleViewPage from './pages/bundle-view';
 import Home from './pages/home';
 import GetInspiration from './pages/getInspiration';
+
+import './App.css';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

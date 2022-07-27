@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import CartTotal from './CartTotals';
+
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
+
+import CartTotal from './CartTotals';
 
 const Review = ({ orders }) => {
   const [edit, setEdit] = useState(false);

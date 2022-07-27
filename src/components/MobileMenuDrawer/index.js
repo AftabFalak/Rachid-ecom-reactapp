@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { IoCloseOutline } from 'react-icons/io5';
+
 import './index.css';
 
-import { IoCloseOutline } from 'react-icons/io5';
 const MobileMenuDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();

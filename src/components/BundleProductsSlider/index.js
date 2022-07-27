@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import './index.css';
+
 import { BsCartPlus } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 import QuickView from '../QuickView/QuickView';
 
+import './index.css';
+
 const BundleProductsSlider = ({ products }) => {
+  const navigate = useNavigate();
   let settings = {
     dots: false,
     infinite: true,
@@ -17,6 +21,10 @@ const BundleProductsSlider = ({ products }) => {
 
   const [liked, setLiked] = useState(false);
   const [quickView, setQuickView] = useState(false);
+
+  const handelClick = () => {
+    navigate('/product-detail');
+  };
 
   return (
     <div className="BundleProductsSlider">
@@ -36,7 +44,11 @@ const BundleProductsSlider = ({ products }) => {
                   <AiOutlineSearch />
                 </span>
               </div>
-              <img className="p-img" src={`${product.image}`} />
+              <img
+                className="p-img cursor-pointer"
+                src={`${product.image}`}
+                // onClick={handelClick}
+              />
               <div className="d-flex py-1 slide-content">
                 <div className="slide-text">
                   <p className="p-title">{product.title}</p>

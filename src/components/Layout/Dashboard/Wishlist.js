@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-import { IoTrashBinOutline, IoCartOutline } from 'react-icons/io5';
+import { IoTrashBinOutline } from 'react-icons/io5';
 import { AiOutlineEye } from 'react-icons/ai';
 
 import { BsCartPlus } from 'react-icons/bs';

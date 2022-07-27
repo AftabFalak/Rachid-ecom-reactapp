@@ -1,13 +1,13 @@
-.ReviewsTab .tab p{
-
-    font-size: 18px!important;
+.ReviewsTab .tab p {
+  font-size: 21px !important;
 }
 
-@media screen and (max-width:768px) {
-    
-    .ReviewsTab .tab p{
+.ReviewsTab .starRaitingTop {
+  margin-left: 3px;
+}
 
-        font-size: 14px!important;
-    }
-    
+@media screen and (max-width: 768px) {
+  .ReviewsTab .tab p {
+    font-size: 14px !important;
+  }
 }

@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import QuickView from '../QuickView/QuickView';
 
 import { BsCartPlus } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+
+import QuickView from '../QuickView/QuickView';
 
 import './index.css';
+
 const RelatedProductsSlider = ({ images }) => {
+  const navigate = useNavigate();
   let settings = {
     dots: false,
     infinite: true,
@@ -43,6 +47,10 @@ const RelatedProductsSlider = ({ images }) => {
   const [quick, setQuick] = useState(false);
   const [like, setLike] = useState(false);
 
+  const handelClick = () => {
+    navigate('/product-detail');
+  };
+
   return (
     <div className="RelatedProductsSlider">
       <Slider {...settings}>
@@ -72,6 +80,7 @@ const RelatedProductsSlider = ({ images }) => {
               <img
                 src={`/Assets/images/ProductList/${image}`}
                 className="singleImage"
+                onClick={handelClick}
               />
             </div>
           );

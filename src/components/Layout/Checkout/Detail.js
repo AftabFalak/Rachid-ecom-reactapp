@@ -1,10 +1,8 @@
 import React from 'react';
-import { profile, user } from '../../../pages/dashboard';
 import { Link } from 'react-router-dom';
-
 import { BiEdit } from 'react-icons/bi';
+import { profile, user } from '../../../pages/dashboard';
 
-import OrderSummary from './OrderSummary';
 import CartTotal from './CartTotals';
 
 const Detail = () => {
@@ -111,7 +109,7 @@ const Detail = () => {
               <span>Same as shipping address</span>
             </div>
             <div className="buttonDiv">
-              <Link to="/yourcart" className="backButton">
+              <Link to="/checkout/shoppingcart" className="backButton">
                 {' < '}Back to cart
               </Link>
               <Link to="/checkout/payment" className="proceedButton">

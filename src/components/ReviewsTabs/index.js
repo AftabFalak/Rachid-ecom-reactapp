@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
+
 import Reviews from '../Reviews';
-import ReactPaginate from 'react-paginate';
 import PaginatedPages from '../Pagination';
-import './index.css'
+
+import './index.css';
+
 const ReviewsTab = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
   return (
-    <div className='ReviewsTab'>
+    <div className="ReviewsTab">
       <div className="p-3">
         <div className="tab-container">
           <div
             onClick={() => setReviewsTab(1)}
-            className={`tab ${reviewsTab === 1 && 'tab-active'}`}
+            className={`tab mr-3 ${reviewsTab === 1 && 'tab-active'}`}
           >
             <p> Review for this item</p>
             <span>22</span>
@@ -28,15 +30,14 @@ const ReviewsTab = () => {
         </div>
       </div>
       {reviewsTab === 1 ? (
-        <div className="d-flex p-3 pb-0">
+        <div className="d-flex pl-3 align-items-center">
           <h3>22 reviews </h3>
           <div>
             <Rating
-              // onClick={handleRating}
               ratingValue={80}
               fillColor={'gold'}
-              size={26}
-              className="starRaiting"
+              size={22}
+              className="starRaitingTop"
             />
           </div>
         </div>
@@ -45,7 +46,6 @@ const ReviewsTab = () => {
           <h3>13 reviews </h3>
           <div>
             <Rating
-              // onClick={handleRating}
               ratingValue={30}
               fillColor={'gold'}
               size={26}

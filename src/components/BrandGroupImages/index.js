@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'reactstrap';
 
-import { Link } from 'react-router-dom';
+import { Col, Row } from 'reactstrap';
 
 import './index.css';
 

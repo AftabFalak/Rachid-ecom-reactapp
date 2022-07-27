@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
-import { BiEdit } from 'react-icons/bi';
-
 import { initOrders } from '../checkout';
+
 import CartTotal from '../../components/Layout/Checkout/CartTotals';
 
 import './index.css';
+
 const YourCart = () => {
   return (
     <div className="YourCart">

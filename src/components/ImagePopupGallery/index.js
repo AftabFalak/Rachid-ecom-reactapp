@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import { useState } from "react";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
+import React from 'react';
 
-const ImagePopupGallery = ({ data,setData }) => {
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
-  const { photoIndex, isOpen,images } = data;
+const ImagePopupGallery = ({ data, setData }) => {
+  const { photoIndex, isOpen, images } = data;
 
-  console.log(data)
+  console.log(data);
   return (
     <div>
       {isOpen && (
@@ -33,4 +32,4 @@ const ImagePopupGallery = ({ data,setData }) => {
     </div>
   );
 };
-export default ImagePopupGallery
+export default ImagePopupGallery;

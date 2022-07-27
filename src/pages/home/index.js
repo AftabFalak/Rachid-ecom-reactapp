@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import Slider from 'react-slick';
+
 import MainCarosuel from '../../components/MainCarosuel/MainCarosuel';
 import BundleView from '../../components/BundleView';
 
-import { TbShirt } from 'react-icons/tb';
-import Slider from 'react-slick';
 import './index.css';
-import Gallery from '../../components/Gallery';
-import { items } from '../../components/VenderProfile/VenderProfile';
+
 const Home = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
   let settings = {

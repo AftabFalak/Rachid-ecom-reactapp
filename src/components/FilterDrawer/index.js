@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import { BsArrowLeft } from 'react-icons/bs';
+
 import './index.css';
 
-import { BsArrowLeft } from 'react-icons/bs';
 const FilterDrawer = ({ open, drawertoggle, filters, allCategorie }) => {
   const [tab, setTab] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();

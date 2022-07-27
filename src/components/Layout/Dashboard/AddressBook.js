@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Popup from '../../core/Popup';
 import InputMask from 'react-input-mask';
+
+import { Link } from 'react-router-dom';
+
+import Popup from '../../core/Popup';
 
 const AddressBook = ({ addressBook, AddressBookDeleteHandler }) => {
   const [openEditModal, setOpenEditModal] = useState(false);

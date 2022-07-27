@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
+
+import { AiOutlineMenuFold } from 'react-icons/ai';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+
 import FilterDrawer from '../FilterDrawer';
 import BoxItem from './BoxItem';
 import QuickView from '../QuickView/QuickView';
 
 import './index.css';
-
-import { AiOutlineMenuFold } from 'react-icons/ai';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 export const allCategorie = [
   {
@@ -153,8 +154,6 @@ const Gallery = ({
         ></div>
       )}
       <div className="Gallery">
-        {/* /////////////////////////////////////////////////////////////////////////// */}
-
         <div className="productDropDownsView">
           {showFilter && (
             <button className="btn btn-filters" onClick={() => setOpen(true)}>
@@ -203,8 +202,6 @@ const Gallery = ({
             <option value="audi">Audi</option>
           </select>
         </div>
-
-        {/* /////////////////////////////////////////////////////////////////////// */}
 
         <Masonry
           breakpointCols={{

@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import './ProductDetail.css';
 import Faq from 'react-faq-component';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import { FaFacebookF } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
-
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
+import { IoCloseOutline } from 'react-icons/io5';
+
 import ProductMainSlider from '../ProductMainSlider';
 import RelatedProductsSlider from '../RelatedProductsSlider';
-
 import BundleView from '../BundleView';
 import Policies from '../core/Policies';
 import MeetSeller from '../core/MeetSeller';
 import ReviewsTab from '../ReviewsTabs';
-import { IoCloseOutline } from 'react-icons/io5';
+import './ProductDetail.css';
 
 const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
   const [selection, setSelection] = useState({
@@ -186,7 +185,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
                   <i className="fa fa-plus"></i>
                 </button>
               </div>
-              <button className="btn addButton">Add to Cart</button>
+              <button className="addButton">Add to Cart</button>
             </div>
 
             <hr />

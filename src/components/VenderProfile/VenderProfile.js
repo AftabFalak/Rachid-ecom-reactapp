@@ -13,6 +13,8 @@ import { GoMail } from 'react-icons/go';
 import { FiFacebook } from 'react-icons/fi';
 import BundleView from '../BundleView';
 import { Rating } from 'react-simple-star-rating';
+import { COLORS } from '../../assets/colors/colors';
+
 import m2 from '../../assets/images/ProductList/2.jpg';
 import m3 from '../../assets/images/ProductList/3.jpg';
 import m4 from '../../assets/images/ProductList/4.jpg';
@@ -23,8 +25,6 @@ import m8 from '../../assets/images/ProductList/7.jpg';
 import m9 from '../../assets/images/ProductList/9.jpg';
 import Gallery from '../Gallery';
 import Annoucements from '../Announcements';
-
-import { COLORS } from '../../assets/colors/colors';
 
 export const items = [
   {
@@ -192,7 +192,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
         <div className="vendorInfoView_bottom">
           <div className="d-sm-none d-none d-md-block">
             <div className="row">
-              <div className="col-md-5 brandInfoView border">
+              <div className="col-md-5 brandInfoView ">
                 <div className="d-flex align-items-center">
                   <h3 className="brandName m-0">{vendor.brandName}</h3>
                   <div className="starRaitingView">
@@ -247,7 +247,7 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   </span>
                 </div>
               </div>
-              <div className="col-md-4 Shipping d-none d-md-block d-sm-none border ">
+              <div className="col-md-4 Shipping d-none d-md-block d-sm-none  mt-2 ">
                 <h4 className="ShippingMainHeader">
                   stayfineofficial is a Star Seller!
                 </h4>
@@ -255,18 +255,16 @@ const VenderProfile = ({ vendor, show, onClickBack }) => {
                   <div className="col-md-6 mt-3">
                     <FaShuttleVan className="shippingLogo mb-2" />
                     <h5 className="shipping-heading">Smooth shipping</h5>
-                    
                   </div>
                   <div className="col-md-6 mt-3">
                     <GrMail className="shippingLogo mb-2" />
                     <h5 className="shipping-heading">Speedy replies</h5>
-                   
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 ShopMember text-center d-md-block d-sm-block border">
+              <div className="col-md-3 ShopMember text-center d-md-block d-sm-block  mt-2">
                 <h4 className="ShopMemberMainHeading">Shop Owner</h4>
-                <div className="mt-4">
+                <div className="mt-2">
                   <div className="memberProfileImg m-auto"></div>
                   <p className="memberName">Paul Tian</p>
                   <GoMail className="socialLogo" />{' '}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './index.css';
+
 import SingleBrandView from './SingleBrandView';
+
+import './index.css';
 
 const BundleView = ({ header, right }) => {
   const [tab, setTab] = useState(1);

@@ -1,39 +1,42 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Rating } from "react-simple-star-rating";
-import "./index.css";
+import React, { useState } from 'react';
+
+import { Link } from 'react-router-dom';
+import { Rating } from 'react-simple-star-rating';
+
+import './index.css';
+
 const Reviews = () => {
   const [reviewList, setReviewList] = useState([
     {
-      username: "Lenka",
-      date: "08 May, 2022",
+      username: 'Lenka',
+      date: '08 May, 2022',
       star: 40,
-      text: "well made shelves, very solid",
+      text: 'well made shelves, very solid',
       purchased: {
-        image: "/Assets/ProductList/2.jpg",
-        title: "Handcrafted Solid Wood Shelf",
+        image: '/Assets/ProductList/2.jpg',
+        title: 'Handcrafted Solid Wood Shelf',
       },
       helpful: false,
     },
     {
-      username: "Lenka",
-      date: "08 May, 2022",
+      username: 'Lenka',
+      date: '08 May, 2022',
       star: 100,
-      text: "well made shelves, very solid",
+      text: 'well made shelves, very solid',
       purchased: {
-        image: "/Assets/ProductList/2.jpg",
-        title: "Handcrafted Solid Wood Shelf",
+        image: '/Assets/ProductList/2.jpg',
+        title: 'Handcrafted Solid Wood Shelf',
       },
       helpful: true,
     },
     {
-      username: "Lenka",
-      date: "08 May, 2022",
+      username: 'Lenka',
+      date: '08 May, 2022',
       star: 85,
-      text: "well made shelves, very solid",
+      text: 'well made shelves, very solid',
       purchased: {
-        image: "/Assets/ProductList/2.jpg",
-        title: "Handcrafted Solid Wood Shelf",
+        image: '/Assets/ProductList/2.jpg',
+        title: 'Handcrafted Solid Wood Shelf',
       },
       helpful: true,
     },
@@ -45,7 +48,7 @@ const Reviews = () => {
         return (
           <div className="reviewBox">
             <div className="img-box">
-              <img src={"/Assets/images/ProductList/2.jpg"} />
+              <img src={'/Assets/images/ProductList/2.jpg'} />
             </div>
             <div className="review-box">
               <div>
@@ -55,7 +58,7 @@ const Reviews = () => {
               </div>
               <Rating
                 ratingValue={review.star}
-                fillColor={"black"}
+                fillColor={'black'}
                 size={20}
                 className="starRaiting"
               />
@@ -63,10 +66,10 @@ const Reviews = () => {
               <p className="p-item">Purchased item:</p>
               <div className="p-item-box">
                 <div className="p-img">
-                  <img src={"/Assets/images/ProductList/2.jpg"} />
+                  <img src={'/Assets/images/ProductList/2.jpg'} />
                 </div>
                 <div className="p-title">
-                  <Link to={"/"}>{review.purchased.title}</Link>
+                  <Link to={'/'}>{review.purchased.title}</Link>
                 </div>
               </div>
               {review.helpful ? (

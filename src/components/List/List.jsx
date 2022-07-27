@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
+
 import pic1 from '../../assets/images/ProductCardImage/bag.PNG';
 import pic2 from '../../assets/images/ProductCardImage/brand.png';
 import pic3 from '../../assets/images/ProductCardImage/ring.PNG';

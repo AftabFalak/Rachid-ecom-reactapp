@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import BrandGroupImages from '../../components/BrandGroupImages';
-import BundleView from '../../components/BundleView';
-import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
-import './index.css';
-import ProductView from '../../components/ProductView';
 
 import { FaFacebookF } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
 import { SiQuora } from 'react-icons/si';
+
+import BrandGroupImages from '../../components/BrandGroupImages';
+import BundleView from '../../components/BundleView';
+import brandLogo from '../../assets/images/VendorProfile/brand2.PNG';
+import ProductView from '../../components/ProductView';
+
+import './index.css';
+
 const BudleViewPage = () => {
   const [product, setProduct] = useState({
     image: '/Assets/images/bundle-images/view1.png',

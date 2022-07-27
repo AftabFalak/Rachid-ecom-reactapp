@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import './index.css';
+import { BsCart } from 'react-icons/bs';
+import { FiUser, FiCheckCircle } from 'react-icons/fi';
+import { MdPayment } from 'react-icons/md';
 
 import Topbar from '../../components/Layout/Checkout/Topbar';
 import Detail from '../../components/Layout/Checkout/Detail';
 import Payment from '../../components/Layout/Checkout/Payment';
 import Review from '../../components/Layout/Checkout/Review';
-
 import ShopingCart from '../../components/Layout/Checkout/ShopingCart';
 
-import { BsCart, BsFillCheckCircleFill } from 'react-icons/bs';
-import { FiUser, FiCheckCircle } from 'react-icons/fi';
-import { MdPayment } from 'react-icons/md';
+import './index.css';
 
 export const initOrders = [
   {

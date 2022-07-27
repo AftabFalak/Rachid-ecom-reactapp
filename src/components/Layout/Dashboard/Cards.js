@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Popup from "../../core/Popup";
-import InputMask from "react-input-mask";
+import React, { useState } from 'react';
+
+import Popup from '../../core/Popup';
 
 const Cards = ({ cards, CardsDeleteHandler }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
@@ -8,15 +8,15 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
   const [openAddNewModal, setOpenAddNewModal] = useState(false);
 
   const [formData, setFormData] = useState({
-    cardNumber: "",
-    nameOnCard: "",
-    validity: "",
+    cardNumber: '',
+    nameOnCard: '',
+    validity: '',
   });
 
   const { cardNumber, nameOnCard, validity } = formData;
 
   const onFormSubmit = () => {
-    console.log("submit");
+    console.log('submit');
   };
   const onChange = (e) => {
     setFormData({
@@ -95,11 +95,11 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
         </div>
       </div>
       {openEditModal && (
-        <Popup title={"Edit Card"}>
+        <Popup title={'Edit Card'}>
           <form
             className="form-t"
             onSubmit={onFormSubmit}
-            style={{ maxWidth: "99%", padding: "20px" }}
+            style={{ maxWidth: '99%', padding: '20px' }}
           >
             <input
               type="text"
@@ -145,11 +145,11 @@ const Cards = ({ cards, CardsDeleteHandler }) => {
       )}
 
       {openAddNewModal && (
-        <Popup title={"Add New Card"}>
+        <Popup title={'Add New Card'}>
           <form
             className="form-t"
             onSubmit={onFormSubmit}
-            style={{ maxWidth: "99%", padding: "20px" }}
+            style={{ maxWidth: '99%', padding: '20px' }}
           >
             <input
               type="text"

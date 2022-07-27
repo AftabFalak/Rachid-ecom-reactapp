@@ -1,8 +1,10 @@
 import React from 'react';
-import OrderSummary from './OrderSummary';
 import { Link } from 'react-router-dom';
 
 import { BiEdit } from 'react-icons/bi';
+
+import OrderSummary from './OrderSummary';
+
 const Shipping = ({ orders }) => {
   return (
     <div id="Payment">

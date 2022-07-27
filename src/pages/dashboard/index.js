@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-import './index.css';
-
+import { vendorList } from '../store-list';
 import AddressBook from '../../components/Layout/Dashboard/AddressBook';
 import Sidebar from '../../components/Layout/Dashboard/Sidebar';
 import Accountinfo from '../../components/Layout/Dashboard/Accountinfo';
@@ -13,10 +12,10 @@ import Orders from '../../components/Layout/Dashboard/Orders';
 import Profile from '../../components/Layout/Dashboard/Profile';
 import Wishlist from '../../components/Layout/Dashboard/Wishlist';
 import Followers from '../../components/Layout/Dashboard/Followers.js';
-
 import VendorListView from '../../components/VenderListView';
-import { vendorList } from '../store-list';
 import QuickView from '../../components/QuickView/QuickView';
+
+import './index.css';
 
 const initAddressBook = [
   {

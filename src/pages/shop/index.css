@@ -1,10 +1,10 @@
 .Shop {
   position: relative;
 }
-.productDropDownsView{
-    margin: 15px 0px;
-  }
- .productsDropDowns{
+.Shop .productDropDownsView {
+  margin: 15px 0px;
+}
+.Shop .productsDropDowns {
   padding: 5px;
   border-radius: 25px;
   cursor: pointer;

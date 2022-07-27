@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import VendorListView from '../../components/VenderListView';
-import VenderProfile from '../../components/VenderProfile/VenderProfile';
-import './index.css';
 
 import { allCategorie } from '../../components/Gallery';
+
+import VendorListView from '../../components/VenderListView';
+import VenderProfile from '../../components/VenderProfile/VenderProfile';
+
+import './index.css';
 
 export const vendorList = [
   {

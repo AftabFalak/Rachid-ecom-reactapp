@@ -1,23 +1,20 @@
-.reviewBox{
-display: flex;
-/* align-items: center; */
-margin: 30px 0px;
+.reviewBox {
+  display: flex;
+  margin: 30px 0px;
 }
 
 .reviewBox .img-box {
-    width: 35px;
-    margin-right: 10px;
-
+  width: 35px;
+  margin-right: 10px;
 }
-.reviewBox .img-box img{
-    width: 35px;
-    border-radius: 50%;
-    height: 35px;
+.reviewBox .img-box img {
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
 }
 
-.reviewBox .name-date{
-    margin-top: 10px;
-
+.reviewBox .name-date {
+  margin-top: 10px;
 }
 .p-item-box {
   display: flex;
@@ -32,14 +29,14 @@ margin: 30px 0px;
   width: 100%;
   border-radius: 6px;
 }
-.p-item-box .p-title a{
-    color: black!important;
-    text-decoration: underline;
+.p-item-box .p-title a {
+  color: black !important;
+  text-decoration: underline;
 }
 
-.helpful{
-    color: black;
-    display: block;
-    cursor: pointer;
-    margin: 20px;
+.helpful {
+  color: black;
+  display: block;
+  cursor: pointer;
+  margin: 20px;
 }

@@ -1,9 +1,7 @@
 import React from 'react';
-import './MainCarosuel.css';
-
 import Slider from 'react-slick';
 
-import { Link } from 'react-router-dom';
+import './MainCarosuel.css';
 
 const MainCarosuel = () => {
   let settings = {

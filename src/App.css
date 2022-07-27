@@ -31,11 +31,11 @@
 }
 
 .slick-next:before {
-  content: url("/Assets/images/right.png") !important;
+  content: url('/Assets/images/right.png') !important;
 }
 
 .slick-prev:before {
-  content: url("/Assets/images/left.png") !important;
+  content: url('/Assets/images/left.png') !important;
 }
 
 .slick-slide {

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
-import './index.css';
 import { BsCartPlus } from 'react-icons/bs';
-import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+
+import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
   const [liked, setLiked] = useState(false);

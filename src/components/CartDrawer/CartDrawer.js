@@ -1,13 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import './CartDrawer.css';
 
 import { Link } from 'react-router-dom';
-import { BiEdit } from 'react-icons/bi';
-
-import GoogleButton from 'react-google-button';
-
 import { IoCloseOutline } from 'react-icons/io5';
+
+import './CartDrawer.css';
 
 const CartDrawer = (props) => {
   const [selection, setSelection] = useState({

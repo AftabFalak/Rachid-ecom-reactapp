@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import './index.css';
+
 const Annoucements = () => {
   const ReadMore = ({ children }) => {
     const text = children;

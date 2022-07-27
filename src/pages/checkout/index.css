@@ -249,7 +249,7 @@
   display: flex;
 }
 #CartTotal .buttonDivProceed .proceedButton {
-  background-color: var(--action-color);
+  background-color: var(--action-color) !important;
   color: white;
   border: none;
   outline: none;
@@ -333,6 +333,11 @@
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
+}
+
+#Detail .buttonDiv .proceedButton {
+  color: #fff;
+  background-color: var(--action-color);
 }
 
 #Detail .buttonDiv .backButton {

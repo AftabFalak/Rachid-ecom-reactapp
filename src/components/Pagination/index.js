@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+
 import './index.css';
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 function PaginatedPages({ itemsPerPage }) {
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
+
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;

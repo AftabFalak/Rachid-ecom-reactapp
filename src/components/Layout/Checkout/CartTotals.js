@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
 const CartTotal = ({ title, navigate }) => {
   return (
     <div id="CartTotal">

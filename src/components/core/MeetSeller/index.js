@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './index.css';
 
 const MeetSeller = () => {
@@ -18,7 +19,9 @@ const MeetSeller = () => {
           </span>
         </div>
       </div>
-      <button className="messageButton">Message Uwe</button>
+      <div className="messageButtonDiv">
+        <button className="messageButton">Message Uwe</button>
+      </div>
       <p className="description">
         This seller usually responds <strong> within 24 hours.</strong>
       </p>

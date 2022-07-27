@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+
 import { IoCloseOutline } from 'react-icons/io5';
+
 import CartTotal from './CartTotals';
+
 const ShopingCart = ({ orders, OrderDeleteHandler }) => {
   const [selection, setSelection] = useState({
     color: '',

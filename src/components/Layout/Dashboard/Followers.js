@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import PaginatedPages from "../../Pagination";
+import PaginatedPages from '../../Pagination';
 
 const Followers = ({ VendorListView, vendorList, setShow }) => {
   return (

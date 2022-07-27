@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import CartTotal from './CartTotals';
 import { Link } from 'react-router-dom';
 
 import { FiCreditCard } from 'react-icons/fi';
-
 import { AiOutlineUpCircle, AiOutlineDownCircle } from 'react-icons/ai';
 import { BsPaypal } from 'react-icons/bs';
+
+import CartTotal from './CartTotals';
 
 const Payment = ({ orders }) => {
   const [ceditCard, setCreditCard] = useState(true);

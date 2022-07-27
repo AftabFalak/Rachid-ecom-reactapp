@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import ImagePopupGallery from '../ImagePopupGallery';
-import './index.css';
 
 import { Link } from 'react-router-dom';
-
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+
+import ImagePopupGallery from '../ImagePopupGallery';
+
+import './index.css';
 
 const ProductMainSlider = ({ images, viewDetail, onClose, cross }) => {
   const [data, setData] = useState({

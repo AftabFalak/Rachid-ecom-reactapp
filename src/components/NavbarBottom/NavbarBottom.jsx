@@ -1,26 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import './NavbarBottom.css';
 import { Link } from 'react-router-dom';
+
 import {
   AiOutlineSearch,
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineUser,
 } from 'react-icons/ai';
-
 import { IoCloseOutline } from 'react-icons/io5';
-
 import { BsCart2 } from 'react-icons/bs';
-
 import { TbUser } from 'react-icons/tb';
-
 import { IoIosSearch, IoIosHeartEmpty } from 'react-icons/io';
-
 import { MainLogo } from '../../assets/svgs/main-logo';
-
 import MobileMenuDrawer from '../MobileMenuDrawer';
-// import Cart from "../../assets/svgs/cart";
+import './NavbarBottom.css';
 
 function NavbarBottom(props) {
   const [open, setOpen] = useState(false);
@@ -69,12 +63,6 @@ function NavbarBottom(props) {
           <ul className="navbar-nav">
             <div
               style={{
-                // width: '250px',
-                // position: 'relative',
-                // display: 'flex',
-                // justifyContent: 'flex-end',
-                // alignItems: 'center',
-                // border: '1px solid red',
                 position: 'relative',
               }}
             >

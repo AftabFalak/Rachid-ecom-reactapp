@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import FilterDrawer from '../../components/FilterDrawer';
-import Gallery from '../../components/Gallery';
+
 import { items } from '../../components/VenderProfile/VenderProfile';
+
+import Gallery from '../../components/Gallery';
+
 import './index.css';
 
-const Shop = (props) => {
+const Shop = () => {
   return (
     <div className="Shop">
       <Gallery
