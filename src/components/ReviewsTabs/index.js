@@ -14,7 +14,7 @@ const ReviewsTab = () => {
         <div className="tab-container">
           <div
             onClick={() => setReviewsTab(1)}
-            className={`tab mr-3 ${reviewsTab === 1 && 'tab-active'}`}
+            className={`tab mr-3 ${reviewsTab === 1 && 'tab-active mr-4'}`}
           >
             <p> Review for this item</p>
             <span>22</span>
@@ -42,7 +42,7 @@ const ReviewsTab = () => {
           </div>
         </div>
       ) : (
-        <div className="d-flex  p-3 pb-0">
+        <div className="d-flex  pl-3 pb-0">
           <h3>13 reviews </h3>
           <div>
             <Rating

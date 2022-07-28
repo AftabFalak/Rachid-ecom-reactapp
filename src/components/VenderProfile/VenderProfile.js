@@ -127,8 +127,7 @@ export const items = [
   },
 ];
 
-              storlistMargin={true}
-const VenderProfile = ({ vendor, show, onClickBack , storeListMargin}) => {
+const VenderProfile = ({ vendor, show, onClickBack, categorieFilterOnTop }) => {
   const [rating, setRating] = useState(0);
   const [favorite, setFavorite] = useState(false);
   const [reviewsTab, setReviewsTab] = useState(1);
@@ -248,7 +247,9 @@ const VenderProfile = ({ vendor, show, onClickBack , storeListMargin}) => {
                   </span>
                 </div>
               </div>
-                <div className= {`col-md-4 Shipping d-none d-md-block d-sm-none mt-2 ${storeListMargin ? 'mb-4':''}`}>
+              <div
+                className={`col-md-4 Shipping d-none d-md-block d-sm-none mt-2`}
+              >
                 <h4 className="ShippingMainHeader">
                   stayfineofficial is a Star Seller!
                 </h4>
@@ -263,7 +264,9 @@ const VenderProfile = ({ vendor, show, onClickBack , storeListMargin}) => {
                   </div>
                 </div>
               </div>
-              <div className={`col-md-3 ShopMember text-center d-md-block d-sm-block  mt-2 ${storeListMargin ? 'mb-4':  ''}`}>
+              <div
+                className={`col-md-3 ShopMember text-center d-md-block d-sm-block mt-2`}
+              >
                 <h4 className="ShopMemberMainHeading">Shop Owner</h4>
                 <div className="mt-2">
                   <div className="memberProfileImg m-auto"></div>
@@ -369,7 +372,7 @@ const VenderProfile = ({ vendor, show, onClickBack , storeListMargin}) => {
           showFilter={false}
           cards={items}
           heading={'Products'}
-          categorieFilterOnTop
+          categorieFilterOnTop={categorieFilterOnTop}
         />
       ) : (
         <div>

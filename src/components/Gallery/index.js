@@ -126,6 +126,7 @@ const Gallery = ({
   heading,
   showFilter = true,
   categorieFilterOnTop,
+  relvencyBox,
 }) => {
   const [open, setOpen] = useState(false);
   const [categoryBoxShow, setCategoryBoxShow] = useState(false);
@@ -147,19 +148,11 @@ const Gallery = ({
 
   return (
     <>
-      {categoryBoxShow && (
-        <div
-          className="backdrop-invisible"
-          onClick={() => {
-            setCategoryBoxShow(false);
-            setRelvencyBoxShow(false);
-          }}
-        ></div>
-      )}
+      {categoryBoxShow && <div className="backdrop-invisible"></div>}
       <div className="Gallery">
         <div className="productDropDownsView">
           {showFilter && (
-            <button className="btn btn-filters" onClick={() => setOpen(true)}>
+            <button className="btn-filters" onClick={() => setOpen(true)}>
               <AiOutlineMenuFold /> <span className="ml-1">All Filters</span>
             </button>
           )}
@@ -170,8 +163,8 @@ const Gallery = ({
                 className="btn-category"
                 onClick={() => setCategoryBoxShow(!categoryBoxShow)}
               >
-                search by Categories {'  '}
-                {categoryBoxShow ? <FaAngleUp /> : <FaAngleDown />}
+                search by Categories
+                <span>{categoryBoxShow ? <FaAngleUp /> : <FaAngleDown />}</span>
               </button>
 
               {categoryBoxShow ? (
@@ -198,21 +191,17 @@ const Gallery = ({
             </div>
           )}
 
-          {/* <select name="cars" id="cars" className="productsDropDowns">
-            <option selected disabled hidden>
-              Sort by: Relevency
-            </option>
-            <option value="audi">Audi</option>
-          </select> */}
-
-          {categorieFilterOnTop && (
-            <div className="category-container" tabIndex={1}>
+          {relvencyBox || categorieFilterOnTop ? (
+            <div className="relevency-container" tabIndex={1}>
               <button
-                className="btn-category"
+                className="btn-category bbb"
                 onClick={() => setRelvencyBoxShow(!relvencyBoxShow)}
               >
                 Sort by: Relevency
-                {relvencyBoxShow ? <FaAngleUp /> : <FaAngleDown />}
+                <span>
+                  {' '}
+                  {relvencyBoxShow ? <FaAngleUp /> : <FaAngleDown />}
+                </span>
               </button>
 
               {relvencyBoxShow ? (
@@ -228,6 +217,8 @@ const Gallery = ({
                 <></>
               )}
             </div>
+          ) : (
+            <></>
           )}
         </div>
 

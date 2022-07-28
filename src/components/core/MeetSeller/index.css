@@ -17,19 +17,28 @@
   text-decoration: underline;
 }
 .MeetSeller .messageButtonDiv {
-  text-align: center;
+  text-align: left;
+  margin-top: 8px;
 }
-.MeetSeller .messageButton {
+.MeetSeller .messageButtonDiv .messageButton {
   background-color: transparent;
   border: 2px solid #000;
-  width: 70%;
+  width: auto;
   border-radius: 100px;
+  padding: 3px 40px;
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  padding: 8px;
   margin: 10px auto;
 }
 .MeetSeller .description {
-  text-align: center;
-  margin-top: 10px;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .MeetSeller .messageButtonDiv {
+    text-align: center;
+  }
+  .MeetSeller .description {
+    text-align: center;
+  }
 }

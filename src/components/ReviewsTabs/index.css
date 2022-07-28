@@ -1,9 +1,15 @@
 .ReviewsTab .tab p {
-  font-size: 21px !important;
+  font-size: 24px !important;
+}
+
+.ReviewsTab .tab span {
+  font-size: 18px !important;
+  margin-left: 10px;
 }
 
 .ReviewsTab .starRaitingTop {
-  margin-left: 3px;
+  margin-left: 6px;
+  margin-top: -10px;
 }
 
 @media screen and (max-width: 768px) {

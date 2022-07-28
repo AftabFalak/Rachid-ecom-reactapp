@@ -59,13 +59,21 @@ const Payment = ({ orders }) => {
                 <div className="dummyCardDiv">
                   <img
                     src={require('../../../assets/images/CreditCard/dummy.PNG')}
-                    alt=""
-                    srcset=""
-                    className="dummyCardImg"
+                    className="dummyCardImg d-none d-md-block"
                     style={{
                       width: '400px',
                       height: '200px',
                       borderRadius: '15px',
+                    }}
+                  />
+                  <img
+                    src={require('../../../assets/images/CreditCard/dummy.PNG')}
+                    className="dummyCardImg d-md-none"
+                    style={{
+                      width: '300px',
+                      height: '160px',
+
+                      borderRadius: '6px',
                     }}
                   />
                 </div>
@@ -154,11 +162,20 @@ const Payment = ({ orders }) => {
                     src={require('../../../assets/images/CreditCard/dummy.PNG')}
                     alt=""
                     srcset=""
-                    className="dummyCardImg"
+                    className="dummyCardImg d-none d-md-block"
                     style={{
                       width: '400px',
                       height: '200px',
                       borderRadius: '15px',
+                    }}
+                  />
+                  <img
+                    src={require('../../../assets/images/CreditCard/dummy.PNG')}
+                    className="dummyCardImg d-md-none"
+                    style={{
+                      width: '300px',
+                      height: '160px',
+                      borderRadius: '6px',
                     }}
                   />
                 </div>

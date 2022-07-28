@@ -14,6 +14,7 @@ import BundleView from '../BundleView';
 import Policies from '../core/Policies';
 import MeetSeller from '../core/MeetSeller';
 import ReviewsTab from '../ReviewsTabs';
+
 import './ProductDetail.css';
 
 const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {

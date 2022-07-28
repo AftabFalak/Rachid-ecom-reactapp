@@ -79,13 +79,15 @@ const StoreList = () => {
             )}
           </div>
 
-          <select name="cars" id="cars" className="productsDropDowns">
-            <option selected disabled hidden>
-              Sort by: <span className="font-weight-bold	">Relevency</span>
-            </option>
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-          </select>
+          <div className="releContainer">
+            <select name="cars" id="cars" className="productsDropDowns">
+              <option selected disabled hidden>
+                Sort by: <span className="font-weight-bold	">Relevency</span>
+              </option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+            </select>
+          </div>
         </div>
 
         <VendorListView
@@ -110,10 +112,9 @@ const StoreList = () => {
           {vendor && (
             <VenderProfile
               vendor={vendor}
-              categorieFilterOnTop={true}
               onClickBack={setShow}
               show={show}
-              storListMargin={true}
+              categorieFilterOnTop={true}
             />
           )}
         </div>

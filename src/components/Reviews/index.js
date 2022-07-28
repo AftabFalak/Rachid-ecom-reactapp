@@ -59,7 +59,7 @@ const Reviews = () => {
               <Rating
                 ratingValue={review.star}
                 fillColor={'black'}
-                size={20}
+                size={22}
                 className="starRaiting"
               />
               <p className="review-text">{review.text}</p>

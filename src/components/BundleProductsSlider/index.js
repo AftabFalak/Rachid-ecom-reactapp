@@ -47,7 +47,7 @@ const BundleProductsSlider = ({ products }) => {
               <img
                 className="p-img cursor-pointer"
                 src={`${product.image}`}
-                // onClick={handelClick}
+                onClick={handelClick}
               />
               <div className="d-flex py-1 slide-content">
                 <div className="slide-text">

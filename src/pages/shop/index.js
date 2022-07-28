@@ -13,6 +13,7 @@ const Shop = () => {
         cards={items}
         heading={'Find Products You Love'}
         categorieFilterOnTop={false}
+        relvencyBox={true}
       />
     </div>
   );

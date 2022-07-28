@@ -190,11 +190,7 @@
 .VenderProfile .tab-container-profile .tab-active {
   border-bottom: 2px solid var(--main-color);
 }
-@media screen and (max-width: 400px) {
-  .VenderProfile .tab-container-profile .tab {
-    font-size: 12px;
-  }
-}
+
 .VenderProfile .Shipping {
   color: var(--black-100) !important;
   display: flex;
@@ -258,7 +254,14 @@
 .ShopMember .socialLogo:hover {
   opacity: 0.8;
 }
-@media (max-width: 440px) {
+
+@media (max-width: 500px) {
+  .VenderProfile .tab-container-profile {
+    padding: 8px 10px !important;
+  }
+  .VenderProfile .tab-container-profile .tab p {
+    font-size: 16px;
+  }
   .VenderProfile .vendorInfoView .vendorInfoView_bottom {
     margin-top: 60px;
     padding: 0px 12px;

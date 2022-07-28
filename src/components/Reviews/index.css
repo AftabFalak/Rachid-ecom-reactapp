@@ -1,6 +1,7 @@
 .reviewBox {
   display: flex;
   margin: 30px 0px;
+  justify-content: flex-start;
 }
 
 .reviewBox .img-box {
@@ -8,22 +9,34 @@
   margin-right: 10px;
 }
 .reviewBox .img-box img {
-  width: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  height: 40px;
 }
 
-.reviewBox .name-date {
-  margin-top: 10px;
+.reviewBox .review-box {
+  margin-top: 8px;
+  margin-left: 40px;
 }
-.p-item-box {
+
+.reviewBox .review-box .name-date {
+  font-size: 18px;
+}
+.reviewBox .review-box .p-item-box {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
-.p-item-box .p-img {
-  width: 50px;
-  margin-right: 5px;
+
+.reviewBox .review-box .p-item {
+  font-size: 14px;
+}
+
+.reviewBox .review-box .review-text {
+  font-size: 15px;
+}
+.reviewBox .review-box .p-item-box .p-img {
+  width: 70px;
+  margin-right: 10px;
 }
 .p-item-box .p-img img {
   width: 100%;

@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   opacity: 0.9;
-padding: 15px 0px;
+  padding: 15px 0px;
 }
 #MainCarosuel .inner-section-small .single-product-heading-small {
   color: var(--white-100);
@@ -28,7 +28,7 @@ padding: 15px 0px;
 }
 #MainCarosuel .priceDiv .single-product-price-small {
   color: var(--white-100);
-  font-weight: 28px!important;
+  font-weight: 28px !important;
 }
 
 #MainCarosuel .single-product-heading {
@@ -73,7 +73,7 @@ padding: 15px 0px;
   margin-right: -120px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   #MainCarosuel .inner-section {
     width: 100%;
   }

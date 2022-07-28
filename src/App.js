@@ -71,6 +71,7 @@ function App() {
                 profileImage: require('./assets/images/VendorProfile/brand2.PNG'),
                 coverImage: require('./assets/images/VenderCover/venderCoverPhotoavif.avif'),
               }}
+              categorieFilterOnTop={true}
             />
           }
         />

@@ -87,9 +87,9 @@ const Home = () => {
       </div>
 
       <div>
-        <BundleView header={false} rotate={true} />
-        <BundleView header={false} rotate={false} />
-        <BundleView header={false} rotate={true} />
+        <BundleView header={false} rotate={true} isBundleView_new={false} />
+        <BundleView header={false} rotate={false} isBundleView_new={false} />
+        <BundleView header={false} rotate={true} isBundleView_new={false} />
       </div>
     </div>
   );

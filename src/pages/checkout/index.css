@@ -58,44 +58,47 @@
   flex-direction: column;
   margin: 20px 0px;
 }
+#ShoppingCart .header {
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+}
+#ShoppingCart .header span {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-#ShoppingCart .orderList .singleOrder {
+#ShoppingCart .singleOrder {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px 0px;
 }
-#ShoppingCart .orderList .singleOrder:last-child {
-  border-bottom: none;
-}
-#ShoppingCart .orderList .singleOrder .infoView {
-  display: flex;
+#ShoppingCart .singleOrder:last-child {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-#ShoppingCart .orderList .singleOrder .title {
+#ShoppingCart .singleOrder .title {
   color: #000;
   font-weight: 600;
 }
-#ShoppingCart .orderList .singleOrder .price {
-  color: var(--main-color);
-}
-#ShoppingCart .orderList .singleOrder .size span {
-  color: rgba(0, 0, 0, 0.5);
-}
-#ShoppingCart .orderList .singleOrder .color span {
-  color: rgba(0, 0, 0, 0.5);
-}
 
-#ShoppingCart .orderList .singleOrder .quantity {
-  font-size: 14px;
-  text-align: center;
+#ShoppingCart .singleOrder .size {
   font-weight: 600;
   color: #000;
 }
-#ShoppingCart .orderList .singleOrder .quantity span {
-  color: rgba(0, 0, 0, 0.6);
+#ShoppingCart .singleOrder .color {
+  font-weight: 600;
+  color: #000;
 }
-#ShoppingCart .orderList .singleOrder .EditProfileLink {
+
+#ShoppingCart .singleOrder .quanitySelect {
+  background-color: rgb(215, 218, 218) !important;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+#ShoppingCart .singleOrder .EditProfileLink {
   background-color: #fff;
   color: #000;
   padding: 3px 12px;
@@ -129,7 +132,7 @@
 }
 #ShoppingCart .price {
   align-items: center;
-  font-size: 18px;
+  color: var(--action-color);
 }
 #ShoppingCart .quantity {
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -153,6 +156,7 @@
 
 #ShoppingCart .closeDiv {
   margin-right: 10px;
+  cursor: pointer;
 }
 #ShoppingCart .closeDiv .closeIcon {
   font-size: 24px;
@@ -406,8 +410,16 @@
 #Review .orderList .singleOrder .price {
   color: var(--action-color);
 }
+#Review .orderList .singleOrder .size {
+  color: #000;
+  font-weight: 600;
+}
 #Review .orderList .singleOrder .size span {
   color: rgba(0, 0, 0, 0.5);
+}
+#Review .orderList .singleOrder .color {
+  color: #000;
+  font-weight: 600;
 }
 #Review .orderList .singleOrder .color span {
   color: rgba(0, 0, 0, 0.5);
@@ -524,10 +536,24 @@
   min-width: 50px;
   font-size: 15px;
 }
+
+#Review .singleOrder .quanitySelect {
+  background-color: rgb(215, 218, 218) !important;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
 #Payment .header {
   background-color: #f7f7f7;
   padding: 10px 20px;
 }
+#Payment .dumas {
+  width: '400px' !important;
+  height: '200px' !important;
+  border-radius: '15px' !important;
+}
+
 #Payment .pymentSubmit {
   color: var(--action-color) !important;
   border: 2px solid var(--action-color);
@@ -610,7 +636,7 @@
   margin: 18px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   #checkout-topbar .singleTab {
     padding: 0px 15px;
   }

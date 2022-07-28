@@ -81,7 +81,7 @@
   opacity: 1;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .RelatedProductsSlider .slide-single {
     width: 100%;
   }
@@ -90,9 +90,11 @@
     width: 100%;
   }
 
-  .RelatedProductsSlider .textArea {
-    padding: 3px;
-    width: 85%;
-    bottom: 10px;
+  .RelatedProductsSlider .slick-next {
+    right: -50px !important;
+  }
+
+  .RelatedProductsSlider .slick-prev {
+    left: -50px !important;
   }
 }

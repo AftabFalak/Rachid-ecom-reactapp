@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './index.css';
 
-const VendorListView = ({ VendorList, setShow }) => {
+const VendorListView = ({ VendorList, setShow, navigateToProfile }) => {
   return (
     <>
       {VendorList.map((item, index) => {
@@ -28,13 +28,23 @@ const VendorListView = ({ VendorList, setShow }) => {
               <div className="mt-5 text-center px-2">
                 <h3 className="pb-2 font-weight-bold">{item.brandName} </h3>
                 <p className="brandDiscription">{item.brandDescription}</p>
-                <Link
-                  to={window.innerWidth < 768 ? '#' : `/store-list/${item.id}`}
-                  onClick={window.innerWidth < 768 ? () => setShow(true) : null}
-                  className="VisitStoreNumber"
-                >
-                  Visit Store
-                </Link>
+                {navigateToProfile ? (
+                  <Link to="/vendor" className="VisitStoreNumber">
+                    Visit Store
+                  </Link>
+                ) : (
+                  <Link
+                    to={
+                      window.innerWidth < 768 ? '#' : `/store-list/${item.id}`
+                    }
+                    onClick={
+                      window.innerWidth < 768 ? () => setShow(true) : null
+                    }
+                    className="VisitStoreNumber"
+                  >
+                    Visit Store
+                  </Link>
+                )}
               </div>
             </div>
           </div>

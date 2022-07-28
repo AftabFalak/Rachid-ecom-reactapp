@@ -23,7 +23,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 0px;
 }
+
 .Gallery .productsDropDowns {
   padding: 5px;
   border-radius: 25px;
@@ -32,6 +34,7 @@
 
 .btn-filters {
   border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: var(--white-100);
   font-weight: normal;
   border-radius: 50px;
   padding: 9px;
@@ -44,7 +47,10 @@
 .Gallery .category-container {
   position: relative;
   margin: 10px 0px;
+  width: 100%;
+  text-align: left;
 }
+
 .Gallery .category-container .list {
   position: absolute;
   top: 36px;
@@ -71,29 +77,30 @@
   cursor: pointer;
   margin: 0 !important;
 }
-.Gallery .category-container .relevensyList {
+.Gallery .relevency-container .relevensyList {
   position: absolute;
   top: 36px;
-  left: 0px !important;
+  right: 0px !important;
   z-index: 30000;
   box-shadow: 3px 4px 10px lightgray;
   background-color: white;
   border-radius: 5px;
   overflow-y: auto;
   max-height: 400px;
-  width: 100%;
+  width: 50%;
 }
 
-.Gallery .category-container .relevensyList li {
+.Gallery .relevency-container .relevensyList li {
   border-bottom: 1px solid gray;
   margin-right: 20px;
 }
 
-.Gallery .category-container .relevensyList li p {
+.Gallery .relevency-container .relevensyList li p {
   flex: 1;
+  text-align: left;
 }
 
-.Gallery .category-container .relevensyList .list_item {
+.Gallery .relevency-container .relevensyList .list_item {
   padding: 10px 10px;
   cursor: pointer;
   margin: 0 !important;
@@ -113,9 +120,7 @@
   background-color: var(--white-100);
   padding: 5px 20px;
   width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: 0px;
 }
 .Gallery .category-container .btn-category:hover {
   transform: scale(1.05);
@@ -123,6 +128,39 @@
 
 .Gallery .category-container .btn-category span {
   float: right;
+}
+
+.Gallery .relevency-container {
+  position: relative;
+  margin: 10px 0px;
+  width: 100%;
+  text-align: right;
+}
+.Gallery .relevency-container .btn-category {
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: left;
+  transition: all 0.3s;
+  background-color: var(--white-100);
+  padding: 5px 20px;
+  width: auto;
+  margin: 0px;
+}
+
+.Gallery .relevency-container .list li {
+  border-bottom: 1px solid gray;
+  margin-right: 20px;
+}
+
+.Gallery .relevency-container .list li p {
+  flex: 1;
+}
+
+.Gallery .relevency-container .list .list_item {
+  padding: 10px 10px;
+  cursor: pointer;
+  margin: 0 !important;
 }
 
 .Gallery .containerCheckbox {
@@ -193,7 +231,7 @@
   left: 0;
   z-index: 3;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .Gallery .category-container .btn-category {
     font-size: 12px;
     width: auto;

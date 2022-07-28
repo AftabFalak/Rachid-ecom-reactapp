@@ -182,7 +182,7 @@
   font-size: 20px;
   text-align: center;
   min-width: 60px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .wishList .socialheading {
@@ -257,21 +257,24 @@
   margin-top: 20px;
 }
 .addButton {
-  background-color: var(--action-color);
-  color: #ffff;
-  font-size: 20px;
-  border-radius: 50px;
-  padding: 4px 20px;
-  height: 46px;
+  background-color: var(--white-100);
+  color: var(--action-color);
+  padding: 8px 30px;
   font-size: 16px;
-  font-weight: 500;
-  border: none;
+  font-weight: normal;
+  border-radius: 0px;
+  border: 2px solid var(--action-color);
+  margin-top: 10px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
 .addButton:hover {
-  background-color: var(--white-100);
-  color: var(--black-100);
-  outline: 1px solid var(--black-100);
+  background-color: var(--action-color);
+  color: var(--white-100);
 }
 .stockAva {
   color: rgb(174, 169, 169);
@@ -314,7 +317,7 @@
 .tab-container .tab-active {
   border-bottom: 2px solid black;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .tab-container .tab {
     font-size: 12px;
   }
