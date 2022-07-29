@@ -287,14 +287,34 @@ const MainCarosuel = () => {
         </a>
       </div>
 
+      {/* ///////////////////////////////////////////////////////////// */}
+      <div className="d-md-none">
+        <div className="inner-section-small-main">
+          <Slider {...settings}>
+            <div className="slide-single-small">
+              <img
+                src={require('../../assets/images/Home/mainn.png')}
+                style={{
+                  width: '100%',
+                  height: '420px',
+                  margin: '0px',
+                }}
+              />
+            </div>
 
-
-
-
-
-
-      <div className='d-md-none'>
-        <div className=" inner-section-small">
+            <div className="slide-single-small">
+              <img
+                src={require('../../assets/images/Home/mainn.png')}
+                style={{
+                  width: '100%',
+                  height: '420px',
+                  margin: '0px',
+                }}
+              />
+            </div>
+          </Slider>
+        </div>
+        <div className="inner-section-small">
           <div>
             <Slider {...settings}>
               <div className="slide-single">
@@ -387,8 +407,6 @@ const MainCarosuel = () => {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 };
