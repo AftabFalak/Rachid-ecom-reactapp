@@ -1,19 +1,36 @@
 import React from 'react';
 import { Container, Row, Media, Col } from 'reactstrap';
-// import CommonLayout from '../../components/shop/common-layout';
 
-const LookBookDot = ({ img, title, price, num, details, classes, link }) => {
+import './LookBook.css';
+
+const LookBookDot = ({
+  img,
+  brd,
+  title,
+  price,
+  num,
+  details,
+  classes,
+  link,
+}) => {
   return (
-    <div className={classes}>
+    <div className={`${classes}`}>
       <span>{num}</span>
       <a href={link}>
-        <div className="dot-showbox">
+        <div className="dot-showbox single-dot" style={{ width: '150px' }}>
           <Media src={img} className="img-fluid blur-up lazyload" alt="" />
           <div className="dot-info">
-            <h5 className="title">{title}</h5>
-            <h5>{price}</h5>
-            <h6>{details}</h6>
+            <div className="d-flex justify-content-between align-items-center">
+              <div>
+                <span className="title-dot">{title}</span>
+                <span className="title-dot">{price}</span>
+              </div>
+              <div>
+                <Media src={brd} className="img-brand" alt="" />
+              </div>
+            </div>
           </div>
+          <button className="addToCart">Add To Cart</button>
         </div>
       </a>
     </div>
@@ -35,18 +52,20 @@ const Lookbook = () => {
                   />
                 </div>
                 <LookBookDot
-                  img={require('../../assets/images/pro3/bag.PNG')}
+                  img={require('../../assets/images/pro3/ring.PNG')}
+                  brd={require('../../assets/images/VendorProfile/niche.jpeg')}
                   num={'1'}
-                  title="tee"
+                  title="Dolor ad hoc "
                   details="details"
                   classes="lookbook-dot"
                   price="200$"
                   link="#"
                 />
                 <LookBookDot
-                  img={require('../../assets/images/pro3/brand.png')}
+                  img={require('../../assets/images/pro3/ring.PNG')}
+                  brd={require('../../assets/images/VendorProfile/niche.jpeg')}
                   num={'2'}
-                  title="tee"
+                  title="Dolor ad hoc "
                   details="details"
                   classes="lookbook-dot dot2"
                   price="200$"
@@ -63,9 +82,10 @@ const Lookbook = () => {
                   />
                 </div>
                 <LookBookDot
-                  img={require('../../assets/images/pro3/shoe.PNG')}
+                  img={require('../../assets/images/pro3/ring.PNG')}
+                  brd={require('../../assets/images/VendorProfile/niche.jpeg')}
                   num={'1'}
-                  title="tee"
+                  title="Dolor ad hoc "
                   details="details"
                   classes="lookbook-dot dot3"
                   price="200$"
@@ -73,8 +93,9 @@ const Lookbook = () => {
                 />
                 <LookBookDot
                   img={require('../../assets/images/pro3/ring.PNG')}
+                  brd={require('../../assets/images/VendorProfile/niche.jpeg')}
                   num={'2'}
-                  title="tee"
+                  title="Dolor ad hoc "
                   details="details"
                   classes="lookbook-dot dot4"
                   price="200$"

@@ -1,0 +1,23 @@
+.single-dot {
+  padding: 8px 8px;
+}
+.img-brand {
+  width: 30px;
+  height: 20px;
+}
+.title-dot {
+  color: var(--black-100) !important;
+  font-size: 10px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: auto !important;
+}
+
+
+.addToCart {
+  border: 1px solid var(--action-color);
+  background-color: transparent;
+  color: var(--action-color);
+  text-align: center;
+  margin: auto;
+}
