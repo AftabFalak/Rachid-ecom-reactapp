@@ -54,10 +54,27 @@ const ShopingCart = ({ orders, OrderDeleteHandler }) => {
                       </span>
                       <br />
                       <span className="price">${price}</span>
+                      <div>
+                        <select
+                          name=""
+                          className="quanitySelectSmall d-md-none"
+                        >
+                          <option value="1">Qty: 1</option>
+                          <option value="2">Qty: 2</option>
+                          <option value="3">Qty: 3</option>
+                          <option value="4">Qty: 4</option>
+                          <option value="5">Qty: 5</option>
+                          <option value="6">Qty: 6</option>
+                          <option value="7">Qty: 7</option>
+                          <option value="8">Qty: 8</option>
+                          <option value="9">Qty: 9</option>
+                          <option value="10">Qty: 10</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div>
-                    <select name="" className="quanitySelect">
+                    <select name="" className="quanitySelect d-none d-md-block">
                       <option value="1">Qty: 1</option>
                       <option value="2">Qty: 2</option>
                       <option value="3">Qty: 3</option>

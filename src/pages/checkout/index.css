@@ -98,6 +98,15 @@
   padding: 5px 8px;
   border-radius: 5px;
 }
+
+#ShoppingCart .singleOrder .quanitySelectSmall {
+  background-color: rgb(215, 218, 218) !important;
+  border: none;
+  outline: none;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
 #ShoppingCart .singleOrder .EditProfileLink {
   background-color: #fff;
   color: #000;
@@ -544,6 +553,14 @@
   padding: 5px 8px;
   border-radius: 5px;
 }
+
+#Review .singleOrder .quanitySelectSmall {
+  background-color: rgb(215, 218, 218) !important;
+  border: none;
+  outline: none;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
 #Payment .header {
   background-color: #f7f7f7;
   padding: 10px 20px;
@@ -663,5 +680,19 @@
 
   #checkout-topbar .singleTab .TabIconActive {
     font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  #Review .quanitySelect {
+    display: none;
+  }
+  #Review .quanitySelectSmall {
+    display: block;
+  }
+  #ShoppingCart .quanitySelect {
+    display: none;
+  }
+  #ShoppingCart .quanitySelectSmall {
+    display: block;
   }
 }

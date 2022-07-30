@@ -131,6 +131,8 @@
 .addToCart {
   text-align: left;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .addToCart .size span {
@@ -155,11 +157,12 @@
 .counterButton {
   display: flex;
   margin-right: 20px;
+  height: 45px;
 }
 
 .counterButton .logo {
   cursor: pointer;
-  padding: 12px;
+  padding: 6px !important;
   background-color: #ffff;
   border: 2px solid rgb(232, 227, 227);
   display: flex;
@@ -175,14 +178,14 @@
 }
 
 .counterButton .countNumber {
-  padding: 3px;
+  padding: 0px;
   background-color: #e8ecef;
   border-top: 2px solid rgb(232, 227, 227);
   border-bottom: 2px solid rgb(232, 227, 227);
   font-size: 20px;
   text-align: center;
   min-width: 60px;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .wishList .socialheading {

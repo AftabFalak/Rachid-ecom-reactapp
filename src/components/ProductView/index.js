@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import { BsCartPlus } from 'react-icons/bs';
-
+import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
 import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
@@ -16,16 +16,16 @@ const ProductView = ({ product, index, handleProduct }) => {
             <span onClick={() => setLiked(!liked)} className="">
               {liked ? (
                 <div>
-                  <i className="fa fa-heart"></i>
+                  <AiOutlineHeart />
                 </div>
               ) : (
                 <i>
-                  <i className="far fa-heart"></i>
+                  <AiFillHeart />
                 </i>
               )}
             </span>
             <span className="icon">
-              <i className="fa fa-search"></i>
+              <AiOutlineSearch />
             </span>
           </div>
           <img src={product.image} width="100%" />
