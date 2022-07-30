@@ -28,11 +28,7 @@ const VendorListView = ({ VendorList, setShow, navigateToProfile }) => {
               <div className="mt-5 text-center px-2">
                 <h3 className="pb-2 font-weight-bold">{item.brandName} </h3>
                 <p className="brandDiscription">{item.brandDescription}</p>
-                {navigateToProfile ? (
-                  <Link to="/vendor" className="VisitStoreNumber">
-                    Visit Store
-                  </Link>
-                ) : (
+               
                   <Link
                     to={
                       window.innerWidth < 768 ? '#' : `/store-list/${item.id}`
@@ -44,7 +40,7 @@ const VendorListView = ({ VendorList, setShow, navigateToProfile }) => {
                   >
                     Visit Store
                   </Link>
-                )}
+                
               </div>
             </div>
           </div>
