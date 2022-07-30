@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 
 import MainCarosuel from '../../components/MainCarosuel/MainCarosuel';
 import BundleView from '../../components/BundleView';
+import Lookbook from '../../components/LookBook/LookBook';
 
 import './index.css';
 
@@ -43,9 +44,9 @@ const Home = () => {
 
   return (
     <div id="Home">
-      <MainCarosuel />
-
-      <div className="m-3 bg-light slide-parent">
+      <Lookbook />
+      {/* <MainCarosuel /> */}
+      <div className="m-5 bg-light slide-parent">
         <Slider {...settings}>
           <div className="slide-single">
             <img src="/Assets/images/brand-logos/art.jpeg" />

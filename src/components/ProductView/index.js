@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsCartPlus } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
+
+import QuickView from '../QuickView/QuickView';
+
 import './index.css';
 
 const ProductView = ({ product, index, handleProduct }) => {
   const [liked, setLiked] = useState(false);
+  const [quickView, setQuickView] = useState(false);
   return (
     <div className="ProductView">
       <hr />
@@ -24,7 +28,7 @@ const ProductView = ({ product, index, handleProduct }) => {
                 </i>
               )}
             </span>
-            <span className="icon">
+            <span className="icon" onClick={() => setQuickView(true)}>
               <AiOutlineSearch />
             </span>
           </div>
@@ -131,6 +135,7 @@ const ProductView = ({ product, index, handleProduct }) => {
           </button>
         </div>
       </div>
+      {quickView ? <QuickView onClose={() => setQuickView(false)} /> : <></>}
     </div>
   );
 };
