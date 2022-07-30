@@ -30,9 +30,7 @@ const VendorListView = ({ VendorList, setShow, navigateToProfile }) => {
                 <p className="brandDiscription">{item.brandDescription}</p>
                
                   <Link
-                    to={
-                      window.innerWidth < 768 ? '#' : `/store-list/${item.id}`
-                    }
+                    to={`/store-list/${item.id}`}
                     onClick={
                       window.innerWidth < 768 ? () => setShow(true) : null
                     }
