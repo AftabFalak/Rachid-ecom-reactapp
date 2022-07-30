@@ -148,7 +148,22 @@ const Gallery = ({
 
   return (
     <>
-      {categoryBoxShow && <div className="backdrop-invisible"></div>}
+      {categoryBoxShow && (
+        <div
+          onClick={() => {
+            setCategoryBoxShow(false);
+          }}
+          className="backdrop-invisible"
+        ></div>
+      )}
+      {relvencyBoxShow && (
+        <div
+          onClick={() => {
+            setRelvencyBoxShow(false);
+          }}
+          className="backdrop-invisible"
+        ></div>
+      )}
       <div className="Gallery">
         <div className="productDropDownsView">
           {showFilter && (
@@ -194,7 +209,7 @@ const Gallery = ({
           {relvencyBox || categorieFilterOnTop ? (
             <div className="relevency-container" tabIndex={1}>
               <button
-                className="btn-category bbb"
+                className="btn-category"
                 onClick={() => setRelvencyBoxShow(!relvencyBoxShow)}
               >
                 Sort by: Relevency

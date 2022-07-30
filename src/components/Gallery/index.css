@@ -236,4 +236,8 @@
     font-size: 12px;
     width: auto;
   }
+  .Gallery .relevency-container .btn-category {
+    width: auto;
+    font-size: 12px;
+  }
 }

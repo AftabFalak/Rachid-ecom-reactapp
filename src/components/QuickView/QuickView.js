@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IoCloseOutline } from 'react-icons/io5';
 
-import ProductDetail from '../ProductDetail/ProductDetail';
+import QuickProductDetail from '../QuickProductDetail/QuickProductDetail';
 import './QuickView.css';
 
 const QuickView = ({ setQuick, onClose }) => {
@@ -34,8 +34,8 @@ const QuickView = ({ setQuick, onClose }) => {
           <IoCloseOutline style={{ fontSize: '34px' }} />
         </button>
       </div>
-      <div className="QuickView">
-        <ProductDetail
+      <div className="QuickView p-0">
+        <QuickProductDetail
           setQuick={setQuick}
           viewDetail
           quickView

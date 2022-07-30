@@ -4,10 +4,11 @@
 
 .store-list .vendor-list {
   overflow-y: scroll;
-  max-width: 500px;
   width: 30%;
   display: inline-block;
   height: calc(100vh - 70px);
+  /* width: 300px; */
+  max-width: 350px !important;
 }
 
 .store-list .vendor-view {

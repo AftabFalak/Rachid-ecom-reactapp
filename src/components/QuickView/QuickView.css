@@ -10,6 +10,7 @@
   top: 5%;
   left: 2.5%;
   overflow: auto;
+  padding: 0px !important;
 }
 
 .bg-overlay-quick {
@@ -72,15 +73,3 @@
     margin-top: -36px;
   }
 }
-
-/* @media (max-width: 600px) {
-  .QuickView {
-    margin: 0;
-    min-width: 50vw;
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-} */

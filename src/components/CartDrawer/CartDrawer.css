@@ -136,37 +136,6 @@
   border: none;
 }
 
-.CartDrawer .singleOrder .counterButton {
-  display: flex;
-}
-
-.CartDrawer .singleOrder .counterButton .logo {
-  cursor: pointer;
-  background-color: #ffff;
-  border: 2px solid rgb(232, 227, 227);
-  display: flex;
-  align-items: center;
-}
-
-.CartDrawer .singleOrder .counterButton .minus-btn {
-  border-radius: 50% 0 0 50%;
-}
-
-.CartDrawer .singleOrder .counterButton .plus-btn {
-  border-radius: 0 50% 50% 0;
-}
-
-.CartDrawer .singleOrder .counterButton .countNumber {
-  padding: 5px 3px;
-  background-color: #e8ecef;
-  border-top: 2px solid rgb(232, 227, 227);
-  border-bottom: 2px solid rgb(232, 227, 227);
-  font-size: 20px;
-  text-align: center;
-  min-width: 40px;
-  font-size: 22px;
-}
-
 .CartDrawer .bottomDiv {
   position: absolute;
   bottom: 0;
@@ -190,16 +159,7 @@
   display: flex;
   flex-direction: column;
 }
-/* .CartDrawer .bottomDiv .buttonsDiv .view-cart {
-  margin: 3px 0px;
-  border: none;
-  outline: none;
-  padding: 9px 0px;
-  border-radius: 20px;
-  background-color: #f7f7f7;
-  text-align: center;
-  color: black;
-} */
+
 .CartDrawer .bottomDiv .buttonsDiv .checkout {
   margin: 3px 0px;
   border: none;
@@ -209,4 +169,36 @@
   text-align: center;
   background-color: var(--action-color);
   color: #fff;
+}
+
+.CartDrawer .counterButton {
+  display: flex;
+  height: 40px;
+}
+
+.CartDrawer .counterButton .logo {
+  cursor: pointer;
+  padding: 5px 8px !important;
+  background-color: #ffff;
+  border: 2px solid rgb(232, 227, 227);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.CartDrawer .counterButton .minus-btn {
+  border-radius: 50% 0 0 50%;
+}
+
+.CartDrawer .counterButton .plus-btn {
+  border-radius: 0 50% 50% 0;
+}
+
+.CartDrawer .counterButton .countNumber {
+  background-color: #e8ecef;
+  border-top: 2px solid rgb(232, 227, 227);
+  border-bottom: 2px solid rgb(232, 227, 227);
+  text-align: center;
+  min-width: 30px !important;
+  font-size: 17px !important;
 }
