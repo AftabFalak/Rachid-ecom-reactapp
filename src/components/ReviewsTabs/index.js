@@ -10,27 +10,25 @@ const ReviewsTab = () => {
   const [reviewsTab, setReviewsTab] = useState(1);
   return (
     <div className="ReviewsTab">
-      <div className="p-3">
-        <div className="tab-container">
-          <div
-            onClick={() => setReviewsTab(1)}
-            className={`tab mr-3 ${reviewsTab === 1 && 'tab-active mr-4'}`}
-          >
-            <p> Review for this item</p>
-            <span>22</span>
-          </div>
+      <div className="tab-container">
+        <div
+          onClick={() => setReviewsTab(1)}
+          className={`tab mr-3 ${reviewsTab === 1 && 'tab-active mr-4'}`}
+        >
+          <p> Review for this item</p>
+          <span>22</span>
+        </div>
 
-          <div
-            onClick={() => setReviewsTab(2)}
-            className={`tab ${reviewsTab === 2 && 'tab-active'}`}
-          >
-            <p> Review for this shop</p>
-            <span>13</span>
-          </div>
+        <div
+          onClick={() => setReviewsTab(2)}
+          className={`tab ${reviewsTab === 2 && 'tab-active'}`}
+        >
+          <p> Review for this shop</p>
+          <span>13</span>
         </div>
       </div>
       {reviewsTab === 1 ? (
-        <div className="d-flex pl-3 align-items-center">
+        <div className="d-flex mt-3 pl-3 align-items-center">
           <h3>22 reviews </h3>
           <div>
             <Rating
@@ -42,7 +40,7 @@ const ReviewsTab = () => {
           </div>
         </div>
       ) : (
-        <div className="d-flex  pl-3 pb-0">
+        <div className="d-flex mt-3 pl-3 pb-0 align-items-center">
           <h3>13 reviews </h3>
           <div>
             <Rating

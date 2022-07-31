@@ -38,10 +38,10 @@
   display: none;
 }
 
-.BundleProductsSlider .ProductMainSlider .slick-next {
-  right: 4px !important;
+.ProductMainSlider .slick-next {
+  right: 0px !important;
 }
 
-.BundleProductsSlider .ProductMainSlider .slick-prev {
-  left: 4px !important;
+.ProductMainSlider .slick-prev {
+  left: 0px !important;
 }

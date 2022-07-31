@@ -79,8 +79,9 @@ const RelatedProductsSlider = ({ images }) => {
               </div>
               <img
                 src={`/Assets/images/ProductList/${image}`}
-                className="singleImage"
+                className="singleImageBelow"
                 onClick={handelClick}
+                width={'100%'}
               />
             </div>
           );

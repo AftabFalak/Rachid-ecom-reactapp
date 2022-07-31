@@ -112,10 +112,6 @@
   border-bottom: 2px solid black;
 }
 
-.QuickProductDetail {
-  text-align: left;
-  margin-top: 20px;
-}
 .QuickProductDetail .QuickProductDetailPara {
   font-size: 18px;
 }
@@ -143,6 +139,7 @@
   justify-content: flex-start !important;
   align-items: flex-end !important;
   margin: 0;
+  border: none;
 }
 
 .QuickProductDetail .addToCart .size span {
@@ -291,9 +288,6 @@
 .QuickProductDetail .tab-container {
   width: 100%;
   border-bottom: 2px solid #eaeaea;
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
 }
 .QuickProductDetail .tab-container .tab {
   display: inline-block;

@@ -143,6 +143,7 @@
   display: flex !important;
   justify-content: flex-start !important;
   align-items: flex-end !important;
+  border: none !important;
 }
 
 .addToCart .size span {

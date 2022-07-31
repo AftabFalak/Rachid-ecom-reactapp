@@ -83,18 +83,34 @@
 
 @media (max-width: 500px) {
   .RelatedProductsSlider .slide-single {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
   }
-  .RelatedProductsSlider .singleImage {
-    height: 215px !important;
-    width: 100%;
+  .RelatedProductsSlider .singleImageBelow {
+    height: 200px !important;
+    width: 100% !important;
   }
 
   .RelatedProductsSlider .slick-next {
-    right: -50px !important;
+    right: 0px !important;
   }
 
   .RelatedProductsSlider .slick-prev {
-    left: -50px !important;
+    left: 0px !important;
+  }
+  .RelatedProductsSlider .textArea {
+    padding: 5px;
+    width: 85%;
+    bottom: 10px;
+    text-align: center;
+    z-index: 3;
+    font-size: 10px;
+  }
+  .RelatedProductsSlider .textArea p {
+    font-size: 12px;
   }
 }
