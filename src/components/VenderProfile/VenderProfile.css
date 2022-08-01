@@ -5,6 +5,8 @@
 .VenderProfile .top-bar-vendder {
   display: flex;
   justify-content: space-between;
+  padding: 3px 0px;
+  align-items: center;
 }
 .VenderProfile .top-bar-vendder h4 {
   text-align: center;

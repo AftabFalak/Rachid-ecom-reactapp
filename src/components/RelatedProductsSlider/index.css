@@ -96,11 +96,11 @@
   }
 
   .RelatedProductsSlider .slick-next {
-    right: 0px !important;
+    right: -50px !important;
   }
 
   .RelatedProductsSlider .slick-prev {
-    left: 0px !important;
+    left: -50px !important;
   }
   .RelatedProductsSlider .textArea {
     padding: 5px;

@@ -1,5 +1,23 @@
+.lookbook {
+  width: 100vw !important;
+}
+
 .single-dot {
   padding: 8px 8px;
+  z-index: 3122177827272412471278421 !important;
+}
+.lookbook .lookbook-block .lookbook-dot.dot3 {
+  top: 23% !important;
+  left: 60%;
+}
+
+.lookbook .lookbook-block .lookbook-dot.dot4 {
+  top: 45% !important;
+  right: 30% !important;
+}
+.lookbook .lookbook-block .lookbook-dot.dot2 {
+  top: 30% !important;
+  left: 60% !important;
 }
 .img-brand {
   width: 30px;
@@ -7,12 +25,22 @@
 }
 .title-dot {
   color: var(--black-100) !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
   margin: 0px !important;
   padding: 0px !important;
   width: auto !important;
+  text-align: left !important;
 }
-
+.price-dot {
+  color: var(--main-color) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: auto !important;
+  text-align: left !important;
+}
 .addToCart {
   border: 1px solid var(--action-color);
   background-color: transparent;

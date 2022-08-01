@@ -18,13 +18,22 @@ const LookBookDot = ({
     <div className={`${classes}`}>
       <span>{num}</span>
       <a href={link}>
-        <div className="dot-showbox single-dot" style={{ width: '150px' }}>
-          <Media src={img} className="img-fluid blur-up lazyload" alt="" />
+        <div
+          className="dot-showbox single-dot"
+          // onClick={() => {}}
+          style={{ width: '130px' }}
+        >
+          <Media
+            src={img}
+            className="img-fluid blur-up lazyload"
+            style={{ height: '50%!important' }}
+            alt=""
+          />
           <div className="dot-info">
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <span className="title-dot">{title}</span>
-                <span className="title-dot">{price}</span>
+                <p className="title-dot">{title}</p>
+                <p className="price-dot">{price}</p>
               </div>
               <div>
                 <Media src={brd} className="img-brand" alt="" />
@@ -58,29 +67,29 @@ const Lookbook = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
   return (
-    <section className="lookbook section-b-space ratio_square border p-0 m-0">
+    <section className="lookbook section-b-space ratio_square border p-0 m-0 w-100">
       <Slider {...settings}>
         <div className="d-flex justify-content-center align-items-center">
-          <div className="lookbook-block mr-2">
+          <div className="lookbook-block mr-1">
             <div>
               <Media
-                src={require('../../assets/images/Home/mainn.png')}
-                className="img-fluid blur-up lazyload bg-img w-100"
+                src={require('../../assets/images/Home/ye.png')}
+                className="img-fluid blur-up lazyload bg-img w-100 h-100"
               />
             </div>
             <LookBookDot
@@ -108,8 +117,8 @@ const Lookbook = () => {
           <div className="lookbook-block">
             <div>
               <Media
-                src={require('../../assets/images/Home/mainn.png')}
-                className="img-fluid blur-up lazyload bg-img w-100"
+                src={require('../../assets/images/Home/ye.png')}
+                className="img-fluid blur-up lazyload w-100 h-100"
               />
             </div>
             <LookBookDot
@@ -135,10 +144,10 @@ const Lookbook = () => {
           </div>
         </div>
         <div className="d-flex justify-content-center align-items-center">
-          <div className="lookbook-block mr-2">
+          <div className="lookbook-block mr-1">
             <div>
               <Media
-                src={require('../../assets/images/Home/mainn.png')}
+                src={require('../../assets/images/Home/ye.png')}
                 className="img-fluid blur-up lazyload bg-img w-100"
               />
             </div>
@@ -167,7 +176,7 @@ const Lookbook = () => {
           <div className="lookbook-block">
             <div>
               <Media
-                src={require('../../assets/images/Home/mainn.png')}
+                src={require('../../assets/images/Home/ye.png')}
                 className="img-fluid blur-up lazyload bg-img w-100"
               />
             </div>

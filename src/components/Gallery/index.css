@@ -233,11 +233,11 @@
 }
 @media (max-width: 500px) {
   .Gallery .category-container .btn-category {
-    font-size: 12px;
+    font-size: 11px;
     width: auto;
   }
   .Gallery .relevency-container .btn-category {
     width: auto;
-    font-size: 12px;
+    font-size: 11px;
   }
 }

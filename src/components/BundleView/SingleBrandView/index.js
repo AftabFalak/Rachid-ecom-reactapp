@@ -10,7 +10,6 @@ import './index.css';
 
 const SingleBrandView = ({ view, rotate, isBundleView, isBundleView_new }) => {
   const [liked, setLiked] = useState(false);
-  console.log('valval', rotate);
   return (
     <div>
       {isBundleView && isBundleView_new ? (

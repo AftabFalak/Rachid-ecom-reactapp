@@ -66,8 +66,8 @@ const QuickProductDetail = ({
 
   return (
     <div className="QuickProductDetail">
-      <div className="row m-0 p-0">
-        <div className="col-md-4">
+      <div className="row m-0 p-0 pt-2">
+        <div className="col-md-4 ">
           <ProductMainSlider
             viewDetail={viewDetail}
             images={product.images}
@@ -91,7 +91,7 @@ const QuickProductDetail = ({
             </div>
           )}
         </div>
-        <div className="col-md-8 justify-content-left ">
+        <div className="col-md-8 justify-content-left">
           <div className="content-product">
             <div className="top d-flex  ">
               <h3 className=" font-weight-bold text-dark product-heading">

@@ -37,7 +37,7 @@ const BoxItem = ({ item, quick, setQuick }) => {
           </small>
         </p>
       </div>
-      <img width={'100%'} src={item.img} onClick={handleClick} />
+      <img width={'100%'} src={item.img} />
     </div>
   );
 };

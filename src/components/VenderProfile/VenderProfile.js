@@ -11,6 +11,7 @@ import {
 import { GrMail } from 'react-icons/gr';
 import { GoMail } from 'react-icons/go';
 import { FiFacebook } from 'react-icons/fi';
+import { BsChevronLeft } from 'react-icons/bs';
 import BundleView from '../BundleView';
 import { Rating } from 'react-simple-star-rating';
 import { COLORS } from '../../assets/colors/colors';
@@ -152,9 +153,9 @@ const VenderProfile = ({ vendor, show, onClickBack, categorieFilterOnTop }) => {
       {show && (
         <div className="top-bar-vendder">
           <button className="back-btn" onClick={() => onClickBack(false)}>
-            <i className="fa fa-chevron-left"></i>
+            <BsChevronLeft style={{ fontSize: '24px' }} />
           </button>
-          <h4>{vendor.brandName}</h4>
+          <h3>{vendor.brandName}</h3>
           <div> </div>
         </div>
       )}

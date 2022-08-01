@@ -44,11 +44,7 @@ const BundleProductsSlider = ({ products }) => {
                   <AiOutlineSearch />
                 </span>
               </div>
-              <img
-                className="p-img cursor-pointer"
-                src={`${product.image}`}
-                onClick={handelClick}
-              />
+              <img className="p-img cursor-pointer" src={`${product.image}`} />
               <div className="d-flex py-1 slide-content">
                 <div className="slide-text">
                   <p className="p-title">{product.title}</p>
