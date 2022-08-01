@@ -13,11 +13,13 @@
   width: auto !important;
 }
 
-
 .addToCart {
   border: 1px solid var(--action-color);
   background-color: transparent;
   color: var(--action-color);
   text-align: center;
   margin: auto;
+}
+.slick-next {
+  right: 10% !important;
 }
