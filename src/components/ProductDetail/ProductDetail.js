@@ -80,7 +80,7 @@ const ProductDetail = ({ quickView, setQuick, viewDetail, onClose, cross }) => {
             <></>
           )}
           {!quickView && (
-            <div className="d-none d-md-block">
+            <div className="d-none d-md-block mt-3">
               <ReviewsTab />
             </div>
           )}

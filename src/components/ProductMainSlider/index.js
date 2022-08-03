@@ -34,7 +34,7 @@ const ProductMainSlider = ({ images, viewDetail, onClose, cross }) => {
           {images.map((image, index) => {
             return (
               <div className="heart-parent">
-                <img src={image.img} className="w-100" />
+                <img src={image.img} className="w-100 h-100" />
 
                 <button
                   className="heart-btn"

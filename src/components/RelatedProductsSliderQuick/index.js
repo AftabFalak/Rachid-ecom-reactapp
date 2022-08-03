@@ -9,7 +9,7 @@ import QuickView from '../QuickView/QuickView';
 
 import './index.css';
 
-const RelatedProductsSlider = ({ images }) => {
+const RelatedProductsSliderQuick = ({ images }) => {
   const navigate = useNavigate();
   let settings = {
     dots: false,
@@ -52,7 +52,7 @@ const RelatedProductsSlider = ({ images }) => {
   };
 
   return (
-    <div className="RelatedProductsSlider">
+    <div className="RelatedProductsSliderQuick">
       <Slider {...settings}>
         {images.map((image) => {
           return (
@@ -80,6 +80,7 @@ const RelatedProductsSlider = ({ images }) => {
               <img
                 src={`/Assets/images/ProductList/${image}`}
                 className="singleImageBelow mr-1"
+                style={{ widht: '100%', height: '170px' }}
               />
             </div>
           );
@@ -90,4 +91,4 @@ const RelatedProductsSlider = ({ images }) => {
   );
 };
 
-export default RelatedProductsSlider;
+export default RelatedProductsSliderQuick;

@@ -4,7 +4,7 @@
 
 .single-dot {
   padding: 8px 8px;
-  z-index: 3122177827272412471278421 !important;
+  z-index: 1000 !important;
 }
 .lookbook .lookbook-block .lookbook-dot.dot3 {
   top: 23% !important;
@@ -20,28 +20,31 @@
   left: 60% !important;
 }
 .img-brand {
-  width: 30px;
-  height: 20px;
+  width: 50px;
+  height: 25px;
 }
-.title-dot {
+
+.lookbook .title-dot {
   color: var(--black-100) !important;
-  font-size: 11px !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-size: 14px !important;
   font-weight: 500 !important;
   margin: 0px !important;
   padding: 0px !important;
   width: auto !important;
   text-align: left !important;
+  margin-bottom: 3px !important;
 }
-.price-dot {
+.lookbook .price-dot {
   color: var(--main-color) !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   font-weight: 500 !important;
   margin: 0px !important;
   padding: 0px !important;
   width: auto !important;
   text-align: left !important;
 }
-.addToCart {
+.lookbook .addToCart {
   border: 1px solid var(--action-color) !important;
   background-color: transparent;
   color: var(--action-color);
@@ -49,7 +52,7 @@
   margin: 5px auto;
 }
 
-.addToCart:hover {
+.lookbook .addToCart:hover {
   background-color: var(--action-color) !important;
   color: var(--white-100);
 }

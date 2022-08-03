@@ -2,11 +2,20 @@
   background-color: #fff;
   padding: 0px !important;
 }
+
+.QuickProductDetail .slick-next {
+  right: -0px !important;
+  display: none;
+}
+.QuickProductDetail .slick-prev {
+  right: -0px !important;
+}
 .QuickProductDetail .completeHeading {
   color: rgba(0, 0, 0, 0.6);
   text-transform: none !important ;
   font-weight: 600;
   margin: 6px 0px;
+  font-size: 20px;
 }
 
 .QuickProductDetail .brandLogo {
@@ -37,7 +46,7 @@
   color: gray;
   text-decoration: line-through;
   margin-right: 12px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .QuickProductDetail .QuickProductDetail .short-description {
@@ -47,22 +56,24 @@
 .QuickProductDetail .priceView .offer {
   color: var(--main-color);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .QuickProductDetail .colorSelection {
-  align-items: center;
+  display: flex;
+  align-items: center !important;
 }
 
-.QuickProductDetail .colorSelection p {
-  font-weight: 700;
-  margin-top: 5px !important;
-  margin-right: 20px;
+.QuickProductDetail .colorSelection .colorText {
+  margin: 0;
+  padding: 0;
+  margin-right: 4px;
 }
+
 .QuickProductDetail .colorSelection .circle {
   border: 2px solid transparent;
-  width: 27px;
-  height: 27px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   border-radius: 50%;
   margin-right: 5px;
@@ -72,12 +83,13 @@
   transition: all 0.5s;
 }
 .QuickProductDetail .colorSelection .color-selected {
+  margin-top: 0px !important;
   border: 2px solid black;
 }
 .QuickProductDetail .colorSelection .inner-circle {
   border: 1px solid black;
-  width: 18px;
-  height: 18px;
+  width: 11px;
+  height: 11px;
   text-align: center;
   border-radius: 50%;
   margin: 2px;
@@ -171,7 +183,7 @@
 }
 
 .QuickProductDetail .addToCart .counterButton .countNumber {
-  background-color: #e8ecef;
+  background-color: #ffff;
   border-top: 2px solid rgb(232, 227, 227);
   border-bottom: 2px solid rgb(232, 227, 227);
   text-align: center;

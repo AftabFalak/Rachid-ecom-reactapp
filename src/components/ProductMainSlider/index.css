@@ -2,7 +2,14 @@
   width: 100% !important;
 }
 
-.view-detail-btn {
+.ProductMainSlider .slick-next {
+  right: 0px !important;
+}
+
+.ProductMainSlider .slick-prev {
+  left: 0px !important;
+}
+.ProductMainSlider .view-detail-btn {
   display: none;
   text-align: center;
   position: absolute;
@@ -18,13 +25,13 @@
   transition: all 0.5s;
   font-size: 17px;
 }
-.view-detail-btn:hover {
+.ProductMainSlider .view-detail-btn:hover {
   color: var(--white-100);
 }
 .ProductMainSlider:hover .view-detail-btn {
   display: block;
 }
-.heart-btn-small {
+.ProductMainSlider .heart-btn-small {
   position: absolute;
   left: 10px;
   background-color: white;
@@ -36,12 +43,4 @@
   padding: 2px 3px;
   font-size: 18px;
   display: none;
-}
-
-.ProductMainSlider .slick-next {
-  right: 0px !important;
-}
-
-.ProductMainSlider .slick-prev {
-  left: 0px !important;
 }

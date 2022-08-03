@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { IoCloseOutline } from 'react-icons/io5';
 
 import ProductMainSlider from '../ProductMainSlider';
-import RelatedProductsSlider from '../RelatedProductsSlider';
+import RelatedProductsSliderQuick from '../RelatedProductsSliderQuick';
 import BundleView from '../BundleView';
 import Policies from '../core/Policies';
 import MeetSeller from '../core/MeetSeller';
@@ -67,7 +67,7 @@ const QuickProductDetail = ({
   return (
     <div className="QuickProductDetail">
       <div className="row m-0 p-0 pt-2">
-        <div className="col-md-4 ">
+        <div className="col-md-5">
           <ProductMainSlider
             viewDetail={viewDetail}
             images={product.images}
@@ -91,7 +91,7 @@ const QuickProductDetail = ({
             </div>
           )}
         </div>
-        <div className="col-md-8 justify-content-left">
+        <div className="col-md-7 justify-content-left">
           <div className="content-product">
             <div className="top d-flex  ">
               <h3 className=" font-weight-bold text-dark product-heading">
@@ -115,48 +115,51 @@ const QuickProductDetail = ({
 
               <div className="short-description">
                 <p>
-                  dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since
-                  the 1500s, when an unknown printer took.
+                  dummy text of the printing and typesetting industry.dummy text
+                  of the printing and typesetting industry.
                 </p>
               </div>
               {product.colors && (
-                <div className="colorSelection d-flex">
-                  <p>Color: </p>
-                  {product.colors.map((color) => {
-                    return (
-                      <div
-                        onClick={() => setSelection({ ...selection, color })}
-                        className={`circle ${
-                          color === selection.color ? 'color-selected' : ''
-                        }`}
-                      >
+                <div className="colorSelection">
+                  <p className="colorText">Color: </p>
+                  <div className="d-flex align-items-center">
+                    {product.colors.map((color) => {
+                      return (
                         <div
-                          style={{ backgroundColor: color }}
-                          className="inner-circle"
-                        ></div>
-                      </div>
-                    );
-                  })}
+                          onClick={() => setSelection({ ...selection, color })}
+                          className={`circle ${
+                            color === selection.color ? 'color-selected' : ''
+                          }`}
+                        >
+                          <div
+                            style={{ backgroundColor: color }}
+                            className="inner-circle"
+                          ></div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
               {product.colors && (
                 <div className="sizeSelection d-flex">
                   <p>Size: </p>
-                  {product.sizes.map((size) => {
-                    return (
-                      <div
-                        onClick={() =>
-                          setSelection({ ...selection, size: size })
-                        }
-                        className={`size ${
-                          size === selection.size ? 'size-selected' : ''
-                        }`}
-                      >
-                        <p className="w-100 m-0 mb-1">{size}</p>
-                      </div>
-                    );
-                  })}
+                  <div className="d-flex align-items-center">
+                    {product.sizes.map((size) => {
+                      return (
+                        <div
+                          onClick={() =>
+                            setSelection({ ...selection, size: size })
+                          }
+                          className={`size ${
+                            size === selection.size ? 'size-selected' : ''
+                          }`}
+                        >
+                          <p className="w-100 m-0 mb-1">{size}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
             </div>
@@ -232,7 +235,7 @@ const QuickProductDetail = ({
 
             <h3 className="completeHeading">Complete The Look</h3>
 
-            <RelatedProductsSlider images={product.otherImages} />
+            <RelatedProductsSliderQuick images={product.otherImages} />
           </div>
 
           {!quickView && (

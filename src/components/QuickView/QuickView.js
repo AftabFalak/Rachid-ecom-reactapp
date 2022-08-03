@@ -31,17 +31,17 @@ const QuickView = ({ setQuick, onClose }) => {
             onClose();
           }}
         >
-          <IoCloseOutline style={{ fontSize: '34px' }} />
+          <IoCloseOutline style={{ fontSize: '44px' }} />
         </button>
-      </div>
-      <div className="QuickView p-0">
-        <QuickProductDetail
-          setQuick={setQuick}
-          viewDetail
-          quickView
-          onClose={onClose}
-          cross={true}
-        />
+        <div className="QuickView p-0">
+          <QuickProductDetail
+            setQuick={setQuick}
+            viewDetail
+            quickView
+            onClose={onClose}
+            cross={true}
+          />
+        </div>
       </div>
     </>
   );
