@@ -14,7 +14,7 @@ import BundleView from '../BundleView';
 import Policies from '../core/Policies';
 import MeetSeller from '../core/MeetSeller';
 import ReviewsTab from '../ReviewsTabs';
-
+import RelatedProductsSlider from '../RelatedProductsSlider';
 import './QuickProductDetail.css';
 
 const QuickProductDetail = ({

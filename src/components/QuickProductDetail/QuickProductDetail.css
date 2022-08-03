@@ -104,7 +104,7 @@
 .QuickProductDetail .sizeSelection p {
   font-weight: 700;
   margin-top: 4px;
-  margin-right: 20px;
+  margin-right: 4px;
 }
 .QuickProductDetail .sizeSelection .size {
   border: 2px solid transparent;
@@ -112,13 +112,14 @@
   text-align: center;
   min-width: 30px;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 0px;
   display: flex;
   cursor: pointer;
   transition: all 0.5s;
 }
 .QuickProductDetail .sizeSelection .size p {
   text-align: center;
+  font-size: 12px;
 }
 .QuickProductDetail .sizeSelection .size-selected {
   border-bottom: 2px solid black;

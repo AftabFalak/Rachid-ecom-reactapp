@@ -3,6 +3,7 @@ import React from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
 
 import QuickProductDetail from '../QuickProductDetail/QuickProductDetail';
+import ProductDetail from '../ProductDetail/ProductDetail';
 import './QuickView.css';
 
 const QuickView = ({ setQuick, onClose }) => {

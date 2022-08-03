@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
 
 import { BsCartPlus } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+
+import Slider from 'react-slick';
 
 import QuickView from '../QuickView/QuickView';
 
@@ -61,10 +62,10 @@ const RelatedProductsSliderQuick = ({ images }) => {
                 <span>
                   <BsCartPlus />
                 </span>
-                <span className="icon" onClick={() => setLike(!like)}>
+                <span className="icons" onClick={() => setLike(!like)}>
                   {like ? <AiFillHeart /> : <AiOutlineHeart />}
                 </span>
-                <span className="icon" onClick={() => setQuick(true)}>
+                <span className="icons" onClick={() => setQuick(true)}>
                   <AiOutlineSearch />
                 </span>
               </div>
