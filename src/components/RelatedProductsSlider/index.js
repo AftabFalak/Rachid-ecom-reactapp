@@ -85,7 +85,14 @@ const RelatedProductsSlider = ({ images }) => {
           );
         })}
       </Slider>
-      {quick && <QuickView onClose={() => setQuick(false)} />}
+      {quick && (
+        <QuickView
+          onClose={() => {
+            setQuick(false);
+            console.log('inner');
+          }}
+        />
+      )}
     </div>
   );
 };

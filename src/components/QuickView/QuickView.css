@@ -9,10 +9,10 @@
   overflow: auto;
   padding: 0px !important;
   border-radius: 0px !important;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: 12.5%;
+  top: 12.5%;
+  /* -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .bg-overlay-quick {

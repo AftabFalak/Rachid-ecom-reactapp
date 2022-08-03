@@ -112,11 +112,7 @@ const Orders = ({ orders, QuickView }) => {
           </div>
         </div>
       </div>
-      {quickview ? (
-        <QuickView open={quickview} onClose={() => setQuickView(false)} />
-      ) : (
-        <></>
-      )}
+      {quickview ? <QuickView onClose={() => setQuickView(false)} /> : <></>}
     </>
   );
 };

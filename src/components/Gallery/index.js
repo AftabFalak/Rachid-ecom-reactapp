@@ -253,7 +253,14 @@ const Gallery = ({
             );
           })}
         </Masonry>
-        {quick && <QuickView onClose={() => setQuick(false)} />}
+        {quick && (
+          <QuickView
+            onClose={() => {
+              setQuick(false);
+              console.log('outer');
+            }}
+          />
+        )}
         {open && (
           <FilterDrawer
             open={open}
