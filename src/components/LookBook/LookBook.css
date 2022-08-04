@@ -5,12 +5,11 @@
 .single-dot {
   padding: 8px 8px;
   z-index: 1000 !important;
-  background-color: red !important;
   position: absolute !important;
 }
 .lookbook .lookbook-block .lookbook-dot.dot3 {
   top: 23% !important;
-  left: 60%;
+  left: 40%;
 }
 
 .lookbook .lookbook-block .lookbook-dot.dot4 {
@@ -19,7 +18,7 @@
 }
 .lookbook .lookbook-block .lookbook-dot.dot2 {
   top: 30% !important;
-  left: 60% !important;
+  left: 40% !important;
 }
 .img-brand {
   width: 50px;

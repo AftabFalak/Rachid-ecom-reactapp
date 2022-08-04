@@ -212,7 +212,8 @@ const Lookbook = () => {
               <div>
                 <Media
                   src={require('../../assets/images/Home/ye.png')}
-                  className="img-fluid blur-up lazyload w-100 h-100"
+                  className="img-fluid blur-up lazyload w-100"
+                  style={{ height: '65vh' }}
                 />
               </div>
               <LookBookDot
