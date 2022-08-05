@@ -12,7 +12,7 @@ const BrandGroupImages = ({ products }) => {
         return (
           <Col sm={3} xs={3} md={3} className="brand-img m-0 p-0" key={index}>
             <div className="brand-view heart-parent">
-              <button onClick={() => setLiked(!liked)} className="heart-btn">
+              {/* <button onClick={() => setLiked(!liked)} className="heart-btn">
                 {liked ? (
                   <span>
                     <i className="fa fa-heart"></i>
@@ -22,7 +22,7 @@ const BrandGroupImages = ({ products }) => {
                     <i className="far fa-heart"></i>
                   </div>
                 )}
-              </button>
+              </button> */}
               <a href="/vendor">
                 <img src={p.brand} width="100%" />
               </a>

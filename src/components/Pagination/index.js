@@ -8,7 +8,7 @@ function PaginatedPages({ itemsPerPage }) {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;

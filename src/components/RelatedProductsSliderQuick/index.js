@@ -81,7 +81,7 @@ const RelatedProductsSliderQuick = ({ images }) => {
               <img
                 src={`/Assets/images/ProductList/${image}`}
                 className="singleImageBelow mr-1"
-                style={{ widht: '100%', height: '170px' }}
+                style={{ widht: '100%', height: '200px' }}
               />
             </div>
           );

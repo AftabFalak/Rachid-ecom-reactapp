@@ -60,3 +60,19 @@
 .slick-next {
   right: 10% !important;
 }
+.singleItem {
+  width: 40px;
+  height: 40px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.activeSingleSlide {
+  background-color: #bdbaba;
+}

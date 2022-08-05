@@ -116,7 +116,9 @@ const QuickProductDetail = ({
               <div className="short-description">
                 <p>
                   dummy text of the printing and typesetting industry.dummy text
-                  of the printing and typesetting industry.
+                  of the printing and typesetting industry.dummy text of the
+                  printing and typesetting industry.dummy text of the printing
+                  and typesetting industry.
                 </p>
               </div>
               {product.colors && (
@@ -143,7 +145,7 @@ const QuickProductDetail = ({
               )}
               {product.colors && (
                 <div className="sizeSelection d-flex">
-                  <p>Size: </p>
+                  <p className="text">Size: </p>
                   <div className="d-flex align-items-center">
                     {product.sizes.map((size) => {
                       return (
@@ -155,7 +157,7 @@ const QuickProductDetail = ({
                             size === selection.size ? 'size-selected' : ''
                           }`}
                         >
-                          <p className="w-100 m-0 mb-1">{size}</p>
+                          <span className="w-100 m-0 mb-1">{size}</span>
                         </div>
                       );
                     })}
